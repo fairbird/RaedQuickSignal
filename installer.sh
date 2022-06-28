@@ -2,8 +2,8 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=14.5
-description=What is NEW:\n-Add support to mmc path\n-Update Italian language [Thanks Spaeleus]\n\n*************************\n:ما هو الجديد\n-دعم مسار mmc للبايكونات\n-[Spaeleus شكراً] تحديث اللغة الايطالية
+version=14.6
+description=What is NEW:\n-Move plugin to my source github\n\n*************************\n:ما هو الجديد\n-github نقل البلجن الى سورساتي على
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
