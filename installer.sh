@@ -94,7 +94,7 @@ if [ -f /var/lib/dpkg/status ]; then
    tar -xzf RaedQuickSignal-main.tar.gz
    cp -rf RaedQuickSignal-main/usr /
    cp -rf RaedQuickSignal-main/tmp /
-   wget --no-check-certificate --content-disposition https://github.com/fairbird/RaedQuickSignal/blob/main/RaedQuickServName2-dreamos.tar.gz
+   wget --no-check-certificate --content-disposition https://github.com/fairbird/RaedQuickSignal/raw/main/RaedQuickServName2-dreamos.tar.gz
    if [ -f '/tmp/RaedQuickServName2-dreamos.tar.gz' ]; then
    	rm -f /usr/lib/enigma2/python/Components/Converter/RaedQuickServName2.py
    fi
