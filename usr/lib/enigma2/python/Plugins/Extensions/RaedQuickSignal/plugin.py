@@ -742,7 +742,7 @@ class RaedQuickSignalScreen(Screen):
                try:
                        from twisted.web.client import getPage, error
                        #url = b"http://tunisia-dreambox.info/TSplugins/RaedQuickSignal/installer.sh"
-                       url = b"https://github.com/fairbird/RaedQuickSignal/blob/main/installer.sh"
+                       url = b"https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh"
                        getPage(url,timeout=10).addCallback(self.parseData).addErrback(self.errBack)
                except Exception as error:
                        trace_error()
@@ -778,7 +778,7 @@ class RaedQuickSignalScreen(Screen):
                      if answer:
                            cmdlist = []
                            #cmd="wget http://tunisia-dreambox.info/TSplugins/RaedQuickSignal/installer.sh -O - | /bin/sh"
-                           cmd="wget https://github.com/fairbird/RaedQuickSignal/blob/main/installer.sh -O - | /bin/sh"
+                           cmd="wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh"
                            cmdlist.append(cmd)
                            self.session.open(Console, title='%s' % title30, cmdlist=cmdlist, finishedCallback=self.myCallback, closeOnSuccess=False)
                 except:
