@@ -80,7 +80,7 @@ mkdir -p $BACKUPPATH
 # check depends packges
 cd /tmp
 set -e
-wget --no-check-certificate --content-disposition https://github.com/fairbird/RaedQuickSignal/blob/main/RaedQuickSignal-8.8_old_devices.tar.gz
+wget --no-check-certificate --content-disposition https://github.com/fairbird/RaedQuickSignal/raw/main/RaedQuickSignal-8.8_old_devices.tar.gz
 tar -xzf RaedQuickSignal-8.8_old_devices.tar.gz -C /
 set +e
 cd ..
