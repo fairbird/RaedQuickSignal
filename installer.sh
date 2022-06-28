@@ -84,12 +84,12 @@ mkdir -p $BACKUPPATH
 # check depends packges
 cd /tmp
 set -e
+rm -rf *RaedQuickSignal*
 if [ -f /var/lib/dpkg/status ]; then
    echo "# Your image is OE2.5/2.6 #"
    echo ""
    echo ""
    cd /tmp
-   rm -f *RaedQuickSignal*
    wget --no-check-certificate --content-disposition https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
    tar -xzf RaedQuickSignal-main.tar.gz
    cp -rf RaedQuickSignal-main/usr /
@@ -103,13 +103,12 @@ else
    echo "# Your image is OE2.0 #"
    echo ""
    echo ""
-   rm -f *RaedQuickSignal*
    wget --no-check-certificate --content-disposition https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
    tar -xzf RaedQuickSignal-main.tar.gz
    cp -rf RaedQuickSignal-main/usr /
    cp -rf RaedQuickSignal-main/tmp /
 fi
-rm -f *RaedQuickSignal*
+rm -rf *RaedQuickSignal*
 set +e
 cd ..
 sleep 2
