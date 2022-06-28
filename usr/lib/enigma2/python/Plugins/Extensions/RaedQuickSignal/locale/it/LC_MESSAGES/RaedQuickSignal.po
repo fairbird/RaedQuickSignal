@@ -1,0 +1,697 @@
+# Signed-off-by: Dario Croci <spaeleus@croci.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Raed QuickSignal v14.4\n"
+"POT-Creation-Date: 2022-05-22 14:36+0200\n"
+"PO-Revision-Date: 2022-05-22 14:46+0200\n"
+"Last-Translator: Dario Croci <spaeleus@croci.org>\n"
+"Language-Team: Dario Croci <spaeleus@croci.org>\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ../../../../../../../../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickFNCsvcName.py:168
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:207
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:218
+msgid "Satellite"
+msgstr "Satellite"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickFNCsvcName.py:170
+#: lib/enigma2/python/Components/Converter/RaedQuickFNCsvcName.py:318
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:209
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:220
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:400
+msgid "Cable"
+msgstr "Cavo"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickFNCsvcName.py:172
+#: lib/enigma2/python/Components/Converter/RaedQuickFNCsvcName.py:320
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:211
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:222
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:402
+msgid "Terrestrial"
+msgstr "Terrestre"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickFNCsvcName.py:331
+msgid "Stream"
+msgstr "Stream"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickFNCsvcName.py:333
+msgid "Altern"
+msgstr "Altern"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:187
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:199
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:576
+msgid "Streaming"
+msgstr "Streaming"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:213
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:224
+msgid "Stream-tv"
+msgstr "TV stream"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:416
+msgid "Alternative"
+msgstr "Alternativa"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:418
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:583
+#: lib/enigma2/python/Components/Converter/RaedQuickServName2.py:670
+msgid "Internet"
+msgstr "Internet"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:554
+#, python-format
+msgid "+%s h"
+msgstr "+%s h"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:556
+#, python-format
+msgid "%s h"
+msgstr "%s h"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:580
+#, python-format
+msgid "%s m/s"
+msgstr "%s m/s"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:582
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:584
+#, python-format
+msgid "%.01f m/s"
+msgstr "%.01f m/s"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:587
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:589
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:591
+#, python-format
+msgid "%.01f ft/s"
+msgstr "%.01f ft/s"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:594
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:596
+#, python-format
+msgid "%.01f mp/h"
+msgstr "%.01f mp/h"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:598
+#, python-format
+msgid "%s mp/h"
+msgstr "%s mp/h"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:601
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:603
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:605
+#, python-format
+msgid "%.01f knots"
+msgstr "%.01f nodi"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:608
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:612
+#, python-format
+msgid "%.01f km/h"
+msgstr "%.01f km/h"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:610
+#, python-format
+msgid "%s km/h"
+msgstr "%s km/h"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:1997
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2000
+msgid "New moon"
+msgstr "Luna nuova"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2003
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2009
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2015
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2021
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2027
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2033
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2039
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2045
+msgid "Waxing cresent"
+msgstr "Luna crescente"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2006
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2012
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2018
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2024
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2030
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2036
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2042
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2048
+msgid "Waning crescent"
+msgstr "Luna calante"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2051
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2057
+msgid "First quarter"
+msgstr "Primo quarto"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2054
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2060
+msgid "Last quarter"
+msgstr "Ultimo quarto"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2063
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2069
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2075
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2081
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2087
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2093
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2099
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2105
+msgid "Waxing gibbous"
+msgstr "Gibbosa crescente"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2066
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2072
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2078
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2084
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2090
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2096
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2102
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2108
+msgid "Waning gibbous"
+msgstr "Gibbosa calante"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2111
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2114
+msgid "Full moon"
+msgstr "Luna piena"
+
+#: lib/enigma2/python/Components/Converter/RaedQuickWeather.py:2154
+#, python-format
+msgid "%s km"
+msgstr "%s km"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:315
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:316
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:365
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:376
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:380
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:396
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:400
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:590
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:601
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:623
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:653
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:695
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:836
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:837
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:838
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:853
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:872
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:873
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:874
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:875
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:876
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:877
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:878
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:880
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:881
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:882
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:883
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:884
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:885
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:967
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:969
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:993
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:1026
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:1061
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:1062
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:1063
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:1086
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:1109
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:123
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:124
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:129
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:130
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:135
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:136
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:143
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:144
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:145
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:146
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:147
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:150
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:151
+#, python-format
+#| msgid "%s h"
+msgid "%s"
+msgstr "%s"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:533
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:538
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:545
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:548
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:554
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:841
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:844
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:850
+msgid " "
+msgstr " "
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:773
+#, python-format
+msgid ""
+"%s %s %s.\n"
+"\n"
+"%s.\n"
+"\n"
+"%s."
+msgstr ""
+"%s %s %s.\n"
+"\n"
+"%s.\n"
+"\n"
+"%s."
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:847
+msgid "Download SatFinder"
+msgstr "Scaricare Satfinder"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:1070
+#, python-format
+#| msgid "RaedQuickSignal Setup"
+msgid "RaedQuickSignal V %s"
+msgstr "RaedQuickSignal V %s"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:1129
+msgid "RaedQuickSignal Setup"
+msgstr "Impostazioni RaedQuickSignal"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/plugin.py:1130
+msgid "RAED's RaedQuickSignal setup"
+msgstr "Impostazioni RAED's RaedQuickSignal"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/Console.py:57
+msgid "Cancel"
+msgstr "Annullare"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/Console.py:58
+msgid "Hide"
+msgstr "Nascondere"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/Console.py:70
+msgid "Console"
+msgstr "Console"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/Console.py:89
+msgid "Execution progress"
+msgstr "Progresso dell'esecuzione"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/Console.py:112
+msgid "Execution finished!!"
+msgstr "Esecuzione terminata."
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/Console.py:118
+msgid ""
+"\n"
+"Press OK or Exit to abort!"
+msgstr ""
+"\n"
+"Premere OK o EXIT per interrompere."
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/Console.py:119
+msgid "Exit"
+msgstr "Uscire"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/Console.py:134
+msgid "Cancel execution?"
+msgstr "Interrompere l'esecuzione?"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:73
+msgid "-20"
+msgstr "-20"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:74
+msgid "-15"
+msgstr "-15"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:75
+msgid "-10"
+msgstr "-10"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:76
+msgid "Default"
+msgstr "Predefinito"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:77
+msgid "+10"
+msgstr "+10"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:78
+msgid "+20"
+msgstr "+20"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:79
+msgid "+30"
+msgstr "+30"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:80
+msgid "+40"
+msgstr "+40"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:85
+msgid "TEXT"
+msgstr "TEXT"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:86
+msgid "TV"
+msgstr "TV"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:87
+msgid "RADIO"
+msgstr "RADIO"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:88
+msgid "OK"
+msgstr "OK"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:89
+msgid "HELP"
+msgstr "HELP"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:90
+msgid "INFO"
+msgstr "INFO"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:91
+msgid "RED"
+msgstr "ROSSO"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:92
+msgid "GREEN"
+msgstr "VERDE"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:93
+msgid "BLUE"
+msgstr "BLU"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:94
+msgid "PVR"
+msgstr "PVR"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:95
+msgid "0"
+msgstr "0"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:96
+msgid "1"
+msgstr "1"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:97
+msgid "2"
+msgstr "2"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:98
+msgid "3"
+msgstr "3"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:99
+msgid "f1"
+msgstr "f1"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:100
+msgid "f2"
+msgstr "f2"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:101
+msgid "f3"
+msgstr "f3"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:106
+msgid "AGC Progress + Picon"
+msgstr "Progresso AGC + Picon"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:107
+msgid "AGC Progress + Event Description"
+msgstr "Progresso AGC + Descrizione evento"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:108
+msgid "AGC Progress + Weather"
+msgstr "Progresso AGC + Meteo"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:109
+msgid "Event Progress + Picon"
+msgstr "Progresso evento + Picon"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:110
+msgid "Event Progress + Event Description"
+msgstr "Progresso evento + Descrizione evento"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:111
+msgid "Event Progress + Weather"
+msgstr "Progresso evento + Meteo"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:112
+msgid "Full Screen without any extra functions1"
+msgstr "Schermo intero senza funzioni aggiuntive1"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:113
+msgid "Full Screen without any extra functions2"
+msgstr "Schermo intero senza funzioni aggiuntive2"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:114
+msgid "Full Screen + Picon + Virtical"
+msgstr "Schermo intero + Picon + Verticale"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:115
+msgid "Full Screen + Picon + Ecm + Virtical1"
+msgstr "Schermo intero + Picon + Ecm + Verticale1"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:116
+msgid "Full Screen + Picon + Ecm + Virtical2"
+msgstr "Schermo intero + Picon + Ecm + Verticale2"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:117
+msgid "Full Screen + Picon + Ecm + Virtical3"
+msgstr "Schermo intero + Picon + Ecm + Verticale3"
+
+#: lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/configs.py:118
+msgid "Full Screen + Picon + Ecm + SNR-AGC_ANALOG"
+msgstr "Schermo intero + Picon + Ecm + SNR_AGC_ANALOG"
+
+#~ msgid "Add city"
+#~ msgstr "Agg. città"
+
+#~ msgid "Please enter a name of the city"
+#~ msgstr "Inserire il nome della città"
+
+#~ msgid "Sorry, your city is not available1."
+#~ msgstr "Spiacente, città non disponibile1."
+
+#~ msgid "Sorry, your city is not available2."
+#~ msgstr "Spiacente, città non disponibile2."
+
+#~ msgid "Sorry, your city is not available."
+#~ msgstr "Spiacente, città non disponibile."
+
+#~ msgid "Open Satfinder"
+#~ msgstr "Aprire Satfinder"
+
+#~ msgid "Open Signalfinder"
+#~ msgstr "Aprire Signalfinder"
+
+#~ msgid "Open PositionerSetup"
+#~ msgstr "Aprire PositionerSetup"
+
+#~ msgid "No positioner capable frontend found."
+#~ msgstr "Nessun frontend motorizzato disponibile."
+
+#~ msgid "No tuner is configured for use with a diseqc positioner!"
+#~ msgstr "Nessun tuner impostato per l'utilizzo di un rotore disecq."
+
+#~ msgid "No satellite frontend found!!"
+#~ msgstr "Nessun frontend satellitare disponibile."
+
+#~ msgid "No satellite, terrestrial or cable tuner is configured. Please check your tuner setup."
+#~ msgstr "Nessun tuner satellitare, terrestre o cavo impostato. Verificare le impostazioni tuner."
+
+#~ msgid ""
+#~ "No satellites configured for DVB-S2 tuner(s).\n"
+#~ "Please check your tuner(s) setup."
+#~ msgstr ""
+#~ "Nessun satellite impostato per tuner DVB-S2.\n"
+#~ "Verificare le impostazioni tuner."
+
+#, python-format
+#~ msgid ""
+#~ "New version %s is available.\n"
+#~ "\n"
+#~ "%s.\n"
+#~ "\n"
+#~ "Do want to install now."
+#~ msgstr ""
+#~ "Disponibile versione aggiornata: %s.\n"
+#~ "\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Installarla ora?"
+
+#~ msgid "Close"
+#~ msgstr "Chiudere"
+
+#~ msgid "Save"
+#~ msgstr "Salvare"
+
+#~ msgid "Download Picons"
+#~ msgstr "Scaricare picon"
+
+#~ msgid "Download Signalfinder"
+#~ msgstr "Scaricare Signalfinder"
+
+#~ msgid "Enable Plugin"
+#~ msgstr "Abilitare il plugin"
+
+#~ msgid "This option for Enable or Disable Plugin"
+#~ msgstr "Abilitare/Disabilitare il plugin"
+
+#~ msgid "Enable/Disable Check for update"
+#~ msgstr "Abilitare/Disabilitare verifica aggiornamenti"
+
+#~ msgid "This option for Enable or Disable Check for update"
+#~ msgstr "Abilitare/Disabilitare verifica circa la presenza di aggiornamenti"
+
+#~ msgid "Select key"
+#~ msgstr "Selezionare un tasto"
+
+#~ msgid "This option for choose Hot key to show RaedQuickSignal"
+#~ msgstr "Selezionare un tasto rapido per attivare RaedQuickSignal"
+
+#~ msgid "Enable/Disable DB Value"
+#~ msgstr "Abiliate/Disabilitare il valore DB"
+
+#~ msgid "This option for Enable or Disable DB tuner Value"
+#~ msgstr "Abilitare/Disabilitare la visualizzazione del valore DB del tuner"
+
+#~ msgid "Select Numbers or Resolution"
+#~ msgstr "Selezionare cifre o risoluzione"
+
+#~ msgid "This option for select to show channels numbers or Resolution info"
+#~ msgstr "Visualizzare il numero canale o informazioni sulla risoluzione"
+
+#~ msgid "Select Path Of Picons Folder"
+#~ msgstr "Percorso della directory picon"
+
+#~ msgid "This option for  Select Path to pring picons from insdie or outside plugin"
+#~ msgstr "Selezionare il percorso dei picon (internamente o esternamente al plugin)"
+
+#~ msgid "Select Style of Plugin"
+#~ msgstr "Stile del plugin"
+
+#~ msgid "This option for Select what skins Style you like to use"
+#~ msgstr "Stile preferito della skin da applicare al plugin"
+
+#~ msgid "Enable Fonts"
+#~ msgstr "Abilitare i caratteri"
+
+#~ msgid "This option for Enable or Disable Select style of fonts"
+#~ msgstr "Abilitare/Disabilitare la selezione dello stile dei caratteri"
+
+#~ msgid "Select Style of Font"
+#~ msgstr "Stile caratteri"
+
+#~ msgid ""
+#~ "This option for Select what font Style you like to use.\n"
+#~ "\n"
+#~ "And you can also add new fonts in (/use/share/fonts).\n"
+#~ "(NEED) do Restart GUI if add new fonts"
+#~ msgstr ""
+#~ "Selezionare lo stile caratteri preferito da applicare al plugin.\n"
+#~ "\n"
+#~ "È anche possibile installare caratteri aggiuntivi in /usr/share/fonts.\n"
+#~ "Nel caso di installazione di caratteri aggiuntivi sarà necessario un riavvio della GUI"
+
+#~ msgid "Refresh interval in minutes:"
+#~ msgstr "Intervallo di aggiornamento (minuti):"
+
+#~ msgid "This option for Adjust times to update weather info"
+#~ msgstr "Stabilire ogni quanti minuti aggiornare le informazioni metereologiche"
+
+#~ msgid "Temperature unit:"
+#~ msgstr "Unità di temperatura:"
+
+#~ msgid "This option for Select type of Temperature what you need"
+#~ msgstr "Selezionare quale unità di misurazione della temperatura adottare"
+
+#~ msgid "Location #press OK to change:"
+#~ msgstr "Posizione (Premere OK per modificare):"
+
+#~ msgid "This option for choose your city name and code for weather"
+#~ msgstr "Selezionare la propria città per ottenete informazioni metereologiche"
+
+#~ msgid " ________________________ 礑 Plugin 礑 ________________________"
+#~ msgstr " ________________________ 礑 Plugin 礑 ________________________"
+
+#~ msgid " _________________________ 礑 Skin 礑 _________________________"
+#~ msgstr " _________________________ 礑 Skin 礑 _________________________"
+
+#~ msgid " ________________________ 礑 Weather 礑 ________________________"
+#~ msgstr " ________________________ 礑 Meteo 礑 ________________________"
+
+#~ msgid ""
+#~ "Do want to install SatFinder now.\n"
+#~ "Device will by Auto restart after finished installed...."
+#~ msgstr ""
+#~ "Installare SatFinder ora.\n"
+#~ "Al termine il dispositivo verrà automaticamente riavviato."
+
+#~ msgid ""
+#~ "My Mod SatFinder To support Scan Feature.\n"
+#~ "(Not For Open source images).\n"
+#~ "\n"
+#~ "Do want to install now.\n"
+#~ "Device will by Auto restart after finished installed...."
+#~ msgstr ""
+#~ "SatFinder modificato per supportare la funzione di scansione.\n"
+#~ "(Non disponibile per immagini Open Source).\n"
+#~ "\n"
+#~ "Installare SatFinder ora.\n"
+#~ "Al termine il dispositivo verrà automaticamente riavviato."
+
+#~ msgid ""
+#~ "select your country\n"
+#~ "And wait to download data after Press (Ok)"
+#~ msgstr ""
+#~ "Selezionare la propria nazione.\n"
+#~ "Premere OK e attendere lo scaricamento dati"
+
+#~ msgid "Settings changed,restart enigma2 now?"
+#~ msgstr "Impostazioni modificate: riavviare enigma2 ora?"
+
+#~ msgid "Do want to Download it now ?!!"
+#~ msgstr "Sacricare i picon ora?"
+
+#~ msgid "Download and Installing Finished."
+#~ msgstr "Download e installazione terminati."
+
+#~ msgid "m/s"
+#~ msgstr "m/s"
+
+#~ msgid "ft/s"
+#~ msgstr "ft/s"
+
+#~ msgid "km/h"
+#~ msgstr "km/h"
+
+#~ msgid "mp/h"
+#~ msgstr "mp/h"
+
+#~ msgid "knots"
+#~ msgstr "Nodi"
+
+#~ msgid "Celsius"
+#~ msgstr "Celsius"
+
+#~ msgid "Fahrenheit"
+#~ msgstr "Fahrenheit"
