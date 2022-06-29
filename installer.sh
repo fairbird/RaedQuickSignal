@@ -84,32 +84,32 @@ mkdir -p $BACKUPPATH
 # check depends packges
 cd /tmp
 set -e
-rm -rf *RaedQuickSignal*
+rm -rf *RaedQuickSignal* > /dev/null 2>&1
 if [ -f /var/lib/dpkg/status ]; then
    echo "# Your image is OE2.5/2.6 #"
    echo ""
    echo ""
    cd /tmp
-   wget --no-check-certificate https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
+   wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
    tar -xzf main.tar.gz
-   cp -rf RaedQuickSignal-main/usr /
-   cp -rf RaedQuickSignal-main/tmp /
-   wget --no-check-certificate https://github.com/fairbird/RaedQuickSignal/raw/main/RaedQuickServName2-dreamos.tar.gz
+   cp -rf RaedQuickSignal-main/usr / > /dev/null 2>&1
+   cp -rf RaedQuickSignal-main/tmp / > /dev/null 2>&1
+   wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/raw/main/RaedQuickServName2-dreamos.tar.gz
    if [ -f '/tmp/RaedQuickServName2-dreamos.tar.gz' ]; then
-   	rm -f /usr/lib/enigma2/python/Components/Converter/RaedQuickServName2.py
+   	rm -f /usr/lib/enigma2/python/Components/Converter/RaedQuickServName2.py > /dev/null 2>&1
    fi
    tar -xzf RaedQuickServName2-dreamos.tar.gz -C /
 else
    echo "# Your image is OE2.0 #"
    echo ""
    echo ""
-   wget --no-check-certificate https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
-   tar -xzf main.tar.gz
-   cp -rf RaedQuickSignal-main/usr /
-   cp -rf RaedQuickSignal-main/tmp /
+   wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
+   tar -xzf main.tar.gz > /dev/null 2>&1
+   cp -rf RaedQuickSignal-main/usr / > /dev/null 2>&1
+   cp -rf RaedQuickSignal-main/tmp / > /dev/null 2>&1
 fi
-rm -rf *RaedQuickSignal*
-rm -rf *main*
+rm -rf *RaedQuickSignal* > /dev/null 2>&1
+rm -rf *main* > /dev/null 2>&1
 set +e
 cd ..
 sleep 2
@@ -153,10 +153,10 @@ if [ ! -d $PLUGINPATH/PICONS/weather ]; then
 else
 	cp -u $PLUGINPICONTMPPATH/weather/* $PLUGINPATH/PICONS/weather > /dev/null 2>&1
 fi
-rm -rf $PLUGINPICONTMPPATH
-rm -rf $BACKUPPATH
-rm -f /tmp/RaedQuickSignal-"$version".tar.gz
-rm -f /tmp/RaedQuickServName2-dreamos.tar.gz
+rm -rf $PLUGINPICONTMPPATH > /dev/null 2>&1
+rm -rf $BACKUPPATH > /dev/null 2>&1
+rm -f /tmp/RaedQuickSignal-"$version".tar.gz > /dev/null 2>&1
+rm -f /tmp/RaedQuickServName2-dreamos.tar.gz > /dev/null 2>&1
 sync
 echo ""
 echo ""
