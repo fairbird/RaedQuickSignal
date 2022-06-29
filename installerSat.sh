@@ -31,13 +31,13 @@ if [ -f $BRANDOS ]; then
 	echo "*** DreamOS images ***"
 	[ -d $SatfinderPATH ] && rm -rf $SatfinderPATH
 	[ -d $SignalfinderPATH ] && rm -rf $SignalfinderPATH
-	wget --no-check-certificate --content-disposition https://github.com/fairbird/RaedQuickSignal/raw/main/OSdream-Satfinder-5.7-RAED.tar.gz
+	wget --no-check-certificate https://github.com/fairbird/RaedQuickSignal/raw/main/OSdream-Satfinder-5.7-RAED.tar.gz
 	tar -xzf OSdream-Satfinder-5.7-RAED.tar.gz -C /
 elif [ -f $BRANDVU ] && [ -f $BlackHole  ] || [ -f $VTI ] ; then
 	echo "*** BH or VTI images ***"
 	[ -d $SatfinderPATH ] && rm -rf $SatfinderPATH
 	[ -d $SignalfinderPATH ] && rm -rf $SignalfinderPATH
-	wget --no-check-certificate --content-disposition https://github.com/fairbird/RaedQuickSignal/raw/main/Signalfinder-2.4.tar.gz
+	wget --no-check-certificate https://github.com/fairbird/RaedQuickSignal/raw/main/Signalfinder-2.4.tar.gz
 	tar -xzf Signalfinder-2.4.tar.gz -C /
 fi
 set +e
