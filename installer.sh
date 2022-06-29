@@ -90,11 +90,11 @@ if [ -f /var/lib/dpkg/status ]; then
    echo ""
    echo ""
    cd /tmp
-   wget --no-check-certificate --content-disposition https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
-   tar -xzf RaedQuickSignal-main.tar.gz
+   wget --no-check-certificate https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
+   tar -xzf main.tar.gz
    cp -rf RaedQuickSignal-main/usr /
    cp -rf RaedQuickSignal-main/tmp /
-   wget --no-check-certificate --content-disposition https://github.com/fairbird/RaedQuickSignal/raw/main/RaedQuickServName2-dreamos.tar.gz
+   wget --no-check-certificate https://github.com/fairbird/RaedQuickSignal/raw/main/RaedQuickServName2-dreamos.tar.gz
    if [ -f '/tmp/RaedQuickServName2-dreamos.tar.gz' ]; then
    	rm -f /usr/lib/enigma2/python/Components/Converter/RaedQuickServName2.py
    fi
@@ -103,12 +103,13 @@ else
    echo "# Your image is OE2.0 #"
    echo ""
    echo ""
-   wget --no-check-certificate --content-disposition https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
-   tar -xzf RaedQuickSignal-main.tar.gz
+   wget --no-check-certificate https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
+   tar -xzf main.tar.gz
    cp -rf RaedQuickSignal-main/usr /
    cp -rf RaedQuickSignal-main/tmp /
 fi
 rm -rf *RaedQuickSignal*
+rm -rf *main*
 set +e
 cd ..
 sleep 2
