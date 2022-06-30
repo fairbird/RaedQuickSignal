@@ -92,8 +92,8 @@ if [ -f /var/lib/dpkg/status ]; then
    cd /tmp
    wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
    tar -xzf main.tar.gz
-   cp -rf RaedQuickSignal-main/usr / > /dev/null 2>&1
-   cp -rf RaedQuickSignal-main/tmp / > /dev/null 2>&1
+   cp -rf RaedQuickSignal-main/usr /
+   cp -rf RaedQuickSignal-main/tmp /
    wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/raw/main/RaedQuickServName2-dreamos.tar.gz
    if [ -f '/tmp/RaedQuickServName2-dreamos.tar.gz' ]; then
    	rm -f /usr/lib/enigma2/python/Components/Converter/RaedQuickServName2.py > /dev/null 2>&1
@@ -104,15 +104,21 @@ else
    echo ""
    echo ""
    wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
-   tar -xzf main.tar.gz > /dev/null 2>&1
-   cp -rf RaedQuickSignal-main/usr / > /dev/null 2>&1
-   cp -rf RaedQuickSignal-main/tmp / > /dev/null 2>&1
+   tar -xzf main.tar.gz
+   cp -rf RaedQuickSignal-main/usr /
+   cp -rf RaedQuickSignal-main/tmp /
 fi
 rm -rf *RaedQuickSignal* > /dev/null 2>&1
 rm -rf *main* > /dev/null 2>&1
 set +e
 cd ..
 sleep 2
+
+### Check if plugin installed correctly
+if [ ! -d $PLUGINPATH ]; then
+	echo "Some thing wrong .. Plugin not installed"
+	exit 1
+fi
 
 mkdir -p $PLUGINPATH/PICONS
 ### move backup files/Folders save to plugin
