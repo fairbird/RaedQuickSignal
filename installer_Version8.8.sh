@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer._Version8.8.sh -O - | /bin/sh
 
 version=8.8
