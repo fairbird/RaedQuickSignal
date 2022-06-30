@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installerSat.sh -O - | /bin/sh
 
 BRANDOS=/var/lib/dpkg/status
