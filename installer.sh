@@ -92,8 +92,8 @@ if [ -f /var/lib/dpkg/status ]; then
    cd /tmp
    wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
    tar -xzf main.tar.gz
-   cp -r RaedQuickSignal-main/usr /
-   cp -r RaedQuickSignal-main/tmp /
+   cp -r 'RaedQuickSignal-main/usr' '/'
+   cp -r 'RaedQuickSignal-main/tmp/RaedQuickSignal' '/tmp'
    wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/raw/main/RaedQuickServName2-dreamos.tar.gz
    if [ -f '/tmp/RaedQuickServName2-dreamos.tar.gz' ]; then
    	rm -f /usr/lib/enigma2/python/Components/Converter/RaedQuickServName2.py > /dev/null 2>&1
@@ -105,8 +105,8 @@ else
    echo ""
    wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
    tar -xzf main.tar.gz
-   cp -r RaedQuickSignal-main/usr /
-   cp -r RaedQuickSignal-main/tmp /
+   cp -r 'RaedQuickSignal-main/usr' '/'
+   cp -r 'RaedQuickSignal-main/tmp/RaedQuickSignal' '/tmp'
 fi
 rm -rf *RaedQuickSignal* > /dev/null 2>&1
 rm -rf *main* > /dev/null 2>&1
