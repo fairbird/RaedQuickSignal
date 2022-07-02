@@ -108,8 +108,6 @@ else
    cp -r 'RaedQuickSignal-main/usr' '/'
    cp -r 'RaedQuickSignal-main/tmp/RaedQuickSignal' '/tmp'
 fi
-rm -rf *RaedQuickSignal* > /dev/null 2>&1
-rm -rf *main* > /dev/null 2>&1
 set +e
 cd ..
 sleep 2
@@ -159,6 +157,8 @@ if [ ! -d $PLUGINPATH/PICONS/weather ]; then
 else
 	cp -u $PLUGINPICONTMPPATH/weather/* $PLUGINPATH/PICONS/weather > /dev/null 2>&1
 fi
+rm -rf *RaedQuickSignal* > /dev/null 2>&1
+rm -rf *main* > /dev/null 2>&1
 rm -rf $PLUGINPICONTMPPATH > /dev/null 2>&1
 rm -rf $BACKUPPATH > /dev/null 2>&1
 rm -f /tmp/RaedQuickSignal-"$version".tar.gz > /dev/null 2>&1
