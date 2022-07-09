@@ -2,8 +2,8 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=14.6
-description=What is NEW:\n-Move plugin to my source github\n\n*************************\n:ما هو الجديد\n-github نقل البلجن الى سورساتي على
+version=14.7
+description=What is NEW:\n-Fix url download line fir picons\n\n*************************\n:ما هو الجديد\n-تعديل رابط تحميل البايكونات
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
