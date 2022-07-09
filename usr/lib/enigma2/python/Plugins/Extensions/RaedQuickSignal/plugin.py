@@ -741,7 +741,6 @@ class RaedQuickSignalScreen(Screen):
         def checkupdates(self):
                try:
                        from twisted.web.client import getPage, error
-                       #url = b"http://tunisia-dreambox.info/TSplugins/RaedQuickSignal/installer.sh"
                        url = b"https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh"
                        getPage(url,timeout=10).addCallback(self.parseData).addErrback(self.errBack)
                except Exception as error:
@@ -777,7 +776,6 @@ class RaedQuickSignalScreen(Screen):
                 try:
                      if answer:
                            cmdlist = []
-                           #cmd="wget http://tunisia-dreambox.info/TSplugins/RaedQuickSignal/installer.sh -O - | /bin/sh"
                            cmd="wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh"
                            cmdlist.append(cmd)
                            self.session.open(Console, title='%s' % title30, cmdlist=cmdlist, finishedCallback=self.myCallback, closeOnSuccess=False)
@@ -974,7 +972,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                 try:
                      if answer:
                            cmdlist = []
-                           cmd="wget http://tunisia-dreambox.info/TSplugins/RaedQuickSignal/installerSat.sh -O - | /bin/sh"
+                           cmd="wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installerSat.sh -O - | /bin/sh"
                            cmdlist.append(cmd)
                            self.session.open(Console, title='%s' % title66, cmdlist=cmdlist, finishedCallback=self.myCallback, closeOnSuccess=False)
                 except:
@@ -1093,13 +1091,13 @@ class PiconsScreen(Screen):
                                 cmdlist = []
                                 index = self["menu"].l.getCurrentSelection()[1]
                                 if index == "Black":
-                                        cmd="wget http://tunisia-dreambox.info/TSplugins/RaedQuickSignal/picons/installerBlackPicons.sh -O - | /bin/sh"
+                                        cmd="wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installerBlackPicons.sh -O - | /bin/sh"
                                         cmdlist.append(cmd)
                                 elif index == "White":
-                                        cmd="wget http://tunisia-dreambox.info/TSplugins/RaedQuickSignal/picons/installerWhitePicons.sh -O - | /bin/sh"
+                                        cmd="wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installerWhitePicons.sh -O - | /bin/sh"
                                         cmdlist.append(cmd)
                                 elif index == "Transparent":
-                                        cmd="wget http://tunisia-dreambox.info/TSplugins/RaedQuickSignal/picons/installerTransparentPicons.sh -O - | /bin/sh"
+                                        cmd="wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installerTransparentPicons.sh -O - | /bin/sh"
                                         cmdlist.append(cmd)
                                 self.session.open(Console, title='%s' % title73, cmdlist=cmdlist, finishedCallback=self.Finished, closeOnSuccess=True)
                         else:
