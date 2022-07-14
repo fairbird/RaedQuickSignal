@@ -1,5 +1,5 @@
 #!/bin/sh
-##setup command=wget http://tunisia-dreambox.info/TSplugins/RaedQuickSignal/picons/installerTransparentPicons.sh -O - | /bin/sh
+##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/picons/main/installerTransparentPicons.sh -O - | /bin/sh
 ## This script to downlaod and install Black Picon by () to inside plugin
 
 if [ ! -d /usr/lib64 ]; then
@@ -20,7 +20,7 @@ rm -rf $PLUGINPATH/PICONS/piconCrypt
 # Download and install Transparent Picons
 cd /tmp
 set -e
-wget "http://tunisia-dreambox.info/TSplugins/RaedQuickSignal/picons/TransparentPicons.tar.gz"
+wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/picons/raw/main/TransparentPicons.tar.gz
 tar -xzf TransparentPicons.tar.gz -C /
 set +e
 cd ..
