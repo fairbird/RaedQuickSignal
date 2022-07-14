@@ -157,8 +157,8 @@ if [ ! -d $PLUGINPATH/PICONS/weather ]; then
 else
 	cp -u $PLUGINPICONTMPPATH/weather/* $PLUGINPATH/PICONS/weather > /dev/null 2>&1
 fi
-rm -rf *RaedQuickSignal* > /dev/null 2>&1
-rm -rf *main* > /dev/null 2>&1
+rm -rf /tmp/*RaedQuickSignal* > /dev/null 2>&1
+rm -rf /tmp/*main* > /dev/null 2>&1
 rm -rf $PLUGINPICONTMPPATH > /dev/null 2>&1
 rm -rf $BACKUPPATH > /dev/null 2>&1
 rm -f /tmp/RaedQuickSignal-"$version".tar.gz > /dev/null 2>&1
