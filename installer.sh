@@ -90,11 +90,11 @@ if [ -f /var/lib/dpkg/status ]; then
    echo ""
    echo ""
    cd /tmp
-   wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
+   wget https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
    tar -xzf main.tar.gz
    cp -r 'RaedQuickSignal-main/usr' '/'
    cp -r 'RaedQuickSignal-main/tmp/RaedQuickSignal' '/tmp'
-   wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/raw/main/RaedQuickServName2-dreamos.tar.gz
+   wget https://github.com/fairbird/RaedQuickSignal/raw/main/RaedQuickServName2-dreamos.tar.gz
    if [ -f '/tmp/RaedQuickServName2-dreamos.tar.gz' ]; then
    	rm -f /usr/lib/enigma2/python/Components/Converter/RaedQuickServName2.py > /dev/null 2>&1
    fi
@@ -103,7 +103,7 @@ else
    echo "# Your image is OE2.0 #"
    echo ""
    echo ""
-   wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
+   wget https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
    tar -xzf main.tar.gz
    cp -r 'RaedQuickSignal-main/usr' '/'
    cp -r 'RaedQuickSignal-main/tmp/RaedQuickSignal' '/tmp'
