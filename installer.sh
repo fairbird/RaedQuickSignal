@@ -2,8 +2,8 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=14.8
-description=What is NEW:\n-Fix url download line fir picons\n\n*************************\n:ما هو الجديد\n-تعديل رابط تحميل البايكونات
+version=14.9
+description=What is NEW:\n-Fix add city in weather list\n\n*************************\n:ما هو الجديد\n-تعديل أدخال إسم المدنية لحالة الطقس
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
