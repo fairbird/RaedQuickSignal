@@ -370,7 +370,7 @@ class WeatherLocationChoiceList(Screen):
                 try:
                         if os_path.exists('/tmp/weathermsn.xml'):
                                 os_remove('/tmp/weathermsn.xml')
-                        returnValue = self["choicelist"].l.getCurrentSelection()
+                        returnValue = city
                         countryCode=self.country.lower()+"-"+self.country.upper()
                         if self.get_xmlfile(returnValue,countryCode)==False:
                                 self.session.open(MessageBox, _("%s") % title18,MessageBox.TYPE_ERROR)
