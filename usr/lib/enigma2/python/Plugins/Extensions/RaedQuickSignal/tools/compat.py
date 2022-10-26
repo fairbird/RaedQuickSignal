@@ -9,6 +9,7 @@ if version_info >= (2, 7, 9):
 	import ssl
 	ssl._create_default_https_context = ssl._create_unverified_context
 
+
 if version_info[0] == 2:
 	# Python 2
 	compat_str = unicode
@@ -21,6 +22,7 @@ if version_info[0] == 2:
 	from urllib2 import URLError as compat_URLError
 	from urlparse import urljoin as compat_urljoin
 	from urlparse import urlparse as compat_urlparse
+	from urlparse import parse_qs as compat_parse_qs
 	from urlparse import urlunparse as compat_urlunparse
 	from httplib import HTTPException as compat_HTTPException
 else:
