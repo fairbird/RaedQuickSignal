@@ -1091,13 +1091,13 @@ class PiconsScreen(Screen):
                                 cmdlist = []
                                 index = self["menu"].l.getCurrentSelection()[1]
                                 if index == "Black":
-                                        cmd='wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/installerBlackPicons.sh -O - | /bin/sh'
+                                        cmd='wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/installerBlackPicons.sh -O - | /bin/sh'
                                         cmdlist.append(cmd)
                                 elif index == "White":
-                                        cmd='wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/installerWhitePicons.sh -O - | /bin/sh'
+                                        cmd='wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/installerWhitePicons.sh -O - | /bin/sh'
                                         cmdlist.append(cmd)
                                 elif index == "Transparent":
-                                        cmd='wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/installerTransparentPicons.sh -O - | /bin/sh'
+                                        cmd='wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/installerTransparentPicons.sh -O - | /bin/sh'
                                         cmdlist.append(cmd)
                                 self.session.open(Console, title='%s' % title73, cmdlist=cmdlist, finishedCallback=self.Finished, closeOnSuccess=True)
                         else:
