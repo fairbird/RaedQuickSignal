@@ -91,7 +91,7 @@ class RaedQuickSignalPicEmuF(Renderer, Poll):
                 if not info:
                         return ""
                 # PurE2
-                if os.path.exists("/etc/clist.list") and os.path.exists("/usr/lib/enigma2/python/Plugins/Extensions/pManager/camrestart.pyo") or os.path.exists("/usr/lib/enigma2/python/Plugins/Extensions/pManager/camrestart.py"):
+                if os.path.exists("/etc/clist.list") and os.path.exists("/usr/lib/enigma2/python/Plugins/Extensions/pManager/camrestart.pyo") or os.path.exists("/etc/clist.list") and os.path.exists("/usr/lib/enigma2/python/Plugins/Extensions/pManager/camrestart.pyc") or os.path.exists("/usr/lib/enigma2/python/Plugins/Extensions/pManager/camrestart.py"):
                         try:
                                 camdlist = open("/etc/clist.list", "r")
                         except:
@@ -109,7 +109,7 @@ class RaedQuickSignalPicEmuF(Renderer, Poll):
                         else: 
                                 return None
                 # VIX
-                elif os.path.exists("/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/SoftcamManager.pyo"):
+                elif os.path.exists("/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/SoftcamManager.pyo") or os.path.exists("/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX/SoftcamManager.pyc"):
                         try:
                                 self.autostartcams = config.softcammanager.softcams_autostart.value
                                 for softcamcheck in self.autostartcams:
@@ -122,16 +122,11 @@ class RaedQuickSignalPicEmuF(Renderer, Poll):
                 elif os.path.exists("/tmp/ucm_cam.info"):
                         return open("/tmp/ucm_cam.info").read()
                 # egami
-                elif os.path.exists("/tmp/egami.inf"):
-                        for line in open("/tmp/egami.inf"):
-                                if 'Current emulator:' in line:
-                                        return line.split(':')[-1].lstrip().strip('\n')
-                # egami #other code 
-                #elif os.path.exists("/tmp/egami.inf","r"):
-                #        for line in open("/tmp/egami.inf"):
-                #                item = line.split(":",1)
-                #                if item[0] == "Current emulator":
-                #                        return item[1].strip()
+                elif os.path.exists("/etc/egami/emuname"):
+                        try:
+                                camdlist = open("/etc/egami/emuname", "r")
+                        except:
+                                camdlist = None
                 # TS-Panel & Ts images
                 elif os.path.exists("/etc/startcam.sh"):
                         try:
@@ -145,7 +140,7 @@ class RaedQuickSignalPicEmuF(Renderer, Poll):
                         if config.plugins.emuman.cam.value: 
                                 return config.plugins.emuman.cam.value
                 #PKT
-                elif os.path.exists("/usr/lib/enigma2/python/Plugins/Extensions/PKT/plugin.pyo"):
+                elif os.path.exists("/usr/lib/enigma2/python/Plugins/Extensions/PKT/plugin.pyo") or os.path.exists("/usr/lib/enigma2/python/Plugins/Extensions/PKT/plugin.pyc"):
                         if config.plugins.emuman.cam.value: 
                                 return config.plugins.emuman.cam.value
                 #HDMU
@@ -198,7 +193,7 @@ class RaedQuickSignalPicEmuF(Renderer, Poll):
                         except:
                                 return None
                 #Newnigma2
-                elif os.path.exists("/usr/lib/enigma2/python/Plugins/newnigma2/eCamdCtrl/eCamdctrl.pyo"):
+                elif os.path.exists("/usr/lib/enigma2/python/Plugins/newnigma2/eCamdCtrl/eCamdctrl.pyo") or elif os.path.exists("/usr/lib/enigma2/python/Plugins/newnigma2/eCamdCtrl/eCamdctrl.pyc"):
                         try:
                           from Plugins.newnigma2.eCamdCtrl.eCamdctrl import runningcamd
                           if config.plugins.camdname.skin.value: 
@@ -206,7 +201,7 @@ class RaedQuickSignalPicEmuF(Renderer, Poll):
                         except: 
                                 return None
                 #Newnigma2 OE2.5
-                elif os.path.exists("/usr/lib/enigma2/python/Plugins/newnigma2/camdctrl/camdctrl.pyo"):
+                elif os.path.exists("/usr/lib/enigma2/python/Plugins/newnigma2/camdctrl/camdctrl.pyo") or os.path.exists("/usr/lib/enigma2/python/Plugins/newnigma2/camdctrl/camdctrl.pyc"):
                         if config.plugins.camdname.skin.value:
                             return config.usage.emu_name.value
                         return None
@@ -224,7 +219,7 @@ class RaedQuickSignalPicEmuF(Renderer, Poll):
                         except:
                                 return None
                 # GP4 OE2.5
-                elif os.path.exists("/usr/lib/enigma2/python/Plugins/GP4/geminicamswitch/gscamScreen.pyo"):
+                elif os.path.exists("/usr/lib/enigma2/python/Plugins/GP4/geminicamswitch/gscamScreen.pyo") or os.path.exists("/usr/lib/enigma2/python/Plugins/GP4/geminicamswitch/gscamScreen.pyc"):
                                 #from Plugins.GP4.geminicamswitch.gscamScreen import Camswitch
                                 from Plugins.GP4.geminicamswitch.gscamtools import gpconfset
                                 if gpconfset.gcammanager.currentbinary.value: 
