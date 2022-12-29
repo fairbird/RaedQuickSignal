@@ -15,9 +15,9 @@ from Tools.Directories import fileExists
 import os
 
 if os.path.exists('/usr/lib/bitratecalc.so'):
-	if not os.path.islink('/usr/lib/enigma2/python/Components/Converter/bitratecalc.so') or not os.path.exists('/usr/lib/enigma2/python/Components/Converter/bitratecalc.so'):
-		os.system('ln -s /usr/lib/bitratecalc.so /usr/lib/enigma2/python/Components/Converter/bitratecalc.so')
-	from Components.Converter.bitratecalc import eBitrateCalculator
+        if not os.path.islink('/usr/lib/enigma2/python/Components/Converter/bitratecalc.so') or not os.path.exists('/usr/lib/enigma2/python/Components/Converter/bitratecalc.so'):
+                os.system('ln -s /usr/lib/bitratecalc.so /usr/lib/enigma2/python/Components/Converter/bitratecalc.so')
+        from Components.Converter.bitratecalc import eBitrateCalculator
 
 if os.path.exists('/usr/lib/bitratecalc.so') or os.path.exists('/usr/lib/enigma2/python/Components/Converter/bitratecalc.so') or os.path.islink('/usr/lib/enigma2/python/Components/Converter/bitratecalc.so'):
         BITRATE = True
@@ -114,26 +114,26 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                         service = self.source.service
                         vpid = apid = dvbnamespace = tsid = onid = -1
                         if service:
-                        	serviceInfo = service.info()
-                        	vpid = serviceInfo.getInfo(iServiceInformation.sVideoPID)
-                        	apid = serviceInfo.getInfo(iServiceInformation.sAudioPID)
-                        	tsid = serviceInfo.getInfo(iServiceInformation.sTSID)
-                        	onid = serviceInfo.getInfo(iServiceInformation.sONID)
-                        	dvbnamespace = serviceInfo.getInfo(iServiceInformation.sNamespace)
+                                serviceInfo = service.info()
+                                vpid = serviceInfo.getInfo(iServiceInformation.sVideoPID)
+                                apid = serviceInfo.getInfo(iServiceInformation.sAudioPID)
+                                tsid = serviceInfo.getInfo(iServiceInformation.sTSID)
+                                onid = serviceInfo.getInfo(iServiceInformation.sONID)
+                                dvbnamespace = serviceInfo.getInfo(iServiceInformation.sNamespace)
                         if BITRATE and vpid > 0 and self.type == self.bitrate:
                                 try:
-                                	self.videoBitrate = eBitrateCalculator(vpid, dvbnamespace, tsid, onid, 1000, 1024*1024) 
-                                	self.videoBitrate.callback.append(self.getVideoBitrateData)
+                                        self.videoBitrate = eBitrateCalculator(vpid, dvbnamespace, tsid, onid, 1000, 1024*1024) 
+                                        self.videoBitrate.callback.append(self.getVideoBitrateData)
                                 except:
-                                	self.videoBitrate = eBitrateCalculator(vpid, dvbnamespace, tsid, onid, 1000, 1024*1024) 
-                                	self.videoBitrate_conn = self.videoBitrate.timeout.connect(self.getVideoBitrateData)
+                                        self.videoBitrate = eBitrateCalculator(vpid, dvbnamespace, tsid, onid, 1000, 1024*1024) 
+                                        self.videoBitrate_conn = self.videoBitrate.timeout.connect(self.getVideoBitrateData)
                         if BITRATE and apid > 0 and self.type == self.bitrate:
                                 try:
-                                	self.audioBitrate = eBitrateCalculator(apid, dvbnamespace, tsid, onid, 1000, 64*1024)
-                                	self.audioBitrate.callback.append(self.getAudioBitrateData)
+                                        self.audioBitrate = eBitrateCalculator(apid, dvbnamespace, tsid, onid, 1000, 64*1024)
+                                        self.audioBitrate.callback.append(self.getAudioBitrateData)
                                 except:
-                                	self.audioBitrate = eBitrateCalculator(apid, dvbnamespace, tsid, onid, 1000, 64*1024)
-                                	self.audioBitrate_conn  = self.audioBitrate.timeout.connect(self.getAudioBitrateData)
+                                        self.audioBitrate = eBitrateCalculator(apid, dvbnamespace, tsid, onid, 1000, 64*1024)
+                                        self.audioBitrate_conn  = self.audioBitrate.timeout.connect(self.getAudioBitrateData)
                 except:
                         pass
                 
@@ -276,8 +276,8 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                         elif os.path.exists("/etc/egami/emuname"):
                                 try:
                                         camdlist = open("/etc/egami/emuname", "r")
-				except:
-					return None
+                                except:
+                                        return None
                         # TS-Panel
                         elif os.path.exists("/etc/startcam.sh"):
                                 try:
