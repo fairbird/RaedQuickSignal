@@ -267,16 +267,17 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                                 else: 
                                         return None
                         # VIX
-                        elif os.path.exists(resolveFilename(SCOPE_PLUGINS, "SystemPlugins/ViX/SoftcamManager.pyo")):
+                        elif os.path.exists(resolveFilename(SCOPE_PLUGINS, "SystemPlugins/ViX/SoftcamManager.pyo")) or os.path.exists(resolveFilename(SCOPE_PLUGINS, "SystemPlugins/ViX/SoftcamManager.pyc")):
                                 if os.path.exists('/tmp/cam.check.log'):
                                         for line in open("/tmp/cam.check.log"):
                                                 if ": Starting" in line:
                                                         return line.split(" ")[-1].lstrip()
                         # egami
-                        elif os.path.exists("/tmp/egami.inf"):
-                                for line in open("/tmp/egami.inf"):
-                                        if 'Current emulator:' in line:
-                                                return line.split(':')[-1].lstrip().strip('\n')
+                        elif os.path.exists("/etc/egami/emuname"):
+                                try:
+                                        camdlist = open("/etc/egami/emuname", "r")
+				except:
+					return None
                         # TS-Panel
                         elif os.path.exists("/etc/startcam.sh"):
                                 try:
@@ -290,7 +291,7 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                                 if config.plugins.emuman.cam.value: 
                                         return config.plugins.emuman.cam.value
                         #PKT
-                        elif os.path.exists(resolveFilename(SCOPE_PLUGINS, "Extensions/PKT/plugin.pyo")):
+                        elif os.path.exists(resolveFilename(SCOPE_PLUGINS, "Extensions/PKT/plugin.pyo")) or os.path.exists(resolveFilename(SCOPE_PLUGINS, "Extensions/PKT/plugin.pyc")):
                                 if config.plugins.emuman.cam.value: 
                                         return config.plugins.emuman.cam.value
                         #HDMU
@@ -355,7 +356,7 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                                 except:
                                         camdlist = None
                         # Newnigma2
-                        elif os.path.exists(resolveFilename(SCOPE_PLUGINS, "newnigma2/eCamdCtrl/eCamdctrl.pyo")):
+                        elif os.path.exists(resolveFilename(SCOPE_PLUGINS, "newnigma2/eCamdCtrl/eCamdctrl.pyo")) or os.path.exists(resolveFilename(SCOPE_PLUGINS, "newnigma2/eCamdCtrl/eCamdctrl.pyc")):
                                 try:
                                         from Plugins.newnigma2.eCamdCtrl.eCamdctrl import runningcamd
                                         if config.plugins.camdname.skin.value: 
@@ -363,7 +364,7 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                                 except: 
                                         return None
                         # Newnigma2 OE2.5
-                        elif os.path.exists(resolveFilename(SCOPE_PLUGINS, "newnigma2/camdctrl/camdctrl.pyo")):
+                        elif os.path.exists(resolveFilename(SCOPE_PLUGINS, "newnigma2/camdctrl/camdctrl.pyo")) or os.path.exists(resolveFilename(SCOPE_PLUGINS, "newnigma2/camdctrl/camdctrl.pyc")):
                                 if config.plugins.camdname.skin.value:
                                         return config.usage.emu_name.value
                                 return None
@@ -381,7 +382,7 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                                 except:
                                         return None
                         # GP4 OE2.5
-                        elif os.path.exists(resolveFilename(SCOPE_PLUGINS, "GP4/geminicamswitch/gscamScreen.pyo")):
+                        elif os.path.exists(resolveFilename(SCOPE_PLUGINS, "GP4/geminicamswitch/gscamScreen.pyo")) or os.path.exists(resolveFilename(SCOPE_PLUGINS, "GP4/geminicamswitch/gscamScreen.pyc")):
                                 #from Plugins.GP4.geminicamswitch.gscamScreen import Camswitch
                                 from Plugins.GP4.geminicamswitch.gscamtools import gpconfset
                                 if gpconfset.gcammanager.currentbinary.value: 
