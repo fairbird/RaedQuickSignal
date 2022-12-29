@@ -2,8 +2,8 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=15.0
-description=What is NEW:\n-Edit download code for picons \n\n*************************\n:ما هو الجديد\n-تعديل أمر تحميل البايكونات
+version=15.1
+description=What is NEW:\n-[Converter + Rendere] Update some files for picons \n\n*************************\n:ما هو الجديد\n-[Converter + Rendere] تحديث بعض ملفات
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
