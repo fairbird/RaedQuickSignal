@@ -193,7 +193,7 @@ class RaedQuickSignalPicEmuF(Renderer, Poll):
                         except:
                                 return None
                 #Newnigma2
-                elif os.path.exists("/usr/lib/enigma2/python/Plugins/newnigma2/eCamdCtrl/eCamdctrl.pyo") or elif os.path.exists("/usr/lib/enigma2/python/Plugins/newnigma2/eCamdCtrl/eCamdctrl.pyc"):
+                elif os.path.exists("/usr/lib/enigma2/python/Plugins/newnigma2/eCamdCtrl/eCamdctrl.pyo") or os.path.exists("/usr/lib/enigma2/python/Plugins/newnigma2/eCamdCtrl/eCamdctrl.pyc"):
                         try:
                           from Plugins.newnigma2.eCamdCtrl.eCamdctrl import runningcamd
                           if config.plugins.camdname.skin.value: 
