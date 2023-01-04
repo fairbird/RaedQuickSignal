@@ -3,7 +3,7 @@
 
 ######### Only These two lines to edit with new version ######
 version=15.2
-description=What is NEW:\n-Try to solve the font conflict changing with plugin [ArabicSavior](https://github.com/fairbird/ArabicSavior) \n\n*************************\n:ما هو الجديد\n-ArabicSavior محاولة إصلاح تعارض تغير الخطوط مع بلجن
+description=What is NEW:\n-Try to solve the font conflict changing with plugin ArabicSavior \n\n*************************\n:ما هو الجديد\n-ArabicSavior محاولة إصلاح تعارض تغير الخطوط مع بلجن
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
