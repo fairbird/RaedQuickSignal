@@ -1,7 +1,4 @@
 #RAEDQuickSignal (c) RAED 07-02-2014
-# Created BY RAED 18-11-2019
-# Update BY RAED 07-02-2021
-# Update BY RAED 20-03-2021
 
 import os
 from enigma import addFont
@@ -13,16 +10,14 @@ from Plugins.Extensions.RaedQuickSignal.tools.configs import *
 
 ## Add Fonts codes
 IMAGEPLUGIN=resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/images/")
-#if config.plugins.RaedQuickSignal.fontsenable.value:
-try:
-	fontfile = config.plugins.RaedQuickSignal.fontsStyle.value
-except:
-	fontfile = IMAGEPLUGIN + 'nmsbd.ttf'
-#else:
-fontfile = IMAGEPLUGIN + 'nmsbd.ttf'
 
-FontName='RSQFont'
-addFont(fontfile, 'RSQFont', 100, 1)
+if config.plugins.RaedQuickSignal.fontsStyle.value == "Default":
+	FontName='Regular'
+else:
+	fontfile = config.plugins.RaedQuickSignal.fontsStyle.value
+	FontName='RSQFont'
+	addFont(fontfile, 'RSQFont', 100, 1)
+
 ## End Add Fonts codes
 
 if config.plugins.RaedQuickSignal.numbers.value == "Numbers":
