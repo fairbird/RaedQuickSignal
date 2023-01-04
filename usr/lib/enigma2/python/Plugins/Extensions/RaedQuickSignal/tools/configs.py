@@ -18,16 +18,10 @@ def trace_error():
     except:
         pass
 
+DEFAULTFont="Default"
 FONTSPATH = '/usr/share'
 FONTPLUGIN=resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/images")
 GETPath = os.path.join(FONTSPATH + '/fonts')
-
-if os.path.exists(FONTSPATH + '/fonts/nmsbd.ttf'):
-	DEFAULTFont = FONTSPATH + '/fonts/nmsbd.ttf'
-	print("DEFAULTFont :", DEFAULTFont)
-else:
-	DEFAULTFont = FONTPLUGIN + '/nmsbd.ttf'
-	print("DEFAULTFont :", DEFAULTFont)
 
 fonts = []
 try:
