@@ -2,8 +2,8 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=15.1
-description=What is NEW:\n-[Converter + Rendere] Update some files for picons \n\n*************************\n:ما هو الجديد\n-[Converter + Rendere] تحديث بعض ملفات
+version=15.2
+description=What is NEW:\n-Try to solve the font conflict changing with plugin [ArabicSavior](https://github.com/fairbird/ArabicSavior) \n\n*************************\n:ما هو الجديد\n-ArabicSavior محاولة إصلاح تعارض تغير الخطوط مع بلجن
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
