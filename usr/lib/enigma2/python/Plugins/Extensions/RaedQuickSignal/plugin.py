@@ -419,11 +419,11 @@ class RaedQuickSignalScreen(Screen):
                         fontSize = 100
                 else:
                         fontSize = config.plugins.RaedQuickSignal.fontsSize.value
-                try:
-                        fontfile = config.plugins.RaedQuickSignal.fontsStyle.value
-                except:
-                        fontfile = IMAGEPLUGIN + 'nmsbd.ttf'
-                addFont(fontfile, 'RSQFont', int(fontSize), 1)
+                #try:
+                #        fontfile = config.plugins.RaedQuickSignal.fontsStyle.value
+                #except:
+                #        fontfile = IMAGEPLUGIN + 'nmsbd.ttf'
+                #addFont(fontfile, 'RSQFont', int(fontSize), 1)
                 ## End Add Fonts codes
 
                 if config.plugins.RaedQuickSignal.style.value == "AGC1":
@@ -856,6 +856,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                 self["help"] = StaticText()
 
                 self.currkeyname_value = config.plugins.RaedQuickSignal.keyname.value
+                self.fontsStyle_value = config.plugins.RaedQuickSignal.fontsStyle.value
                 #self.fontsenabled_value = config.plugins.RaedQuickSignal.fontsenable.value
                 self.numbers_value = config.plugins.RaedQuickSignal.numbers.value
                 self.lang_value = config.plugins.RaedQuickSignal.lang.value
@@ -1021,6 +1022,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                         keyfile.write('<keymap>\n\t<map context="GlobalActions">\n\t\t<key id="%s" mapto="showRaedQuickSignal" flags="m" />\n\t</map>\n</keymap>' % config.plugins.RaedQuickSignal.keyname.value)
                         keyfile.close()
                         if not self.currkeyname_value == config.plugins.RaedQuickSignal.keyname.value or \
+                        not self.fontsStyle_value == config.plugins.RaedQuickSignal.fontsStyle.value or \
                         not self.numbers_value == config.plugins.RaedQuickSignal.numbers.value or \
                         not self.lang_value == config.plugins.RaedQuickSignal.lang.value:
                                 self.session.openWithCallback(self.restart, MessageBox, _("%s") % title68)
