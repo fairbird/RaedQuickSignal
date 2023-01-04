@@ -68,18 +68,18 @@ class RaedQuickTestConnection(Converter, object):
 			self.testTimer.start(1000, True)
  
 	def get_iface_list(self):
-		names = array.array('B', '\0' * BYTES)
+		names = array.array('B', b'\0' * BYTES)
 		sck = socket(AF_INET, SOCK_DGRAM)
 		bytelen = struct.unpack('iL', fcntl.ioctl(sck.fileno(), SIOCGIFCONF, struct.pack('iL', BYTES, names.buffer_info()[0])))[0]
 		sck.close()
 		namestr = names.tostring()
-		return [namestr[i:i+32].split('\0', 1)[0] for i in range(0, bytelen, 32)]
+		return [namestr[i:i+32].split(b'\0', 1)[0] for i in range(0, bytelen, 32)]
 
 	def test(self):
 		prevOK = self.testOK
 		link = "down"
 		for iface in self.get_iface_list():
-			if "lo" in iface: continue
+			if b"lo" in iface: continue
 			if os_path.exists("/sys/class/net/%s/operstate"%(iface)):
 				fd = open("/sys/class/net/%s/operstate"%(iface), "r")
 				link = fd.read().strip()
