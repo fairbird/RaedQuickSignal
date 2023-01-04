@@ -72,7 +72,10 @@ class RaedQuickTestConnection(Converter, object):
 		sck = socket(AF_INET, SOCK_DGRAM)
 		bytelen = struct.unpack('iL', fcntl.ioctl(sck.fileno(), SIOCGIFCONF, struct.pack('iL', BYTES, names.buffer_info()[0])))[0]
 		sck.close()
-		namestr = names.tostring()
+		try:
+			namestr = names.tostring() # py2
+		except:
+			namestr = names.tobytes() # py3
 		return [namestr[i:i+32].split(b'\0', 1)[0] for i in range(0, bytelen, 32)]
 
 	def test(self):
