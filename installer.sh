@@ -2,8 +2,8 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=15.2
-description=What is NEW:\n-Try to solve the font conflict changing with plugin ArabicSavior \n\n*************************\n:ما هو الجديد\n-ArabicSavior محاولة إصلاح تعارض تغير
+version=15.3
+description=What is NEW:\n-Fix Some bugs on DreamOS images \n\n*************************\n:ما هو الجديد\n-DreamOS إصلاح بعض الأخطاء على صور
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
