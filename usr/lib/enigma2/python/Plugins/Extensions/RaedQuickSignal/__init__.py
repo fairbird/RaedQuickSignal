@@ -5,14 +5,18 @@
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS
 import os
 
-### Share path
 SHAREPATH='/usr/share/enigma2/'
-### Picons + Icons path
-EMUPATH=resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICONS/emu")
-WEATHEPATH=resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICONS/weather")
-PICONSATPATH=resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICONS/piconSat")
-PICONPROVPATH=resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICONS/piconProv")
-PICONCRYPTPATH=resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICONS/piconCrypt")
+DEFAULTFont = '/usr/share/fonts/Default.ttf'
+
+FONTPLUGIN = resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/images/Default.ttf")
+EMUPATH = resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICONS/emu")
+WEATHEPATH = resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICONS/weather")
+PICONSATPATH = resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICONS/piconSat")
+PICONPROVPATH = resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICONS/piconProv")
+PICONCRYPTPATH = resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICONS/piconCrypt")
+
+if not os.path.exists(DEFAULTFont):
+	os.system('cp -f %s %s' % (FONTPLUGIN, DEFAULTFont))
 
 keymapfile='KEY_TEXT'
 try:

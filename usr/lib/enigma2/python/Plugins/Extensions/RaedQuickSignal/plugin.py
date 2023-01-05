@@ -912,17 +912,17 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                 self["config"].onSelectionChanged.append(self.Picture)
 
                 # DreamOS Config/menu fonts
-                if DreamOS():
+                #if DreamOS():
                         #if config.plugins.RaedQuickSignal.fontsenable.value and isHD():
-                        if isHD():
-                                self["config"].l.setValueFont(gFont("RSQFont", 24)) ## set font to config menu
-                                self["config"].l.setDescriptionFont(gFont("RSQFont", 24)) ## set font to DescriptionFont
-                                self["config"].l.setItemHeight(26) ## set ItemHeight to config menu
+                #        if isHD():
+                #                self["config"].l.setValueFont(gFont("RSQFont", 24)) ## set font to config menu
+                #                self["config"].l.setDescriptionFont(gFont("RSQFont", 24)) ## set font to DescriptionFont
+                #                self["config"].l.setItemHeight(26) ## set ItemHeight to config menu
                         #elif config.plugins.RaedQuickSignal.fontsenable.value and not isHD():
-                        elif not isHD():
-                                self["config"].l.setValueFont(gFont("RSQFont", 28)) ## set font to config menu
-                                self["config"].l.setDescriptionFont(gFont("RSQFont", 28)) ## set font to DescriptionFont
-                                self["config"].l.setItemHeight(38) ## set ItemHeight to config menu
+                #        elif not isHD():
+                #                self["config"].l.setValueFont(gFont("RSQFont", 28)) ## set font to config menu
+                #                self["config"].l.setDescriptionFont(gFont("RSQFont", 28)) ## set font to DescriptionFont
+                #                self["config"].l.setItemHeight(38) ## set ItemHeight to config menu
 
         def setWindowTitle(self):
                 self.setTitle("%s%s" % (title21, VER))
