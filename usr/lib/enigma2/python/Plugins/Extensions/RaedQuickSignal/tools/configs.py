@@ -5,7 +5,6 @@ import os, sys, traceback
 from Components.config import *
 from Plugins.Extensions.RaedQuickSignal.plugin import *
 from Plugins.Plugin import PluginDescriptor
-from Tools.Directories import resolveFilename, SCOPE_PLUGINS
 from Components.config import config, configfile, ConfigSubsection, getConfigListEntry, ConfigSelection, ConfigText, ConfigYesNo
 from Components.ConfigList import ConfigListScreen
 
@@ -18,10 +17,8 @@ def trace_error():
     except:
         pass
 
-DEFAULTFont="Default"
-FONTSPATH = '/usr/share'
-FONTPLUGIN=resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/images")
-GETPath = os.path.join(FONTSPATH + '/fonts')
+GETPath = os.path.join('/usr/share/fonts')
+DEFAULTFont = '/usr/share/fonts/Default.ttf'
 
 fonts = []
 try:
