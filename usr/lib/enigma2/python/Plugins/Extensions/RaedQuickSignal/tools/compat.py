@@ -25,6 +25,7 @@ if version_info[0] == 2:
 	from urlparse import parse_qs as compat_parse_qs
 	from urlparse import urlunparse as compat_urlunparse
 	from httplib import HTTPException as compat_HTTPException
+	from urllib import urlretrieve as compat_urlretrieve
 else:
 	# Python 3
 	compat_str = str
@@ -40,3 +41,4 @@ else:
 	from urllib.parse import parse_qs as compat_parse_qs
 	from urllib.parse import urlunparse as compat_urlunparse
 	from http.client import HTTPException as compat_HTTPException
+	from urllib.request import urlretrieve as compat_urlretrieve
