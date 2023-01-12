@@ -112,6 +112,13 @@ SKIN_WeatherLocation = """
 </screen>
 """.format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"))
 
+### SKIN_SearchLocationMSN
+SKIN_SearchLocationMSN = """
+<screen name="SearchLocationMSN" position="center,160" size="750,370" title="SearchLocationMSN">
+	<widget name="menu" position="15,10" size="720,300" scrollbarMode="showOnDemand" transparent="1" />
+</screen>
+"""
+
 ### SKIN_AGC_Picon
 SKIN_AGC_Picon_SNRdB = """
 <screen backgroundColor="#16000000" name="AGC_Picon" position="210,130" size="800,470" title="RAED's Quick Signal Info" zPosition="1" flags="wfNoBorder">
