@@ -20,7 +20,7 @@ rm -rf $PLUGINPATH/PICONS/piconCrypt
 # Download and install Transparent Picons
 cd /tmp
 set -e
-wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/raw/fairbird/picons/TransparentPicons.tar.gz
+wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/TransparentPicons.tar.gz
 tar -xzf TransparentPicons.tar.gz -C /
 set +e
 cd ..
