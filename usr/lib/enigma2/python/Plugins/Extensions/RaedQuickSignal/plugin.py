@@ -30,16 +30,18 @@ from os import environ
 from Screens.ChoiceBox import ChoiceBox
 from Components.Pixmap import Pixmap
 from Tools.LoadPixmap import LoadPixmap
+from Screens.VirtualKeyBoard import VirtualKeyBoard
 try:
         from keymapparser import readKeymap
 except:
         from Components.ActionMap import loadKeymap as readKeymap
+from twisted.web.client import downloadPage
+from xml.etree.cElementTree import fromstring as cet_fromstring
 # import as python3 from plugin
+import re, six, shutil, requests
+from six import ensure_str, ensure_binary
 from .tools.configs import *
-from .tools.compat import PY3
-from .tools.compat import compat_urlopen
-from .tools.compat import compat_Request
-from .tools.compat import compat_URLError
+from .tools.compat import compat_urlopen, compat_Request, compat_URLError, compat_quote, PY3
 from .tools.Console import Console
 from os import path as os_path, remove as os_remove
 from six.moves.urllib.request import urlretrieve
@@ -361,9 +363,7 @@ class WeatherLocationChoiceList(Screen):
                 #self.iConsole.ePopen("wget -P /tmp -T2 "http://weather.service.msn.com/data.aspx?weadegreetype=%s&culture=%s&weasearchstr=%s&src=outlook" -O /tmp/weathermsn.xml" % (degreetype, weather_location, weather_city), self.control_xml)
 
         def add_city(self):
-                 from Screens.VirtualKeyBoard import VirtualKeyBoard
                  self.session.openWithCallback(self.cityCallback, VirtualKeyBoard, title=_("%s") % title16, text="%s" % title17)
-
                  #self.session.openWithCallback(self.cityCallback, InputBox, title=_("%s") % title16, text="%s" % title17, maxSize=False, visible_width =250)
 
         def cityCallback(self,city=None):
@@ -982,16 +982,22 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
         def myCallback(self,result):
                 return
 
+        def ShowsearchBarracuda(self, name):
+                if name is not None:
+                        self.session.open(SearchLocationMSN, name)
+                return
+
         def keyOk(self):
                 cur = self["config"].getCurrent()
                 if cur == self.set_city:
-                        countriesFile = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/tools/countries')
-                        countries=open(countriesFile).readlines()
-                        clist=[]
-                        for country in countries:
-                                countryCode,countryName=country.split(",")
-                                clist.append((countryName,countryCode))
-                        self.session.openWithCallback(self.choicesback, ChoiceBox, _('%s') % title67, clist)
+                        self.session.openWithCallback(self.ShowsearchBarracuda, VirtualKeyBoard, title=_('Please enter a name of the city"'))
+                #        countriesFile = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/tools/countries')
+                #        countries=open(countriesFile).readlines()
+                #        clist=[]
+                #        for country in countries:
+                #                countryCode,countryName=country.split(",")
+                #                clist.append((countryName,countryCode))
+                #        self.session.openWithCallback(self.choicesback, ChoiceBox, _('%s') % title67, clist)
 
         def choicesback(self, select):
                 if select:
@@ -1112,6 +1118,94 @@ class PiconsScreen(Screen):
 
         def cancel(self):
                 self.close()
+
+
+class SearchLocationMSN(Screen):
+        def __init__(self, session, name):
+                Screen.__init__(self, session)
+                self.skin = SKIN_SearchLocationMSN
+                self.session = session
+                self.eventname = name
+                self.resultlist = []
+                self.setTitle(_("Search Location Weather MSN"))
+                self["menu"] = MenuList(self.resultlist)
+
+                self["actions"] = ActionMap(["OkCancelActions", "DirectionActions"], 
+                	{
+                		"ok": self.okClicked,
+                		"cancel": self.close,
+                		"up": self.pageUp,
+                		"down": self.pageDown
+                	}, -1)
+
+                self.showMenu()
+
+        def pageUp(self):
+                self['menu'].instance.moveSelection(self['menu'].instance.moveUp)
+
+        def pageDown(self):
+                self['menu'].instance.moveSelection(self['menu'].instance.moveDown)
+
+        def showMenu(self):
+                try:
+                        results = search_title(self.eventname)
+                except:
+                        results = []
+                if len(results) == 0:
+                        return False
+                self.resultlist = []
+                for searchResult in results:
+                        try:
+                                self.resultlist.append(searchResult)
+                        except:
+                                pass
+                self['menu'].l.setList(self.resultlist)
+
+        def okClicked(self):
+                id = self['menu'].getCurrent()
+                if id:
+                        config.plugins.RaedQuickSignal.city.value = id.replace(', ', ',')
+                        config.plugins.RaedQuickSignal.city.save()
+                        self.get_xmlfile()
+                        self.close()
+
+        def get_xmlfile(self):
+                degreetype = config.plugins.RaedQuickSignal.degreetype.value
+                weather_city = config.plugins.RaedQuickSignal.city.value
+                self.language = config.osd.language.value.replace('_', '-')
+                if self.language == 'en-EN':
+                        self.language = 'en-US'
+                xmlfile = "http://weather.service.msn.com/data.aspx?weadegreetype=%s&culture=%s&weasearchstr=%s&src=outlook" % (degreetype, self.language, compat_quote(weather_city))
+                downloadPage(ensure_binary(xmlfile), "/tmp/weathermsn.xml").addCallback(self.downloadFinished).addErrback(self.downloadFailed)
+
+        def downloadFinished(self, result):
+                print("[WeatherMSN] Download finished")
+                self.notdata = False
+                self.parse_weather_data()
+
+        def downloadFailed(self, result):
+                self.notdata = True
+                print("[WeatherMSN] Download failed!")
+
+def search_title(id):
+        url = 'http://weather.service.msn.com/find.aspx?outputview=search&weasearchstr=%s&culture=en-US&src=outlook' % id
+        msnrequest = compat_Request(url)
+        try:
+                msnpage = compat_urlopen(msnrequest)
+        except compat_URLError as err:
+                print('[WeatherSettingsView] Error: Unable to retrieve page - Error code: %s' % str(err))
+                return "error"
+
+        content = ensure_str(msnpage.read())
+        msnpage.close()
+        root = cet_fromstring(content)
+        search_results = []
+        if content:
+                for childs in root:
+                        if childs.tag == 'weather':
+                                locationcode = ensure_str(childs.attrib.get('weatherlocationname'), errors='ignore')
+                                search_results.append(locationcode)
+        return search_results
 
 ##############################################################################
 def sessionstart(reason, session = None, **kwargs):
