@@ -20,7 +20,7 @@ rm -rf $PLUGINPATH/PICONS/piconCrypt
 # Download and install White Picon
 cd /tmp
 set -e
-wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/raw/fairbird/picons/WhitePicons.tar.gz
+wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/WhitePicons.tar.gz
 tar -xzf WhitePicons.tar.gz -C /
 set +e
 cd ..
