@@ -192,6 +192,21 @@ else:
   <widget name="key_green" position="380,1018" size="290,45" halign="center" valign="center" zPosition="1" font="{0};35" foregroundColor="#00f0f0f0" transparent="1"/>
 </screen>
 """.format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"))
+### SKIN_SearchLocationMSN
+if DreamOS():
+	SKIN_SearchLocationMSN = """
+		<!-- Search LocationMSN -->
+		<screen name="SearchLocationMSN" position="center,center" size="1212,673" title="SearchLocationMSN">
+		<widget name="menu" position="20,20" size="1182,640" scrollbarMode="showOnDemand" transparent="1" />
+		</screen>
+"""
+else:
+	SKIN_SearchLocationMSN = """
+		<!-- Search LocationMSN -->
+		<screen name="SearchLocationMSN" position="center,center" size="1212,673" title="SearchLocationMSN">
+		<widget name="menu" position="20,20" size="1182,640" font="{0};36" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+		</screen>
+""".format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"))
 ##different way ...
 #SKIN_WeatherLocation = """
 #<screen backgroundColor="#16000000" name="WeatherLocationChoiceList" position="center,center" size="1280,720" title="Location list" flags="wfNoBorder">
