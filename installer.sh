@@ -2,8 +2,8 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=15.3
-description=What is NEW:\n-Fix Some bugs on DreamOS images \n\n*************************\n:ما هو الجديد\n-DreamOS إصلاح بعض الأخطاء على صور
+version=15.4
+description=What is NEW:\n-Change method of searching to weather city name \n\n*************************\n:ما هو الجديد\n-تغير طريقة البحث عن المدينة لحالة الطقس
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
