@@ -2,8 +2,8 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=15.4
-description=What is NEW:\n-Change method of searching to weather city name \n\n*************************\n:ما هو الجديد\n-تغير طريقة البحث عن المدينة لحالة الطقس
+version=15.5
+description=What is NEW:\n-Drop python-six for py2 images \n\n*************************\n:ما هو الجديد\n- من صور بايثون2 python-six حذف اكواد
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
@@ -32,21 +32,14 @@ if python --version 2>&1 | grep -q '^Python 3\.'; then
 else
 	echo "You have Python2 image"
 	PYTHON=PY2
-	Packagesix=python-six
 	Packagerequests=python-requests
 fi
 
-if grep -qs "Package: $Packagesix" cat $STATUS ; then
-	echo ""
-else
-	echo "Need to install $Packagesix"
-	echo ""
-	if [ $OSTYPE = "DreamOs" ]; then
-		apt-get update && apt-get install python-six -y
-	elif [ $PYTHON = "PY3" ]; then
+if [ $PYTHON = "PY3" ]; then
+	if grep -qs "Package: $Packagesix" cat $STATUS ; then
+		echo ""
+	else
 		opkg update && opkg install python3-six
-	elif [ $PYTHON = "PY2" ]; then
-		opkg update && opkg install python-six
 	fi
 fi
 echo ""

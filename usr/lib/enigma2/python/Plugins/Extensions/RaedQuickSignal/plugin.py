@@ -3,9 +3,6 @@
 #RAEDQuickSignal (c) RAED 07-02-2014
 #Thank's mfaraj for help
 
-# python3
-from __future__ import print_function
-
 from Components.config import config, getConfigListEntry, ConfigText, ConfigSelection, ConfigSubsection, ConfigYesNo, configfile, NoSave
 from Components.ConfigList import ConfigListScreen
 from Components.ActionMap import ActionMap
@@ -38,13 +35,11 @@ except:
 from twisted.web.client import downloadPage
 from xml.etree.cElementTree import fromstring as cet_fromstring
 # import as python3 from plugin
-import re, six, shutil, requests
-from six import ensure_str, ensure_binary
+import re, shutil, requests
 from .tools.configs import *
-from .tools.compat import compat_urlopen, compat_Request, compat_URLError, compat_quote, PY3
+from .tools.compat import compat_urlopen, compat_Request, compat_URLError, compat_quote, compat_urlretrieve, PY3
 from .tools.Console import Console
 from os import path as os_path, remove as os_remove
-from six.moves.urllib.request import urlretrieve
         
 #lang = language.getLanguage()
 #environ["LANGUAGE"] = lang[:2]
@@ -215,7 +210,7 @@ def cprint(text):
 def downloadFile(url, filePath):
     try:
         # Download the file from `url` and save it locally under `file_name`:
-        urlretrieve(url, filePath)
+        compat_urlretrieve(url, filePath)
         return True
         req = compat_Request(url)
         response = compat_urlopen(req)         
@@ -1176,7 +1171,11 @@ class SearchLocationMSN(Screen):
                 if self.language == 'en-EN':
                         self.language = 'en-US'
                 xmlfile = "http://weather.service.msn.com/data.aspx?weadegreetype=%s&culture=%s&weasearchstr=%s&src=outlook" % (degreetype, self.language, compat_quote(weather_city))
-                downloadPage(ensure_binary(xmlfile), "/tmp/weathermsn.xml").addCallback(self.downloadFinished).addErrback(self.downloadFailed)
+                if PY3:
+                	import six
+                	downloadPage(six.ensure_binary(xmlfile), "/tmp/weathermsn.xml").addCallback(self.downloadFinished).addErrback(self.downloadFailed)
+                else:
+                	downloadPage(xmlfile, "/tmp/weathermsn.xml").addCallback(self.downloadFinished).addErrback(self.downloadFailed)
 
         def downloadFinished(self, result):
                 print("[WeatherMSN] Download finished")
@@ -1196,14 +1195,14 @@ def search_title(id):
                 print('[WeatherSettingsView] Error: Unable to retrieve page - Error code: %s' % str(err))
                 return "error"
 
-        content = ensure_str(msnpage.read())
+        content = msnpage.read() if PY3 else msnpage.read().encode("UTF-8", "ignore")
         msnpage.close()
         root = cet_fromstring(content)
         search_results = []
         if content:
                 for childs in root:
                         if childs.tag == 'weather':
-                                locationcode = ensure_str(childs.attrib.get('weatherlocationname'), errors='ignore')
+                                locationcode = childs.attrib.get('weatherlocationname') if PY3 else childs.attrib.get('weatherlocationname').encode("UTF-8", "ignore")
                                 search_results.append(locationcode)
         return search_results
 
