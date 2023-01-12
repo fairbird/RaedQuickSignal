@@ -20,7 +20,7 @@ rm -rf $PLUGINPATH/PICONS/piconCrypt
 # Download and install Black Picon
 cd /tmp
 set -e
-wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/raw/fairbird/picons/BlackPicons.tar.gz
+wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/BlackPicons.tar.gz
 tar -xzf BlackPicons.tar.gz -C /
 set +e
 cd ..
