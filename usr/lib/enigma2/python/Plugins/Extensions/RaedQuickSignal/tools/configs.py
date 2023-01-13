@@ -127,7 +127,11 @@ config.plugins.RaedQuickSignal.piconpath = ConfigSelection(default = "PLUGIN", c
 	("MEDIA", _("%s") % title6)
 	])
 	
-############# Weather 
+############# Weather
+config.plugins.RaedQuickSignal.Searchmethod = ConfigSelection(default = "search", choices = [
+	("search", _("%s") % title90),
+	("chosse", _("%s") % title91)
+	])
 config.plugins.RaedQuickSignal.refreshInterval = ConfigNumber(default=30) #in minutes
 config.plugins.RaedQuickSignal.city = ConfigText(default="Manama", visible_width = 250, fixed_size = False)
 config.plugins.RaedQuickSignal.windtype = ConfigSelection(default="ms", choices = [

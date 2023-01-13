@@ -58,7 +58,7 @@ if DreamOS():
   <widget source="session.Event_Now" render="Label" position="1010,671" zPosition="2" size="842,68" font="{0};32" halign="center" foregroundColor="#00bab329" backgroundColor="#16000000" transparent="1" valign="center">
     <convert type="EventName">Name</convert>
   </widget>
-  <widget name="config" position="15,140" size="981,675" foregroundColor="#ffffff" backgroundColor="#16000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#0e6382" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+  <widget name="config" position="15,140" size="981,690" foregroundColor="#ffffff" backgroundColor="#16000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#0e6382" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
   <widget source="key_red" render="Label" position="1,1035" zPosition="2" size="381,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
   <widget source="key_green" render="Label" position="544,1035" zPosition="2" size="381,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
   <widget source="key_yellow" render="Label" position="1074,1035" zPosition="2" size="381,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
@@ -90,7 +90,7 @@ else:
   <widget source="session.Event_Now" render="Label" position="1010,671" zPosition="2" size="842,68" font="{0};32" halign="center" foregroundColor="#00bab329" backgroundColor="#16000000" transparent="1" valign="center">
     <convert type="EventName">Name</convert>
   </widget>
-  <widget name="config" position="15,140" size="981,675" foregroundColor="#ffffff" backgroundColor="#16000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#0e6382" scrollbarMode="showOnDemand" transparent="1" zPosition="2" font="{0};30" itemHeight="40" />
+  <widget name="config" position="15,140" size="981,690" foregroundColor="#ffffff" backgroundColor="#16000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#0e6382" scrollbarMode="showOnDemand" transparent="1" zPosition="2" font="{0};30" itemHeight="40" />
   <widget source="key_red" render="Label" position="1,1035" zPosition="2" size="381,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
   <widget source="key_green" render="Label" position="544,1035" zPosition="2" size="381,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
   <widget source="key_yellow" render="Label" position="1074,1035" zPosition="2" size="381,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>

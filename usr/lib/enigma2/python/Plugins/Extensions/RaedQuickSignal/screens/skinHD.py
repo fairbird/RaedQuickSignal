@@ -53,7 +53,7 @@ SKIN_setup = """
   <widget source="session.Event_Now" render="Label" position="688,393" zPosition="2" size="543,40" font="{0};25" halign="center" foregroundColor="#00bab329" backgroundColor="#16000000" transparent="1" valign="center">
     <convert type="EventName">Name</convert>
   </widget>
-  <widget name="config" position="10,69" size="667,460" scrollbarMode="showOnDemand" foregroundColor="#00f0f0f0" backgroundColor="#16000000"/>
+  <widget name="config" position="10,69" size="667,470" scrollbarMode="showOnDemand" foregroundColor="#00f0f0f0" backgroundColor="#16000000"/>
   <widget source="key_red" render="Label" position="2,686" zPosition="2" size="299,25" font="{0};20" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
   <widget source="key_green" render="Label" position="331,686" zPosition="2" size="299,25" font="{0};20" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
   <widget source="key_yellow" render="Label" position="647,686" zPosition="2" size="299,25" font="{0};20" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
