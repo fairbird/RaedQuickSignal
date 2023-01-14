@@ -898,7 +898,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                 self.set_fontsStyle = getConfigListEntry(_("%s") % title51, config.plugins.RaedQuickSignal.fontsStyle, _("%s") % title52)
                 self.set_fontssize = getConfigListEntry(_("%s") % title88, config.plugins.RaedQuickSignal.fontsSize, _("%s") % title89)
                 self.set_refreshInterval = getConfigListEntry(_("%s") % title53, config.plugins.RaedQuickSignal.refreshInterval, _("%s") % title54)
-                #self.set_Searchmethod = getConfigListEntry(_("%s")  % title92, config.plugins.RaedQuickSignal.Searchmethod, _("%s")  % title93)
+                self.set_Searchmethod = getConfigListEntry(_("%s")  % title92, config.plugins.RaedQuickSignal.Searchmethod, _("%s")  % title93)
                 self.set_degreetype = getConfigListEntry(_("%s") % title55, config.plugins.RaedQuickSignal.degreetype, _("%s") % title56)
                 self.set_city = getConfigListEntry(_("%s") % title57, config.plugins.RaedQuickSignal.city, _("%s") % title58)
                 self.language = getConfigListEntry(_("%s") % title59, config.plugins.RaedQuickSignal.lang, _("%s") % title60)
@@ -922,7 +922,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                         self.list.append(getConfigListEntry("%s" % title63))
                         self.list.append(self.set_refreshInterval)
                         self.list.append(self.set_degreetype)
-                        #self.list.append(self.set_Searchmethod)
+                        self.list.append(self.set_Searchmethod)
                         self.list.append(self.set_city)
 
                 self["config"].list = self.list
@@ -1009,18 +1009,18 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
         def keyOk(self):
                 cur = self["config"].getCurrent()
                 if cur == self.set_city:
-                	#if config.plugins.RaedQuickSignal.Searchmethod.value == "search":
-                        	#config.plugins.RaedQuickSignal.Searchmethod.save()
+                	if config.plugins.RaedQuickSignal.Searchmethod.value == "search":
+                        	config.plugins.RaedQuickSignal.Searchmethod.save()
                         	self.session.openWithCallback(self.ShowsearchBarracuda, VirtualKeyBoard, title=_('%s') % title16)
-                	#elif config.plugins.RaedQuickSignal.Searchmethod.value == "chosse":
-                        #	config.plugins.RaedQuickSignal.Searchmethod.save()
-                        #	countriesFile = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/tools/countries')
-                        #	countries=open(countriesFile).readlines()
-                        #	clist=[]
-                        #	for country in countries:
-                        #        	countryCode,countryName=country.split(",")
-                        #        	clist.append((countryName,countryCode))
-                        #	self.session.openWithCallback(self.choicesback, ChoiceBox, _('%s') % title67, clist)
+                	elif config.plugins.RaedQuickSignal.Searchmethod.value == "chosse":
+                        	config.plugins.RaedQuickSignal.Searchmethod.save()
+                        	countriesFile = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/tools/countries')
+                        	countries=open(countriesFile).readlines()
+                        	clist=[]
+                        	for country in countries:
+                                	countryCode,countryName=country.split(",")
+                                	clist.append((countryName,countryCode))
+                        	self.session.openWithCallback(self.choicesback, ChoiceBox, _('%s') % title67, clist)
 
         def choicesback(self, select):
                 if select:
