@@ -2,8 +2,8 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=15.6
-description=What is NEW:\n-Add the option to navigate between what you want in the way to search for the city name for the weather \n\n*************************\n:ما هو الجديد\n- إضافة خيار التنقل بين ما ترغب به في طريقة البحث عن إسم المدينة لحالة الطقس
+version=15.7
+description=What is NEW:\n- Small update for weather \n\n*************************\n:ما هو الجديد\n- تحديث بسيط لحالة الطقس
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
