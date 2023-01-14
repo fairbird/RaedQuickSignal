@@ -133,7 +133,7 @@ config.plugins.RaedQuickSignal.Searchmethod = ConfigSelection(default = "search"
 	("chosse", _("%s") % title91)
 	])
 config.plugins.RaedQuickSignal.refreshInterval = ConfigNumber(default=30) #in minutes
-config.plugins.RaedQuickSignal.city = ConfigText(default="Manama", visible_width = 250, fixed_size = False)
+config.plugins.RaedQuickSignal.city = ConfigText(default="manama", visible_width = 250, fixed_size = False)
 config.plugins.RaedQuickSignal.windtype = ConfigSelection(default="ms", choices = [
 	("ms", _("%s") % title7),
 	("fts", _("%s") % title8),
@@ -145,4 +145,4 @@ config.plugins.RaedQuickSignal.degreetype = ConfigSelection(default="C", choices
 	("C", _("%s") % title12),
 	("F", _("%s") % title13)
 	])
-config.plugins.RaedQuickSignal.weather_location= ConfigText(default="bh-BH", visible_width = 250, fixed_size = False)     
+config.plugins.RaedQuickSignal.weather_location = ConfigText(default="bh-BH", visible_width = 250, fixed_size = False)     

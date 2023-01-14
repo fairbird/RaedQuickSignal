@@ -988,8 +988,10 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                 cur = self["config"].getCurrent()
                 if cur == self.set_city:
                 	if config.plugins.RaedQuickSignal.Searchmethod.value == "search":
+                        	config.plugins.RaedQuickSignal.Searchmethod.save()
                         	self.session.openWithCallback(self.ShowsearchBarracuda, VirtualKeyBoard, title=_('%s') % title16)
                 	elif config.plugins.RaedQuickSignal.Searchmethod.value == "chosse":
+                        	config.plugins.RaedQuickSignal.Searchmethod.save()
                         	countriesFile = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/tools/countries')
                         	countries=open(countriesFile).readlines()
                         	clist=[]
@@ -1000,9 +1002,13 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
 
         def choicesback(self, select):
                 if select:
-                    self.country=select[1]
-                    config.plugins.RaedQuickSignal.weather_location.value=self.country.lower()+"-"+self.country.upper()
-                    config.plugins.RaedQuickSignal.weather_location.save()
+                    self.country = select[1]
+                    #config.plugins.RaedQuickSignal.weather_location.value = self.country.lower()+"-"+self.country.upper()
+                    #config.plugins.RaedQuickSignal.weather_location.save()
+                    self.language = config.osd.language.value.replace('_', '-')
+                    if self.language == 'en-EN':
+                    	self.language = 'en-US'
+                    self.language = self.country
                     self.session.openWithCallback(self.citiesback, WeatherLocationChoiceList, self.country)
                     
         def citiesback(self,select):
@@ -1163,8 +1169,7 @@ class SearchLocationMSN(Screen):
         def okClicked(self):
                 id = self['menu'].getCurrent()
                 if id:
-                        config.plugins.RaedQuickSignal.city.value = id.replace(', ', ',')
-                        config.plugins.RaedQuickSignal.city.save()
+                        config.plugins.RaedQuickSignal.city.setValue(id.split()[0].replace(',', '').lower())
                         self.get_xmlfile()
                         self.close()
 
