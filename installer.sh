@@ -2,7 +2,7 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=15.7
+version=15.8
 description=What is NEW:\n- Small update for weather \n\n*************************\n:ما هو الجديد\n- تحديث بسيط لحالة الطقس
 ##############################################################
 

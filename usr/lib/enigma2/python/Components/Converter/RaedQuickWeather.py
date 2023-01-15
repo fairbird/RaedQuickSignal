@@ -53,10 +53,10 @@ else:
 weather_city = config.plugins.RaedQuickSignal.city.value
 degreetype = config.plugins.RaedQuickSignal.degreetype.value
 windtype = config.plugins.RaedQuickSignal.windtype.value
-weather_location =  config.plugins.RaedQuickSignal.weather_location.value
+language = config.osd.language.value.replace('_', '-')
 
-if weather_location == 'en-EN':
-	weather_location = 'en-US'
+if language == 'en-EN':
+	language = 'en-US'
 
 time_update = 30
 time_update_ms = 3000
@@ -412,12 +412,12 @@ class RaedQuickWeather(Poll, Converter, object):
 			self.write_none()
 
 	def write_none(self):
-		with open("/tmp/weathermsn.xml", "w") as noneweather:
+		with open("/tmp/RaedQSweathermsn.xml", "w") as noneweather:
 			noneweather.write("None")
 		noneweather.close()
 
 	def get_xmlfile(self):
-		self.iConsole.ePopen("wget -P /tmp -T2 'http://weather.service.msn.com/data.aspx?weadegreetype=%s&culture=%s&weasearchstr=%s&src=outlook' -O /tmp/weathermsn.xml" % (degreetype, weather_location, weather_city), self.control_xml)
+		self.iConsole.ePopen("wget -P /tmp -T2 'http://weather.service.msn.com/data.aspx?weadegreetype=%s&culture=%s&weasearchstr=%s&src=outlook' -O /tmp/RaedQSweathermsn.xml" % (degreetype, language, weather_city), self.control_xml)
 
 	@cached
 	def getText(self):
@@ -536,17 +536,17 @@ class RaedQuickWeather(Poll, Converter, object):
 			'Precip4': '',\
 			}
 #
-		if fileExists("/tmp/weathermsn.xml"):
-			if int((time.time() - os.stat("/tmp/weathermsn.xml").st_mtime)/60) >= time_update:
+		if fileExists("/tmp/RaedQSweathermsn.xml"):
+			if int((time.time() - os.stat("/tmp/RaedQSweathermsn.xml").st_mtime)/60) >= time_update:
 				self.get_xmlfile()
 		else:
 			self.get_xmlfile()
-		if not fileExists("/tmp/weathermsn.xml"):
+		if not fileExists("/tmp/RaedQSweathermsn.xml"):
 			self.write_none()
 			return info
-		if fileExists("/tmp/weathermsn.xml") and open("/tmp/weathermsn.xml").read() == 'None':
+		if fileExists("/tmp/RaedQSweathermsn.xml") and open("/tmp/RaedQSweathermsn.xml").read() == 'None':
 			return info
-		for line in open("/tmp/weathermsn.xml"):
+		for line in open("/tmp/RaedQSweathermsn.xml"):
 			try:
 				if "<weather" in line:
 					msnweather['Location'] = line.split('weatherlocationname')[1].split('"')[1].split(',')[0]

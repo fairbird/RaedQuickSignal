@@ -337,7 +337,7 @@ class WeatherLocationChoiceList(Screen):
                         self.write_none()
 
         def write_none(self):
-                with open('/tmp/weathermsn.xml', 'w') as noneweather:
+                with open('/tmp/RaedQSweathermsn.xml', 'w') as noneweather:
                         noneweather.write('None')
                 noneweather.close()
 
@@ -347,7 +347,7 @@ class WeatherLocationChoiceList(Screen):
                 weather_city = weather_city.decode("utf-8").replace(" ","_")
                 url = "http://weather.service.msn.com/data.aspx?weadegreetype=%s&culture=%s&weasearchstr=%s&src=outlook" % (degreetype, weather_location, weather_city)
                 logdata('url',url)
-                file_name ='/tmp/weathermsn.xml'
+                file_name ='/tmp/RaedQSweathermsn.xml'
                 # Download the file from `url` and save it locally under `file_name`:
                 try:
                        ret=downloadFile(url, file_name)
@@ -355,7 +355,7 @@ class WeatherLocationChoiceList(Screen):
                 except Exception as error:### new
                        trace_error()
                        return False
-                #self.iConsole.ePopen("wget -P /tmp -T2 "http://weather.service.msn.com/data.aspx?weadegreetype=%s&culture=%s&weasearchstr=%s&src=outlook" -O /tmp/weathermsn.xml" % (degreetype, weather_location, weather_city), self.control_xml)
+                #self.iConsole.ePopen("wget -P /tmp -T2 "http://weather.service.msn.com/data.aspx?weadegreetype=%s&culture=%s&weasearchstr=%s&src=outlook" -O /tmp/RaedQSweathermsn.xml" % (degreetype, weather_location, weather_city), self.control_xml)
 
         def add_city(self):
                  self.session.openWithCallback(self.cityCallback, VirtualKeyBoard, title=_("%s") % title16, text="%s" % title17)
@@ -363,14 +363,14 @@ class WeatherLocationChoiceList(Screen):
 
         def cityCallback(self,city=None):
                 try:
-                        if os_path.exists('/tmp/weathermsn.xml'):
-                                os_remove('/tmp/weathermsn.xml')
+                        if os_path.exists('/tmp/RaedQSweathermsn.xml'):
+                                os_remove('/tmp/RaedQSweathermsn.xml')
                         returnValue = city
                         countryCode=self.country.lower()+"-"+self.country.upper()
                         if self.get_xmlfile(returnValue,countryCode)==False:
                                 self.session.open(MessageBox, _("%s") % title18,MessageBox.TYPE_ERROR)
                                 return 
-                        if not fileExists('/tmp/weathermsn.xml'):
+                        if not fileExists('/tmp/RaedQSweathermsn.xml'):
                                 self.write_none()
                                 self.session.open(MessageBox, _("%s") % title19,MessageBox.TYPE_ERROR)
                                 return None
@@ -383,14 +383,14 @@ class WeatherLocationChoiceList(Screen):
 
         def keyOk(self):
                 try:
-                        if os_path.exists('/tmp/weathermsn.xml'):
-                                os_remove('/tmp/weathermsn.xml')
+                        if os_path.exists('/tmp/RaedQSweathermsn.xml'):
+                                os_remove('/tmp/RaedQSweathermsn.xml')
                         returnValue = self["choicelist"].l.getCurrentSelection()
                         countryCode=self.country.lower()+"-"+self.country.upper()
                         if self.get_xmlfile(returnValue,countryCode)==False:
                                 self.session.open(MessageBox, _("%s") % title20,MessageBox.TYPE_ERROR)
                                 return 
-                        if not fileExists('/tmp/weathermsn.xml'):
+                        if not fileExists('/tmp/RaedQSweathermsn.xml'):
                                 self.write_none()
                                 self.session.open(MessageBox, _("%s") % title20,MessageBox.TYPE_ERROR)
                                 return None
@@ -408,6 +408,13 @@ class RaedQuickSignalScreen(Screen):
         def __init__(self, session):
                 Screen.__init__(self, session)
                 dellog()
+
+                os.system("rm -f /tmp/RaedQSweathermsn.xml")
+                self.degreetype = config.plugins.RaedQuickSignal.degreetype.value
+                self.weather_city = config.plugins.RaedQuickSignal.city.value
+                self.language = config.osd.language.value.replace('_', '-')
+                if self.language == 'en-EN':
+                        self.language = 'en-US'
 
                 ## Add Fonts codes
                 if config.plugins.RaedQuickSignal.fontsSize.value == "Default":
@@ -550,9 +557,24 @@ class RaedQuickSignalScreen(Screen):
                         logdata("Label Key_yellow: PositionerSetup Not Installed\n")
                 self.onShown.append(self.onWindowShow)
 
+        def get_xmlfile(self):
+                xmlfile = "http://weather.service.msn.com/data.aspx?weadegreetype=%s&culture=%s&weasearchstr=%s&src=outlook" % (self.degreetype, self.language, compat_quote(self.weather_city))
+                if PY3:
+                	import six
+                	downloadPage(six.ensure_binary(xmlfile), "/tmp/RaedQSweathermsn.xml").addCallback(self.downloadFinished).addErrback(self.downloadFailed)
+                else:
+                	downloadPage(xmlfile, "/tmp/RaedQSweathermsn.xml").addCallback(self.downloadFinished).addErrback(self.downloadFailed)
+
+        def downloadFinished(self, result):
+                print("[WeatherMSN] Download finished")
+
+        def downloadFailed(self, result):
+                print("[WeatherMSN] Download failed!")
+
         def onWindowShow(self):
                 self.onShown.remove(self.onWindowShow)
                 self.instance.show()
+                self.get_xmlfile()
                 #self.setTitle("QuickSignal by RAED V" + str(VER + Space + datetime_now))
                 self.setTitle("%s%s" % (title21, VER))
                 self.new_version = VER
@@ -1020,6 +1042,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
 
         def save(self):
                 #if self["config"].isChanged():
+                os.system("rm -f /tmp/RaedQSweathermsn.xml")
                 if self.configChanged:
                         for x in self["config"].list:
                                 if len(x)>1:
@@ -1169,41 +1192,17 @@ class SearchLocationMSN(Screen):
         def okClicked(self):
                 id = self['menu'].getCurrent()
                 if id:
-                        config.plugins.RaedQuickSignal.city.setValue(id.split()[0].replace(',', '').lower())
-                        self.get_xmlfile()
+                        config.plugins.RaedQuickSignal.city.setValue(id.replace(', ', ','))
+                        config.plugins.RaedQuickSignal.city.save()
                         self.close()
 
-        def get_xmlfile(self):
-                degreetype = config.plugins.RaedQuickSignal.degreetype.value
-                weather_city = config.plugins.RaedQuickSignal.city.value
-                self.language = config.osd.language.value.replace('_', '-')
-                if self.language == 'en-EN':
-                        self.language = 'en-US'
-                xmlfile = "http://weather.service.msn.com/data.aspx?weadegreetype=%s&culture=%s&weasearchstr=%s&src=outlook" % (degreetype, self.language, compat_quote(weather_city))
-                if PY3:
-                	import six
-                	downloadPage(six.ensure_binary(xmlfile), "/tmp/weathermsn.xml").addCallback(self.downloadFinished).addErrback(self.downloadFailed)
-                else:
-                	downloadPage(xmlfile, "/tmp/weathermsn.xml").addCallback(self.downloadFinished).addErrback(self.downloadFailed)
-
-        def downloadFinished(self, result):
-                print("[WeatherMSN] Download finished")
-                self.notdata = False
-                self.parse_weather_data()
-
-        def downloadFailed(self, result):
-                self.notdata = True
-                print("[WeatherMSN] Download failed!")
-
 def search_title(id):
-        url = 'http://weather.service.msn.com/find.aspx?outputview=search&weasearchstr=%s&culture=en-US&src=outlook' % id
+        url = "http://weather.service.msn.com/find.aspx?outputview=search&weasearchstr=%s&culture=en-US&src=outlook" % id
         msnrequest = compat_Request(url)
         try:
                 msnpage = compat_urlopen(msnrequest)
-        except compat_URLError as err:
-                print('[WeatherSettingsView] Error: Unable to retrieve page - Error code: %s' % str(err))
-                return "error"
-
+        except (compat_URLError, HTTPException, socket.error) as err:
+                print("[Location] Error: Unable to retrieve page - Error code: ", str(err))
         content = msnpage.read() if PY3 else msnpage.read().encode("UTF-8", "ignore")
         msnpage.close()
         root = cet_fromstring(content)
@@ -1211,7 +1210,7 @@ def search_title(id):
         if content:
                 for childs in root:
                         if childs.tag == 'weather':
-                                locationcode = childs.attrib.get('weatherlocationname') if PY3 else childs.attrib.get('weatherlocationname').encode("UTF-8", "ignore")
+                                locationcode = "%s,%s" % (childs.attrib.get('weatherlocationname') if PY3 else childs.attrib.get('weatherlocationname').encode("UTF-8", "ignore"), childs.attrib.get('region') if PY3 else childs.attrib.get('region').encode("UTF-8", "ignore"))
                                 search_results.append(locationcode)
         return search_results
 
