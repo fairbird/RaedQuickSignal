@@ -877,7 +877,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                 #self.fontsenabled_value = config.plugins.RaedQuickSignal.fontsenable.value
                 self.numbers_value = config.plugins.RaedQuickSignal.numbers.value
                 self.lang_value = config.plugins.RaedQuickSignal.lang.value
-                self.city = config.plugins.RaedQuickSignal.city.value
+                self.Searchmethod = config.plugins.RaedQuickSignal.Searchmethod.value
 
                 self.createConfigList()
                 self.onLayoutFinish.append(self.setWindowTitle)
@@ -1060,7 +1060,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                         not self.fontsStyle_value == config.plugins.RaedQuickSignal.fontsStyle.value or \
                         not self.numbers_value == config.plugins.RaedQuickSignal.numbers.value or \
                         not self.lang_value == config.plugins.RaedQuickSignal.lang.value or \
-                        not self.city == config.plugins.RaedQuickSignal.city.value:
+                        not self.Searchmethod == config.plugins.RaedQuickSignal.Searchmethod.value:
                                 self.session.openWithCallback(self.restart, MessageBox, _("%s") % title68)
                         else:
                                 self.close(True)
@@ -1194,7 +1194,7 @@ class SearchLocationMSN(Screen):
         def okClicked(self):
                 id = self['menu'].getCurrent()
                 if id:
-                        config.plugins.RaedQuickSignal.city.setValue(id.split()[0].replace(",", "").lower())
+                        config.plugins.RaedQuickSignal.city.value = id.replace(", ", ",")
                         config.plugins.RaedQuickSignal.city.save()
                         self.close()
 
