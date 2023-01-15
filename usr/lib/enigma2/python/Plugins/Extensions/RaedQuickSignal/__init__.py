@@ -15,6 +15,9 @@ PICONSATPATH = resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICONS
 PICONPROVPATH = resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICONS/piconProv")
 PICONCRYPTPATH = resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICONS/piconCrypt")
 
+if os.path.exists("/tmp/RaedQSweathermsn.xml"):
+	os.system("rm -f /tmp/RaedQSweathermsn.xml")
+
 if not os.path.exists(DEFAULTFont):
 	os.system('cp -f %s %s' % (FONTPLUGIN, DEFAULTFont))
 
