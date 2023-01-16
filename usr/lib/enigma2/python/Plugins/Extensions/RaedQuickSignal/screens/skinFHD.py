@@ -259,12 +259,12 @@ SKIN_AGC_Picon_SNRdB = """
   <widget source="session.CurrentService" render="Label" position="1244,514" size="200,45" font="{0}; 32" zPosition="3" backgroundColor="#54111112" foregroundColor="#fec000" transparent="1" valign="top" halign="center">
     <convert type="RaedQuickEcmInfo">activecaid</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="40,564" size="1400,45" font="{0}; 32" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="center" halign="center">
+  <!--widget source="session.CurrentService" render="Label" position="40,564" size="1400,45" font="{0}; 32" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="center" halign="center">
     <convert type="RaedQuickEcmInfo">pids</convert>
-  </widget>
-  <!--widget source="session.CurrentService" render="Label" position="40,563" size="1400,45" font="{0}; 32" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="center" halign="center">
-    <convert type="RaedQuickEcmInfo">bitrate</convert>
   </widget-->
+  <widget source="session.CurrentService" render="Label" position="40,564" size="1400,45" font="{0}; 32" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="center" halign="center">
+    <convert type="RaedQuickEcmInfo">bitrate</convert>
+  </widget>
   <widget source="session.FrontendStatus" render="Pixmap" position="60,183" size="124,60" zPosition="2" pixmap="{1}/images/icons_quick/icon_ber-scan_on2.png" transparent="1">
     <convert type="RaedQuickSignalText">BerNum</convert>
     <convert type="ValueRange">1,10</convert>
