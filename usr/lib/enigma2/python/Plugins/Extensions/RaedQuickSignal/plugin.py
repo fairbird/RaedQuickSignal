@@ -7,7 +7,7 @@ from Components.config import config, getConfigListEntry, ConfigText, ConfigSele
 from Components.ConfigList import ConfigListScreen
 from Components.ActionMap import ActionMap
 from GlobalActions import globalActionMap
-from enigma import eTimer, getDesktop, gFont, addFont
+from enigma import eTimer, getDesktop, gFont, addFont, eConsoleAppContainer, iServiceInformation
 from Plugins.Plugin import PluginDescriptor
 from Screens.Screen import Screen
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS, SCOPE_LANGUAGE
@@ -86,6 +86,13 @@ try: # This is for OpenBH + OpenVIX images
 except ImportError:
         print("[Satfinder] import dvbreader not available")
         dvbreader_available = False
+
+if os.path.exists('/usr/bin/bitrate'):
+        BITRATEBIN = True
+        config.plugins.RaedQuickSignal.bitrateVideo = NoSave(ConfigText(default = "0"))
+        config.plugins.RaedQuickSignal.bitrateAudio = NoSave(ConfigText(default = "0"))
+else:
+        BITRATEBIN = False
 
 def removeunicode(data):
         try:
@@ -741,6 +748,8 @@ class RaedQuickSignalScreen(Screen):
                 self.session.execDialog(self.servicelist)
 
         def exit(self):
+                if BITRATEBIN:
+                        os.system("killall -9 bitrate")
                 if os_path.exists("/tmp/.RaedQuickSignal"):
                         os_remove("/tmp/.RaedQuickSignal")
                 if not DreamOS() and not BHVU():
@@ -806,11 +815,22 @@ class RaedQuickSignal():
         def __init__(self):
                 self.dialog = None
 
-        def gotSession(self, session):
+        def gotSession(self, session, refresh_func=None, finished_func=None):
                 self.session = session
                 self.RaedQuickSignal = None
                 if os_path.exists("/tmp/.RaedQuickSignal"):
                         os_remove("/tmp/.RaedQuickSignal")
+                if BITRATEBIN:
+                        self.refresh_func = refresh_func
+                        self.finished_func = finished_func
+                        self.remainingdata = ''
+                        self.running = False
+                        self.clearValues()
+                        self.datalines = []
+                        self.dziel = []
+                        self.container = eConsoleAppContainer()
+                        self.container.appClosed.append(self.appClosed)
+                        self.container.dataAvail.append(self.dataAvail)
                 keymap = resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/tools/keymap.xml")
                 global globalActionMap
                 readKeymap(keymap)
@@ -822,8 +842,96 @@ class RaedQuickSignal():
 
         def ShowHide(self):
                 if os_path.exists("/tmp/.RaedQuickSignal") == False:
+                        if BITRATEBIN:
+                                self.start()
                         if config.plugins.RaedQuickSignal.enabledonoff.value:
                                 self.session.open(RaedQuickSignalScreen)
+                else:
+                        if BITRATEBIN:
+                                self.stop()
+
+        def start(self):
+                if self.running:
+                        return
+                service = self.session.nav.getCurrentService()
+                if service:
+                        adapter = 0
+                        demux = 0
+                        try:
+                                stream = service.stream()
+                                if stream:
+                                        streamdata = stream.getStreamingData()
+                                        if streamdata:
+                                                if 'demux' in streamdata:
+                                                        demux = streamdata["demux"]
+                                                if 'adapter' in streamdata:
+                                                        adapter = streamdata["adapter"]
+                        except:
+                                pass
+                        info = service.info()
+                        vpid = info.getInfo(iServiceInformation.sVideoPID)
+                        apid = info.getInfo(iServiceInformation.sAudioPID)
+                        cmd = "bitrate "
+                        cmd += str(adapter)
+                        cmd += " "
+                        cmd += str(demux)
+                        cmd += " "
+                        cmd += str(vpid)
+                        cmd += " "
+                        cmd += str(apid)
+                        self.running = True
+                        self.container.execute(cmd)
+
+        def clearValues(self):
+                self.vmin = 0
+                self.vmax = 0
+                self.vavg = 0
+                self.vcur = 0
+                self.amin = 0
+                self.amax = 0
+                self.aavg = 0
+                self.acur = 0
+
+        def stop(self):
+                self.container.kill()
+                self.remainingdata = ""
+                self.clearValues()
+                self.running = False
+
+        def appClosed(self, retval):
+                self.remainingdata = ""
+                self.clearValues()
+                self.running = False
+                if self.finished_func:
+                        self.finished_func(retval)
+
+        def dataAvail(self, str):
+                #prepend any remaining data from the previous call
+                str = self.remainingdata + six.ensure_str(str)
+                #split in lines
+                newlines = str.split('\n')
+                #'str' should end with '\n', so when splitting, the last line should be empty. If this is not the case, we received an incomplete line
+                if len(newlines[-1]):
+                        #remember this data for next time
+                        self.remainingdata = newlines[-1]
+                        newlines = newlines[0:-1]
+                else:
+                        self.remainingdata = ""
+
+                for line in newlines:
+                        if len(line):
+                                self.datalines.append(line)
+                if len(self.datalines) >= 2:
+                        try:
+                                self.vmin, self.vmax, self.vavg, self.vcur = self.datalines[0].split(' ')
+                                self.amin, self.amax, self.aavg, self.acur = self.datalines[1].split(' ')
+                        except:
+                                self.clearValues()
+                        self.datalines = []
+                        if self.refresh_func:
+                                self.refresh_func()
+                        config.plugins.RaedQuickSignal.bitrateVideo.value = self.vcur
+                        config.plugins.RaedQuickSignal.bitrateAudio.value = self.acur
 
 #################################
 pSignal = RaedQuickSignal()

@@ -26,6 +26,11 @@ else:
         BITRATE = False
         pass
 
+if os.path.exists('/usr/bin/bitrate'):
+        BITRATEBIN = True
+else:
+        BITRATEBIN = False
+
 class RaedQuickEcmInfo(Poll, Converter, object):
         ecmfile = 0
         emuname = 1
@@ -178,12 +183,18 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                                 audio = service and service.audioTracks()
                                 if audio:
                                         if audio.getCurrentTrack() > -1:
-                                                if self.audio is not 0 or self.video is not 0:
+                                                if self.audio != 0 or self.video != 0:
                                                         audioTrackCodec = str(audio.getTrackInfo(audio.getCurrentTrack()).getDescription()) or ""
                                                 else:
                                                         audioTrackCodec = ""
                                 else:
                                         audioTrackCodec = ""
+                                if BITRATEBIN:
+                                        try:
+                                                self.video = int(config.plugins.RaedQuickSignal.bitrateVideo.value)
+                                                self.audio = int(config.plugins.RaedQuickSignal.bitrateAudio.value)
+                                        except:
+                                                self.video = self.audio = 0
                                 yres = info.getInfo(iServiceInformation.sVideoHeight)
                                 mode = ("i", "p", "")[info.getInfo(iServiceInformation.sProgressive)]
                                 xres = info.getInfo(iServiceInformation.sVideoWidth)
@@ -423,11 +434,11 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                                         serlist = "%s" % nameser[1].split('"')[1]
                                 except:
                                         pass
-                                if serlist is not None and camdlist is not None:
+                                if serlist != None and camdlist != None:
                                         return ("%s %s" % (serlist, camdlist))
-                                elif camdlist is not None:
+                                elif camdlist != None:
                                         return "%s" % camdlist
-                                elif serlist is not None:
+                                elif serlist != None:
                                         return "%s" % serlist
                                 return ""
                         # AAF & ATV old under 6.2 & VTI 
@@ -451,7 +462,7 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                         else:
                                 return None
                                 
-                        if serlist is not None:
+                        if serlist != None:
                                 try:
                                         cardserver = ""
                                         for current in serlist.readlines():
@@ -462,7 +473,7 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                         else:
                                 cardserver = ""
 
-                        if camdlist is not None:
+                        if camdlist != None:
                                 try:
                                         emu = ""
                                         for current in camdlist.readlines():
