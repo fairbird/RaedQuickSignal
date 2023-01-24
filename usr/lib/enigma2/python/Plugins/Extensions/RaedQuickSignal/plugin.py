@@ -1212,7 +1212,7 @@ def search_title(id):
         if content:
                 for childs in root:
                         if childs.tag == 'weather':
-                                locationcode = "%s,%s" % (childs.attrib.get('weatherlocationname') if PY3 else childs.attrib.get('weatherlocationname').encode("UTF-8", "ignore"), childs.attrib.get('region') if PY3 else childs.attrib.get('region').encode("UTF-8", "ignore"))
+                                locationcode = "%s" % (childs.attrib.get('weatherlocationname') if PY3 else childs.attrib.get('weatherlocationname').encode("UTF-8", "ignore"))
                                 search_results.append(locationcode)
         return search_results
 
