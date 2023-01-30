@@ -603,13 +603,13 @@ class RaedQuickSignalCaidInfo2(Poll, Converter, object):
 									item[1] = item[1][tt+1:]
 							info[item[0].strip().lower()] = item[1].strip()
 						else:
-							if "caid" not in info:
+							if not 'caid' in info or not 'CaID' in info:
 								x = line.lower().find("caid")
 								if x != -1:
 									y = line.find(",")
 									if y != -1:
 										info["caid"] = line[x+5:y]
-							if "pid" not in info:
+							if not 'pid' in info:
 								x = line.lower().find("pid")
 								if x != -1:
 									y = line.find(" =")
