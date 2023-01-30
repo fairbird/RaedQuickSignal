@@ -31,9 +31,9 @@
 # 17.08.2018 Update by mfraja to RAEDQuickSignal plugins
 # 07.12.2018 Update by mfraja to RAEDQuickSignal plugins fix picon show on DreamOS
 # 12.01.2022 Update by RAED to remove "sub-network" from namespace
+# 12.01.2022 Update by RAED to support picon for channels name
 
-from __future__ import print_function
-
+import unicodedata
 from Components.Renderer.Renderer import Renderer
 from enigma import ePixmap, ePicLoad
 from Components.AVSwitch import AVSwitch
@@ -127,6 +127,7 @@ class RaedQuickSignalPiconUni(Renderer, Poll):
                         if what[0] != self.CHANGED_CLEAR:
                                 sname = self.source.text
                                 sname = sname.upper().replace('.', '').replace('\xc2\xb0', '')
+                                channelname = sname.split(':')[-1]
                                 fields = sname.upper().replace('.', '').replace('\xc2\xb0', '').split(':', 10)[:10]
                                 if sname.startswith('4097'):
                                         sname = sname.replace('4097', '1', 1)
@@ -134,12 +135,21 @@ class RaedQuickSignalPiconUni(Renderer, Poll):
                                         sname = '_'.join(sname.split(':')[:10])
                                 pngname = self.nameCache.get(sname, '')
                                 if pngname == '' and len(fields) >= 10:
-                                	print("****fields****",str(fields))
                                 	if not fields[6].endswith("0000"): #remove "sub-network" from namespace
                                 		fields[6] = fields[6][:-4] + "0000"
                                 		sname2 = '_'.join(fields)
                                 		pngname = self.findPicon(sname2)
-                                #print("****raedpngname****",str(pngname))
+                                if pngname == '': # picon by channel name
+                                	channelname = unicodedata.normalize('NFKD', str(channelname)).encode('ASCII', 'ignore').decode('ASCII', 'ignore')
+                                	channelname = re.sub('[^a-z0-9]', '', channelname.replace('&', 'and').replace('+', 'plus').replace('*', 'star').lower())
+                                	if len(channelname) > 0:
+                                		pngname = self.findPicon(channelname)
+                                		if not pngname and len(channelname) > 2 and channelname.endswith('hd'):
+                                			pngname = self.findPicon(channelname[:-2])
+                                		if not pngname and len(channelname) > 6:
+                                			series = re.sub(r's[0-9]*e[0-9]*$', '', channelname)
+                                			pngname = self.findPicon(series)
+
                                 if pngname == '':
                                         pngname = self.findPicon(sname)
                                         if pngname != '':
