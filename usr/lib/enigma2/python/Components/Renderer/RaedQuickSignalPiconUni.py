@@ -38,8 +38,9 @@ from Components.Renderer.Renderer import Renderer
 from enigma import ePixmap, ePicLoad
 from Components.AVSwitch import AVSwitch
 from Tools.Directories import fileExists, SCOPE_CURRENT_SKIN, SCOPE_PLUGINS, resolveFilename
+from ServiceReference import ServiceReference
 from os import path as os_path
-import os, re
+import os, re, sys
 
 try:
     from Components.Converter.Poll import PollConverter as Poll
@@ -59,7 +60,11 @@ except:
         #                       searchPaths.append(piconPath)
         #searchPaths.append(resolveFilename(SCOPE_CURRENT_SKIN, '%s/'))
         #searchPaths.append(resolveFilename(SCOPE_PLUGINS, '%s/'))
-        
+
+def getchannelName(serviceName):
+	return ServiceReference(serviceName).getServiceName()
+	
+
 class RaedQuickSignalPiconUni(Renderer, Poll):
         __module__ = __name__
         if not os.path.exists("/usr/lib64"):
@@ -127,7 +132,6 @@ class RaedQuickSignalPiconUni(Renderer, Poll):
                         if what[0] != self.CHANGED_CLEAR:
                                 sname = self.source.text
                                 sname = sname.upper().replace('.', '').replace('\xc2\xb0', '')
-                                channelname = sname.split(':')[-1]
                                 fields = sname.upper().replace('.', '').replace('\xc2\xb0', '').split(':', 10)[:10]
                                 if sname.startswith('4097'):
                                         sname = sname.replace('4097', '1', 1)
@@ -140,13 +144,17 @@ class RaedQuickSignalPiconUni(Renderer, Poll):
                                 		sname2 = '_'.join(fields)
                                 		pngname = self.findPicon(sname2)
                                 if pngname == '': # picon by channel name
-                                	channelname = unicodedata.normalize('NFKD', str(channelname)).encode('ASCII', 'ignore').decode('ASCII', 'ignore')
+                                	channelname = getchannelName(self.source.text)
+                                	if sys.version_info[0] >= 3:
+                                		channelname = channelname = unicodedata.normalize('NFKD', str(channelname)).encode('ASCII', 'ignore').decode('ASCII', 'ignore')
+                                	else:
+                                		channelname = unicodedata.normalize('NFKD', unicode(channelname, 'utf_8', errors='ignore')).encode('ASCII', 'ignore')
                                 	channelname = re.sub('[^a-z0-9]', '', channelname.replace('&', 'and').replace('+', 'plus').replace('*', 'star').lower())
                                 	if len(channelname) > 0:
                                 		pngname = self.findPicon(channelname)
-                                		if not pngname and len(channelname) > 2 and channelname.endswith('hd'):
+                                		if pngname == '' and len(channelname) > 2 and channelname.endswith('hd'):
                                 			pngname = self.findPicon(channelname[:-2])
-                                		if not pngname and len(channelname) > 6:
+                                		if pngname == '' and len(channelname) > 6:
                                 			series = re.sub(r's[0-9]*e[0-9]*$', '', channelname)
                                 			pngname = self.findPicon(series)
 
