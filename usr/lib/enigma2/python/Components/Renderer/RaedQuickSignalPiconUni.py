@@ -143,7 +143,11 @@ class RaedQuickSignalPiconUni(Renderer, Poll):
                                 		fields[6] = fields[6][:-4] + "0000"
                                 		sname2 = '_'.join(fields)
                                 		pngname = self.findPicon(sname2)
-                                if pngname == '': # picon by channel name
+                                if pngname == '': # picon by channel Reference
+                                        pngname = self.findPicon(sname)
+                                        if pngname != '':
+                                                self.nameCache[sname] = pngname
+                                if pngname == '': # picon by channel Name
                                 	channelname = getchannelName(self.source.text)
                                 	if sys.version_info[0] >= 3:
                                 		channelname = channelname = unicodedata.normalize('NFKD', str(channelname)).encode('ASCII', 'ignore').decode('ASCII', 'ignore')
@@ -158,10 +162,6 @@ class RaedQuickSignalPiconUni(Renderer, Poll):
                                 			series = re.sub(r's[0-9]*e[0-9]*$', '', channelname)
                                 			pngname = self.findPicon(series)
 
-                                if pngname == '':
-                                        pngname = self.findPicon(sname)
-                                        if pngname != '':
-                                                self.nameCache[sname] = pngname
                         if pngname == '':
                                 pngname = self.nameCache.get('default', '')
                                 if pngname == '':
