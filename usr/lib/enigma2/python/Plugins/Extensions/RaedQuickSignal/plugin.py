@@ -1098,7 +1098,7 @@ class PiconsScreen(Screen):
                 list = []
                 list.append((_("%s") % title69, "Black"))
                 list.append((_("%s") % title70, "White"))
-                list.append((_("%s") % title71, "Black"))
+                list.append((_("%s") % title71, "Transparent"))
                 self["menu"] = MenuList(list)
                 self["menu"].onSelectionChanged.append(self.Picture)
                 self.onShow.append(self.Picture)
