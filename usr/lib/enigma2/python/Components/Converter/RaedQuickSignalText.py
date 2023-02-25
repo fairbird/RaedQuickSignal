@@ -76,62 +76,61 @@ class RaedQuickSignalText(Converter, object):
 
 	@cached
 	def getValue(self):	
-		if self.type == self.SNRNUM:
+		if (self.type == self.SNRNUM):
 			count = self.source.snr		
-			if count == None:
+			if (count == None):
 				return 0	
-			return (count * 100 // 65536)
+			return ((count * 100) // 65536)
 		elif self.type == self.AGCNUM:
 			count = self.source.agc			
-			if count == None:
+			if (count == None):
 				return 0						
-			return (count * 100 // 65536)
-		elif self.type == self.BERNUM:
+			return ((count * 100) // 65536)
+		elif (self.type == self.BERNUM):
 			count = self.source.ber
-			if count:
-				if count < 320000:
-					return count
+			if (count < 320000):
+				return count
 			return 320000
-		elif self.type == self.STEP:
+		elif (self.type == self.STEP):
 			time = self.source.time
-			if time == None:
+			if (time == None):
 				return 0
 			t = localtime(time)
 			c = t.tm_sec
 			
-			if c < 10:
+			if (c < 10):
 				return c
-			elif c < 20:
+			elif (c < 20):
 				return (c - 10)
-			elif c < 30:
+			elif (c < 30):
 				return (c - 20)
-			elif c < 40:
+			elif (c < 40):
 				return (c - 30)
-			elif c < 50:
+			elif (c < 50):
 				return (c - 40)
 			return (c - 50)
-		elif self.type == self.SECHAND:
+		elif (self.type == self.SECHAND):
 			time = self.source.time
-			if time == None:
+			if (time == None):
 				return 0
 			t = localtime(time)
 			c = t.tm_sec
 			return c
-		elif self.type == self.MINHAND:
+		elif (self.type == self.MINHAND):
 			time = self.source.time
-			if time == None:
+			if (time == None):
 				return 0
 			t = localtime(time)
 			c = t.tm_min
 			return c			
-		elif self.type == self.HOURHAND:
+		elif (self.type == self.HOURHAND):
 			time = self.source.time
-			if time == None:
+			if (time == None):
 				return 0
 			t = localtime(time)
 			c = t.tm_hour
 			m = t.tm_min
-			if c > 11:
+			if (c > 11):
 				c = c - 12
 			val = (c * 5) + (m // 12)
 			return val
