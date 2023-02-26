@@ -88,9 +88,10 @@ class RaedQuickSignalText(Converter, object):
 			return ((count * 100) // 65536)
 		elif (self.type == self.BERNUM):
 			count = self.source.ber
-			if (count < 320000):
-				return count
-			return 320000
+			if count:
+				if (count < 320000):
+					return count
+				return 320000
 		elif (self.type == self.STEP):
 			time = self.source.time
 			if (time == None):
