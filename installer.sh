@@ -2,7 +2,7 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=16.4
+version=16.5
 description=What is NEW:\n- Fix some code\n\n*************************\n:ما هو الجديد\n- إصلاح بعض الاكواد
 ##############################################################
 
