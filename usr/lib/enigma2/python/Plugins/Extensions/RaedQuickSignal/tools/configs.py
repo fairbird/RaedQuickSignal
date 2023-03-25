@@ -40,6 +40,7 @@ config.plugins.RaedQuickSignal.lang = ConfigSelection(default="EN", choices = [
 	("AR", "عربي"),
 	("TR", "İngilizce"),
 	("IT", "Italiano"),
+	("SK", "Slovenský"),
 	("CN", "中國人")
 	])
 
@@ -52,6 +53,8 @@ elif config.plugins.RaedQuickSignal.lang.value == "TR":
 	from Plugins.Extensions.RaedQuickSignal.language.tr import *
 elif config.plugins.RaedQuickSignal.lang.value == "IT":
 	from Plugins.Extensions.RaedQuickSignal.language.it import *
+elif config.plugins.RaedQuickSignal.lang.value == "SK":
+	from Plugins.Extensions.RaedQuickSignal.language.sk import *
 elif config.plugins.RaedQuickSignal.lang.value == "CN":
 	from Plugins.Extensions.RaedQuickSignal.language.ch import *
 else:
