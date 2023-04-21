@@ -100,10 +100,7 @@ class RaedQuickSignalPiconUni(Renderer, Poll):
                    Poll.__init__(self,type)
                 else:
                    Poll.__init__(self)
-                if os_path.exists('/data/piconpool'):
-                	self.path = 'piconpool'
-                else:
-                	self.path = 'picon'
+                self.path = 'picon'
                 self.scale = '0'
                 self.nameCache = {}
                 self.pngname = ''
