@@ -2,8 +2,8 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=16.6
-description=What is NEW:\n- Add Slovak language support\n\n*************************\n:ما هو الجديد\n- إضافة دعم اللغة السلوفاكية
+version=16.7
+description=What is NEW:\n- Update picons renderer\n\n*************************\n:ما هو الجديد\n- تحديث ملف ريندير البايكونات
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
