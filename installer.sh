@@ -24,7 +24,7 @@ else
    OSTYPE=Dream
 fi
 echo ""
-if python --version 2>&1 | grep -q '^Python 3\.'; then
+if [ -f /usr/bin/python3 ] ; then
 	echo "You have Python3 image"
 	PYTHON=PY3
 	Packagesix=python3-six
