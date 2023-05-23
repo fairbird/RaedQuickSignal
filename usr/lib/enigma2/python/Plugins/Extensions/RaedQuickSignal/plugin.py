@@ -212,8 +212,8 @@ def downloadFile(url, filePath):
         # Download the file from `url` and save it locally under `file_name`:
         compat_urlretrieve(url, filePath)
         return True
-        req = compat_Request(url)
-        response = compat_urlopen(req)         
+        req = compat_Request(url, headers={'User-Agent': 'Mozilla/5.0'}) # add [headers={'User-Agent': 'Mozilla/5.0'}] to fix HTTP Error 403: Forbidden
+        response = compat_urlopen(req,timeout=5)
         cprint("response.read",response.read())
         output = open(filePath, 'wb')
         output.write(response.read())
@@ -231,8 +231,8 @@ def downloadFile(url, filePath):
 
 def readurl(url):
     try:
-        req = compat_Request(url)
-        response = compat_urlopen(req)
+        req = compat_Request(url, headers={'User-Agent': 'Mozilla/5.0'}) # add [headers={'User-Agent': 'Mozilla/5.0'}] to fix HTTP Error 403: Forbidden
+        response = compat_urlopen(req,timeout=5)
         data = response.read()
         response.close()
         cprint("[data %s]" % data)
@@ -1197,12 +1197,15 @@ class SearchLocationMSN(Screen):
                         config.plugins.RaedQuickSignal.city.value = id.replace(", ", ",")
                         config.plugins.RaedQuickSignal.city.save()
                         self.close()
-
+        
 def search_title(id):
+        import urllib.request
         url = "http://weather.service.msn.com/find.aspx?outputview=search&weasearchstr=%s&culture=en-US&src=outlook" % id
-        msnrequest = compat_Request(url)
+        #msnrequest = urllib.request.Request(url)
+        msnrequest = compat_Request(url, headers={'User-Agent': 'Mozilla/5.0'}) # add [headers={'User-Agent': 'Mozilla/5.0'}] to fix HTTP Error 403: Forbidden
         try:
-                msnpage = compat_urlopen(msnrequest)
+        	#msnpage = urllib.request.urlopen(msnrequest)
+                msnpage = compat_urlopen(msnrequest,timeout=5)
         except (compat_URLError, HTTPException, socket.error) as err:
                 print("[Location] Error: Unable to retrieve page - Error code: ", str(err))
         content = msnpage.read() if PY3 else msnpage.read().encode("UTF-8", "ignore")
