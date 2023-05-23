@@ -2,8 +2,8 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=16.7
-description=What is NEW:\n- Update picons renderer\n\n*************************\n:ما هو الجديد\n- تحديث ملف ريندير البايكونات
+version=16.8
+description=What is NEW:\n- Fix download data of weather\n\n*************************\n:ما هو الجديد\n- إصلاح تحميل بيانات حالة الطقس
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
