@@ -1099,6 +1099,7 @@ class PiconsScreen(Screen):
                 list.append((_("%s") % title69, "Black"))
                 list.append((_("%s") % title70, "White"))
                 list.append((_("%s") % title71, "Transparent"))
+                list.append((_("%s") % title94, "Transparent2"))
                 self["menu"] = MenuList(list)
                 self["menu"].onSelectionChanged.append(self.Picture)
                 self.onShow.append(self.Picture)
@@ -1116,6 +1117,8 @@ class PiconsScreen(Screen):
                                 pic = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/preview/WhitePicon.png')
                         elif index == "Transparent":
                                 pic = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/preview/TransparentPicon.png')
+                        elif index == "Transparent2":
+                                pic = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/preview/TransparentPicon2.png')
                         self['Picture'].instance.setPixmapFromFile(pic)
                 except Exception as error:
                         logdata("Picture preview:", error)
@@ -1136,6 +1139,9 @@ class PiconsScreen(Screen):
                                         cmdlist.append(cmd)
                                 elif index == "Transparent":
                                         cmd='wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/installerTransparentPicons.sh -O - | /bin/sh'
+                                        cmdlist.append(cmd)
+                                elif index == "Transparent2":
+                                        cmd='wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/installerTransparentPicons2.sh -O - | /bin/sh'
                                         cmdlist.append(cmd)
                                 self.session.open(Console, title='%s' % title73, cmdlist=cmdlist, finishedCallback=self.Finished, closeOnSuccess=True)
                         else:

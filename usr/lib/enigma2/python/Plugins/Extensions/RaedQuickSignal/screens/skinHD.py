@@ -63,7 +63,7 @@ SKIN_setup = """
   <ePixmap position="692,713" zPosition="1" size="200,3" pixmap="{1}/images/yellow.png" alphatest="blend"/>
   <ePixmap position="1025,713" zPosition="1" size="200,3" pixmap="{1}/images/blue.png" alphatest="blend"/>
   <widget source="help" render="Label" position="10,539" size="723,142" font="{0};23" foregroundColor="#00e5b243" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <widget name="Picture" position="756,441" size="400,225" zPosition="5" alphatest="on"/>
+  <widget name="Picture" position="756,441" size="400,225" zPosition="5" alphatest="blend"/>
   <ePixmap position="877,478" zPosition="3" size="150,150" pixmap="{1}/images/fairbirdhd.png" alphatest="blend"/>
 </screen>
 """.format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"))
@@ -83,20 +83,20 @@ SKIN_setup2 = """
   <!--ePixmap position="387,658" zPosition="1" size="200,2" pixmap="{1}/images/yellow.png" alphatest="blend" /-->
   <ePixmap position="515,658" zPosition="1" size="200,2" pixmap="{1}/images/blue.png" alphatest="blend" />
   <widget source="help" render="Label" position="15,406" size="309,225" font="{0};23" foregroundColor="#00e5b243" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <widget name="Picture" position="330,406" size="400,225" zPosition="5" alphatest="on"/>
+  <widget name="Picture" position="330,406" size="400,225" zPosition="5" alphatest="blend"/>
   <ePixmap position="448,443" zPosition="3" size="150,150" pixmap="{1}/images/fairbirdhd.png" alphatest="blend" />
  </screen>
 """.format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"))
 
 ### SKIN_Picons
 SKIN_Picons = """
-<screen name="PiconsScreen" backgroundColor="#16000000" position="center,center" size="1050,375" title="RAED's RaedQuickSignal Picons setup" flags="wfNoBorder">
+<screen name="PiconsScreen" backgroundColor="#16000000" position="center,center" size="1050,421" title="RAED's RaedQuickSignal Picons setup" flags="wfNoBorder">
   <eLabel position="0,53" size="1050,1" zPosition="10" backgroundColor="#00ffffff"/>
   <widget source="Title" render="Label" font="{0};35" foregroundColor="#00bab329" position="30,5" size="981,45" transparent="1"/>
-  <widget name="menu" position="15,60" size="615,229" foregroundColor="#00ffffff" backgroundColor="#16000000" foregroundColorSelected="#00000000" backgroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
-  <eLabel text="{1}" position="16,298" size="1015,32" font="{0};32" foregroundColor="#00ff2525" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <eLabel text="{2}" position="16,338" size="1015,32" font="{0};32" foregroundColor="#00bab329" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <widget name="Picture" position="638,62" size="400,225" zPosition="5" alphatest="blend"/>
+  <widget name="menu" position="15,60" size="615,278" foregroundColor="#00ffffff" backgroundColor="#16000000" foregroundColorSelected="#00000000" backgroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
+  <eLabel text="{1}" position="16,348" size="1015,32" font="{0};32" foregroundColor="#00ff2525" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
+  <eLabel text="{2}" position="16,383" size="1015,32" font="{0};32" foregroundColor="#00bab329" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
+  <widget name="Picture" position="638,97" size="400,225" zPosition="5" alphatest="blend"/>
 </screen>
 """.format(FontName, title75, title76)
 
@@ -148,7 +148,7 @@ SKIN_AGC_Picon_SNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -310,19 +310,19 @@ SKIN_AGC_Picon_SNRdB = """
   </widget>
   <ePixmap position = "740,340" size = "45,30" zPosition = "4" alphatest = "blend" pixmap="{1}/images/menu.png" />
   <!-- Picon -->
-  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="288,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="288,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="390,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="390,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
   <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="495,402" size="100,60" transparent="1" alphatest="blend" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="0,420" size="180,22" font="{0}; 16" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
@@ -385,7 +385,7 @@ SKIN_AGC_Picon_NOSNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -547,19 +547,19 @@ SKIN_AGC_Picon_NOSNRdB = """
   </widget>
   <ePixmap position = "740,340" size = "45,30" zPosition = "4" alphatest = "blend" pixmap="{1}/images/menu.png" />
   <!-- Picon -->
-  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="288,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="288,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="390,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="390,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
   <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="495,402" size="100,60" transparent="1" alphatest="blend" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="0,420" size="180,22" font="{0}; 16" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
@@ -626,7 +626,7 @@ SKIN_AGC_Event_Des_SNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -852,7 +852,7 @@ SKIN_AGC_Event_Des_NOSNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -1082,7 +1082,7 @@ SKIN_AGC_Weather_SNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -1245,32 +1245,32 @@ SKIN_AGC_Weather_SNRdB = """
   <ePixmap position = "740,340" size = "45,30" zPosition = "4" alphatest = "blend" pixmap="{1}/images/menu.png" />
 <!-- Weather -->
 <!-- Today -->
-<widget source="session.CurrentService" render="Label" position="180,400" size="80,22" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="180,400" size="80,22" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Day</convert>
     </widget>
 <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="171,420" size="58,58" zPosition="3" transparent="1" alphatest="blend">
       <convert type="RaedQuickWeather">Picon</convert>
     </widget>
-<widget source="session.CurrentService" render="Label" position="233,449" size="200,25" font="{0}; 17" zPosition="3" halign="left" valign="center" foregroundColor="#00f37104" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="233,449" size="200,25" font="{0}; 17" zPosition="3" halign="left" valign="center" foregroundColor="#00f37104" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Location</convert>
     </widget>
-<widget source="session.CurrentService" render="Label" position="236,420" size="77,30" font="{0}; 24" zPosition="3" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="236,420" size="77,30" font="{0}; 24" zPosition="3" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Temp</convert>
     </widget>
 <ePixmap position="416,445" size="40,33" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/wind.png" />
-<widget source="session.CurrentService" render="Label" position="336,436" size="80,30" font="{0}; 16" zPosition="3" halign="center" valign="center" foregroundColor="#0000ff00" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="336,436" size="80,30" font="{0}; 16" zPosition="3" halign="center" valign="center" foregroundColor="#0000ff00" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Windspeed</convert>
     </widget>
 <ePixmap position="410,405" size="30,30" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/humd.png" />
-<widget source="session.CurrentService" render="Label" position="329,405" size="80,30" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="329,405" size="80,30" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Humidity</convert>
     </widget>
   <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/rise.png" position="456,405" size="60,30" zPosition="2"/>
-  <widget source="session.CurrentService" render="Label" position="456,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="456,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunrise</convert>
   </widget>
   <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/set.png" position="530,405" size="60,30" zPosition="2"/>
-  <widget source="session.CurrentService" render="Label" position="530,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="530,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunset</convert>
   </widget>
   <!-- Channel and Provider -->
@@ -1334,7 +1334,7 @@ SKIN_AGC_Weather_NOSNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -1497,32 +1497,32 @@ SKIN_AGC_Weather_NOSNRdB = """
   <ePixmap position = "740,340" size = "45,30" zPosition = "4" alphatest = "blend" pixmap="{1}/images/menu.png" />
 <!-- Weather -->
 <!-- Today -->
-<widget source="session.CurrentService" render="Label" position="180,400" size="80,22" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="180,400" size="80,22" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Day</convert>
     </widget>
 <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="171,420" size="58,58" zPosition="3" transparent="1" alphatest="blend">
       <convert type="RaedQuickWeather">Picon</convert>
     </widget>
-<widget source="session.CurrentService" render="Label" position="233,449" size="200,25" font="{0}; 17" zPosition="3" halign="left" valign="center" foregroundColor="#00f37104" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="233,449" size="200,25" font="{0}; 17" zPosition="3" halign="left" valign="center" foregroundColor="#00f37104" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Location</convert>
     </widget>
-<widget source="session.CurrentService" render="Label" position="236,420" size="77,30" font="{0}; 24" zPosition="3" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="236,420" size="77,30" font="{0}; 24" zPosition="3" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Temp</convert>
     </widget>
 <ePixmap position="416,445" size="40,33" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/wind.png" />
-<widget source="session.CurrentService" render="Label" position="336,436" size="80,30" font="{0}; 16" zPosition="3" halign="center" valign="center" foregroundColor="#0000ff00" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="336,436" size="80,30" font="{0}; 16" zPosition="3" halign="center" valign="center" foregroundColor="#0000ff00" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Windspeed</convert>
     </widget>
 <ePixmap position="410,405" size="30,30" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/humd.png" />
-<widget source="session.CurrentService" render="Label" position="329,405" size="80,30" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="329,405" size="80,30" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Humidity</convert>
     </widget>
   <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/rise.png" position="456,405" size="60,30" zPosition="2"/>
-  <widget source="session.CurrentService" render="Label" position="456,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="456,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunrise</convert>
   </widget>
   <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/set.png" position="530,405" size="60,30" zPosition="2"/>
-  <widget source="session.CurrentService" render="Label" position="530,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="530,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunset</convert>
   </widget>
   <!-- Channel and Provider -->
@@ -1589,7 +1589,7 @@ SKIN_Event_Progress_Picon_SNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -1751,19 +1751,19 @@ SKIN_Event_Progress_Picon_SNRdB = """
   </widget>
   <ePixmap position = "740,340" size = "45,30" zPosition = "4" alphatest = "blend" pixmap="{1}/images/menu.png" />
   <!-- Picon -->
-  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="288,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="288,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="390,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="390,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
   <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="495,402" size="100,60" transparent="1" alphatest="blend" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="0,420" size="180,22" font="{0}; 16" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
@@ -1825,7 +1825,7 @@ SKIN_Event_Progress_Picon_NOSNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -1987,19 +1987,19 @@ SKIN_Event_Progress_Picon_NOSNRdB = """
   </widget>
   <ePixmap position = "740,340" size = "45,30" zPosition = "4" alphatest = "blend" pixmap="{1}/images/menu.png" />
   <!-- Picon -->
-  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="288,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="288,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="390,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="390,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
   <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="495,402" size="100,60" transparent="1" alphatest="blend" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="0,420" size="180,22" font="{0}; 16" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
@@ -2065,7 +2065,7 @@ SKIN_Event_Progress_Event_Des_SNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -2290,7 +2290,7 @@ SKIN_Event_Progress_Event_Des_NOSNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -2519,7 +2519,7 @@ SKIN_Event_Progress_Weather_SNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -2682,32 +2682,32 @@ SKIN_Event_Progress_Weather_SNRdB = """
   <ePixmap position = "740,340" size = "45,30" zPosition = "4" alphatest = "blend" pixmap="{1}/images/menu.png" />
 <!-- Weather -->
 <!-- Today -->
-<widget source="session.CurrentService" render="Label" position="180,400" size="80,22" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="180,400" size="80,22" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Day</convert>
     </widget>
 <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="171,420" size="58,58" zPosition="3" transparent="1" alphatest="blend">
       <convert type="RaedQuickWeather">Picon</convert>
     </widget>
-<widget source="session.CurrentService" render="Label" position="233,449" size="200,25" font="{0}; 17" zPosition="3" halign="left" valign="center" foregroundColor="#00f37104" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="233,449" size="200,25" font="{0}; 17" zPosition="3" halign="left" valign="center" foregroundColor="#00f37104" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Location</convert>
     </widget>
-<widget source="session.CurrentService" render="Label" position="236,420" size="77,30" font="{0}; 24" zPosition="3" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="236,420" size="77,30" font="{0}; 24" zPosition="3" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Temp</convert>
     </widget>
 <ePixmap position="416,445" size="40,33" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/wind.png" />
-<widget source="session.CurrentService" render="Label" position="336,436" size="80,30" font="{0}; 18" zPosition="3" halign="center" valign="center" foregroundColor="#0000ff00" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="336,436" size="80,30" font="{0}; 18" zPosition="3" halign="center" valign="center" foregroundColor="#0000ff00" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Windspeed</convert>
     </widget>
 <ePixmap position="410,405" size="30,30" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/humd.png" />
-<widget source="session.CurrentService" render="Label" position="329,405" size="80,30" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="329,405" size="80,30" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Humidity</convert>
     </widget>
   <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/rise.png" position="456,405" size="60,30" zPosition="2"/>
-  <widget source="session.CurrentService" render="Label" position="456,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="456,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunrise</convert>
   </widget>
   <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/set.png" position="530,405" size="60,30" zPosition="2"/>
-  <widget source="session.CurrentService" render="Label" position="530,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="530,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunset</convert>
   </widget>
   <!-- Channel and Provider -->
@@ -2770,7 +2770,7 @@ SKIN_Event_Progress_Weather_NOSNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -2933,32 +2933,32 @@ SKIN_Event_Progress_Weather_NOSNRdB = """
   <ePixmap position = "740,340" size = "45,30" zPosition = "4" alphatest = "blend" pixmap="{1}/images/menu.png" />
 <!-- Weather -->
 <!-- Today -->
-<widget source="session.CurrentService" render="Label" position="180,400" size="80,22" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="180,400" size="80,22" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Day</convert>
     </widget>
 <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="171,420" size="58,58" zPosition="3" transparent="1" alphatest="blend">
       <convert type="RaedQuickWeather">Picon</convert>
     </widget>
-<widget source="session.CurrentService" render="Label" position="233,449" size="200,25" font="{0}; 17" zPosition="3" halign="left" valign="center" foregroundColor="#00f37104" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="233,449" size="200,25" font="{0}; 17" zPosition="3" halign="left" valign="center" foregroundColor="#00f37104" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Location</convert>
     </widget>
-<widget source="session.CurrentService" render="Label" position="236,420" size="77,30" font="{0}; 24" zPosition="3" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="236,420" size="77,30" font="{0}; 24" zPosition="3" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Temp</convert>
     </widget>
 <ePixmap position="416,445" size="40,33" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/wind.png" />
-<widget source="session.CurrentService" render="Label" position="336,436" size="80,30" font="{0}; 18" zPosition="3" halign="center" valign="center" foregroundColor="#0000ff00" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="336,436" size="80,30" font="{0}; 18" zPosition="3" halign="center" valign="center" foregroundColor="#0000ff00" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Windspeed</convert>
     </widget>
 <ePixmap position="410,405" size="30,30" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/humd.png" />
-<widget source="session.CurrentService" render="Label" position="329,405" size="80,30" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" noWrap="1">
+<widget source="session.CurrentService" render="Label" position="329,405" size="80,30" font="{0}; 20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Humidity</convert>
     </widget>
   <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/rise.png" position="456,405" size="60,30" zPosition="2"/>
-  <widget source="session.CurrentService" render="Label" position="456,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="456,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunrise</convert>
   </widget>
   <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/set.png" position="530,405" size="60,30" zPosition="2"/>
-  <widget source="session.CurrentService" render="Label" position="530,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="530,440" size="60,25" font="{0};20" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunset</convert>
   </widget>
   <!-- Channel and Provider -->
@@ -3026,7 +3026,7 @@ SKIN_AGC_Picon_media_SNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -3188,19 +3188,19 @@ SKIN_AGC_Picon_media_SNRdB = """
   </widget>
   <ePixmap position = "740,340" size = "45,30" zPosition = "4" alphatest = "blend" pixmap="{1}/images/menu.png" />
   <!-- Picon -->
-  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="288,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="288,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="390,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="390,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
   <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="495,402" size="100,60" transparent="1" alphatest="blend" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="0,420" size="180,22" font="{0}; 16" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
@@ -3263,7 +3263,7 @@ SKIN_AGC_Picon_media_NOSNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -3425,19 +3425,19 @@ SKIN_AGC_Picon_media_NOSNRdB = """
   </widget>
   <ePixmap position = "740,340" size = "45,30" zPosition = "4" alphatest = "blend" pixmap="{1}/images/menu.png" />
   <!-- Picon -->
-  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="288,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="288,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="390,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="390,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
   <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="495,402" size="100,60" transparent="1" alphatest="blend" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="0,420" size="180,22" font="{0}; 16" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
@@ -3503,7 +3503,7 @@ SKIN_Event_Progress_Picon_media_SNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -3665,19 +3665,19 @@ SKIN_Event_Progress_Picon_media_SNRdB = """
   </widget>
   <ePixmap position = "740,340" size = "45,30" zPosition = "4" alphatest = "blend" pixmap="{1}/images/menu.png" />
   <!-- Picon -->
-  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="288,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="288,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="390,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="390,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
   <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="495,402" size="100,60" transparent="1" alphatest="blend" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="0,420" size="180,22" font="{0}; 16" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
@@ -3739,7 +3739,7 @@ SKIN_Event_Progress_Picon_media_NOSNRdB = """
   <eLabel position="85,337" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,368" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="85,397" size="600,2" backgroundColor="#00bbbbbb" zPosition="4" />
-  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top" noWrap="1" halign="center">
+  <widget source="session.CurrentService" render="Label" position="85,161" size="600,170" font="{0}; 18" zPosition="2" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="top"  halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="85,341" size="600,25" font="{0}; 20" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="top" halign="center">
@@ -3901,19 +3901,19 @@ SKIN_Event_Progress_Picon_media_NOSNRdB = """
   </widget>
   <ePixmap position = "740,340" size = "45,30" zPosition = "4" alphatest = "blend" pixmap="{1}/images/menu.png" />
   <!-- Picon -->
-  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="185,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="185,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="288,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="288,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="288,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="390,402" size="100,60" zPosition="3" alphatest="on">
+  <ePixmap position="390,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="390,402" size="100,60" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon.png" />
+  <ePixmap position="495,402" size="100,60" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon.png" />
   <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="495,402" size="100,60" transparent="1" alphatest="blend" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="0,420" size="180,22" font="{0}; 16" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
@@ -4157,15 +4157,15 @@ SKIN_Full_Screen_Picon_Vertical = """
   <eLabel size="1280,2" position="0,84" backgroundColor="#16000000"/>
   <!-- Picon -->
   <ePixmap position="197,597" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="201,602" size="190,110" zPosition="3" alphatest="on">
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="201,602" size="190,110" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
   <ePixmap position="434,597" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv"  position="439,602" size="190,110" zPosition="3" alphatest="on">
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv"  position="439,602" size="190,110" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <ePixmap position="664,597" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="669,602" size="190,110" zPosition="3" alphatest="on">
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="669,602" size="190,110" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
   <ePixmap position="893,597" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png"/>
@@ -4270,15 +4270,15 @@ SKIN_Full_Screen_Picon_media_Vertical = """
   <eLabel size="1280,2" position="0,84" backgroundColor="#16000000"/>
   <!-- Picon -->
   <ePixmap position="197,597" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="201,602" size="190,110" zPosition="3" alphatest="on">
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="201,602" size="190,110" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
   <ePixmap position="434,597" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv"  position="439,602" size="190,110" zPosition="3" alphatest="on">
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv"  position="439,602" size="190,110" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <ePixmap position="664,597" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="669,602" size="190,110" zPosition="3" alphatest="on">
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="669,602" size="190,110" zPosition="3" alphatest="blend">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
   <ePixmap position="893,597" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png"/>
@@ -4353,7 +4353,7 @@ SKIN_Full_Screen_Picon_Ecm1_Vertical = """
     <widget source="session.FrontendStatus" render="Label" position="1029,106" size="147,28" zPosition="2" font="{0};26" halign="center" foregroundColor="#00ff0080" backgroundColor="#16000000" transparent="1">
       <convert type="FrontendInfo">AGC</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="394,373" size="507,123" zPosition="2" font="{0};18" halign="center" valign="top" noWrap="1" foregroundColor="#000099ff" backgroundColor="#16000000" transparent="1">
+    <widget source="session.CurrentService" render="Label" position="394,373" size="507,123" zPosition="2" font="{0};18" halign="center" valign="top"  foregroundColor="#000099ff" backgroundColor="#16000000" transparent="1">
       <convert type="RaedQuickEcmInfo">ecmfile</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="447,662" size="287,30" zPosition="2" font="{0};25" halign="left" valign="top" foregroundColor="#fec000" backgroundColor="#16000000" transparent="1">
@@ -4443,15 +4443,15 @@ SKIN_Full_Screen_Picon_Ecm1_Vertical = """
     <convert type="ConditionalShowHide" />
   </widget>
   <<!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="1150,558" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="1150,558" size="40,20" zPosition="2" alphatest="blend">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -4499,7 +4499,7 @@ SKIN_Full_Screen_Picon_media_Ecm1_Vertical = """
     <widget source="session.FrontendStatus" render="Label" position="1029,106" size="147,28" zPosition="2" font="{0};26" halign="center" foregroundColor="#00ff0080" backgroundColor="#16000000" transparent="1">
       <convert type="FrontendInfo">AGC</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="394,373" size="507,123" zPosition="2" font="{0};18" halign="center" valign="top" noWrap="1" foregroundColor="#000099ff" backgroundColor="#16000000" transparent="1">
+    <widget source="session.CurrentService" render="Label" position="394,373" size="507,123" zPosition="2" font="{0};18" halign="center" valign="top"  foregroundColor="#000099ff" backgroundColor="#16000000" transparent="1">
       <convert type="RaedQuickEcmInfo">ecmfile</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="447,662" size="287,30" zPosition="2" font="{0};25" halign="left" valign="top" foregroundColor="#fec000" backgroundColor="#16000000" transparent="1">
@@ -4589,15 +4589,15 @@ SKIN_Full_Screen_Picon_media_Ecm1_Vertical = """
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="1150,558" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="1150,558" size="40,20" zPosition="2" alphatest="blend">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -4645,7 +4645,7 @@ SKIN_Full_Screen_Picon_Ecm2_Vertical = """
     <widget source="session.FrontendStatus" render="Label" position="1029,106" size="147,28" zPosition="2" font="{0};26" halign="center" foregroundColor="#005395c3" backgroundColor="#16000000" transparent="1">
       <convert type="FrontendInfo">AGC</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="394,373" size="507,123" zPosition="2" font="{0};18" halign="center" valign="top" noWrap="1" foregroundColor="#005395c3" backgroundColor="#16000000" transparent="1">
+    <widget source="session.CurrentService" render="Label" position="394,373" size="507,123" zPosition="2" font="{0};18" halign="center" valign="top"  foregroundColor="#005395c3" backgroundColor="#16000000" transparent="1">
       <convert type="RaedQuickEcmInfo">ecmfile</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="447,662" size="287,30" zPosition="2" font="{0};25" halign="left" valign="top" foregroundColor="#005395c3" backgroundColor="#16000000" transparent="1">
@@ -4735,15 +4735,15 @@ SKIN_Full_Screen_Picon_Ecm2_Vertical = """
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="1150,558" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="1150,558" size="40,20" zPosition="2" alphatest="blend">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -4791,7 +4791,7 @@ SKIN_Full_Screen_Picon_media_Ecm2_Vertical = """
     <widget source="session.FrontendStatus" render="Label" position="1029,106" size="147,28" zPosition="2" font="{0};26" halign="center" foregroundColor="#005395c3" backgroundColor="#16000000" transparent="1">
       <convert type="FrontendInfo">AGC</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="394,373" size="507,123" zPosition="2" font="{0};18" halign="center" valign="top" noWrap="1" foregroundColor="#005395c3" backgroundColor="#16000000" transparent="1">
+    <widget source="session.CurrentService" render="Label" position="394,373" size="507,123" zPosition="2" font="{0};18" halign="center" valign="top"  foregroundColor="#005395c3" backgroundColor="#16000000" transparent="1">
       <convert type="RaedQuickEcmInfo">ecmfile</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="447,662" size="287,30" zPosition="2" font="{0};25" halign="left" valign="top" foregroundColor="#005395c3" backgroundColor="#16000000" transparent="1">
@@ -4881,15 +4881,15 @@ SKIN_Full_Screen_Picon_media_Ecm2_Vertical = """
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="1150,558" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="1150,558" size="40,20" zPosition="2" alphatest="blend">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="1100,558" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -4933,7 +4933,7 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
   <widget source="session.FrontendStatus" render="Label" position="151,100" size="83,28" zPosition="2" font="{0};25" halign="center" valign="center" backgroundColor="#25101010" transparent="1">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="320,340" size="637,152" zPosition="2" font="{0};22" halign="center" valign="center" noWrap="1" foregroundColor="#000090e6" backgroundColor="#25101010" transparent="1">
+  <widget source="session.CurrentService" render="Label" position="320,340" size="637,152" zPosition="2" font="{0};22" halign="center" valign="center"  foregroundColor="#000090e6" backgroundColor="#25101010" transparent="1">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="450,618" size="305,24" zPosition="2" font="{0};20" foregroundColor="#00fffe9e" backgroundColor="#25101010" transparent="1">
@@ -4953,7 +4953,7 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
   <widget source="session.CurrentService" render="Label" position="521,517" size="50,25" font="{0};23" halign="right" backgroundColor="#00000000" transparent="1" zPosition="1">
     <convert type="RaedQuickServiceInfo2">Framerate</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="51,546" size="236,25" foregroundColor="#00389416" zPosition="3" font="{0};23" halign="center" noWrap="1" backgroundColor="#25101010" transparent="1">
+  <widget source="session.CurrentService" render="Label" position="51,546" size="236,25" foregroundColor="#00389416" zPosition="3" font="{0};23" halign="center"  backgroundColor="#25101010" transparent="1">
     <convert type="RaedQuickEcmInfo">emuname</convert>
   </widget>
   <widget source="session.CurrentService" render="FixedLabel" text="{4}" position="650,517" size="156,25" zPosition="4" font="{0};23" halign="center" valign="center" foregroundColor="#7b68ee" backgroundColor="#16000000" transparent="1">
@@ -4999,7 +4999,7 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
   </widget>
   <!--Picon-->
   <ePixmap position="245,105" size="130,90" zPosition="2" pixmap="{1}/images/CobaltFHD/HD/frame_of_picon3c.png" alphatest="blend" transparent="1"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="250,110" size="120,80" zPosition="5" alphatest="on">
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="250,110" size="120,80" zPosition="5" alphatest="blend">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
   <ePixmap position="245,235" size="130,90" zPosition="2" pixmap="{1}/images/CobaltFHD/HD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
@@ -5028,15 +5028,15 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
   <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="1030,139" size="70,70" zPosition="3" transparent="1" alphatest="blend">
     <convert type="RaedQuickWeather">Picon</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="1165,137" size="52,27" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="#00c1ea02" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="1165,137" size="52,27" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="#00c1ea02" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Temp</convert>
   </widget>
   <ePixmap pixmap="{1}/images/CobaltFHD/HD/wiatr.png" position="1106,161" size="25,25" zPosition="3" transparent="1" alphatest="blend"/>
   <ePixmap pixmap="{1}/images/CobaltFHD/HD/deszcz.png" position="1106,187" size="25,25" zPosition="4" transparent="1" alphatest="blend"/>
-  <widget source="session.CurrentService" render="Label" position="1130,161" size="88,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="#000090e6" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="1130,161" size="88,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="#000090e6" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Windspeed</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="1130,187" size="88,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="1130,187" size="88,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Humidity</convert>
   </widget>
   <ePixmap alphatest="blend" pixmap="{1}/images/CobaltFHD/HD/wsch.png" position="1031,215" size="70,30" zPosition="2"/>
@@ -5052,15 +5052,15 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
   <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather/MoonPhase" position="1037,292" size="60,60" zPosition="3" transparent="1" alphatest="blend">
     <convert type="RaedQuickWeather">PiconMoon</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="1105,289" size="105,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="foreground" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="1105,289" size="105,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="foreground" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Moonlight</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="1105,326" size="113,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="foreground" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="1105,326" size="113,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="foreground" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Moondist</convert>
   </widget>
   <eLabel name="new eLabel" position="1038,360" size="177,2" zPosition="2" backgroundColor="#004f6ef2"/>
   <eLabel text="{9}" position="1034,362" size="185,23" font="{0};20" valign="center" halign="center" backgroundColor="#54111112" transparent="1" foregroundColor="#00c1ea02" zPosition="2"/>
-  <widget alphatest="on" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="1030,388" size="70,70" source="session.CurrentService" transparent="1" zPosition="2">
+  <widget alphatest="blend" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="1030,388" size="70,70" source="session.CurrentService" transparent="1" zPosition="2">
     <convert type="RaedQuickWeather">Picon2</convert>
   </widget>
   <ePixmap pixmap="{1}/images/CobaltFHD/HD/temp.png" position="1105,400" size="20,44" zPosition="2" transparent="1" alphatest="blend"/>
@@ -5091,15 +5091,15 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="285,590" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="285,590" size="40,20" zPosition="2" alphatest="blend">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="235,590" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="235,590" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="235,590" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="235,590" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -5143,7 +5143,7 @@ SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
   <widget source="session.FrontendStatus" render="Label" position="151,100" size="83,28" zPosition="2" font="{0};25" halign="center" valign="center" backgroundColor="#25101010" transparent="1">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="320,340" size="637,152" zPosition="2" font="{0};22" halign="center" valign="center" noWrap="1" foregroundColor="#000090e6" backgroundColor="#25101010" transparent="1">
+  <widget source="session.CurrentService" render="Label" position="320,340" size="637,152" zPosition="2" font="{0};22" halign="center" valign="center"  foregroundColor="#000090e6" backgroundColor="#25101010" transparent="1">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="450,618" size="305,24" zPosition="2" font="{0};20" foregroundColor="#00fffe9e" backgroundColor="#25101010" transparent="1">
@@ -5163,7 +5163,7 @@ SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
   <widget source="session.CurrentService" render="Label" position="521,517" size="50,25" font="{0};23" halign="right" backgroundColor="#00000000" transparent="1" zPosition="1">
     <convert type="RaedQuickServiceInfo2">Framerate</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="51,546" size="236,25" foregroundColor="#00389416" zPosition="3" font="{0};23" halign="center" noWrap="1" backgroundColor="#25101010" transparent="1">
+  <widget source="session.CurrentService" render="Label" position="51,546" size="236,25" foregroundColor="#00389416" zPosition="3" font="{0};23" halign="center"  backgroundColor="#25101010" transparent="1">
     <convert type="RaedQuickEcmInfo">emuname</convert>
   </widget>
   <widget source="session.CurrentService" render="FixedLabel" text="{4}" position="650,517" size="156,25" zPosition="4" font="{0};23" halign="center" valign="center" foregroundColor="#7b68ee" backgroundColor="#16000000" transparent="1">
@@ -5208,7 +5208,7 @@ SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
     <convert type="ConditionalShowHide"/>
   </widget>
   <ePixmap position="245,105" size="130,90" zPosition="2" pixmap="{1}/images/CobaltFHD/HD/frame_of_picon3c.png" alphatest="blend" transparent="1"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="250,110" size="120,80" zPosition="5" alphatest="on">
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="250,110" size="120,80" zPosition="5" alphatest="blend">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
   <ePixmap position="245,235" size="130,90" zPosition="2" pixmap="{1}/images/CobaltFHD/HD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
@@ -5237,15 +5237,15 @@ SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
   <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="weather" position="1030,139" size="70,70" zPosition="3" transparent="1" alphatest="blend">
     <convert type="RaedQuickWeather">Picon</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="1165,137" size="52,27" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="#00c1ea02" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="1165,137" size="52,27" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="#00c1ea02" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Temp</convert>
   </widget>
   <ePixmap pixmap="{1}/images/CobaltFHD/HD/wiatr.png" position="1106,161" size="25,25" zPosition="3" transparent="1" alphatest="blend"/>
   <ePixmap pixmap="{1}/images/CobaltFHD/HD/deszcz.png" position="1106,187" size="25,25" zPosition="4" transparent="1" alphatest="blend"/>
-  <widget source="session.CurrentService" render="Label" position="1130,161" size="88,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="#000090e6" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="1130,161" size="88,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="#000090e6" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Windspeed</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="1130,187" size="88,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="1130,187" size="88,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Humidity</convert>
   </widget>
   <ePixmap alphatest="blend" pixmap="{1}/images/CobaltFHD/HD/wsch.png" position="1031,215" size="70,30" zPosition="2"/>
@@ -5261,15 +5261,15 @@ SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
   <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="weather/MoonPhase" position="1037,292" size="60,60" zPosition="3" transparent="1" alphatest="blend">
     <convert type="RaedQuickWeather">PiconMoon</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="1105,289" size="105,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="foreground" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="1105,289" size="105,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="foreground" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Moonlight</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="1105,326" size="113,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="foreground" backgroundColor="#54111112" transparent="1" noWrap="1">
+  <widget source="session.CurrentService" render="Label" position="1105,326" size="113,25" font="{0};22" zPosition="3" halign="center" valign="center" foregroundColor="foreground" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Moondist</convert>
   </widget>
   <eLabel name="new eLabel" position="1038,360" size="177,2" zPosition="2" backgroundColor="#004f6ef2"/>
   <eLabel text="{9}" position="1034,362" size="185,23" font="{0};20" valign="center" halign="center" backgroundColor="#54111112" transparent="1" foregroundColor="#00c1ea02" zPosition="2"/>
-  <widget alphatest="on" render="RaedQuickSignalPiconUni" path="weather" position="1030,388" size="70,70" source="session.CurrentService" transparent="1" zPosition="2">
+  <widget alphatest="blend" render="RaedQuickSignalPiconUni" path="weather" position="1030,388" size="70,70" source="session.CurrentService" transparent="1" zPosition="2">
     <convert type="RaedQuickWeather">Picon2</convert>
   </widget>
   <ePixmap pixmap="{1}/images/CobaltFHD/HD/temp.png" position="1105,400" size="20,44" zPosition="2" transparent="1" alphatest="blend"/>
@@ -5300,15 +5300,15 @@ SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="285,590" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="285,590" size="40,20" zPosition="2" alphatest="blend">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="235,590" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="235,590" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="235,590" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="235,590" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -5325,7 +5325,7 @@ SKIN_Full_Screen_Picon_Ecm3_SNR_ANALOG = """
 <widget backgroundColor="#16000000" font="{0};22" position="27,128" render="Label" size="657,185" source="session.Event_Now" transparent="1">
   <convert type="EventName">ExtendedDescription</convert>
 </widget>
-<widget source="session.CurrentService" render="Label" position="693,80" size="567,232" zPosition="2" font="{0};22" halign="center" valign="center" noWrap="1" foregroundColor="#00bab329" backgroundColor="#16000000" transparent="1">
+<widget source="session.CurrentService" render="Label" position="693,80" size="567,232" zPosition="2" font="{0};22" halign="center" valign="center"  foregroundColor="#00bab329" backgroundColor="#16000000" transparent="1">
   <convert type="RaedQuickEcmInfo">ecmfile</convert>
 </widget>
   <widget source="global.CurrentTime" render="Label" position="681,20" size="572,37" font="{0};28" valign="center" halign="right" backgroundColor="#16000000" foregroundColor="#58bcff" transparent="1">
@@ -5335,15 +5335,15 @@ SKIN_Full_Screen_Picon_Ecm3_SNR_ANALOG = """
   <widget source="session.FrontendStatus" render="Label" position="508,647" zPosition="2" size="327,32" font="{0}; 28" foregroundColor="#00f23d21" halign="center" valign="center" transparent="1">
     <convert type="RaedQuickFrontendInfo2">SNRdB</convert>
   </widget>
-  <widget source="session.FrontendStatus" render="RaedQuickWatches" position="295,510" size="391,315" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="on">
+  <widget source="session.FrontendStatus" render="RaedQuickWatches" position="295,510" size="391,315" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="blend">
       <convert type="RaedQuickFrontendInfo2">SNR_ANALOG</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="RaedQuickWatches" position="705,510" size="391,315" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="on">
+    <widget source="session.FrontendStatus" render="RaedQuickWatches" position="705,510" size="391,315" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="blend">
       <convert type="RaedQuickFrontendInfo2">AGC_ANALOG</convert>
     </widget>
     <!--Picon-->
     <ePixmap position="171,330" size="150,90" zPosition="2" pixmap="{1}/images/analog/HD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="174,333" size="144,84" zPosition="5" alphatest="on">
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="174,333" size="144,84" zPosition="5" alphatest="blend">
     <convert type="RaedQuickServName2">Reference</convert>
  </widget>
     <ePixmap position="428,330" size="150,90" zPosition="2" pixmap="{1}/images/analog/HD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
@@ -5371,7 +5371,7 @@ SKIN_Full_Screen_Picon_Ecm3_SNR_ANALOG = """
     <widget source="session.CurrentService" render="Label" position="614,428" size="50,28" font="{0};24" halign="right" backgroundColor="#00000000" transparent="1" >
     <convert type="RaedQuickServiceInfo2">Framerate</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="69,466" size="243,28" foregroundColor="#00389416" zPosition="3" font="{0};24" halign="center" noWrap="1" backgroundColor="#16000000" transparent="1">
+    <widget source="session.CurrentService" render="Label" position="69,466" size="243,28" foregroundColor="#00389416" zPosition="3" font="{0};24" halign="center"  backgroundColor="#16000000" transparent="1">
   <convert type="RaedQuickEcmInfo">emuname</convert>
 </widget>
 <widget source="session.CurrentService" render="FixedLabel" text="{4}" position="740,428" size="174,28" zPosition="4" font="{0};24" halign="center" valign="center" foregroundColor="#7b68ee" backgroundColor="#16000000" transparent="1">
@@ -5432,15 +5432,15 @@ SKIN_Full_Screen_Picon_Ecm3_SNR_ANALOG = """
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="1230,582" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="1230,582" size="40,20" zPosition="2" alphatest="blend">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="1171,582" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="1171,582" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="1171,582" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="1171,582" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget> 
@@ -5456,7 +5456,7 @@ SKIN_Full_Screen_Picon_media_Ecm3_SNR_ANALOG = """
 <widget backgroundColor="#16000000" font="{0};22" position="27,128" render="Label" size="657,185" source="session.Event_Now" transparent="1">
   <convert type="EventName">ExtendedDescription</convert>
 </widget>
-<widget source="session.CurrentService" render="Label" position="693,80" size="567,232" zPosition="2" font="{0};22" halign="center" valign="center" noWrap="1" foregroundColor="#00bab329" backgroundColor="#16000000" transparent="1">
+<widget source="session.CurrentService" render="Label" position="693,80" size="567,232" zPosition="2" font="{0};22" halign="center" valign="center"  foregroundColor="#00bab329" backgroundColor="#16000000" transparent="1">
   <convert type="RaedQuickEcmInfo">ecmfile</convert>
 </widget>
   <widget source="global.CurrentTime" render="Label" position="681,20" size="572,37" font="{0};28" valign="center" halign="right" backgroundColor="#16000000" foregroundColor="#58bcff" transparent="1">
@@ -5472,11 +5472,11 @@ SKIN_Full_Screen_Picon_media_Ecm3_SNR_ANALOG = """
   <widget source="session.FrontendStatus" render="Label" position="325,647" size="110,32" font="{0}; 25" foregroundColor="#00f23d21" transparent="1" zPosition="2">
     <convert type="FrontendInfo">SNR</convert>
   </widget>
-  <widget source="session.FrontendStatus" render="RaedQuickWatches" position="295,510" size="391,315" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="on">
+  <widget source="session.FrontendStatus" render="RaedQuickWatches" position="295,510" size="391,315" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="blend">
       <convert type="RaedQuickFrontendInfo2">SNR_ANALOG</convert>
     </widget>
   <!-- AGC -->
-    <widget source="session.FrontendStatus" render="RaedQuickWatches" position="705,510" size="391,315" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="on">
+    <widget source="session.FrontendStatus" render="RaedQuickWatches" position="705,510" size="391,315" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="blend">
       <convert type="RaedQuickFrontendInfo2">AGC_ANALOG</convert>
     </widget>
     <eLabel name="agc" text="AGC:" position="912,647" size="80,32" font="{0}; 25" halign="right" foregroundColor="#7ad927" backgroundColor="#16000000" transparent="1" zPosition="2"/>
@@ -5485,7 +5485,7 @@ SKIN_Full_Screen_Picon_media_Ecm3_SNR_ANALOG = """
   </widget>
     <!--Picon-->
     <ePixmap position="171,330" size="150,90" zPosition="2" pixmap="{1}/images/analog/HD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="174,333" size="144,84" zPosition="5" alphatest="on">
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="174,333" size="144,84" zPosition="5" alphatest="blend">
     <convert type="RaedQuickServName2">Reference</convert>
  </widget>
     <ePixmap position="428,330" size="150,90" zPosition="2" pixmap="{1}/images/analog/HD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
@@ -5513,7 +5513,7 @@ SKIN_Full_Screen_Picon_media_Ecm3_SNR_ANALOG = """
     <widget source="session.CurrentService" render="Label" position="614,428" size="50,28" font="{0};24" halign="right" backgroundColor="#00000000" transparent="1" >
     <convert type="RaedQuickServiceInfo2">Framerate</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="69,466" size="243,28" foregroundColor="#00389416" zPosition="3" font="{0};24" halign="center" noWrap="1" backgroundColor="#16000000" transparent="1">
+    <widget source="session.CurrentService" render="Label" position="69,466" size="243,28" foregroundColor="#00389416" zPosition="3" font="{0};24" halign="center"  backgroundColor="#16000000" transparent="1">
   <convert type="RaedQuickEcmInfo">emuname</convert>
 </widget>
 <widget source="session.CurrentService" render="FixedLabel" text="{4}" position="740,428" size="174,28" zPosition="4" font="{0};24" halign="center" valign="center" foregroundColor="#7b68ee" backgroundColor="#16000000" transparent="1">
@@ -5574,15 +5574,15 @@ SKIN_Full_Screen_Picon_media_Ecm3_SNR_ANALOG = """
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="1230,582" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="1230,582" size="40,20" zPosition="2" alphatest="blend">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="1171,582" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_hd.png" position="1171,582" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="1171,582" size="40,20" zPosition="2" alphatest="on">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_hd.png" position="1171,582" size="40,20" zPosition="2" alphatest="blend">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget> 
