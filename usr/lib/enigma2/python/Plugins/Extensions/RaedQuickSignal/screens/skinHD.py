@@ -90,13 +90,13 @@ SKIN_setup2 = """
 
 ### SKIN_Picons
 SKIN_Picons = """
-<screen name="PiconsScreen" backgroundColor="#16000000" position="center,center" size="1050,375" title="RAED's RaedQuickSignal Picons setup" flags="wfNoBorder">
+<screen name="PiconsScreen" backgroundColor="#16000000" position="center,center" size="1050,421" title="RAED's RaedQuickSignal Picons setup" flags="wfNoBorder">
   <eLabel position="0,53" size="1050,1" zPosition="10" backgroundColor="#00ffffff"/>
   <widget source="Title" render="Label" font="{0};35" foregroundColor="#00bab329" position="30,5" size="981,45" transparent="1"/>
-  <widget name="menu" position="15,60" size="615,229" foregroundColor="#00ffffff" backgroundColor="#16000000" foregroundColorSelected="#00000000" backgroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
-  <eLabel text="{1}" position="16,298" size="1015,32" font="{0};32" foregroundColor="#00ff2525" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <eLabel text="{2}" position="16,338" size="1015,32" font="{0};32" foregroundColor="#00bab329" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <widget name="Picture" position="638,62" size="400,225" zPosition="5" alphatest="blend"/>
+  <widget name="menu" position="15,60" size="615,278" foregroundColor="#00ffffff" backgroundColor="#16000000" foregroundColorSelected="#00000000" backgroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
+  <eLabel text="{1}" position="16,348" size="1015,32" font="{0};32" foregroundColor="#00ff2525" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
+  <eLabel text="{2}" position="16,383" size="1015,32" font="{0};32" foregroundColor="#00bab329" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
+  <widget name="Picture" position="638,97" size="400,225" zPosition="5" alphatest="blend"/>
 </screen>
 """.format(FontName, title75, title76)
 
