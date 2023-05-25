@@ -148,24 +148,24 @@ else:
 ### SKIN_Picons
 if DreamOS():
       SKIN_Picons = """
-<screen name="PiconsScreen" backgroundColor="#16000000" position="center,center" size="1050,365" title="RAED's RaedQuickSignal Picons setup" flags="wfNoBorder">
-  <eLabel position="0,53" size="1050,1" zPosition="10" backgroundColor="#00ffffff"/>
-  <widget source="Title" render="Label" font="{0};35" foregroundColor="#00bab329" position="30,5" size="981,45" transparent="1"/>
-  <widget name="menu" position="15,60" size="615,229" foregroundColor="#00ffffff" backgroundColor="#16000000" foregroundColorSelected="#00000000" backgroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
-  <eLabel text="{1}" position="16,295" size="1015,32" font="{0};32" foregroundColor="#00ff2525" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <eLabel text="{2}" position="16,330" size="1015,32" font="{0};32" foregroundColor="#00bab329" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <widget name="Picture" position="638,62" size="400,225" zPosition="5" alphatest="blend"/>
+<screen name="PiconsScreen" backgroundColor="#16000000" position="center,center" size="1104,421" title="RAED's RaedQuickSignal Picons setup" flags="wfNoBorder">
+  <eLabel position="0,53" size="1102,1" zPosition="10" backgroundColor="#00ffffff"/>
+  <widget source="Title" render="Label" font="{0};35" foregroundColor="#00bab329" position="30,5" size="1060,45" transparent="1"/>
+  <widget name="menu" position="15,60" size="662,285" foregroundColor="#00ffffff" backgroundColor="#16000000" foregroundColorSelected="#00000000" backgroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
+  <eLabel text="{1}" position="14,355" size="1072,32" font="{0};32" foregroundColor="#00ff2525" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
+  <eLabel text="{2}" position="16,385" size="1072,32" font="{0};32" foregroundColor="#00bab329" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
+  <<widget name="Picture" position="688,92" size="400,225" zPosition="5" alphatest="blend"/>
 </screen>
 """.format(FontName, title75, title76)
 else:
       SKIN_Picons = """
-<screen name="PiconsScreen" backgroundColor="#16000000" position="center,center" size="1050,365" title="RAED's RaedQuickSignal Picons setup" flags="wfNoBorder">
-  <eLabel position="0,53" size="1050,1" zPosition="10" backgroundColor="#00ffffff"/>
-  <widget source="Title" render="Label" font="{0};35" foregroundColor="#00bab329" position="30,5" size="981,45" transparent="1"/>
-  <widget name="menu" position="15,60" size="615,229" font="{0};35" itemHeight="45" foregroundColor="#00ffffff" backgroundColor="#16000000" foregroundColorSelected="#00000000" backgroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
-  <eLabel text="{1}" position="16,295" size="1015,32" font="{0};32" foregroundColor="#00ff2525" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <eLabel text="{2}" position="16,330" size="1015,32" font="{0};32" foregroundColor="#00bab329" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <widget name="Picture" position="638,62" size="400,225" zPosition="5" alphatest="blend"/>
+<screen name="PiconsScreen" backgroundColor="#16000000" position="center,center" size="1104,421" title="RAED's RaedQuickSignal Picons setup" flags="wfNoBorder">
+  <eLabel position="0,53" size="1102,1" zPosition="10" backgroundColor="#00ffffff"/>
+  <widget source="Title" render="Label" font="{0};35" foregroundColor="#00bab329" position="30,5" size="1060,45" transparent="1"/>
+  <widget name="menu" position="15,60" size="662,285" font="{0};35" itemHeight="45" foregroundColor="#00ffffff" backgroundColor="#16000000" foregroundColorSelected="#00000000" backgroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
+  <eLabel text="{1}" position="14,355" size="1072,32" font="{0};32" foregroundColor="#00ff2525" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
+  <eLabel text="{2}" position="16,385" size="1072,32" font="{0};32" foregroundColor="#00bab329" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
+  <widget name="Picture" position="688,92" size="400,225" zPosition="5" alphatest="blend"/>
 </screen>
 """.format(FontName, title75, title76)
 
