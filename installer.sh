@@ -3,7 +3,7 @@
 
 ######### Only These two lines to edit with new version ######
 version=16.9
-description=What is NEW:\n- Add extra Url Transparent picons for (azl + Albahraniy) \n\n*************************\n:ما هو الجديد\n- (azl + Albahraniy) إضافة رابط تحميل جديد للبايكونات الشفافة من عمل
+description=What is NEW:\n- Add extra Url Transparent picons to [azl + Albahraniy] \n\n*************************\n:ما هو الجديد\n- [azl + Albahraniy] إضافة رابط تحميل جديد للبايكونات الشفافة من عمل
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
