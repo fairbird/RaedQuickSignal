@@ -154,7 +154,7 @@ if DreamOS():
   <widget name="menu" position="15,60" size="662,285" foregroundColor="#00ffffff" backgroundColor="#16000000" foregroundColorSelected="#00000000" backgroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
   <eLabel text="{1}" position="14,355" size="1072,32" font="{0};32" foregroundColor="#00ff2525" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
   <eLabel text="{2}" position="16,385" size="1072,32" font="{0};32" foregroundColor="#00bab329" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <<widget name="Picture" position="688,92" size="400,225" zPosition="5" alphatest="blend"/>
+  <widget name="Picture" position="688,92" size="400,225" zPosition="5" alphatest="blend"/>
 </screen>
 """.format(FontName, title75, title76)
 else:
