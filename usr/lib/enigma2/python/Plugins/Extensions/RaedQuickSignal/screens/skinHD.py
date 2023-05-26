@@ -4442,8 +4442,8 @@ SKIN_Full_Screen_Picon_Ecm1_Vertical = """
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <<!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="1150,558" size="40,20" zPosition="2" alphatest="blend">
+  <!-- Network -->
+  <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_hd.png" position="1150,558" size="40,20" zPosition="2" alphatest="blend">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
