@@ -63,13 +63,13 @@ if DreamOS():
   <widget source="key_green" render="Label" position="544,1035" zPosition="2" size="381,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
   <widget source="key_yellow" render="Label" position="1074,1035" zPosition="2" size="381,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
   <widget source="key_blue" render="Label" position="1534,1035" zPosition="2" size="381,32" font="{0};25" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
-  <ePixmap position="68,1070" zPosition="1" size="250,4" pixmap="{1}/images/red.png" alphatest="blend"/>
-  <ePixmap position="605,1070" zPosition="1" size="250,4" pixmap="{1}/images/green.png" alphatest="blend"/>
-  <ePixmap position="1137,1070" zPosition="1" size="250,4" pixmap="{1}/images/yellow.png" alphatest="blend"/>
-  <ePixmap position="1599,1070" zPosition="1" size="250,4" pixmap="{1}/images/blue.png" alphatest="blend"/>
+  <ePixmap position="68,1070" zPosition="1" size="250,4" pixmap="{1}/images/red.png" alphatest="on"/>
+  <ePixmap position="605,1070" zPosition="1" size="250,4" pixmap="{1}/images/green.png" alphatest="on"/>
+  <ePixmap position="1137,1070" zPosition="1" size="250,4" pixmap="{1}/images/yellow.png" alphatest="on"/>
+  <ePixmap position="1599,1070" zPosition="1" size="250,4" pixmap="{1}/images/blue.png" alphatest="on"/>
   <widget source="help" render="Label" position="15,826" size="1187,199" font="{0};32" foregroundColor="#00e5b243" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <widget name="Picture" position="1229,773" size="400,225" zPosition="5" alphatest="blend"/>
-  <ePixmap position="1326,785" zPosition="3" size="200,200" pixmap="{1}/images/fairbirdfhd.png" alphatest="blend"/>
+  <widget name="Picture" position="1229,773" size="400,225" zPosition="5" alphatest="on"/>
+  <ePixmap position="1326,785" zPosition="3" size="200,200" pixmap="{1}/images/fairbirdfhd.png" alphatest="on"/>
 </screen>
 """.format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"))
 else:
@@ -95,13 +95,13 @@ else:
   <widget source="key_green" render="Label" position="544,1035" zPosition="2" size="381,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
   <widget source="key_yellow" render="Label" position="1074,1035" zPosition="2" size="381,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
   <widget source="key_blue" render="Label" position="1534,1035" zPosition="2" size="381,32" font="{0};25" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
-  <ePixmap position="68,1070" zPosition="1" size="250,4" pixmap="{1}/images/red.png" alphatest="blend"/>
-  <ePixmap position="605,1070" zPosition="1" size="250,4" pixmap="{1}/images/green.png" alphatest="blend"/>
-  <ePixmap position="1137,1070" zPosition="1" size="250,4" pixmap="{1}/images/yellow.png" alphatest="blend"/>
-  <ePixmap position="1599,1070" zPosition="1" size="250,4" pixmap="{1}/images/blue.png" alphatest="blend"/>
+  <ePixmap position="68,1070" zPosition="1" size="250,4" pixmap="{1}/images/red.png" alphatest="on"/>
+  <ePixmap position="605,1070" zPosition="1" size="250,4" pixmap="{1}/images/green.png" alphatest="on"/>
+  <ePixmap position="1137,1070" zPosition="1" size="250,4" pixmap="{1}/images/yellow.png" alphatest="on"/>
+  <ePixmap position="1599,1070" zPosition="1" size="250,4" pixmap="{1}/images/blue.png" alphatest="on"/>
   <widget source="help" render="Label" position="15,826" size="1187,199" font="{0};32" foregroundColor="#00e5b243" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <widget name="Picture" position="1229,773" size="400,225" zPosition="5" alphatest="blend"/>
-  <ePixmap position="1326,785" zPosition="3" size="200,200" pixmap="{1}/images/fairbirdfhd.png" alphatest="blend"/>
+  <widget name="Picture" position="1229,773" size="400,225" zPosition="5" alphatest="on"/>
+  <ePixmap position="1326,785" zPosition="3" size="200,200" pixmap="{1}/images/fairbirdfhd.png" alphatest="on"/>
 </screen>
 """.format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"))
 
@@ -116,13 +116,13 @@ if DreamOS():
   <widget source="key_green" render="Label" position="265,896" zPosition="2" size="165,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1" />
   <!--widget source="key_yellow" render="Label" position="480,896" zPosition="2" size="200,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1" /-->
   <widget source="key_blue" render="Label" position="600,896" zPosition="2" size="284,32" font="{0};25" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1" />
-  <ePixmap position="45,928" zPosition="1" size="165,2" pixmap="{1}/images/red.png" alphatest="blend" />
-  <ePixmap position="265,928" zPosition="1" size="165,2" pixmap="{1}/images/green.png" alphatest="blend" />
-  <!--ePixmap position="480,928" zPosition="1" size="200,2" pixmap="{1}/images/yellow.png" alphatest="blend" /-->
-  <ePixmap position="640,928" zPosition="1" size="200,2" pixmap="{1}/images/blue.png" alphatest="blend" />
+  <ePixmap position="45,928" zPosition="1" size="165,2" pixmap="{1}/images/red.png" alphatest="on" />
+  <ePixmap position="265,928" zPosition="1" size="165,2" pixmap="{1}/images/green.png" alphatest="on" />
+  <!--ePixmap position="480,928" zPosition="1" size="200,2" pixmap="{1}/images/yellow.png" alphatest="on" /-->
+  <ePixmap position="640,928" zPosition="1" size="200,2" pixmap="{1}/images/blue.png" alphatest="on" />
   <widget source="help" render="Label" position="45,667" size="554,225" font="{0};28" foregroundColor="#00e5b243" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <widget name="Picture" position="613,667" size="400,225" zPosition="5" alphatest="blend"/>
-  <ePixmap position="712,680" size="200,200" zPosition="3" pixmap="{1}/images/fairbirdfhd.png" alphatest="blend" />
+  <widget name="Picture" position="613,667" size="400,225" zPosition="5" alphatest="on"/>
+  <ePixmap position="712,680" size="200,200" zPosition="3" pixmap="{1}/images/fairbirdfhd.png" alphatest="on" />
  </screen>
 """.format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"))
 else:
@@ -135,13 +135,13 @@ else:
   <widget source="key_green" render="Label" position="265,896" zPosition="2" size="165,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1" />
   <!--widget source="key_yellow" render="Label" position="480,896" zPosition="2" size="200,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1" /-->
   <widget source="key_blue" render="Label" position="600,896" zPosition="2" size="284,32" font="{0};25" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1" />
-  <ePixmap position="45,928" zPosition="1" size="165,2" pixmap="{1}/images/red.png" alphatest="blend" />
-  <ePixmap position="265,928" zPosition="1" size="165,2" pixmap="{1}/images/green.png" alphatest="blend" />
-  <!--ePixmap position="480,928" zPosition="1" size="200,2" pixmap="{1}/images/yellow.png" alphatest="blend" /-->
-  <ePixmap position="640,928" zPosition="1" size="200,2" pixmap="{1}/images/blue.png" alphatest="blend" />
+  <ePixmap position="45,928" zPosition="1" size="165,2" pixmap="{1}/images/red.png" alphatest="on" />
+  <ePixmap position="265,928" zPosition="1" size="165,2" pixmap="{1}/images/green.png" alphatest="on" />
+  <!--ePixmap position="480,928" zPosition="1" size="200,2" pixmap="{1}/images/yellow.png" alphatest="on" /-->
+  <ePixmap position="640,928" zPosition="1" size="200,2" pixmap="{1}/images/blue.png" alphatest="on" />
   <widget source="help" render="Label" position="45,667" size="554,225" font="{0};28" foregroundColor="#00e5b243" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <widget name="Picture" position="613,667" size="400,225" zPosition="5" alphatest="blend"/>
-  <ePixmap position="712,680" zPosition="3" size="200,200" pixmap="{1}/images/fairbirdfhd.png" alphatest="blend" />
+  <widget name="Picture" position="613,667" size="400,225" zPosition="5" alphatest="on"/>
+  <ePixmap position="712,680" zPosition="3" size="200,200" pixmap="{1}/images/fairbirdfhd.png" alphatest="on" />
  </screen>
 """.format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"))
 
@@ -154,7 +154,7 @@ if DreamOS():
   <widget name="menu" position="15,60" size="662,285" foregroundColor="#00ffffff" backgroundColor="#16000000" foregroundColorSelected="#00000000" backgroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
   <eLabel text="{1}" position="14,355" size="1072,32" font="{0};32" foregroundColor="#00ff2525" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
   <eLabel text="{2}" position="16,385" size="1072,32" font="{0};32" foregroundColor="#00bab329" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <widget name="Picture" position="688,92" size="400,225" zPosition="5" alphatest="blend"/>
+  <widget name="Picture" position="688,92" size="400,225" zPosition="5" alphatest="on"/>
 </screen>
 """.format(FontName, title75, title76)
 else:
@@ -165,7 +165,7 @@ else:
   <widget name="menu" position="15,60" size="662,285" font="{0};35" itemHeight="45" foregroundColor="#00ffffff" backgroundColor="#16000000" foregroundColorSelected="#00000000" backgroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
   <eLabel text="{1}" position="14,355" size="1072,32" font="{0};32" foregroundColor="#00ff2525" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
   <eLabel text="{2}" position="16,385" size="1072,32" font="{0};32" foregroundColor="#00bab329" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5"/>
-  <widget name="Picture" position="688,92" size="400,225" zPosition="5" alphatest="blend"/>
+  <widget name="Picture" position="688,92" size="400,225" zPosition="5" alphatest="on"/>
 </screen>
 """.format(FontName, title75, title76)
 
@@ -410,22 +410,22 @@ SKIN_AGC_Picon_SNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
   <!-- Picon -->
-  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="547,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="547,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="753,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="753,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="961,624" size="190,110" transparent="1" alphatest="blend" zPosition="3" />
+  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="961,624" size="190,110" transparent="1" alphatest="on" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="2,660" size="330,40" font="{0}; 28" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
     <convert type="RaedQuickServName2">Name</convert>
@@ -434,17 +434,17 @@ SKIN_AGC_Picon_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
     <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -643,22 +643,22 @@ SKIN_AGC_Picon_NOSNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
   <!-- Picon -->
-  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="547,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="547,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="753,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="753,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="961,624" size="190,110" transparent="1" alphatest="blend" zPosition="3" />
+  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="961,624" size="190,110" transparent="1" alphatest="on" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="2,660" size="330,40" font="{0}; 28" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
     <convert type="RaedQuickServName2">Name</convert>
@@ -667,17 +667,17 @@ SKIN_AGC_Picon_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -884,7 +884,7 @@ SKIN_AGC_Event_Des_SNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
   <!-- Event Description -->
   <widget source="session.Event_Now" render="Label" position="340,625" size="810,120" font="{0}; 28" halign="center" foregroundColor="#00bbbbbb" backgroundColor="#54111112" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
@@ -897,17 +897,17 @@ SKIN_AGC_Event_Des_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -1110,7 +1110,7 @@ SKIN_AGC_Event_Des_NOSNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
   <!-- Event Description -->
   <widget source="session.Event_Now" render="Label" position="340,625" size="810,120" font="{0}; 28" halign="center" foregroundColor="#00bbbbbb" backgroundColor="#54111112" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
@@ -1123,17 +1123,17 @@ SKIN_AGC_Event_Des_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -1340,13 +1340,13 @@ SKIN_AGC_Weather_SNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
 <!-- Weather -->
 <!-- Today -->
 <widget source="session.CurrentService" render="Label" position="332,613" size="241,32" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Day</convert>
     </widget>
-<widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="326,645" size="100,100" zPosition="3" transparent="1" alphatest="blend">
+<widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="326,645" size="100,100" zPosition="3" transparent="1" alphatest="on">
       <convert type="RaedQuickWeather">Picon</convert>
     </widget>
 <widget source="session.CurrentService" render="Label" position="424,691" size="400,40" font="{0}; 30" zPosition="3" halign="left" valign="center" foregroundColor="#00f37104" backgroundColor="#54111112" transparent="1" >
@@ -1355,19 +1355,19 @@ SKIN_AGC_Weather_SNRdB = """
 <widget source="session.CurrentService" render="Label" position="424,636" size="150,60" font="{0}; 45" zPosition="3" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Temp</convert>
     </widget>
-<ePixmap position="775,694" size="50,50" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/wind_fhd.png" />
+<ePixmap position="775,694" size="50,50" zPosition="4" alphatest="on" pixmap="{1}/PICONS/weather/wind_fhd.png" />
 <widget source="session.CurrentService" render="Label" position="627,693" size="147,50" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="#0000ff00" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Windspeed</convert>
     </widget>
-<ePixmap position="760,625" size="60,60" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/humd_fhd.png" />
+<ePixmap position="760,625" size="60,60" zPosition="4" alphatest="on" pixmap="{1}/PICONS/weather/humd_fhd.png" />
 <widget source="session.CurrentService" render="Label" position="627,631" size="147,50" font="{0}; 35" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Humidity</convert>
     </widget>
-  <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/risefhd.png" position="850,628" size="130,60" zPosition="2"/>
+  <ePixmap alphatest="on" pixmap="{1}/PICONS/weather/risefhd.png" position="850,628" size="130,60" zPosition="2"/>
   <widget source="session.CurrentService" render="Label" position="850,699" size="130,35" font="{0};32" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunrise</convert>
   </widget>
-  <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/setfhd.png" position="1000,628" size="130,60" zPosition="2"/>
+  <ePixmap alphatest="on" pixmap="{1}/PICONS/weather/setfhd.png" position="1000,628" size="130,60" zPosition="2"/>
   <widget source="session.CurrentService" render="Label" position="1000,699" size="130,35" font="{0};32" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunset</convert>
   </widget>
@@ -1379,17 +1379,17 @@ SKIN_AGC_Weather_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -1592,13 +1592,13 @@ SKIN_AGC_Weather_NOSNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
 <!-- Weather -->
 <!-- Today -->
 <widget source="session.CurrentService" render="Label" position="332,613" size="241,32" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Day</convert>
     </widget>
-<widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="326,645" size="100,100" zPosition="3" transparent="1" alphatest="blend">
+<widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="326,645" size="100,100" zPosition="3" transparent="1" alphatest="on">
       <convert type="RaedQuickWeather">Picon</convert>
     </widget>
 <widget source="session.CurrentService" render="Label" position="424,691" size="400,40" font="{0}; 30" zPosition="3" halign="left" valign="center" foregroundColor="#00f37104" backgroundColor="#54111112" transparent="1" >
@@ -1607,19 +1607,19 @@ SKIN_AGC_Weather_NOSNRdB = """
 <widget source="session.CurrentService" render="Label" position="424,636" size="150,60" font="{0}; 45" zPosition="3" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Temp</convert>
     </widget>
-<ePixmap position="775,694" size="50,50" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/wind_fhd.png" />
+<ePixmap position="775,694" size="50,50" zPosition="4" alphatest="on" pixmap="{1}/PICONS/weather/wind_fhd.png" />
 <widget source="session.CurrentService" render="Label" position="627,693" size="147,50" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="#0000ff00" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Windspeed</convert>
     </widget>
-<ePixmap position="760,625" size="60,60" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/humd_fhd.png" />
+<ePixmap position="760,625" size="60,60" zPosition="4" alphatest="on" pixmap="{1}/PICONS/weather/humd_fhd.png" />
 <widget source="session.CurrentService" render="Label" position="627,631" size="147,50" font="{0}; 35" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Humidity</convert>
     </widget>
-  <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/risefhd.png" position="850,628" size="130,60" zPosition="2"/>
+  <ePixmap alphatest="on" pixmap="{1}/PICONS/weather/risefhd.png" position="850,628" size="130,60" zPosition="2"/>
   <widget source="session.CurrentService" render="Label" position="850,699" size="130,35" font="{0};32" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunrise</convert>
   </widget>
-  <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/setfhd.png" position="1000,628" size="130,60" zPosition="2"/>
+  <ePixmap alphatest="on" pixmap="{1}/PICONS/weather/setfhd.png" position="1000,628" size="130,60" zPosition="2"/>
   <widget source="session.CurrentService" render="Label" position="1000,699" size="130,35" font="{0};32" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunset</convert>
   </widget>
@@ -1631,17 +1631,17 @@ SKIN_AGC_Weather_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -1847,22 +1847,22 @@ SKIN_Event_Progress_Picon_SNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
   <!-- Picon -->
-  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="547,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="547,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="753,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="753,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="961,624" size="190,110" transparent="1" alphatest="blend" zPosition="3" />
+  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="961,624" size="190,110" transparent="1" alphatest="on" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="2,660" size="330,40" font="{0}; 28" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
     <convert type="RaedQuickServName2">Name</convert>
@@ -1871,17 +1871,17 @@ SKIN_Event_Progress_Picon_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -2083,22 +2083,22 @@ SKIN_Event_Progress_Picon_NOSNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
   <!-- Picon -->
-  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="547,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="547,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="753,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="753,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="961,624" size="190,110" transparent="1" alphatest="blend" zPosition="3" />
+  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="961,624" size="190,110" transparent="1" alphatest="on" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="2,660" size="330,40" font="{0}; 28" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
     <convert type="RaedQuickServName2">Name</convert>
@@ -2107,17 +2107,17 @@ SKIN_Event_Progress_Picon_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -2323,7 +2323,7 @@ SKIN_Event_Progress_Event_Des_SNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
   <!-- Event Description -->
   <widget source="session.Event_Now" render="Label" position="340,625" size="810,120" font="{0}; 28" halign="center" foregroundColor="#00bbbbbb" backgroundColor="#54111112" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
@@ -2336,17 +2336,17 @@ SKIN_Event_Progress_Event_Des_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -2548,7 +2548,7 @@ SKIN_Event_Progress_Event_Des_NOSNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
   <!-- Event Description -->
   <widget source="session.Event_Now" render="Label" position="340,625" size="810,120" font="{0}; 28" halign="center" foregroundColor="#00bbbbbb" backgroundColor="#54111112" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
@@ -2561,17 +2561,17 @@ SKIN_Event_Progress_Event_Des_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -2777,13 +2777,13 @@ SKIN_Event_Progress_Weather_SNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
 <!-- Weather -->
 <!-- Today -->
 <widget source="session.CurrentService" render="Label" position="332,613" size="241,32" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Day</convert>
     </widget>
-<widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="326,645" size="100,100" zPosition="3" transparent="1" alphatest="blend">
+<widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="326,645" size="100,100" zPosition="3" transparent="1" alphatest="on">
       <convert type="RaedQuickWeather">Picon</convert>
     </widget>
 <widget source="session.CurrentService" render="Label" position="424,691" size="400,40" font="{0}; 30" zPosition="3" halign="left" valign="center" foregroundColor="#00f37104" backgroundColor="#54111112" transparent="1" >
@@ -2792,19 +2792,19 @@ SKIN_Event_Progress_Weather_SNRdB = """
 <widget source="session.CurrentService" render="Label" position="424,636" size="150,60" font="{0}; 45" zPosition="3" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Temp</convert>
     </widget>
-<ePixmap position="775,694" size="50,50" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/wind_fhd.png" />
+<ePixmap position="775,694" size="50,50" zPosition="4" alphatest="on" pixmap="{1}/PICONS/weather/wind_fhd.png" />
 <widget source="session.CurrentService" render="Label" position="627,693" size="147,50" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="#0000ff00" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Windspeed</convert>
     </widget>
-<ePixmap position="760,625" size="60,60" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/humd_fhd.png" />
+<ePixmap position="760,625" size="60,60" zPosition="4" alphatest="on" pixmap="{1}/PICONS/weather/humd_fhd.png" />
 <widget source="session.CurrentService" render="Label" position="627,631" size="147,50" font="{0}; 35" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Humidity</convert>
     </widget>
-  <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/risefhd.png" position="850,628" size="130,60" zPosition="2"/>
+  <ePixmap alphatest="on" pixmap="{1}/PICONS/weather/risefhd.png" position="850,628" size="130,60" zPosition="2"/>
   <widget source="session.CurrentService" render="Label" position="850,699" size="130,35" font="{0};32" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunrise</convert>
   </widget>
-  <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/setfhd.png" position="1000,628" size="130,60" zPosition="2"/>
+  <ePixmap alphatest="on" pixmap="{1}/PICONS/weather/setfhd.png" position="1000,628" size="130,60" zPosition="2"/>
   <widget source="session.CurrentService" render="Label" position="1000,699" size="130,35" font="{0};32" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunset</convert>
   </widget>
@@ -2816,17 +2816,17 @@ SKIN_Event_Progress_Weather_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -3028,13 +3028,13 @@ SKIN_Event_Progress_Weather_NOSNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
 <!-- Weather -->
 <!-- Today -->
 <widget source="session.CurrentService" render="Label" position="332,613" size="241,32" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="#00ffffff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Day</convert>
     </widget>
-<widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="326,645" size="100,100" zPosition="3" transparent="1" alphatest="blend">
+<widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="326,645" size="100,100" zPosition="3" transparent="1" alphatest="on">
       <convert type="RaedQuickWeather">Picon</convert>
     </widget>
 <widget source="session.CurrentService" render="Label" position="424,691" size="400,40" font="{0}; 30" zPosition="3" halign="left" valign="center" foregroundColor="#00f37104" backgroundColor="#54111112" transparent="1" >
@@ -3043,19 +3043,19 @@ SKIN_Event_Progress_Weather_NOSNRdB = """
 <widget source="session.CurrentService" render="Label" position="424,636" size="150,60" font="{0}; 45" zPosition="3" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Temp</convert>
     </widget>
-<ePixmap position="775,694" size="50,50" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/wind_fhd.png" />
+<ePixmap position="775,694" size="50,50" zPosition="4" alphatest="on" pixmap="{1}/PICONS/weather/wind_fhd.png" />
 <widget source="session.CurrentService" render="Label" position="627,693" size="147,50" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="#0000ff00" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Windspeed</convert>
     </widget>
-<ePixmap position="760,625" size="60,60" zPosition="4" alphatest="blend" pixmap="{1}/PICONS/weather/humd_fhd.png" />
+<ePixmap position="760,625" size="60,60" zPosition="4" alphatest="on" pixmap="{1}/PICONS/weather/humd_fhd.png" />
 <widget source="session.CurrentService" render="Label" position="627,631" size="147,50" font="{0}; 35" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Humidity</convert>
     </widget>
-  <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/risefhd.png" position="850,628" size="130,60" zPosition="2"/>
+  <ePixmap alphatest="on" pixmap="{1}/PICONS/weather/risefhd.png" position="850,628" size="130,60" zPosition="2"/>
   <widget source="session.CurrentService" render="Label" position="850,699" size="130,35" font="{0};32" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunrise</convert>
   </widget>
-  <ePixmap alphatest="blend" pixmap="{1}/PICONS/weather/setfhd.png" position="1000,628" size="130,60" zPosition="2"/>
+  <ePixmap alphatest="on" pixmap="{1}/PICONS/weather/setfhd.png" position="1000,628" size="130,60" zPosition="2"/>
   <widget source="session.CurrentService" render="Label" position="1000,699" size="130,35" font="{0};32" zPosition="3" halign="center" valign="center" foregroundColor="#0000deff" backgroundColor="#54111112" transparent="1" >
     <convert type="RaedQuickWeather">Sunset</convert>
   </widget>
@@ -3067,17 +3067,17 @@ SKIN_Event_Progress_Weather_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -3284,22 +3284,22 @@ SKIN_AGC_Picon_media_SNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
   <!-- Picon -->
-  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="547,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="547,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="753,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="753,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="961,624" size="190,110" transparent="1" alphatest="blend" zPosition="3" />
+  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="961,624" size="190,110" transparent="1" alphatest="on" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="2,660" size="330,40" font="{0}; 28" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
     <convert type="RaedQuickServName2">Name</convert>
@@ -3308,17 +3308,17 @@ SKIN_AGC_Picon_media_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -3521,22 +3521,22 @@ SKIN_AGC_Picon_media_NOSNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
   <!-- Picon -->
-  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="547,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="547,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="753,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="753,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="961,624" size="190,110" transparent="1" alphatest="blend" zPosition="3" />
+  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="961,624" size="190,110" transparent="1" alphatest="on" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="2,660" size="330,40" font="{0}; 28" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
     <convert type="RaedQuickServName2">Name</convert>
@@ -3545,17 +3545,17 @@ SKIN_AGC_Picon_media_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -3761,22 +3761,22 @@ SKIN_Event_Progress_Picon_media_SNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
   <!-- Picon -->
-  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="547,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="547,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="753,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="753,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="961,624" size="190,110" transparent="1" alphatest="blend" zPosition="3" />
+  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="961,624" size="190,110" transparent="1" alphatest="on" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="2,660" size="330,40" font="{0}; 28" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
     <convert type="RaedQuickServName2">Name</convert>
@@ -3785,17 +3785,17 @@ SKIN_Event_Progress_Picon_media_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -3997,22 +3997,22 @@ SKIN_Event_Progress_Picon_media_NOSNRdB = """
     <convert type="ValueRange">320000,320000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
+  <ePixmap position="1400,560" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png" />
   <!-- Picon -->
-  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="335,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="340,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="547,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="540,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="547,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="753,624" size="190,110" zPosition="3" alphatest="blend">
+  <ePixmap position="746,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="753,624" size="190,110" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon2.png" />
-  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="961,624" size="190,110" transparent="1" alphatest="blend" zPosition="3" />
+  <ePixmap position="954,619" size="200,120" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon2.png" />
+  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="961,624" size="190,110" transparent="1" alphatest="on" zPosition="3" />
   <!-- Channel and Provider -->
   <widget source="session.CurrentService" render="Label" position="2,660" size="330,40" font="{0}; 28" backgroundColor="#54111112" foregroundColor="#ff0000" transparent="1" halign="center">
     <convert type="RaedQuickServName2">Name</convert>
@@ -4021,17 +4021,17 @@ SKIN_Event_Progress_Picon_media_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="30,615" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -4107,17 +4107,17 @@ SKIN_Full_Screen1 = """
 	<widget name="Positioner" position="32,92" size="800,50" zPosition="1" font="{0};35" halign="center" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1"/>
 	<widget name="Satfinder" position="1087,92" size="800,50" zPosition="1" font="{0};35" halign="center" backgroundColor="#54111112" foregroundColor="#0000deff" transparent="1"/>
 <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="1006,488" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1006,488" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="1006,488" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1006,488" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="1006,488" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1006,488" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -4277,33 +4277,33 @@ SKIN_Full_Screen_Picon_Vertical = """
   <widget name="Positioner" position="751,5" size="800,34" zPosition="1" font="{0};30" halign="center" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1"/>
   <widget name="Satfinder" position="751,44" size="800,34" zPosition="1" font="{0};30" halign="center" backgroundColor="#54111112" foregroundColor="#0000deff" transparent="1"/>
   <!-- Picon -->
-  <ePixmap position="346,892" size="280,180" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="354,900" size="265,165" zPosition="3" alphatest="blend">
+  <ePixmap position="346,892" size="280,180" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="354,900" size="265,165" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="662,892" size="280,180" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="670,900" size="265,165" zPosition="3" alphatest="blend">
+  <ePixmap position="662,892" size="280,180" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="670,900" size="265,165" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="982,892" size="280,180" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="989,900" size="265,165" zPosition="3" alphatest="blend">
+  <ePixmap position="982,892" size="280,180" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="989,900" size="265,165" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="1298,892" size="280,180" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="1305,900" size="265,165" transparent="1" alphatest="blend" zPosition="3"/>
-  <ePixmap position="1572,15" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png"/>
+  <ePixmap position="1298,892" size="280,180" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
+  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="1305,900" size="265,165" transparent="1" alphatest="on" zPosition="3"/>
+  <ePixmap position="1572,15" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png"/>
 <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="715,358" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="715,358" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="715,358" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="715,358" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="715,358" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="715,358" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -4389,33 +4389,33 @@ SKIN_Full_Screen_Picon_media_Vertical = """
   <widget name="Positioner" position="751,5" size="800,34" zPosition="1" font="{0};30" halign="center" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1"/>
   <widget name="Satfinder" position="751,44" size="800,34" zPosition="1" font="{0};30" halign="center" backgroundColor="#54111112" foregroundColor="#0000deff" transparent="1"/>
   <!-- Picon -->
-  <ePixmap position="346,892" size="280,180" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="354,900" size="265,165" zPosition="3" alphatest="blend">
+  <ePixmap position="346,892" size="280,180" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="354,900" size="265,165" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Reference</convert>
   </widget>
-  <ePixmap position="662,892" size="280,180" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="670,900" size="265,165" zPosition="3" alphatest="blend">
+  <ePixmap position="662,892" size="280,180" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="670,900" size="265,165" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
-  <ePixmap position="982,892" size="280,180" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="989,900" size="265,165" zPosition="3" alphatest="blend">
+  <ePixmap position="982,892" size="280,180" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
+  <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="989,900" size="265,165" zPosition="3" alphatest="on">
     <convert type="RaedQuickServName2">OrbitalPos</convert>
   </widget>
-  <ePixmap position="1298,892" size="280,180" zPosition="5" transparent="1" alphatest="blend" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
-  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="1305,900" size="265,165" transparent="1" alphatest="blend" zPosition="3"/>
-  <ePixmap position="1572,15" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png"/>
+  <ePixmap position="1298,892" size="280,180" zPosition="5" transparent="1" alphatest="on" pixmap="{1}/images/icons_quick/picon_fon3.png"/>
+  <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="1305,900" size="265,165" transparent="1" alphatest="on" zPosition="3"/>
+  <ePixmap position="1572,15" size="65,50" zPosition="4" alphatest="on" pixmap="{1}/images/menu2.png"/>
 <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="715,358" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="715,358" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="715,358" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="715,358" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="715,358" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="715,358" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
@@ -4435,17 +4435,17 @@ SKIN_Full_Screen_Picon_media_Vertical = """
 SKIN_Full_Screen_Picon_Ecm1_Vertical = """
 <screen name="QuickSignalScreen" position="0,0" size="1920,1080" title="RAED's Quick Signal Info" flags="wfNoBorder">
     <ePixmap position="0,0" size="1920,1080" zPosition="-10" pixmap="{1}/images/ArmyTouch/FHD/frame_base-fs8.png"/>
-    <ePixmap position="119,140" size="383,629" zPosition="1" pixmap="{1}/images/ArmyTouch/FHD/ind_snr2.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="1419,140" size="383,629" zPosition="1" pixmap="{1}/images/ArmyTouch/FHD/ind_agc2.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="center,140" size="270,30" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/arrow_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="42,947" size="601,108" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="660,947" size="601,108" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="1278,947" size="601,108" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="548,559" size="825,209" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick2.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="83,780" size="1752,96" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick3.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="837,268" size="246,78" zPosition="1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick4.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="596,247" size="729,300" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick5.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="665,185" size="591,50" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick6.png" alphatest="blend" transparent="1"/>
+    <ePixmap position="119,140" size="383,629" zPosition="1" pixmap="{1}/images/ArmyTouch/FHD/ind_snr2.png" alphatest="on" transparent="1"/>
+    <ePixmap position="1419,140" size="383,629" zPosition="1" pixmap="{1}/images/ArmyTouch/FHD/ind_agc2.png" alphatest="on" transparent="1"/>
+    <ePixmap position="center,140" size="270,30" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/arrow_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="42,947" size="601,108" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="660,947" size="601,108" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="1278,947" size="601,108" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="548,559" size="825,209" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick2.png" alphatest="on" transparent="1"/>
+    <ePixmap position="83,780" size="1752,96" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick3.png" alphatest="on" transparent="1"/>
+    <ePixmap position="837,268" size="246,78" zPosition="1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick4.png" alphatest="on" transparent="1"/>
+    <ePixmap position="596,247" size="729,300" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick5.png" alphatest="on" transparent="1"/>
+    <ePixmap position="665,185" size="591,50" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick6.png" alphatest="on" transparent="1"/>
     <eLabel text="RAEDQuickSignal" position="60,16" size="1800,72" font="{0};54" halign="center" valign="center" foregroundColor="#5395c3" backgroundColor="#16000000" transparent="1"/>
     <widget source="global.CurrentTime" render="Label" position="672,186" size="576,44" zPosition="2" font="{0};30" halign="center" valign="center" foregroundColor="#5395c3" backgroundColor="#16000000" transparent="1">
       <convert type="ClockToText">Date</convert>
@@ -4512,24 +4512,24 @@ SKIN_Full_Screen_Picon_Ecm1_Vertical = """
       <convert type="RaedQuickServName2">%s</convert>
     </widget>
    <!--Picon-->
-    <ePixmap position="827,361" size="267,165" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon2.png" alphatest="blend" transparent="1"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="830,364" size="261,159" zPosition="1" alphatest="blend">
+    <ePixmap position="827,361" size="267,165" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon2.png" alphatest="on" transparent="1"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="830,364" size="261,159" zPosition="1" alphatest="on">
       <convert type="RaedQuickServName2">Reference</convert>
     </widget>
-    <ePixmap position="617,268" size="192,120" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" transparent="2" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="620,271" size="186,114" zPosition="2" alphatest="blend">
+    <ePixmap position="617,268" size="192,120" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" transparent="2" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="620,271" size="186,114" zPosition="2" alphatest="on">
       <convert type="RaedQuickServName2">Provider</convert>
     </widget>
-    <ePixmap position="617,406" size="192,120" zPosition="3" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" transparent="2" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="620,409" size="186,114" zPosition="1" alphatest="blend">
+    <ePixmap position="617,406" size="192,120" zPosition="3" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" transparent="2" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="620,409" size="186,114" zPosition="1" alphatest="on">
       <convert type="RaedQuickServName2">OrbitalPos</convert>
     </widget>
-    <ePixmap position="1112,268" size="192,120" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" transparent="2" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconCrypt" position="1115,271" size="186,114" zPosition="1" alphatest="blend">
+    <ePixmap position="1112,268" size="192,120" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" transparent="2" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconCrypt" position="1115,271" size="186,114" zPosition="1" alphatest="on">
       <convert type="RaedQuickSignalCaidInfo2">CryptInfo2</convert>
     </widget>
-    <ePixmap position="1112,406" size="192,120" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" alphatest="blend" transparent="1"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="1115,409" size="186,114" transparent="1" alphatest="blend" zPosition="3" />
+    <ePixmap position="1112,406" size="192,120" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" alphatest="on" transparent="1"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="1115,409" size="186,114" transparent="1" alphatest="on" zPosition="3" />
     <widget source="session.CurrentService" render="Label" position="45,954" size="595,45" font="{0};38" halign="center" foregroundColor="#9fcff" backgroundColor="#16000000" transparent="1">
       <convert type="RaedQuickServName2">Name</convert>
     </widget>
@@ -4545,31 +4545,31 @@ SKIN_Full_Screen_Picon_Ecm1_Vertical = """
     <widget name="Positioner" position="60,16" size="575,72" zPosition="10" font="{0};35" halign="left" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="center" />
     <widget name="Satfinder" position="1283,16" size="575,72" zPosition="10" font="{0};35" backgroundColor="#54111112" foregroundColor="#0000deff" transparent="1" valign="center" halign="right"/>
 <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="1729,833" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="1729,833" size="50,40" zPosition="2" alphatest="on">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -4579,17 +4579,17 @@ SKIN_Full_Screen_Picon_Ecm1_Vertical = """
 SKIN_Full_Screen_Picon_media_Ecm1_Vertical = """
 <screen name="QuickSignalScreen" position="0,0" size="1920,1080" title="RAED's Quick Signal Info" flags="wfNoBorder">
     <ePixmap position="0,0" size="1920,1080" zPosition="-10" pixmap="{1}/images/ArmyTouch/FHD/frame_base-fs8.png"/>
-    <ePixmap position="119,140" size="383,629" zPosition="1" pixmap="{1}/images/ArmyTouch/FHD/ind_snr2.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="1419,140" size="383,629" zPosition="1" pixmap="{1}/images/ArmyTouch/FHD/ind_agc2.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="center,140" size="270,30" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/arrow_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="42,947" size="601,108" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="660,947" size="601,108" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="1278,947" size="601,108" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="548,559" size="825,209" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick2.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="83,780" size="1752,96" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick3.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="837,268" size="246,78" zPosition="1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick4.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="596,247" size="729,300" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick5.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="665,185" size="591,50" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick6.png" alphatest="blend" transparent="1"/>
+    <ePixmap position="119,140" size="383,629" zPosition="1" pixmap="{1}/images/ArmyTouch/FHD/ind_snr2.png" alphatest="on" transparent="1"/>
+    <ePixmap position="1419,140" size="383,629" zPosition="1" pixmap="{1}/images/ArmyTouch/FHD/ind_agc2.png" alphatest="on" transparent="1"/>
+    <ePixmap position="center,140" size="270,30" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/arrow_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="42,947" size="601,108" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="660,947" size="601,108" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="1278,947" size="601,108" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="548,559" size="825,209" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick2.png" alphatest="on" transparent="1"/>
+    <ePixmap position="83,780" size="1752,96" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick3.png" alphatest="on" transparent="1"/>
+    <ePixmap position="837,268" size="246,78" zPosition="1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick4.png" alphatest="on" transparent="1"/>
+    <ePixmap position="596,247" size="729,300" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick5.png" alphatest="on" transparent="1"/>
+    <ePixmap position="665,185" size="591,50" zPosition="-1" pixmap="{1}/images/ArmyTouch/FHD/frame_quick6.png" alphatest="on" transparent="1"/>
     <eLabel text="RAEDQuickSignal" position="60,16" size="1800,72" font="{0};54" halign="center" valign="center" foregroundColor="#5395c3" backgroundColor="#16000000" transparent="1"/>
     <widget source="global.CurrentTime" render="Label" position="672,186" size="576,44" zPosition="2" font="{0};30" halign="center" valign="center" foregroundColor="#5395c3" backgroundColor="#16000000" transparent="1">
       <convert type="ClockToText">Date</convert>
@@ -4656,24 +4656,24 @@ SKIN_Full_Screen_Picon_media_Ecm1_Vertical = """
       <convert type="RaedQuickServName2">%s</convert>
     </widget>
    <!--Picon-->
-    <ePixmap position="827,361" size="267,165" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon2.png" alphatest="blend" transparent="1"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="830,364" size="261,159" zPosition="1" alphatest="blend">
+    <ePixmap position="827,361" size="267,165" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon2.png" alphatest="on" transparent="1"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="830,364" size="261,159" zPosition="1" alphatest="on">
       <convert type="RaedQuickServName2">Reference</convert>
     </widget>
-    <ePixmap position="617,268" size="192,120" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" transparent="2" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="620,271" size="186,114" zPosition="2" alphatest="blend">
+    <ePixmap position="617,268" size="192,120" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" transparent="2" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="620,271" size="186,114" zPosition="2" alphatest="on">
       <convert type="RaedQuickServName2">Provider</convert>
     </widget>
-    <ePixmap position="617,406" size="192,120" zPosition="3" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" transparent="2" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="620,409" size="186,114" zPosition="1" alphatest="blend">
+    <ePixmap position="617,406" size="192,120" zPosition="3" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" transparent="2" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="620,409" size="186,114" zPosition="1" alphatest="on">
       <convert type="RaedQuickServName2">OrbitalPos</convert>
     </widget>
-    <ePixmap position="1112,268" size="192,120" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" transparent="2" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconCrypt" position="1115,271" size="186,114" zPosition="1" alphatest="blend">
+    <ePixmap position="1112,268" size="192,120" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" transparent="2" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconCrypt" position="1115,271" size="186,114" zPosition="1" alphatest="on">
       <convert type="RaedQuickSignalCaidInfo2">CryptInfo2</convert>
     </widget>
-    <ePixmap position="1112,406" size="192,120" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" alphatest="blend" transparent="1"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="1115,409" size="186,114" transparent="1" alphatest="blend" zPosition="3" />
+    <ePixmap position="1112,406" size="192,120" zPosition="2" pixmap="{1}/images/ArmyTouch/FHD/frame_of_picon3s.png" alphatest="on" transparent="1"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="1115,409" size="186,114" transparent="1" alphatest="on" zPosition="3" />
     <widget source="session.CurrentService" render="Label" position="45,954" size="595,45" font="{0};38" halign="center" foregroundColor="#9fcff" backgroundColor="#16000000" transparent="1">
       <convert type="RaedQuickServName2">Name</convert>
     </widget>
@@ -4689,31 +4689,31 @@ SKIN_Full_Screen_Picon_media_Ecm1_Vertical = """
     <widget name="Positioner" position="60,16" size="575,72" zPosition="10" font="{0};35" halign="left" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="center" />
     <widget name="Satfinder" position="1283,16" size="575,72" zPosition="10" font="{0};35" backgroundColor="#54111112" foregroundColor="#0000deff" transparent="1" valign="center" halign="right"/>
 <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="1729,833" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="1729,833" size="50,40" zPosition="2" alphatest="on">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -4723,17 +4723,17 @@ SKIN_Full_Screen_Picon_media_Ecm1_Vertical = """
 SKIN_Full_Screen_Picon_Ecm2_Vertical = """
 <screen backgroundColor="#ffffffff" name="RaedQuickSignalScreen" position="0,0" size="1920,1080" title="RAED's Quick Signal Info" zPosition="1" flags="wfNoBorder">
     <ePixmap position="0,0" size="1920,1080" zPosition="-10" pixmap="{1}/images/ShabahNet/FHD/frame_base-fs8.png"/>
-    <ePixmap position="119,140" size="383,629" zPosition="1" pixmap="{1}/images/ShabahNet/FHD/ind_snr2.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="1419,140" size="383,629" zPosition="1" pixmap="{1}/images/ShabahNet/FHD/ind_agc2.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="center,135" size="272,80" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/arrow_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="42,947" size="601,108" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="660,947" size="601,108" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="1278,947" size="601,108" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="548,559" size="825,209" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick2.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="83,780" size="1752,96" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick3.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="837,268" size="246,78" zPosition="1" pixmap="{1}/images/ShabahNet/FHD/frame_quick4.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="596,247" size="729,300" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick5.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="665,185" size="591,50" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick6.png" alphatest="blend" transparent="1"/>
+    <ePixmap position="119,140" size="383,629" zPosition="1" pixmap="{1}/images/ShabahNet/FHD/ind_snr2.png" alphatest="on" transparent="1"/>
+    <ePixmap position="1419,140" size="383,629" zPosition="1" pixmap="{1}/images/ShabahNet/FHD/ind_agc2.png" alphatest="on" transparent="1"/>
+    <ePixmap position="center,135" size="272,80" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/arrow_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="42,947" size="601,108" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="660,947" size="601,108" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="1278,947" size="601,108" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="548,559" size="825,209" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick2.png" alphatest="on" transparent="1"/>
+    <ePixmap position="83,780" size="1752,96" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick3.png" alphatest="on" transparent="1"/>
+    <ePixmap position="837,268" size="246,78" zPosition="1" pixmap="{1}/images/ShabahNet/FHD/frame_quick4.png" alphatest="on" transparent="1"/>
+    <ePixmap position="596,247" size="729,300" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick5.png" alphatest="on" transparent="1"/>
+    <ePixmap position="665,185" size="591,50" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick6.png" alphatest="on" transparent="1"/>
     <eLabel text="RAEDQuickSignal" position="60,16" size="1800,72" font="{0};45" halign="center" valign="center" foregroundColor="#5395c3" backgroundColor="#16000000" transparent="1"/>
     <widget source="global.CurrentTime" render="Label" position="672,186" size="576,44" zPosition="2" font="{0};28" halign="center" valign="center" foregroundColor="#5395c3" backgroundColor="#16000000" transparent="1">
       <convert type="ClockToText">Date</convert>
@@ -4800,24 +4800,24 @@ SKIN_Full_Screen_Picon_Ecm2_Vertical = """
       <convert type="RaedQuickServName2">%s</convert>
     </widget>
    <!--Picon-->
-    <ePixmap position="827,361" size="267,165" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon2.png" alphatest="blend" transparent="1"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="830,364" size="261,159" zPosition="1" alphatest="blend">
+    <ePixmap position="827,361" size="267,165" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon2.png" alphatest="on" transparent="1"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="830,364" size="261,159" zPosition="1" alphatest="on">
       <convert type="RaedQuickServName2">Reference</convert>
     </widget>
-    <ePixmap position="617,268" size="192,120" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" transparent="2" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="620,271" size="186,114" zPosition="2" alphatest="blend">
+    <ePixmap position="617,268" size="192,120" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" transparent="2" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="620,271" size="186,114" zPosition="2" alphatest="on">
       <convert type="RaedQuickServName2">Provider</convert>
     </widget>
-    <ePixmap position="617,406" size="192,120" zPosition="3" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" transparent="2" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="620,409" size="186,114" zPosition="1" alphatest="blend">
+    <ePixmap position="617,406" size="192,120" zPosition="3" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" transparent="2" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="620,409" size="186,114" zPosition="1" alphatest="on">
       <convert type="RaedQuickServName2">OrbitalPos</convert>
     </widget>
-    <ePixmap position="1112,268" size="192,120" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" transparent="2" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconCrypt" position="1115,271" size="186,114" zPosition="1" alphatest="blend">
+    <ePixmap position="1112,268" size="192,120" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" transparent="2" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconCrypt" position="1115,271" size="186,114" zPosition="1" alphatest="on">
       <convert type="RaedQuickSignalCaidInfo2">CryptInfo2</convert>
     </widget>
-    <ePixmap position="1112,406" size="192,120" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" alphatest="blend" transparent="1"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="1115,409" size="186,114" transparent="1" alphatest="blend" zPosition="3" />
+    <ePixmap position="1112,406" size="192,120" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" alphatest="on" transparent="1"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="1115,409" size="186,114" transparent="1" alphatest="on" zPosition="3" />
     <widget source="session.CurrentService" render="Label" position="45,954" size="595,45" font="{0};30" halign="center" foregroundColor="#00808888" backgroundColor="#16000000" transparent="1">
       <convert type="RaedQuickServName2">Name</convert>
     </widget>
@@ -4833,31 +4833,31 @@ SKIN_Full_Screen_Picon_Ecm2_Vertical = """
     <widget name="Positioner" position="60,16" size="575,72" zPosition="10" font="{0};30" halign="left" backgroundColor="#00ffffff" foregroundColor="#41ff9900" transparent="1" valign="center" />
     <widget name="Satfinder" position="1283,16" size="575,72" zPosition="10" font="{0};30" backgroundColor="#00ffffff" foregroundColor="#0000deff" transparent="1" valign="center" halign="right"/>
 <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1485,831" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="1729,833" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="1729,833" size="50,40" zPosition="2" alphatest="on">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -4867,17 +4867,17 @@ SKIN_Full_Screen_Picon_Ecm2_Vertical = """
 SKIN_Full_Screen_Picon_media_Ecm2_Vertical = """
 <screen backgroundColor="#ffffffff" name="RaedQuickSignalScreen" position="0,0" size="1920,1080" title="RAED's Quick Signal Info" zPosition="1" flags="wfNoBorder">
     <ePixmap position="0,0" size="1920,1080" zPosition="-10" pixmap="{1}/images/ShabahNet/FHD/frame_base-fs8.png"/>
-    <ePixmap position="119,140" size="383,629" zPosition="1" pixmap="{1}/images/ShabahNet/FHD/ind_snr2.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="1419,140" size="383,629" zPosition="1" pixmap="{1}/images/ShabahNet/FHD/ind_agc2.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="center,135" size="272,80" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/arrow_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="42,947" size="601,108" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="660,947" size="601,108" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="1278,947" size="601,108" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="548,559" size="825,209" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick2.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="83,780" size="1752,96" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick3.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="837,268" size="246,78" zPosition="1" pixmap="{1}/images/ShabahNet/FHD/frame_quick4.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="596,247" size="729,300" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick5.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="665,185" size="591,50" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick6.png" alphatest="blend" transparent="1"/>
+    <ePixmap position="119,140" size="383,629" zPosition="1" pixmap="{1}/images/ShabahNet/FHD/ind_snr2.png" alphatest="on" transparent="1"/>
+    <ePixmap position="1419,140" size="383,629" zPosition="1" pixmap="{1}/images/ShabahNet/FHD/ind_agc2.png" alphatest="on" transparent="1"/>
+    <ePixmap position="center,135" size="272,80" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/arrow_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="42,947" size="601,108" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="660,947" size="601,108" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="1278,947" size="601,108" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="548,559" size="825,209" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick2.png" alphatest="on" transparent="1"/>
+    <ePixmap position="83,780" size="1752,96" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick3.png" alphatest="on" transparent="1"/>
+    <ePixmap position="837,268" size="246,78" zPosition="1" pixmap="{1}/images/ShabahNet/FHD/frame_quick4.png" alphatest="on" transparent="1"/>
+    <ePixmap position="596,247" size="729,300" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick5.png" alphatest="on" transparent="1"/>
+    <ePixmap position="665,185" size="591,50" zPosition="-1" pixmap="{1}/images/ShabahNet/FHD/frame_quick6.png" alphatest="on" transparent="1"/>
     <eLabel text="RAEDQuickSignal" position="60,16" size="1800,72" font="{0};48" halign="center" valign="center" foregroundColor="#5395c3" backgroundColor="#16000000" transparent="1"/>
     <widget source="global.CurrentTime" render="Label" position="672,186" size="576,44" zPosition="2" font="{0};28" halign="center" valign="center" foregroundColor="#5395c3" backgroundColor="#16000000" transparent="1">
       <convert type="ClockToText">Date</convert>
@@ -4944,24 +4944,24 @@ SKIN_Full_Screen_Picon_media_Ecm2_Vertical = """
       <convert type="RaedQuickServName2">%s</convert>
     </widget>
    <!--Picon-->
-    <ePixmap position="827,361" size="267,165" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon2.png" alphatest="blend" transparent="1"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="830,364" size="261,159" zPosition="1" alphatest="blend">
+    <ePixmap position="827,361" size="267,165" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon2.png" alphatest="on" transparent="1"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="830,364" size="261,159" zPosition="1" alphatest="on">
       <convert type="RaedQuickServName2">Reference</convert>
     </widget>
-    <ePixmap position="617,268" size="192,120" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" transparent="2" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="620,271" size="186,114" zPosition="2" alphatest="blend">
+    <ePixmap position="617,268" size="192,120" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" transparent="2" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="620,271" size="186,114" zPosition="2" alphatest="on">
       <convert type="RaedQuickServName2">Provider</convert>
     </widget>
-    <ePixmap position="617,406" size="192,120" zPosition="3" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" transparent="2" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="620,409" size="186,114" zPosition="1" alphatest="blend">
+    <ePixmap position="617,406" size="192,120" zPosition="3" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" transparent="2" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="620,409" size="186,114" zPosition="1" alphatest="on">
       <convert type="RaedQuickServName2">OrbitalPos</convert>
     </widget>
-    <ePixmap position="1112,268" size="192,120" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" transparent="2" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconCrypt" position="1115,271" size="186,114" zPosition="1" alphatest="blend">
+    <ePixmap position="1112,268" size="192,120" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" transparent="2" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconCrypt" position="1115,271" size="186,114" zPosition="1" alphatest="on">
       <convert type="RaedQuickSignalCaidInfo2">CryptInfo2</convert>
     </widget>
-    <ePixmap position="1112,406" size="192,120" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" alphatest="blend" transparent="1"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="1115,409" size="186,114" transparent="1" alphatest="blend" zPosition="3" />
+    <ePixmap position="1112,406" size="192,120" zPosition="2" pixmap="{1}/images/ShabahNet/FHD/frame_of_picon3s.png" alphatest="on" transparent="1"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="1115,409" size="186,114" transparent="1" alphatest="on" zPosition="3" />
     <widget source="session.CurrentService" render="Label" position="45,954" size="595,45" font="{0};30" halign="center" foregroundColor="#00808888" backgroundColor="#16000000" transparent="1">
       <convert type="RaedQuickServName2">Name</convert>
     </widget>
@@ -4977,31 +4977,31 @@ SKIN_Full_Screen_Picon_media_Ecm2_Vertical = """
     <widget name="Positioner" position="60,16" size="575,72" zPosition="10" font="{0};30" halign="left" backgroundColor="#00ffffff" foregroundColor="#41ff9900" transparent="1" valign="center" />
     <widget name="Satfinder" position="1283,16" size="575,72" zPosition="10" font="{0};30" backgroundColor="#00ffffff" foregroundColor="#0000deff" transparent="1" valign="center" halign="right"/>
 <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="1550,831" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1550,831" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="1550,831" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1550,831" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="1550,831" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1550,831" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="1729,833" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="1729,833" size="50,40" zPosition="2" alphatest="on">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="1660,833" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget>  
@@ -5011,14 +5011,14 @@ SKIN_Full_Screen_Picon_media_Ecm2_Vertical = """
 SKIN_Full_Screen_Picon_Ecm3_Vertical = """
 <screen name="RaedQuickSignalScreen" position="0,0" size="1920,1080" title="Quick Signal Info" flags="wfNoBorder">
     <ePixmap position="0,0" size="1920,1080" zPosition="-10" pixmap="{1}/images/CobaltFHD/FHD/cool1.png"/>
-    <ePixmap position="119,140" size="257,559" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/agc_snr.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="1545,140" size="257,559" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/pogoda.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="67,847" size="601,108" zPosition="-1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="669,847" size="601,108" zPosition="-1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="1269,847" size="601,108" zPosition="-1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="573,484" size="794,209" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick2.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="108,720" size="1752,96" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick3.png" alphatest="blend" transparent="1"/>
-    <ePixmap position="596,157" size="729,300" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick5.png" alphatest="blend" transparent="1"/>
+    <ePixmap position="119,140" size="257,559" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/agc_snr.png" alphatest="on" transparent="1"/>
+    <ePixmap position="1545,140" size="257,559" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/pogoda.png" alphatest="on" transparent="1"/>
+    <ePixmap position="67,847" size="601,108" zPosition="-1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="669,847" size="601,108" zPosition="-1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="1269,847" size="601,108" zPosition="-1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+    <ePixmap position="573,484" size="794,209" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick2.png" alphatest="on" transparent="1"/>
+    <ePixmap position="108,720" size="1752,96" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick3.png" alphatest="on" transparent="1"/>
+    <ePixmap position="596,157" size="729,300" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick5.png" alphatest="on" transparent="1"/>
 	<widget source="session.Event_Now" render="Label" position="613,162" size="694,40" font="{0};35" halign="center" backgroundColor="#595959" foregroundColor="#00ffffff" transparent="1" zPosition="1">
       <convert type="EventName">Name</convert>
  </widget>
@@ -5110,20 +5110,20 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
     <convert type="ConditionalShowHide" />
   </widget>
 <!--Picon-->
-	<ePixmap position="393,158" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" alphatest="blend" transparent="1"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="397,162" size="182,110" zPosition="5" alphatest="blend">
+	<ePixmap position="393,158" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" alphatest="on" transparent="1"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="397,162" size="182,110" zPosition="5" alphatest="on">
     <convert type="RaedQuickServName2">Reference</convert>
  </widget>
-	<ePixmap position="393,340" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="397,344" size="182,110" zPosition="5" transparent="1" alphatest="blend">
+	<ePixmap position="393,340" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" transparent="1" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="397,344" size="182,110" zPosition="5" transparent="1" alphatest="on">
     <convert type="RaedQuickServName2">Provider</convert>
  </widget>
-	<ePixmap position="1339,158" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="1343,162" zPosition="5" size="182,110" alphatest="blend" >
+	<ePixmap position="1339,158" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" transparent="1" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="1343,162" zPosition="5" size="182,110" alphatest="on" >
 	<convert type="RaedQuickServName2">OrbitalPos</convert>
  </widget>
-	<ePixmap position="1339,340" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="1343,344" size="182,110" transparent="1" alphatest="blend" zPosition="3" />
+	<ePixmap position="1339,340" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" transparent="1" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="1343,344" size="182,110" transparent="1" alphatest="on" zPosition="3" />
     <!--widget source="session.CurrentService" render="Label" position="76,854" size="568,45" font="{0};33" halign="center" foregroundColor="#F0A30A" backgroundColor="#54111112" transparent="1">
     <convert type="RaedQuickServName2">Number</convert>
     </widget-->
@@ -5138,14 +5138,14 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
  </widget>
  <!--pogoda-->
  <eLabel text="{8}" position="1639,194" size="100,30" font="{0};25" backgroundColor="#54111112" halign="center" transparent="1" foregroundColor="#00c1ea02" zPosition="2" />
- <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="1549,194" size="90,90" zPosition="3" transparent="1" alphatest="blend">
+ <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="1549,194" size="90,90" zPosition="3" transparent="1" alphatest="on">
       <convert type="RaedQuickWeather">Picon</convert>
     </widget>
  <widget source="session.CurrentService" render="Label" position="1720,194" size="66,30" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="#00c1ea02" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Temp</convert>
     </widget>
-    <ePixmap pixmap="{1}/images/CobaltFHD/FHD/wiatr.png" position="1638,224" size="30,30" zPosition="3" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="{1}/images/CobaltFHD/FHD/deszcz.png" position="1639,254" size="28,30" zPosition="4" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="{1}/images/CobaltFHD/FHD/wiatr.png" position="1638,224" size="30,30" zPosition="3" transparent="1" alphatest="on" />
+    <ePixmap pixmap="{1}/images/CobaltFHD/FHD/deszcz.png" position="1639,254" size="28,30" zPosition="4" transparent="1" alphatest="on" />
  <widget source="session.CurrentService" render="Label" position="1676,224" size="120,30" font="{0}; 28" zPosition="3" halign="center" valign="center" foregroundColor="#000090e6" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Windspeed</convert>
     </widget>
@@ -5153,8 +5153,8 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
       <convert type="RaedQuickWeather">Humidity</convert>
     </widget>
     <!--eLabel text="%" position="1738,254" size="30,30" zPosition="2" backgroundColor="#54111112" transparent="1" font="{0};25" foregroundColor="#00ffffff" /-->
-    <ePixmap alphatest="blend" pixmap="{1}/images/CobaltFHD/FHD/wsch.png" position="1551,300" size="99,50" zPosition="2" />
-    <ePixmap alphatest="blend" pixmap="{1}/images/CobaltFHD/FHD/zach.png" position="1551,350" size="99,50" zPosition="2" />
+    <ePixmap alphatest="on" pixmap="{1}/images/CobaltFHD/FHD/wsch.png" position="1551,300" size="99,50" zPosition="2" />
+    <ePixmap alphatest="on" pixmap="{1}/images/CobaltFHD/FHD/zach.png" position="1551,350" size="99,50" zPosition="2" />
     <eLabel text="Rise." position="1655,325" size="75,30" font="{0};21" backgroundColor="#54111112"  transparent="1" zPosition="2" />
 	<widget backgroundColor="#54111112" font="{0};25" halign="right" position="1715,321" zPosition="2" render="Label" size="71,30" source="global.CurrentTime" transparent="1" valign="center">
   <convert type="RaedQuickWeather">Sunrise</convert>
@@ -5163,7 +5163,7 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
     <widget backgroundColor="#54111112" font="{0};25" foregroundColor="#00ffffff" halign="right" position="1715,371" zPosition="2" render="Label" size="71,30" source="global.CurrentTime" transparent="1" valign="center">
     <convert type="RaedQuickWeather">Sunset</convert>
  </widget>
- <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather/MoonPhase" position="1561,425" size="80,80" zPosition="3" transparent="1" alphatest="blend">
+ <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather/MoonPhase" position="1561,425" size="80,80" zPosition="3" transparent="1" alphatest="on">
     <convert type="RaedQuickWeather">PiconMoon</convert>
   </widget>
    <widget source="session.CurrentService" render="Label" position="1611,420" size="165,65" font="{0};25" zPosition="3" halign="center" valign="center" foregroundColor="foreground" backgroundColor="#54111112" transparent="1" >
@@ -5174,10 +5174,10 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
   </widget>
     <eLabel name="new eLabel" position="1567,522" size="214,2" zPosition="2" backgroundColor="#004f6ef2" />
 	<eLabel text="{9}" position="1551,525" size="245,30" font="{0};25" halign="center" valign="center" backgroundColor="#54111112"  transparent="1" foregroundColor="#00c1ea02" zPosition="2" />
-	<widget alphatest="blend" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="1551,557" size="90,90" source="session.CurrentService" transparent="1" zPosition="2">
+	<widget alphatest="on" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="1551,557" size="90,90" source="session.CurrentService" transparent="1" zPosition="2">
     <convert type="RaedQuickWeather">Picon2</convert>
  </widget>
-    <ePixmap pixmap="{1}/images/CobaltFHD/FHD/temp.png" position="1681,577" size="20,50" zPosition="2" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="{1}/images/CobaltFHD/FHD/temp.png" position="1681,577" size="20,50" zPosition="2" transparent="1" alphatest="on" />
 	<widget source="session.CurrentService" render="Label" font="{0};25" position="1690,569" size="90,30" backgroundColor="#54111112" zPosition="3" transparent="1" valign="center" halign="right">
     <convert type="RaedQuickWeather">Hightemp2</convert>
  </widget>
@@ -5186,34 +5186,34 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
  </widget>
 <widget name="Positioner" position="522,980" size="575,72" zPosition="10" font="{0};30" halign="center" backgroundColor="#54111112" foregroundColor="#41ff9900" valign="center" transparent="1"/>
 <widget name="Satfinder" position="1160,980" size="575,72" zPosition="10" font="{0};30" backgroundColor="#54111112" foregroundColor="#0000deff"  valign="center" halign="center" transparent="1"/>
-	<ePixmap position="120,990" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/menu.png" alphatest="blend" />
-	<ePixmap position="300,990" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/exit.png" alphatest="blend" /> 
+	<ePixmap position="120,990" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/menu.png" alphatest="on" />
+	<ePixmap position="300,990" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/exit.png" alphatest="on" /> 
 <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="153,855" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="153,855" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="153,855" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="153,855" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="153,855" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="153,855" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="471,855" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="471,855" size="50,40" zPosition="2" alphatest="on">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="401,855" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="401,855" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="401,855" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="401,855" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget>  
@@ -5223,14 +5223,14 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
 SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
 <screen name="RaedQuickSignalScreen" position="0,0" size="1920,1080" title="Quick Signal Info" flags="wfNoBorder">
  <ePixmap position="0,0" size="1920,1080" zPosition="-10" pixmap="{1}/images/CobaltFHD/FHD/cool1.png"/>
- <ePixmap position="119,140" size="257,559" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/agc_snr.png" alphatest="blend" transparent="1"/>
- <ePixmap position="1545,140" size="257,559" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/pogoda.png" alphatest="blend" transparent="1"/>
- <ePixmap position="67,847" size="601,108" zPosition="-1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
- <ePixmap position="669,847" size="601,108" zPosition="-1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
- <ePixmap position="1269,847" size="601,108" zPosition="-1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick1.png" alphatest="blend" transparent="1"/>
- <ePixmap position="573,484" size="794,209" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick2.png" alphatest="blend" transparent="1"/>
- <ePixmap position="108,720" size="1752,96" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick3.png" alphatest="blend" transparent="1"/>
- <ePixmap position="596,157" size="729,300" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick5.png" alphatest="blend" transparent="1"/>
+ <ePixmap position="119,140" size="257,559" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/agc_snr.png" alphatest="on" transparent="1"/>
+ <ePixmap position="1545,140" size="257,559" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/pogoda.png" alphatest="on" transparent="1"/>
+ <ePixmap position="67,847" size="601,108" zPosition="-1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+ <ePixmap position="669,847" size="601,108" zPosition="-1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+ <ePixmap position="1269,847" size="601,108" zPosition="-1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick1.png" alphatest="on" transparent="1"/>
+ <ePixmap position="573,484" size="794,209" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick2.png" alphatest="on" transparent="1"/>
+ <ePixmap position="108,720" size="1752,96" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick3.png" alphatest="on" transparent="1"/>
+ <ePixmap position="596,157" size="729,300" zPosition="1" pixmap="{1}/images/CobaltFHD/FHD/frame_quick5.png" alphatest="on" transparent="1"/>
  <widget source="session.Event_Now" render="Label" position="613,162" size="694,40" font="{0};35" halign="center" backgroundColor="#595959" foregroundColor="#00ffffff" transparent="1" zPosition="1">
       <convert type="EventName">Name</convert>
  </widget>
@@ -5322,20 +5322,20 @@ SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
     <convert type="ConditionalShowHide" />
   </widget>
 <!--Picon-->
-	<ePixmap position="393,158" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" alphatest="blend" transparent="1"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="397,162" size="182,110" zPosition="5" alphatest="blend">
+	<ePixmap position="393,158" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" alphatest="on" transparent="1"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="397,162" size="182,110" zPosition="5" alphatest="on">
     <convert type="RaedQuickServName2">Reference</convert>
  </widget>
-	<ePixmap position="393,340" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="397,344" size="182,110" zPosition="5" transparent="1" alphatest="blend">
+	<ePixmap position="393,340" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" transparent="1" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="397,344" size="182,110" zPosition="5" transparent="1" alphatest="on">
     <convert type="RaedQuickServName2">Provider</convert>
  </widget>
-	<ePixmap position="1339,158" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="1343,162" zPosition="5" size="182,110" alphatest="blend" >
+	<ePixmap position="1339,158" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" transparent="1" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="1343,162" zPosition="5" size="182,110" alphatest="on" >
 	<convert type="RaedQuickServName2">OrbitalPos</convert>
  </widget>
-	<ePixmap position="1339,340" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="1343,344" size="182,110" transparent="1" alphatest="blend" zPosition="3" />
+	<ePixmap position="1339,340" size="192,120" zPosition="2" pixmap="{1}/images/CobaltFHD/FHD/frame_of_picon3c.png" transparent="1" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="1343,344" size="182,110" transparent="1" alphatest="on" zPosition="3" />
 	<!--widget source="session.CurrentService" render="Label" position="76,854" size="568,45" font="{0};33" halign="center" foregroundColor="#F0A30A" backgroundColor="#54111112" transparent="1">
     <convert type="RaedQuickServName2">Number</convert>
  </widget-->
@@ -5350,14 +5350,14 @@ SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
  </widget>
  <!--pogoda-->
  <eLabel text="{8}" position="1639,194" size="100,30" font="{0};25" backgroundColor="#54111112" halign="center" transparent="1" foregroundColor="#00c1ea02" zPosition="2" />
- <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="weather" position="1549,194" size="90,90" zPosition="3" transparent="1" alphatest="blend">
+ <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="weather" position="1549,194" size="90,90" zPosition="3" transparent="1" alphatest="on">
       <convert type="RaedQuickWeather">Picon</convert>
     </widget>
  <widget source="session.CurrentService" render="Label" position="1720,194" size="66,30" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="#00c1ea02" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Temp</convert>
     </widget>
-    <ePixmap pixmap="{1}/images/CobaltFHD/FHD/wiatr.png" position="1638,224" size="30,30" zPosition="3" transparent="1" alphatest="blend" />
-    <ePixmap pixmap="{1}/images/CobaltFHD/FHD/deszcz.png" position="1639,254" size="28,30" zPosition="4" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="{1}/images/CobaltFHD/FHD/wiatr.png" position="1638,224" size="30,30" zPosition="3" transparent="1" alphatest="on" />
+    <ePixmap pixmap="{1}/images/CobaltFHD/FHD/deszcz.png" position="1639,254" size="28,30" zPosition="4" transparent="1" alphatest="on" />
  <widget source="session.CurrentService" render="Label" position="1676,224" size="120,30" font="{0}; 28" zPosition="3" halign="center" valign="center" foregroundColor="#000090e6" backgroundColor="#54111112" transparent="1" >
       <convert type="RaedQuickWeather">Windspeed</convert>
     </widget>
@@ -5365,8 +5365,8 @@ SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
       <convert type="RaedQuickWeather">Humidity</convert>
     </widget>
     <!--eLabel text="%" position="1738,254" size="30,30" zPosition="2" backgroundColor="#54111112" transparent="1" font="{0};25" foregroundColor="#00ffffff" /-->
-    <ePixmap alphatest="blend" pixmap="{1}/images/CobaltFHD/FHD/wsch.png" position="1551,300" size="99,50" zPosition="2" />
-    <ePixmap alphatest="blend" pixmap="{1}/images/CobaltFHD/FHD/zach.png" position="1551,350" size="99,50" zPosition="2" />
+    <ePixmap alphatest="on" pixmap="{1}/images/CobaltFHD/FHD/wsch.png" position="1551,300" size="99,50" zPosition="2" />
+    <ePixmap alphatest="on" pixmap="{1}/images/CobaltFHD/FHD/zach.png" position="1551,350" size="99,50" zPosition="2" />
     <eLabel text="Rise." position="1655,325" size="75,30" font="{0};21" backgroundColor="#54111112"  transparent="1" zPosition="2" />
 	<widget backgroundColor="#54111112" font="{0};25" halign="right" position="1715,321" zPosition="2" render="Label" size="71,30" source="global.CurrentTime" transparent="1" valign="center">
   <convert type="RaedQuickWeather">Sunrise</convert>
@@ -5375,7 +5375,7 @@ SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
     <widget backgroundColor="#54111112" font="{0};25" foregroundColor="#00ffffff" halign="right" position="1715,371" zPosition="2" render="Label" size="71,30" source="global.CurrentTime" transparent="1" valign="center">
     <convert type="RaedQuickWeather">Sunset</convert>
  </widget>
- <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="weather/MoonPhase" position="1561,425" size="80,80" zPosition="3" transparent="1" alphatest="blend">
+ <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="weather/MoonPhase" position="1561,425" size="80,80" zPosition="3" transparent="1" alphatest="on">
     <convert type="RaedQuickWeather">PiconMoon</convert>
   </widget>
    <widget source="session.CurrentService" render="Label" position="1611,420" size="165,65" font="{0};25" zPosition="3" halign="center" valign="center" foregroundColor="foreground" backgroundColor="#54111112" transparent="1" >
@@ -5386,10 +5386,10 @@ SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
   </widget>
     <eLabel name="new eLabel" position="1567,522" size="214,2" zPosition="2" backgroundColor="#004f6ef2" />
 	<eLabel text="{9}" position="1551,525" size="245,30" font="{0};25" valign="center" halign="center" backgroundColor="#54111112"  transparent="1" foregroundColor="#00c1ea02" zPosition="2" />
-	<widget alphatest="blend" render="RaedQuickSignalPiconUni" path="weather" position="1551,557" size="90,90" source="session.CurrentService" transparent="1" zPosition="2">
+	<widget alphatest="on" render="RaedQuickSignalPiconUni" path="weather" position="1551,557" size="90,90" source="session.CurrentService" transparent="1" zPosition="2">
     <convert type="RaedQuickWeather">Picon2</convert>
  </widget>
-    <ePixmap pixmap="{1}/images/CobaltFHD/FHD/temp.png" position="1681,577" size="20,50" zPosition="2" transparent="1" alphatest="blend" />
+    <ePixmap pixmap="{1}/images/CobaltFHD/FHD/temp.png" position="1681,577" size="20,50" zPosition="2" transparent="1" alphatest="on" />
 	<widget source="session.CurrentService" render="Label" font="{0};25" position="1690,569" size="90,30" backgroundColor="#54111112" zPosition="3" transparent="1" valign="center" halign="right">
     <convert type="RaedQuickWeather">Hightemp2</convert>
  </widget>
@@ -5398,34 +5398,34 @@ SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
  </widget> 
 <widget name="Positioner" position="522,980" size="575,72" zPosition="10" font="{0};30" backgroundColor="#54111112" foregroundColor="#41ff9900"  transparent="1" valign="center" halign="center"/>
 <widget name="Satfinder" position="1160,980" size="575,72" zPosition="10" font="{0};30" backgroundColor="#54111112" foregroundColor="#0000deff" transparent="1" valign="center" halign="center"/>
-<ePixmap position="120,990" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/menu.png" alphatest="blend" />
-<ePixmap position="300,990" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/exit.png" alphatest="blend" />
+<ePixmap position="120,990" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/menu.png" alphatest="on" />
+<ePixmap position="300,990" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/exit.png" alphatest="on" />
 <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="253,855" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="253,855" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="253,855" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="253,855" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="253,855" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="253,855" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="471,855" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="471,855" size="50,40" zPosition="2" alphatest="on">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="401,855" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="401,855" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="401,855" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="401,855" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget>  
@@ -5435,7 +5435,7 @@ SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
 ### SKIN_Full_Screen_Picons_ECM_SNR_ANALOG
 SKIN_Full_Screen_Picon_Ecm3_SNR_ANALOG = """
 <screen name="SKIN_Full_Screen_Picon_Ecm3_SNR_ANALOG" position="0,0" size="1920,1080" title="Quick Signal Info" backgroundColor="#16000000" flags="wfNoBorder">
-  <ePixmap position="325,777" size="1200,250" zPosition="1" pixmap="{1}/images/analog/FHD/analog_tuner_bg.png" alphatest="blend" transparent="1"/>
+  <ePixmap position="325,777" size="1200,250" zPosition="1" pixmap="{1}/images/analog/FHD/analog_tuner_bg.png" alphatest="on" transparent="1"/>
   <widget source="session.Event_Now" render="Label" position="47,162" size="898,66" font="{0};35" halign="center" backgroundColor="#ff595959" foregroundColor="#7ad927" transparent="1" zPosition="1">
   <convert type="EventName">Name</convert>
 </widget>
@@ -5458,11 +5458,11 @@ SKIN_Full_Screen_Picon_Ecm3_SNR_ANALOG = """
 <widget source="session.FrontendStatus" render="Label" position="430,969" size="150,45" font="{0}; 35" foregroundColor="#00f23d21" transparent="1" zPosition="2">
     <convert type="FrontendInfo">SNR</convert>
   </widget>
-  <widget source="session.FrontendStatus" render="RaedQuickWatches" position="400,790" size="500,450" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="blend">
+  <widget source="session.FrontendStatus" render="RaedQuickWatches" position="400,790" size="500,450" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="on">
       <convert type="RaedQuickFrontendInfo2">SNR_ANALOG</convert>
     </widget>
     <!-- AGC -->
-    <widget source="session.FrontendStatus" render="RaedQuickWatches" position="1000,792" size="500,450" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="blend">
+    <widget source="session.FrontendStatus" render="RaedQuickWatches" position="1000,792" size="500,450" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="on">
       <convert type="RaedQuickFrontendInfo2">AGC_ANALOG</convert>
     </widget>
   <eLabel name="agc" text="AGC:" position="1278,969" size="150,45" font="{0}; 35" halign="right" foregroundColor="#7ad927" backgroundColor="#16000000" transparent="1" zPosition="2"/>
@@ -5470,22 +5470,22 @@ SKIN_Full_Screen_Picon_Ecm3_SNR_ANALOG = """
     <convert type="FrontendInfo">AGC</convert>
   </widget>
     <!--Picon-->
-    <ePixmap position="203,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="208,505" size="240,140" zPosition="5" alphatest="blend">
+    <ePixmap position="203,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="208,505" size="240,140" zPosition="5" alphatest="on">
     <convert type="RaedQuickServName2">Reference</convert>
  </widget>
-    <ePixmap position="617,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="622,505" zPosition="5" size="240,140" alphatest="blend" >
+    <ePixmap position="617,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconSat" position="622,505" zPosition="5" size="240,140" alphatest="on" >
 	<convert type="RaedQuickServName2">OrbitalPos</convert>
  </widget>
-    <ePixmap position="1040,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="1045,505" size="240,140" zPosition="5" transparent="1" alphatest="blend">
+    <ePixmap position="1040,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/piconProv" position="1045,505" size="240,140" zPosition="5" transparent="1" alphatest="on">
     <convert type="RaedQuickServName2">Provider</convert>
  </widget>
-    <ePixmap position="1458,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="1463,505" size="240,140" transparent="1" alphatest="blend" zPosition="3" />
-    <ePixmap position="18,975" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/exit.png" alphatest="blend"/>
-<ePixmap position="18,929" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/menu.png" alphatest="blend"/>
+    <ePixmap position="1458,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" position="1463,505" size="240,140" transparent="1" alphatest="on" zPosition="3" />
+    <ePixmap position="18,975" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/exit.png" alphatest="on"/>
+<ePixmap position="18,929" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/menu.png" alphatest="on"/>
 <widget name="Positioner" position="5,1020" size="575,60" zPosition="10" font="{0};30" backgroundColor="#54111112" foregroundColor="#41ff9900"  transparent="1" valign="center" halign="center"/>
 <widget name="Satfinder" position="1340,1020" size="575,60" zPosition="10" font="{0};30" backgroundColor="#54111112" foregroundColor="#0000deff" transparent="1" valign="center" halign="center"/>
     <widget source="session.CurrentService" render="Label" position="462,719" size="992,38" zPosition="2" font="{0};32" halign="center" valign="top" foregroundColor="#7ad927" backgroundColor="#16000000" transparent="1">
@@ -5544,31 +5544,31 @@ SKIN_Full_Screen_Picon_Ecm3_SNR_ANALOG = """
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="1556,883" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1556,883" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="1556,883" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1556,883" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="1556,883" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1556,883" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="1786,883" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="1786,883" size="50,40" zPosition="2" alphatest="on">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="1716,883" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="1716,883" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="1716,883" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="1716,883" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget> 
@@ -5577,7 +5577,7 @@ SKIN_Full_Screen_Picon_Ecm3_SNR_ANALOG = """
 
 SKIN_Full_Screen_Picon_media_Ecm3_SNR_ANALOG = """
 <screen name="SKIN_Full_Screen_Picon_media_Ecm3_SNR_ANALOG" position="0,0" size="1920,1080" title="Quick Signal Info" backgroundColor="#16000000" flags="wfNoBorder">
-  <ePixmap position="325,777" size="1200,250" zPosition="1" pixmap="{1}/images/analog/FHD/analog_tuner_bg.png" alphatest="blend" transparent="1"/>
+  <ePixmap position="325,777" size="1200,250" zPosition="1" pixmap="{1}/images/analog/FHD/analog_tuner_bg.png" alphatest="on" transparent="1"/>
   <widget source="session.Event_Now" render="Label" position="47,162" size="898,66" font="{0};35" halign="center" backgroundColor="#ff595959" foregroundColor="#7ad927" transparent="1" zPosition="1">
   <convert type="EventName">Name</convert>
 </widget>
@@ -5600,11 +5600,11 @@ SKIN_Full_Screen_Picon_media_Ecm3_SNR_ANALOG = """
 <widget source="session.FrontendStatus" render="Label" position="430,969" size="150,45" font="{0}; 35" foregroundColor="#00f23d21" transparent="1" zPosition="2">
     <convert type="FrontendInfo">SNR</convert>
   </widget>
-  <widget source="session.FrontendStatus" render="RaedQuickWatches" position="400,790" size="500,450" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="blend">
+  <widget source="session.FrontendStatus" render="RaedQuickWatches" position="400,790" size="500,450" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="on">
       <convert type="RaedQuickFrontendInfo2">SNR_ANALOG</convert>
     </widget>
     <!-- AGC -->
-    <widget source="session.FrontendStatus" render="RaedQuickWatches" position="1000,792" size="500,450" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="blend">
+    <widget source="session.FrontendStatus" render="RaedQuickWatches" position="1000,792" size="500,450" borderColor="#008f8f8f" foregroundColor="#00ff2525" zPosition="4" transparent="1" alphatest="on">
       <convert type="RaedQuickFrontendInfo2">AGC_ANALOG</convert>
     </widget>
   <eLabel name="agc" text="AGC:" position="1278,969" size="150,45" font="{0}; 35" halign="right" foregroundColor="#7ad927" backgroundColor="#16000000" transparent="1" zPosition="2"/>
@@ -5612,22 +5612,22 @@ SKIN_Full_Screen_Picon_media_Ecm3_SNR_ANALOG = """
     <convert type="FrontendInfo">AGC</convert>
   </widget>
     <!--Picon-->
-    <ePixmap position="203,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="208,505" size="240,140" zPosition="5" alphatest="blend">
+    <ePixmap position="203,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" position="208,505" size="240,140" zPosition="5" alphatest="on">
     <convert type="RaedQuickServName2">Reference</convert>
  </widget>
-    <ePixmap position="617,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="622,505" zPosition="5" size="240,140" alphatest="blend" >
+    <ePixmap position="617,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconSat" position="622,505" zPosition="5" size="240,140" alphatest="on" >
 	<convert type="RaedQuickServName2">OrbitalPos</convert>
  </widget>
-    <ePixmap position="1040,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="1045,505" size="240,140" zPosition="5" transparent="1" alphatest="blend">
+    <ePixmap position="1040,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="piconProv" position="1045,505" size="240,140" zPosition="5" transparent="1" alphatest="on">
     <convert type="RaedQuickServName2">Provider</convert>
  </widget>
-    <ePixmap position="1458,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="blend"/>
-    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="1463,505" size="240,140" transparent="1" alphatest="blend" zPosition="3" />
-    <ePixmap position="18,975" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/exit.png" alphatest="blend"/>
-<ePixmap position="18,929" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/menu.png" alphatest="blend"/>
+    <ePixmap position="1458,500" size="250,150" zPosition="2" pixmap="{1}/images/analog/FHD/frame_of_picon3c.png" transparent="1" alphatest="on"/>
+    <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="emu" position="1463,505" size="240,140" transparent="1" alphatest="on" zPosition="3" />
+    <ePixmap position="18,975" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/exit.png" alphatest="on"/>
+<ePixmap position="18,929" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/menu.png" alphatest="on"/>
 <widget name="Positioner" position="5,1020" size="575,60" zPosition="10" font="{0};30" backgroundColor="#54111112" foregroundColor="#41ff9900"  transparent="1" valign="center" halign="center"/>
 <widget name="Satfinder" position="1340,1020" size="575,60" zPosition="10" font="{0};30" backgroundColor="#54111112" foregroundColor="#0000deff" transparent="1" valign="center" halign="center"/>
     <widget source="session.CurrentService" render="Label" position="462,719" size="992,38" zPosition="2" font="{0};32" halign="center" valign="top" foregroundColor="#7ad927" backgroundColor="#16000000" transparent="1">
@@ -5686,31 +5686,31 @@ SKIN_Full_Screen_Picon_media_Ecm3_SNR_ANALOG = """
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget source="session.CurrentService" render="Pixmap"  position="1556,883" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1556,883" size="50,40" zPosition="1" pixmap="{1}/images/sd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,720</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="1556,883" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1556,883" size="50,40" zPosition="2" pixmap="{1}/images/hd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">721,1980</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget source="session.CurrentService" render="Pixmap"  position="1556,883" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="blend">
+  <widget source="session.CurrentService" render="Pixmap"  position="1556,883" size="50,40" zPosition="3" pixmap="{1}/images/uhd_fhd.png" alphatest="on">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">1921,3840</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Network -->
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="1786,883" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/inet_green_fhd.png" position="1786,883" size="50,40" zPosition="2" alphatest="on">
     <convert type="RaedQuickTestConnection">google.com</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="1716,883" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/lan_green_fhd.png" position="1716,883" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Lan</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="1716,883" size="50,40" zPosition="2" alphatest="blend">
+   <widget source="session.CurrentService" render="Pixmap" pixmap="{1}/images/wlan_green_fhd.png" position="1716,883" size="50,40" zPosition="2" alphatest="on">
    <convert type="RaedQuickRouteInfo">Wifi</convert>
       <convert type="ConditionalShowHide" />
     </widget> 
