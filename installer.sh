@@ -2,8 +2,8 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=16.9
-description=What is NEW:\n- Add extra Url Transparent picons to [azl + Albahraniy] \n\n*************************\n:ما هو الجديد\n- [azl + Albahraniy] إضافة رابط تحميل جديد للبايكونات الشفافة من عمل
+version=17.0
+description=What is NEW:\n- Fix some codes \n\n*************************\n:ما هو الجديد\n- إصلاح بعض الأكواد
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
