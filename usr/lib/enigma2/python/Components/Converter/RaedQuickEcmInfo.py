@@ -12,19 +12,17 @@ from Components.config import config
 from Components.Element import cached
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS
 from Tools.Directories import fileExists
+from Components.Console import Console
 import os
 
-if os.path.exists('/usr/lib/bitratecalc.so'):
-        if not os.path.islink('/usr/lib/enigma2/python/Components/Converter/bitratecalc.so') or not os.path.exists('/usr/lib/enigma2/python/Components/Converter/bitratecalc.so'):
-                os.system('ln -s /usr/lib/bitratecalc.so /usr/lib/enigma2/python/Components/Converter/bitratecalc.so')
-        from Components.Converter.bitratecalc import eBitrateCalculator
-
-if os.path.exists('/usr/lib/bitratecalc.so') or os.path.exists('/usr/lib/enigma2/python/Components/Converter/bitratecalc.so') or os.path.islink('/usr/lib/enigma2/python/Components/Converter/bitratecalc.so'):
-        BITRATE = True
-        from bitratecalc import eBitrateCalculator
+if fileExists('/usr/lib/bitratecalc.so'):
+	if not os.path.islink('/usr/lib/enigma2/python/Components/Converter/bitratecalc.so') or not fileExists('/usr/lib/enigma2/python/Components/Converter/bitratecalc.so'):
+		Console().ePopen('ln -s /usr/lib/bitratecalc.so /usr/lib/enigma2/python/Components/Converter/bitratecalc.so')
+	from Components.Converter.bitratecalc import eBitrateCalculator
+	BITRATE = True
 else:
-        BITRATE = False
-        pass
+	BITRATE = False
+
 
 class RaedQuickEcmInfo(Poll, Converter, object):
         ecmfile = 0
