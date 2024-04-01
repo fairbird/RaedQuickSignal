@@ -90,7 +90,7 @@ else:
   <widget source="session.Event_Now" render="Label" position="1010,671" zPosition="2" size="842,68" font="{0};32" halign="center" foregroundColor="#00bab329" backgroundColor="#16000000" transparent="1" valign="center">
     <convert type="EventName">Name</convert>
   </widget>
-  <widget name="config" position="15,140" size="981,690" foregroundColor="#ffffff" backgroundColor="#16000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#0e6382" scrollbarMode="showOnDemand" transparent="1" zPosition="2" font="{0};30" secondFont="{0};28" itemHeight="40" />
+  <widget name="config" position="15,140" size="981,690" foregroundColor="#ffffff" backgroundColor="#16000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#0e6382" scrollbarMode="showOnDemand" transparent="1" zPosition="2" font="{0};30" valueFont="{0};28" itemHeight="40" />
   <widget source="key_red" render="Label" position="1,1035" zPosition="2" size="381,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
   <widget source="key_green" render="Label" position="544,1035" zPosition="2" size="381,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
   <widget source="key_yellow" render="Label" position="1074,1035" zPosition="2" size="381,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1"/>
@@ -130,7 +130,7 @@ else:
 <screen backgroundColor="#16000000" name="RaedQuickSignal_setup" position="center,center" size="1050,935" title="RAED's RaedQuickSignal setup" flags="wfNoBorder">
   <eLabel position="0,53" size="1050,1" zPosition="10" backgroundColor="#00ffffff" transparent="0"/>
   <widget source="Title" render="Label" font="{0};35" foregroundColor="#00bab329" position="30,5" size="981,45" transparent="1" />
-  <widget name="config" position="15,60" size="1015,600" foregroundColor="#ffffff" backgroundColor="#16000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#0e6382" scrollbarMode="showOnDemand" transparent="1" zPosition="1" font="{0};30" secondFont="{0};28" itemHeight="40" />
+  <widget name="config" position="15,60" size="1015,600" foregroundColor="#ffffff" backgroundColor="#16000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#0e6382" scrollbarMode="showOnDemand" transparent="1" zPosition="1" font="{0};30" valueFont="{0};28" itemHeight="40" />
   <widget source="key_red" render="Label" position="45,896" zPosition="2" size="165,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1" />
   <widget source="key_green" render="Label" position="265,896" zPosition="2" size="165,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1" />
   <!--widget source="key_yellow" render="Label" position="480,896" zPosition="2" size="200,32" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="#00f0f0f0" transparent="1" /-->
