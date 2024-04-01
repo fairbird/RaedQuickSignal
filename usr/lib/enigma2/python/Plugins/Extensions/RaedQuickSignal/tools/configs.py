@@ -86,6 +86,7 @@ config.plugins.RaedQuickSignal.keyname = ConfigSelection(default = "KEY_TEXT", c
 	("KEY_GREEN", _("GREEN")),
 	("KEY_BLUE", _("BLUE")),
 	("KEY_VIDEO", _("PVR")),
+	("KEY_HOMEPAGE", _("HOMEPAGE")),
 	("KEY_0", _("0")),
 	("KEY_1", _("1")),
 	("KEY_2", _("2")),
