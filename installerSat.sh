@@ -9,7 +9,7 @@ BRANATV=/usr/lib/enigma2/python/boxbranding.so
 BRANDOPEN=/usr/lib/enigma2/python/Tools/StbHardware.pyo
 
 rm -f /tmp/OSdream-Satfinder-5.8-RAED.tar.gz > /dev/null 2>&1
-rm -f /tmp/Signalfinder-2.4.tar.gz > /dev/null 2>&1
+rm -f /tmp/Signalfinder-3.0.tar.gz > /dev/null 2>&1
 
 if [ ! -d /usr/lib64 ]; then
 	SatfinderPATH=/usr/lib/enigma2/python/Plugins/SystemPlugins/Satfinder
@@ -37,8 +37,8 @@ elif [ -f $BRANDVU ] && [ -f $BlackHole  ] || [ -f $VTI ] ; then
 	echo "*** BH or VTI images ***"
 	[ -d $SatfinderPATH ] && rm -rf $SatfinderPATH > /dev/null 2>&1
 	[ -d $SignalfinderPATH ] && rm -rf $SignalfinderPATH > /dev/null 2>&1
-	wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/raw/main/Signalfinder-2.4.tar.gz
-	tar -xzf Signalfinder-2.4.tar.gz -C / > /dev/null 2>&1
+	wget -q "--no-check-certificate" https://github.com/fairbird/RaedQuickSignal/raw/main/Signalfinder-3.0.tar.gz
+	tar -xzf Signalfinder-3.0.tar.gz -C / > /dev/null 2>&1
 fi
 set +e
 cd ..
