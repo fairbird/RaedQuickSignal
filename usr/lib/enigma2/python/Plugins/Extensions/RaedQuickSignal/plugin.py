@@ -23,7 +23,9 @@ from Components.MenuList import MenuList
 from Components.Label import Label
 from datetime import datetime
 import os, re, gettext
-from os import environ
+from os import environ, remove
+from os import system
+from os.path import exists, split
 from Screens.ChoiceBox import ChoiceBox
 from Components.Pixmap import Pixmap
 from Tools.LoadPixmap import LoadPixmap
@@ -39,7 +41,6 @@ import re, shutil, requests
 from .tools.configs import *
 from .tools.compat import compat_urlopen, compat_Request, compat_URLError, compat_quote, compat_urlretrieve, PY3
 from .tools.Console import Console
-from os import path as os_path, remove as os_remove
         
 #lang = language.getLanguage()
 #environ["LANGUAGE"] = lang[:2]
@@ -61,6 +62,7 @@ BRANDOPENPYO="/usr/lib/enigma2/python/Tools/StbHardware.pyo"
 OPENBH="/usr/lib/enigma2/python/Screens/BpBlue.py"
 OPENBH2="/usr/lib/enigma2/python/Screens/BpBlue.pyc"
 OPENVIX="/usr/lib/enigma2/python/Plugins/SystemPlugins/ViX"
+BLackHole="/usr/lib/enigma2/python/Blackhole"
 BRANDVU="/proc/stb/info/vumodel"
 ### Satfinder path
 Satfinderpy=resolveFilename(SCOPE_PLUGINS, "SystemPlugins/Satfinder/plugin.py")
@@ -101,7 +103,7 @@ def removeunicode(data):
 def getversioninfo():
     currversion='1.0'
     version_file=resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/tools/version")
-    if os_path.exists(version_file):
+    if exists(version_file):
         try:
             fp=open(version_file, 'r').readlines()
             for line in fp:
@@ -134,31 +136,35 @@ def logdata(label_name = '', data = None):
 
 def dellog(label_name = '', data = None):
     try:
-        if os_path.exists('/tmp/RaedQuickSignal.log'):
-                os_remove('/tmp/RaedQuickSignal.log')
+        if exists('/tmp/RaedQuickSignal.log'):
+                remove('/tmp/RaedQuickSignal.log')
     except:
         pass
 
 def getSatfinderinfo():
     infofile=resolveFilename(SCOPE_PLUGINS, "SystemPlugins/Satfinder/LICENSE")
-    if os_path.exists(infofile):
+    if exists(infofile):
         fp=open(infofile, 'r').readlines()
         for line in fp:
                 if 'RAED' in line:
                         return getSatfinderinfo
 
 def DreamOS():
-    if os_path.exists('/var/lib/dpkg/status'):
+    if exists('/var/lib/dpkg/status'):
         return DreamOS
 
 def BHVU():
-    if os_path.exists('/proc/stb/info/vumodel') and os_path.exists('/usr/lib/enigma2/python/Blackhole'):
+    if exists(BRANDVU) and exists(BLackHole):
         return BHVU
 
 def VTI():
     VTI = resolveFilename(SCOPE_PLUGINS, "SystemPlugins/VTIPanel/plugin.pyo")
-    if os_path.exists(VTI):
+    if exists(VTI):
         return VTI
+
+def VUDevice():
+    if exists(BRANDVU) and not exists(VTI) or exists(BRANDOPENPYO) or exists(BRANDOPENPY) or exists(BRANDOPENPYC):
+    	return VUDevice
 
 def getDesktopSize():
     s = getDesktop(0).size()
@@ -263,7 +269,7 @@ def getcities(weather_location):
                         for block in blocks:
                                 regx='''<a href="(.*?)">.*?</a>'''
                                 href = re.findall(regx, block)[0]
-                                cityName = os.path.split(href)[1].replace(".html","").replace("-"," ").lstrip(' ')
+                                cityName = split(href)[1].replace(".html","").replace("-"," ").lstrip(' ')
                                 #cityName = re.findall(str(regx), str(block), re.M|re.I)[0]#.replace(".html","").split("_%", 1)[0].split("%", 1)[0]
                                 cities.append(cityName)
                         cities.sort()
@@ -283,7 +289,7 @@ def getcities(weather_location):
         #        match = re.findall(str(regx), str(data), re.M|re.I)
         #        cities = []
         #        for cityURL in match:
-        #            cityName = os.path.split(cityURL)[1].replace(".html","").split("_%", 1)[0].split("%", 1)[0]    
+        #            cityName = split(cityURL)[1].replace(".html","").split("_%", 1)[0].split("%", 1)[0]    
         #            if cityName in cities:
         #                continue
         #            cities.append(cityName)
@@ -363,8 +369,8 @@ class WeatherLocationChoiceList(Screen):
 
         def cityCallback(self,city=None):
                 try:
-                        if os_path.exists('/tmp/RaedQSweathermsn.xml'):
-                                os_remove('/tmp/RaedQSweathermsn.xml')
+                        if exists('/tmp/RaedQSweathermsn.xml'):
+                                remove('/tmp/RaedQSweathermsn.xml')
                         returnValue = city
                         countryCode=self.country.lower()+"-"+self.country.upper()
                         if self.get_xmlfile(returnValue,countryCode)==False:
@@ -383,8 +389,8 @@ class WeatherLocationChoiceList(Screen):
 
         def keyOk(self):
                 try:
-                        if os_path.exists('/tmp/RaedQSweathermsn.xml'):
-                                os_remove('/tmp/RaedQSweathermsn.xml')
+                        if exists('/tmp/RaedQSweathermsn.xml'):
+                                remove('/tmp/RaedQSweathermsn.xml')
                         returnValue = self["choicelist"].l.getCurrentSelection()
                         countryCode=self.country.lower()+"-"+self.country.upper()
                         if self.get_xmlfile(returnValue,countryCode)==False:
@@ -409,7 +415,7 @@ class RaedQuickSignalScreen(Screen):
                 Screen.__init__(self, session)
                 dellog()
 
-                os.system("rm -f /tmp/RaedQSweathermsn.xml")
+                system("rm -f /tmp/RaedQSweathermsn.xml")
                 self.degreetype = config.plugins.RaedQuickSignal.degreetype.value
                 self.weather_city = config.plugins.RaedQuickSignal.city.value
                 self.language = config.osd.language.value.replace('_', '-')
@@ -503,7 +509,7 @@ class RaedQuickSignalScreen(Screen):
                         elif config.plugins.RaedQuickSignal.piconpath.value == "MEDIA":
                                 self.skin = SKIN_Full_Screen_Picon_media_Ecm3_SNR_ANALOG
                 self.session = session
-                if not DreamOS() and not BHVU():
+                if not DreamOS() and not BHVU() and not VUDevice():
                         self.startupservice = config.servicelist.startupservice.value
                         sref = self.session.nav.getCurrentService()
                         from ServiceReference import ServiceReference
@@ -530,17 +536,17 @@ class RaedQuickSignalScreen(Screen):
                 shown=True
                 #self.onLayoutFinish.append(self.layoutFinished)
                 # open source and DreamOS
-                if os.path.exists(Satfinderpy) or os.path.exists(Satfinderpyo) or os.path.exists(Satfinderpyc):
+                if exists(Satfinderpy) or exists(Satfinderpyo) or exists(Satfinderpyc):
                         if BHVU() or VTI():
                                 self["Satfinder"] = Label(_(" "))
                                 logdata("Label Key_blue: SatFinder does not support Scan feature (VU+ BH/VTI)\n")
-                        elif getSatfinderinfo() or os.path.exists(BRANDOPENPYO) or os.path.exists(BRANDOPENPY) or os.path.exists(BRANDOPENPYC):
+                        elif getSatfinderinfo() or exists(BRANDOPENPYO) or exists(BRANDOPENPY) or exists(BRANDOPENPYC):
                                 self["Satfinder"] = Label("%s" % title77)
                         else:
                                 self["Satfinder"] = Label(_(" "))
                                 logdata("Label Key_blue: SatFinder does not support Scan feature\n")
                 # VU+ (BH & VTI)
-                elif os.path.exists(Signalfinderpy) or os.path.exists(Signalfinderpyo) or os.path.exists(Signalfinderpyc):
+                elif exists(Signalfinderpy) or exists(Signalfinderpyo) or exists(Signalfinderpyc):
                         if BHVU() or VTI():
                                 self["Satfinder"] = Label("%s" % title78)
                         else:
@@ -550,7 +556,7 @@ class RaedQuickSignalScreen(Screen):
                         self["Satfinder"] = Label(_(" "))
                         logdata("Label Key_blue: Satfinder Not Installed\n")
 
-                if os.path.exists(Positionerpy) or os.path.exists(Positionerpyo) or os.path.exists(Positionerpyc):
+                if exists(Positionerpy) or exists(Positionerpyo) or exists(Positionerpyc):
                         self["Positioner"] = Label("%s" % title79)
                 else:
                         self["Positioner"] = Label(_(" "))
@@ -596,7 +602,7 @@ class RaedQuickSignalScreen(Screen):
 
         def keyyellow(self):
                 try:
-                        if os.path.exists(Positionerpy) or os.path.exists(Positionerpyo) or os.path.exists(Positionerpyc):
+                        if exists(Positionerpy) or exists(Positionerpyo) or exists(Positionerpyc):
                                 try:
                                         from Plugins.SystemPlugins.PositionerSetup.ui import PositionerSetup
                                 except:
@@ -623,9 +629,9 @@ class RaedQuickSignalScreen(Screen):
 
         def keyblue(self):
                 try:
-                        if os.path.exists(Satfinderpy) or os.path.exists(Satfinderpyo) or os.path.exists(Satfinderpyc) or os.path.exists(Signalfinderpy) or os.path.exists(Signalfinderpyo) or os.path.exists(Signalfinderpyc): # Satfinder
+                        if exists(Satfinderpy) or exists(Satfinderpyo) or exists(Satfinderpyc) or exists(Signalfinderpy) or exists(Signalfinderpyo) or exists(Signalfinderpyc): # Satfinder
                                 from Components.NimManager import nimmanager
-                                if not BHVU() and (getSatfinderinfo() or os.path.exists(BRANDOPENPYO) or os.path.exists(BRANDOPENPY) or os.path.exists(BRANDOPENPYC)):
+                                if not BHVU() and (getSatfinderinfo() or exists(BRANDOPENPYO) or exists(BRANDOPENPY) or exists(BRANDOPENPYC)):
                                         from Plugins.SystemPlugins.Satfinder.plugin import Satfinder
                                         nimList = []
                                         if DreamOS(): # DreamOS
@@ -683,7 +689,7 @@ class RaedQuickSignalScreen(Screen):
                                                         
 
                                 elif BHVU() or VTI(): # VU+ (BH and VTI)
-                                        if os.path.exists(Satfinderpyo) or os.path.exists(Satfinderpyc) or os.path.exists(Signalfinderpy) or os.path.exists(Signalfinderpyc):
+                                        if exists(Satfinderpyo) or exists(Satfinderpyc) or exists(Signalfinderpy) or exists(Signalfinderpyc):
                                                 logdata("keyblue: Open Signalfinder BH or VTI\n")
                                                 from enigma import eDVBFrontendParametersSatellite
                                                 from Plugins.SystemPlugins.Signalfinder.plugin import SignalFinderMultistreamT2MI, SignalFinderMultistream, SignalFinder
@@ -741,9 +747,9 @@ class RaedQuickSignalScreen(Screen):
                 self.session.execDialog(self.servicelist)
 
         def exit(self):
-                if os_path.exists("/tmp/.RaedQuickSignal"):
-                        os_remove("/tmp/.RaedQuickSignal")
-                if not DreamOS() and not BHVU():
+                if exists("/tmp/.RaedQuickSignal"):
+                        remove("/tmp/.RaedQuickSignal")
+                if not DreamOS() and not BHVU() and not VUDevice():
                         config.servicelist.startupservice.value = self.startupservice
                         config.servicelist.startupservice.save()
                 self.close()
@@ -809,8 +815,8 @@ class RaedQuickSignal():
         def gotSession(self, session):
                 self.session = session
                 self.RaedQuickSignal = None
-                if os_path.exists("/tmp/.RaedQuickSignal"):
-                        os_remove("/tmp/.RaedQuickSignal")
+                if exists("/tmp/.RaedQuickSignal"):
+                        remove("/tmp/.RaedQuickSignal")
                 keymap = resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/tools/keymap.xml")
                 global globalActionMap
                 readKeymap(keymap)
@@ -821,7 +827,7 @@ class RaedQuickSignal():
                 globalActionMap.actions['showRaedQuickSignal'] = self.ShowHide
 
         def ShowHide(self):
-                if os_path.exists("/tmp/.RaedQuickSignal") == False:
+                if exists("/tmp/.RaedQuickSignal") == False:
                         if config.plugins.RaedQuickSignal.enabledonoff.value:
                                 self.session.open(RaedQuickSignalScreen)
 
@@ -854,7 +860,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                 self["key_green"] = StaticText(_("%s") % title32)
                 self["key_yellow"] = StaticText(_("%s") % title33)
 
-                if (os.path.exists(BRANDOPENPYO) or os.path.exists(BRANDOPENPY) or os.path.exists(BRANDOPENPYC)) and ((os.path.exists(Satfinderpy) or os.path.exists(Satfinderpyo) or os.path.exists(Satfinderpyc))):
+                if (exists(BRANDOPENPYO) or exists(BRANDOPENPY) or exists(BRANDOPENPYC)) and ((exists(Satfinderpy) or exists(Satfinderpyo) or exists(Satfinderpyc))):
                         self["key_blue"] = StaticText(_(" "))
                         logdata('key_blue: You have open source image')
                 elif getSatfinderinfo() and not (BHVU() or VTI()):
@@ -863,7 +869,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                 else:
                         self["key_blue"] = StaticText(_("Download SatFinder"))
 
-                if os.path.exists(Signalfinderpy) or os.path.exists(Signalfinderpyo) or os.path.exists(Signalfinderpyc):
+                if exists(Signalfinderpy) or exists(Signalfinderpyo) or exists(Signalfinderpyc):
                         self["key_blue"] = StaticText(_(" "))
                         logdata('key_blue: You already installed Signalfinder')
                 elif BHVU() or VTI():
@@ -957,7 +963,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                         cur = self["config"].getCurrent()
                         if cur == self.set_style:
                                 preview = PREVIEWPIC + "%s.png" % config.plugins.RaedQuickSignal.style.value
-                                if os.path.exists(preview):
+                                if exists(preview):
                                         self['Picture'].instance.setPixmapFromFile(preview)
                                         self["Picture"].show()
                                 else:
@@ -981,10 +987,10 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                 self.session.open(PiconsScreen)
 
         def keyBlue(self):
-                if (os.path.exists(BRANDOPENPYO) or os.path.exists(BRANDOPENPY) or os.path.exists(BRANDOPENPYC)) and (os.path.exists(Satfinderpy) or os.path.exists(Satfinderpyo) or os.path.exists(Satfinderpyc)):
+                if (exists(BRANDOPENPYO) or exists(BRANDOPENPY) or exists(BRANDOPENPYC)) and (exists(Satfinderpy) or exists(Satfinderpyo) or exists(Satfinderpyc)):
                         logdata('keyBlue: You have open source')
-                elif not getSatfinderinfo() or not os.path.exists(Satfinderpy) or not os.path.exists(Satfinderpyo) or not os.path.exists(Satfinderpyc) or not os.path.exists(Signalfinderpy) or not os.path.exists(Signalfinderpyc) or not os.path.exists(Signalfinderpyo):
-                        if os.path.exists(BRANDOPENPYO) or os.path.exists(BRANDOPENPY) or os.path.exists(BRANDOPENPYC):
+                elif not getSatfinderinfo() or not exists(Satfinderpy) or not exists(Satfinderpyo) or not exists(Satfinderpyc) or not exists(Signalfinderpy) or not exists(Signalfinderpyc) or not exists(Signalfinderpyo):
+                        if exists(BRANDOPENPYO) or exists(BRANDOPENPY) or exists(BRANDOPENPYC):
                                 self.session.openWithCallback(self.installsat, MessageBox, _('%s') % title64, MessageBox.TYPE_YESNO)
                         else:
                                 self.session.openWithCallback(self.installsat, MessageBox, _('%s') % title65, MessageBox.TYPE_YESNO)
@@ -1043,14 +1049,14 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
 
         def save(self):
                 #if self["config"].isChanged():
-                os.system("rm -f /tmp/RaedQSweathermsn.xml")
+                system("rm -f /tmp/RaedQSweathermsn.xml")
                 if self.configChanged:
                         for x in self["config"].list:
                                 if len(x)>1:
                                         x[1].save()
                         configfile.save()
                         # we can not use resolveFilename(SCOPE_PLUGINS) here the keymap.xml will be not writable 
-                        if os_path.exists('/usr/lib64/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml'):
+                        if exists('/usr/lib64/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml'):
                             keyfile = open("/usr/lib64/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml", "w")
                         else:
                             keyfile = open("/usr/lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml", "w")
