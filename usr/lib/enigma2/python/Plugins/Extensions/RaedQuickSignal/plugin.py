@@ -163,8 +163,10 @@ def VTI():
         return VTI
 
 def VUDevice():
-    if exists(BRANDVU) and not exists(VTI) or exists(BRANDOPENPYO) or exists(BRANDOPENPY) or exists(BRANDOPENPYC):
-    	return VUDevice
+    if exists(BRANDVU):
+        if not VTI():
+                if not exists(BRANDOPENPYO) or not exists(BRANDOPENPY) or not exists(BRANDOPENPYC):
+                    return VUDevice
 
 def getDesktopSize():
     s = getDesktop(0).size()
@@ -566,10 +568,10 @@ class RaedQuickSignalScreen(Screen):
         def get_xmlfile(self):
                 xmlfile = "http://weather.service.msn.com/data.aspx?weadegreetype=%s&culture=%s&weasearchstr=%s&src=outlook" % (self.degreetype, self.language, compat_quote(self.weather_city))
                 if PY3:
-                	import six
-                	downloadPage(six.ensure_binary(xmlfile), "/tmp/RaedQSweathermsn.xml").addCallback(self.downloadFinished).addErrback(self.downloadFailed)
+                        import six
+                        downloadPage(six.ensure_binary(xmlfile), "/tmp/RaedQSweathermsn.xml").addCallback(self.downloadFinished).addErrback(self.downloadFailed)
                 else:
-                	downloadPage(xmlfile, "/tmp/RaedQSweathermsn.xml").addCallback(self.downloadFinished).addErrback(self.downloadFailed)
+                        downloadPage(xmlfile, "/tmp/RaedQSweathermsn.xml").addCallback(self.downloadFinished).addErrback(self.downloadFailed)
 
         def downloadFinished(self, result):
                 print("[WeatherMSN] Download finished")
@@ -1016,18 +1018,18 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
         def keyOk(self):
                 cur = self["config"].getCurrent()
                 if cur == self.set_city:
-                	if config.plugins.RaedQuickSignal.Searchmethod.value == "search":
-                        	config.plugins.RaedQuickSignal.Searchmethod.save()
-                        	self.session.openWithCallback(self.ShowsearchBarracuda, VirtualKeyBoard, title=_('%s') % title16)
-                	elif config.plugins.RaedQuickSignal.Searchmethod.value == "chosse":
-                        	config.plugins.RaedQuickSignal.Searchmethod.save()
-                        	countriesFile = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/tools/countries')
-                        	countries=open(countriesFile).readlines()
-                        	clist=[]
-                        	for country in countries:
-                                	countryCode,countryName=country.split(",")
-                                	clist.append((countryName,countryCode))
-                        	self.session.openWithCallback(self.choicesback, ChoiceBox, _('%s') % title67, clist)
+                        if config.plugins.RaedQuickSignal.Searchmethod.value == "search":
+                                config.plugins.RaedQuickSignal.Searchmethod.save()
+                                self.session.openWithCallback(self.ShowsearchBarracuda, VirtualKeyBoard, title=_('%s') % title16)
+                        elif config.plugins.RaedQuickSignal.Searchmethod.value == "chosse":
+                                config.plugins.RaedQuickSignal.Searchmethod.save()
+                                countriesFile = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/tools/countries')
+                                countries=open(countriesFile).readlines()
+                                clist=[]
+                                for country in countries:
+                                        countryCode,countryName=country.split(",")
+                                        clist.append((countryName,countryCode))
+                                self.session.openWithCallback(self.choicesback, ChoiceBox, _('%s') % title67, clist)
 
         def choicesback(self, select):
                 if select:
@@ -1036,7 +1038,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                     #config.plugins.RaedQuickSignal.weather_location.save()
                     self.language = config.osd.language.value.replace('_', '-')
                     if self.language == 'en-EN':
-                    	self.language = 'en-US'
+                        self.language = 'en-US'
                     self.language = self.country
                     self.session.openWithCallback(self.citiesback, WeatherLocationChoiceList, self.country)
                     
@@ -1173,12 +1175,12 @@ class SearchLocationMSN(Screen):
                 self["menu"] = MenuList(self.resultlist)
 
                 self["actions"] = ActionMap(["OkCancelActions", "DirectionActions"], 
-                	{
-                		"ok": self.okClicked,
-                		"cancel": self.close,
-                		"up": self.pageUp,
-                		"down": self.pageDown
-                	}, -1)
+                        {
+                                "ok": self.okClicked,
+                                "cancel": self.close,
+                                "up": self.pageUp,
+                                "down": self.pageDown
+                        }, -1)
 
                 self.showMenu()
 
@@ -1216,7 +1218,7 @@ def search_title(id):
         #msnrequest = urllib.request.Request(url)
         msnrequest = compat_Request(url, headers={'User-Agent': 'Mozilla/5.0'}) # add [headers={'User-Agent': 'Mozilla/5.0'}] to fix HTTP Error 403: Forbidden
         try:
-        	#msnpage = urllib.request.urlopen(msnrequest)
+                #msnpage = urllib.request.urlopen(msnrequest)
                 msnpage = compat_urlopen(msnrequest,timeout=5)
         except (compat_URLError, HTTPException, socket.error) as err:
                 print("[Location] Error: Unable to retrieve page - Error code: ", str(err))
