@@ -163,10 +163,8 @@ def VTI():
         return VTI
 
 def VUDevice():
-    if exists(BRANDVU):
-        if not VTI():
-                if not exists(BRANDOPENPYO) or not exists(BRANDOPENPY) or not exists(BRANDOPENPYC):
-                    return VUDevice
+    if exists(BRANDVU) and not VTI() and not exists(BRANDOPENPYO) or not exists(BRANDOPENPY) or not exists(BRANDOPENPYC):
+        return VUDevice
 
 def getDesktopSize():
     s = getDesktop(0).size()
