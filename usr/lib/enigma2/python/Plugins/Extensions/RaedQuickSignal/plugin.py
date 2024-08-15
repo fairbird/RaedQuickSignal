@@ -510,7 +510,7 @@ class RaedQuickSignalScreen(Screen):
                         elif config.plugins.RaedQuickSignal.piconpath.value == "MEDIA":
                                 self.skin = SKIN_Full_Screen_Picon_media_Ecm3_SNR_ANALOG
                 self.session = session
-                if not DreamOS() and not BHVU() and not VUDevice():
+                try:
                         self.startupservice = config.servicelist.startupservice.value
                         sref = self.session.nav.getCurrentService()
                         from ServiceReference import ServiceReference
@@ -519,6 +519,8 @@ class RaedQuickSignalScreen(Screen):
                         serviceurl = p.getPath()
                         config.servicelist.startupservice.value = serviceurl
                         config.servicelist.startupservice.save()
+                except:
+                        pass
                 if fileExists(OPENBH) or fileExists(OPENBH2) or fileExists(OPENVIX):
                         self.servicelist = self.session.instantiateDialog(RAED_ChannelSelection)
                 else:
@@ -750,9 +752,11 @@ class RaedQuickSignalScreen(Screen):
         def exit(self):
                 if exists("/tmp/.RaedQuickSignal"):
                         remove("/tmp/.RaedQuickSignal")
-                if not DreamOS() and not BHVU() and not VUDevice():
+                try:
                         config.servicelist.startupservice.value = self.startupservice
                         config.servicelist.startupservice.save()
+                except:
+                        pass
                 self.close()
 
         def setupback(self,answer=False):
