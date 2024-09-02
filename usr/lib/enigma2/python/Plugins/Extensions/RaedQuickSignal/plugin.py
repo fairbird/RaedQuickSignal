@@ -221,7 +221,7 @@ def downloadFile(url, filePath):
         return True
         req = compat_Request(url, headers={'User-Agent': 'Mozilla/5.0'}) # add [headers={'User-Agent': 'Mozilla/5.0'}] to fix HTTP Error 403: Forbidden
         response = compat_urlopen(req,timeout=5)
-        cprint("response.read",response.read())
+        cprint("response.read: %s" % response.read())
         output = open(filePath, 'wb')
         output.write(response.read())
         output.close()
@@ -275,7 +275,7 @@ def getcities(weather_location):
                                 cities.append(cityName)
                         cities.sort()
     except Exception as error:
-                cprint('excepyion',str(error))
+                cprint('excepyion: %s' % str(error))
                 trace_error()
     cities.sort()
     return cities
