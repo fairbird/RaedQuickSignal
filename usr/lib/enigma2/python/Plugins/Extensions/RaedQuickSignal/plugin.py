@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-#RAEDQuickSignal (c) RAED 07-02-2014
+#RAEDQuickSignal (c) RAED 2014-2025
 #Thank's mfaraj for help
 
 from Components.config import config, getConfigListEntry, ConfigText, ConfigSelection, ConfigSubsection, ConfigYesNo, configfile, NoSave
@@ -424,10 +424,10 @@ class RaedQuickSignalScreen(Screen):
                         self.language = 'en-US'
 
                 ## Add Fonts codes
-                if config.plugins.RaedQuickSignal.fontsSize.value == "Default":
-                        fontSize = 100
-                else:
-                        fontSize = config.plugins.RaedQuickSignal.fontsSize.value
+                #if config.plugins.RaedQuickSignal.fontsSize.value == "Default":
+                #        fontSize = 100
+                #else:
+                #        fontSize = config.plugins.RaedQuickSignal.fontsSize.value
                 #try:
                 #        fontfile = config.plugins.RaedQuickSignal.fontsStyle.value
                 #except:
@@ -885,6 +885,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
 
                 self.currkeyname_value = config.plugins.RaedQuickSignal.keyname.value
                 self.fontsStyle_value = config.plugins.RaedQuickSignal.fontsStyle.value
+                self.fontssize_value = config.plugins.RaedQuickSignal.fontsSize.value
                 #self.fontsenabled_value = config.plugins.RaedQuickSignal.fontsenable.value
                 self.numbers_value = config.plugins.RaedQuickSignal.numbers.value
                 self.lang_value = config.plugins.RaedQuickSignal.lang.value
@@ -1067,11 +1068,12 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                             keyfile = open("/usr/lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml", "w")
                         keyfile.write('<keymap>\n\t<map context="GlobalActions">\n\t\t<key id="%s" mapto="showRaedQuickSignal" flags="m" />\n\t</map>\n</keymap>' % config.plugins.RaedQuickSignal.keyname.value)
                         keyfile.close()
-                        if not self.currkeyname_value == config.plugins.RaedQuickSignal.keyname.value or \
-                        not self.fontsStyle_value == config.plugins.RaedQuickSignal.fontsStyle.value or \
-                        not self.numbers_value == config.plugins.RaedQuickSignal.numbers.value or \
-                        not self.lang_value == config.plugins.RaedQuickSignal.lang.value or \
-                        not self.Searchmethod == config.plugins.RaedQuickSignal.Searchmethod.value:
+                        if not self.currkeyname_value == config.plugins.RaedQuickSignal.keyname.value \
+                        or not self.fontsStyle_value == config.plugins.RaedQuickSignal.fontsStyle.value \
+                        or not self.fontssize_value == config.plugins.RaedQuickSignal.fontsSize.value \
+                        or not self.numbers_value == config.plugins.RaedQuickSignal.numbers.value \
+                        or not self.lang_value == config.plugins.RaedQuickSignal.lang.value \
+                        or not self.Searchmethod == config.plugins.RaedQuickSignal.Searchmethod.value:
                                 self.session.openWithCallback(self.restart, MessageBox, _("%s") % title68)
                         else:
                                 self.close(True)
