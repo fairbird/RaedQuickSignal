@@ -2,8 +2,8 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=17.5
-description=What is NEW:\n- Fix some codes \n\n*************************\n:ما هو الجديد\n- إصلاح بعض الأكواد
+version=17.6
+description=What is NEW:\n- Fix changing Font size \n\n*************************\n:ما هو الجديد\n- إصلاح تغير حجم الخط
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
