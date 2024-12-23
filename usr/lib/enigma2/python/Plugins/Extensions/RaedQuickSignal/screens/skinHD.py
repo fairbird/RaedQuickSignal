@@ -10,14 +10,19 @@ from Plugins.Extensions.RaedQuickSignal.tools.configs import *
 
 ## Add Fonts codes
 IMAGEPLUGIN=resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/images/")
-
+# Font name
 if config.plugins.RaedQuickSignal.fontsStyle.value == "Default":
-	FontName='Regular'
+	fontfilename='Regular'
 else:
-	fontfile = config.plugins.RaedQuickSignal.fontsStyle.value
-	FontName='RSQFont'
-	addFont(fontfile, 'RSQFont', 100, 1)
-
+	fontfilename = config.plugins.RaedQuickSignal.fontsStyle.value
+# Font size
+if config.plugins.RaedQuickSignal.fontsSize.value == "Default":
+	fontSize = 100
+else:
+	fontSize = config.plugins.RaedQuickSignal.fontsSize.value
+# Add Font to skin
+FontName='RSQFont'
+addFont(fontfilename, 'RSQFont', int(fontSize), 1)
 ## End Add Fonts codes
 
 if config.plugins.RaedQuickSignal.numbers.value == "Numbers":
