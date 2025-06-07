@@ -33,6 +33,7 @@ except Exception as error:
 
 ############# plugins
 config.plugins.RaedQuickSignal = ConfigSubsection()
+config.plugins.RaedQuickSignal.showplugin = ConfigText(default="")
 config.plugins.RaedQuickSignal.enabledonoff = ConfigYesNo(default=True)
 config.plugins.RaedQuickSignal.updateonline = ConfigYesNo(default=True)
 config.plugins.RaedQuickSignal.lang = ConfigSelection(default="EN", choices = [
