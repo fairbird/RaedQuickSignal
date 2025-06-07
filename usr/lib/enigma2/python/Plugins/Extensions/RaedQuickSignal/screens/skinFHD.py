@@ -151,6 +151,28 @@ else:
  </screen>
 """.format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"))
 
+#### Selection Screen
+SKIN_SelectionScreen = """
+<screen name="SelectionScreen" position="center,center" size="738,524" title="Select Options">
+        <widget source="list" render="Listbox" position="10,10" size="716,461" scrollbarMode="showOnDemand">
+            <convert type="TemplatedMultiContent">
+                {
+                    "template": [
+                        MultiContentEntryText(pos=(85,10), size=(650,50), font=0, text=0),
+                        MultiContentEntryPixmapAlphaBlend(pos=(0,0), size=(50,50), png=1)
+                    ],
+                    "fonts": [gFont("Regular", 35)],
+                    "itemHeight": 60
+                }
+            </convert>
+        </widget>
+<ePixmap pixmap="%s/images/red.png" position="105,517" size="165,2" alphatest="blend"/>
+<ePixmap pixmap="%s/images/green.png" position="482,517" size="165,2" alphatest="blend"/>
+<widget name="key_red" position="70,480" zPosition="1" size="246,40" font="Regular;35" halign="center" valign="right" foregroundColor="#00ffffff" backgroundColor="#ff1f771f" transparent="1"/>
+<widget name="key_green" position="445,480" zPosition="1" size="246,40" font="Regular;35" halign="center" valign="right" foregroundColor="#00ffffff" backgroundColor="#ff9f1313" transparent="1"/>
+</screen>
+""" % (resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal'), resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal'))
+
 ### SKIN_Picons
 if DreamOS():
       SKIN_Picons = """
