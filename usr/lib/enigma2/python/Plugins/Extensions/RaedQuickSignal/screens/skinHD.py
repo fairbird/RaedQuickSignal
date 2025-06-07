@@ -93,6 +93,28 @@ SKIN_setup2 = """
  </screen>
 """.format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"))
 
+#### Selection Screen
+SKIN_SelectionScreen = """
+<screen name="SelectionScreen" position="center,center" size="560,400" title="Select Options">
+        <widget source="list" render="Listbox" position="10,10" size="540,300" scrollbarMode="showOnDemand">
+            <convert type="TemplatedMultiContent">
+                {
+                    "template": [
+                        MultiContentEntryText(pos=(50,0), size=(450,50), font=0, text=0),
+                        MultiContentEntryPixmapAlphaBlend(pos=(0,0), size=(50,50), png=1)
+                    ],
+                    "fonts": [gFont("Regular", 24)],
+                    "itemHeight": 50
+                }
+            </convert>
+        </widget>
+<ePixmap pixmap="%s/images/red.png" position="55,392" size="165,2" alphatest="blend"/>
+<ePixmap pixmap="%s/images/green.png" position="337,392" size="165,2" alphatest="blend"/>
+<widget name="key_red" position="70,355" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="right" foregroundColor="#00ffffff" backgroundColor="#ff1f771f" transparent="1"/>
+<widget name="key_green" position="350,355" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="right" foregroundColor="#00ffffff" backgroundColor="#ff9f1313" transparent="1"/>
+</screen>
+""" % (resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal'), resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal'))
+
 ### SKIN_Picons
 SKIN_Picons = """
 <screen name="PiconsScreen" backgroundColor="#16000000" position="center,center" size="1050,421" title="RAED's RaedQuickSignal Picons setup" flags="wfNoBorder">
