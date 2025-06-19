@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#RAEDQuickSignal (c) RAED 07-02-2014
+#RAEDQuickSignal (c) RAED 2025
 
 import os, sys, traceback
 from Components.config import *
