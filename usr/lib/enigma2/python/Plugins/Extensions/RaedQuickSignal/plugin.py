@@ -1,8 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #RAEDQuickSignal (c) RAED 2014-2025
-#Thank's mfaraj for help
 
+from datetime import datetime
+import os, re, gettext
+from os import environ, remove
+from os import system
+from os.path import exists, split
 from Components.config import config, getConfigListEntry, ConfigText, ConfigSelection, ConfigSubsection, ConfigYesNo, configfile, NoSave
 from Components.ConfigList import ConfigListScreen
 from Components.ActionMap import ActionMap
@@ -22,11 +26,6 @@ from Screens.InputBox import InputBox
 from Components.Sources.List import List
 from Components.MenuList import MenuList
 from Components.Label import Label
-from datetime import datetime
-import os, re, gettext
-from os import environ, remove
-from os import system
-from os.path import exists, split
 from Screens.ChoiceBox import ChoiceBox
 from Components.Pixmap import Pixmap
 from Tools.LoadPixmap import LoadPixmap
@@ -909,7 +908,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                 self.set_numbers = getConfigListEntry(_("%s") % title43, config.plugins.RaedQuickSignal.numbers, _("%s") % title44)
                 self.set_piconpath = getConfigListEntry(_("%s") % title45, config.plugins.RaedQuickSignal.piconpath, _("%s") % title46)
                 self.set_style = getConfigListEntry(_("%s") % title47, config.plugins.RaedQuickSignal.style, _("%s") % title48)
-                #self.set_fontsenable = getConfigListEntry(_("%s") % title49, config.plugins.RaedQuickSignal.fontsenable, _("%s")% title50)
+                self.set_fontsenable = getConfigListEntry(_("%s") % title49, config.plugins.RaedQuickSignal.fontsenable, _("%s")% title50)
                 self.set_fontsStyle = getConfigListEntry(_("%s") % title51, config.plugins.RaedQuickSignal.fontsStyle, _("%s") % title52)
                 self.set_fontssize = getConfigListEntry(_("%s") % title88, config.plugins.RaedQuickSignal.fontsSize, _("%s") % title89)
                 self.set_refreshInterval = getConfigListEntry(_("%s") % title53, config.plugins.RaedQuickSignal.refreshInterval, _("%s") % title54)
@@ -938,7 +937,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                         self.list.append(getConfigListEntry("%s" % title63))
                         self.list.append(self.set_refreshInterval)
                         self.list.append(self.set_degreetype)
-                        self.list.append(self.set_Searchmethod)
+                        #self.list.append(self.set_Searchmethod)
                         self.list.append(self.set_city)
 
                 self["config"].list = self.list
@@ -1025,18 +1024,20 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
         def keyOk(self):
                 cur = self["config"].getCurrent()
                 if cur == self.set_city:
-                        if config.plugins.RaedQuickSignal.Searchmethod.value == "search":
-                                config.plugins.RaedQuickSignal.Searchmethod.save()
-                                self.session.openWithCallback(self.ShowsearchBarracuda, VirtualKeyBoard, title=_('%s') % title16)
-                        elif config.plugins.RaedQuickSignal.Searchmethod.value == "chosse":
-                                config.plugins.RaedQuickSignal.Searchmethod.save()
-                                countriesFile = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/tools/countries')
-                                countries=open(countriesFile).readlines()
-                                clist=[]
-                                for country in countries:
-                                        countryCode,countryName=country.split(",")
-                                        clist.append((countryName,countryCode))
-                                self.session.openWithCallback(self.choicesback, ChoiceBox, _('%s') % title67, clist)
+                        config.plugins.RaedQuickSignal.Searchmethod.save()
+                        self.session.openWithCallback(self.ShowsearchBarracuda, VirtualKeyBoard, title=_('%s') % title16)
+                        #if config.plugins.RaedQuickSignal.Searchmethod.value == "search":
+                        #        config.plugins.RaedQuickSignal.Searchmethod.save()
+                        #        self.session.openWithCallback(self.ShowsearchBarracuda, VirtualKeyBoard, title=_('%s') % title16)
+                        #elif config.plugins.RaedQuickSignal.Searchmethod.value == "chosse":
+                        #        config.plugins.RaedQuickSignal.Searchmethod.save()
+                        #        countriesFile = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/tools/countries')
+                        #        countries=open(countriesFile).readlines()
+                        #        clist=[]
+                        #        for country in countries:
+                        #                countryCode,countryName=country.split(",")
+                        #                clist.append((countryName,countryCode))
+                        #        self.session.openWithCallback(self.choicesback, ChoiceBox, _('%s') % title67, clist)
                 if cur == self.set_showplugin:
                         self.session.open(SelectionScreen)
 

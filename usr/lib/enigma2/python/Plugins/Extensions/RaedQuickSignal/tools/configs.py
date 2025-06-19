@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#RAEDQuickSignal (c) RAED 07-02-2014
+#RAEDQuickSignal (c) RAED 2025
 
 import os, sys, traceback
 from Components.config import *
@@ -36,22 +36,26 @@ config.plugins.RaedQuickSignal = ConfigSubsection()
 config.plugins.RaedQuickSignal.showplugin = ConfigText(default="")
 config.plugins.RaedQuickSignal.enabledonoff = ConfigYesNo(default=True)
 config.plugins.RaedQuickSignal.updateonline = ConfigYesNo(default=True)
+############# language
+
 config.plugins.RaedQuickSignal.lang = ConfigSelection(default="EN", choices = [
 	("EN", "English"),
 	("AR", "عربي"),
 	("TR", "İngilizce"),
+	("RU", "Русский"),
 	("IT", "Italiano"),
 	("SK", "Slovenský"),
 	("CN", "中國人")
 	])
 
-############# language
 if config.plugins.RaedQuickSignal.lang.value == "EN":
 	from Plugins.Extensions.RaedQuickSignal.language.en import *
 elif config.plugins.RaedQuickSignal.lang.value == "AR":
 	from Plugins.Extensions.RaedQuickSignal.language.ar import *
 elif config.plugins.RaedQuickSignal.lang.value == "TR":
 	from Plugins.Extensions.RaedQuickSignal.language.tr import *
+elif config.plugins.RaedQuickSignal.lang.value == "RU":
+	from Plugins.Extensions.RaedQuickSignal.language.ru import *
 elif config.plugins.RaedQuickSignal.lang.value == "IT":
 	from Plugins.Extensions.RaedQuickSignal.language.it import *
 elif config.plugins.RaedQuickSignal.lang.value == "SK":
