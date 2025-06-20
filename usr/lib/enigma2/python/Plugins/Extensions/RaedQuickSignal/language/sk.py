@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# RAEDQuickSignal (c) RAED 07-02-2022
+# RAEDQuickSignal (c) RAED 20-06-2025
 # Slovak translation by (enosat&yahoo.com) Thank you
 
 title1="Povoliť zobrazovanie v dB"
@@ -96,5 +96,5 @@ title91="Výber zo zoznamu názvov miesta"
 title92="Výber vyhľadávania názvu mesta"
 title93="Posunutím < alebo > vyberte metódu, ktorú chcete použiť na vyhľadávanie názvu mesta"
 title94="Priehľadné piktogramy od (azl + Albahraniy)"
-title95="Show Plugin #press OK to change"
-title96="This option to show Plugin in any where you like"
+title95="Zobrazenie doplnku #stlačte OK pre zmenu"
+title96="Táto možnosť zobrazuje doplnok vo vybraných položkách"
