@@ -1,9 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #RAEDQuickSignal (c) RAED 2014-2025
-
+import os, re, gettext, re, shutil, requests, sys, traceback
 from datetime import datetime
-import os, re, gettext
 from os import environ, remove
 from os import system
 from os.path import exists, split
@@ -34,10 +33,9 @@ try:
         from keymapparser import readKeymap
 except:
         from Components.ActionMap import loadKeymap as readKeymap
-from twisted.web.client import downloadPage
+from twisted.web.client import downloadPage, getPage, error
 from xml.etree.cElementTree import fromstring as cet_fromstring
 # import as python3 from plugin
-import re, shutil, requests
 from .tools.configs import *
 from .tools.compat import compat_urlopen, compat_Request, compat_URLError, compat_quote, compat_urlretrieve, PY3
 from .tools.Console import Console
@@ -116,8 +114,6 @@ def getversioninfo():
 VER = getversioninfo()
 
 def trace_error():
-    import sys
-    import traceback
     try:
         traceback.print_exc(file=sys.stdout)
         traceback.print_exc(file=open('/tmp/RaedQuickSignal.log', 'a'))
@@ -207,7 +203,6 @@ else:
 #        SKIN_Event_Progress_Picon_media = resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/screens/Event_Progress_Picon_media_FHD.xml")
 ##############################################################################
 
-import gettext
 REDC =  '\033[31m'
 ENDC = '\033[m'
 
@@ -252,8 +247,6 @@ def readurl(url):
             cprint('Reason: %s' % e.reason)
 
 def getcities(weather_location):
-
-    import requests,re
     S = requests.Session()
     url = (b"http://www.geonames.org/advanced-search.html?q=&country=%s&featureClass=P&startRow=".decode("utf-8")) % str(weather_location.upper())
     pages = range(0, 1501, 50) ## change 1501 as page you want
@@ -767,8 +760,7 @@ class RaedQuickSignalScreen(Screen):
                 self.session.openWithCallback(self.setupback,RaedQuickSignal_setup)
 
         def checkupdates(self):
-               try:
-                       from twisted.web.client import getPage, error
+               try:    
                        url = b"https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh"
                        getPage(url,timeout=10).addCallback(self.parseData).addErrback(self.errBack)
                except Exception as error:
@@ -1332,12 +1324,9 @@ class SearchLocationMSN(Screen):
                         self.close()
         
 def search_title(id):
-        import urllib.request
         url = "http://weather.service.msn.com/find.aspx?outputview=search&weasearchstr=%s&culture=en-US&src=outlook" % id
-        #msnrequest = urllib.request.Request(url)
         msnrequest = compat_Request(url, headers={'User-Agent': 'Mozilla/5.0'}) # add [headers={'User-Agent': 'Mozilla/5.0'}] to fix HTTP Error 403: Forbidden
         try:
-                #msnpage = urllib.request.urlopen(msnrequest)
                 msnpage = compat_urlopen(msnrequest,timeout=5)
         except (compat_URLError, HTTPException, socket.error) as err:
                 print("[Location] Error: Unable to retrieve page - Error code: ", str(err))
@@ -1351,6 +1340,7 @@ def search_title(id):
                                 locationcode = "%s" % (childs.attrib.get('weatherlocationname') if PY3 else childs.attrib.get('weatherlocationname').encode("UTF-8", "ignore"))
                                 search_results.append(locationcode)
         return search_results
+
 
 def sessionstart(reason, session=None, **kwargs):
         if reason == 0:
