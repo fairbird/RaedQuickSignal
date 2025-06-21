@@ -2,8 +2,8 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=17.8
-description="What is NEW:\n- Add Russian language support\n- Remove the option to select the city name for the weather condition from the cities list (this option is no longer useful) and only rely on the manual option\n\n*************************\nما هو الجديد:\n- حذف خيار اختيار اسم المدينة لحالة الطقس من خلال قائمة المدن (لم يعد ينفع هذا الخيار) فقط الإعتماد على الخيار اليدوي\n- إضافة دعم اللغة الروسية"
+version=17.9
+description="What is NEW:\n- Fix some code for python2 (DreamOS images)\n\n*************************\nما هو الجديد:\n- إصلاح بعض الاخطاء لبايثون 2"
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
