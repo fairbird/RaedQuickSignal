@@ -769,27 +769,43 @@ class RaedQuickSignalScreen(Screen):
         def errBack(self,error=None):
                logdata("errBack-error",error)
 
-        def parseData(self, data):
-               if PY3:
-                   data = data.decode("utf-8")
-               else:
-                   data = data.encode("utf-8")
-               if data:
-                   lines = data.split("\n")
-                   for line in lines:
-                       if line.startswith("version"):
-                          self.new_version = line.split("=")[1]
-                          #break #if enabled the for loop will exit before reading description line
-                       if line.startswith("description"):
-                          self.new_description = line.split("=")[1]
-                          break
-               logdata("Current VER",VER)
-               logdata('New VER',self.new_version)
-               if float(VER) == float(self.new_version) or float(VER)>float(self.new_version):
-                   logdata("Updates","No new version available")
-               else :
-                   new_version = self.new_version
-                   new_description = self.new_description
+        def errBack(self,error=None):
+        logdata("errBack-error",error)
+
+    def parseData(self, data):
+        if PY3:
+        	data = data.decode("utf-8")
+        else:
+        	data = data.encode("utf-8")
+
+        if data:
+        	lines = data.split("\n")
+        	desc_started = False
+        	desc_lines = []
+        	for line in lines:
+        		line = line.strip()
+        		if line.startswith("version"):
+        			self.new_version = line.split("=")[1].strip('"')
+        		elif line.startswith("description="):
+        			desc_started = True
+        			first_part = line.split("=", 1)[1].lstrip('"')
+        			if first_part.endswith('"'):
+        				# description is in one line only
+        				self.new_description = first_part.rstrip('"')
+        				desc_started = False
+        			else:
+        				desc_lines.append(first_part)
+        		elif desc_started:
+        			if line.endswith('"'):
+        				desc_lines.append(line.rstrip('"'))
+        				desc_started = False
+        				self.new_description = "\n".join(desc_lines)
+        			else:
+        				desc_lines.append(line)
+        if float(VER) >= float(self.new_version):
+        	logdata("Updates", "No new version available")
+        else:
+        	new_description = self.new_description
                    self.session.openWithCallback(self.install, MessageBox, _('%s %s %s.\n\n%s.\n\n%s.' % (title27, new_version, title28, new_description, title29)), MessageBox.TYPE_YESNO)
 
         def install(self,answer=False):
