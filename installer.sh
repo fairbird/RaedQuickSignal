@@ -5,10 +5,10 @@
 version="18.1"
 description="
 What is NEW:
-- Remove (valueFont) from skin some images does not use it
+- Add Greek translation
 
 ما هو الجديد:
-- من السكين بعض الصور لا تستخدمه valueFont حذف
+- إضافة اللغة اليونانية
 "
 ##############################################################
 
