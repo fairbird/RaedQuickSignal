@@ -45,6 +45,7 @@ config.plugins.RaedQuickSignal.lang = ConfigSelection(default="EN", choices = [
 	("RU", "Русский"),
 	("IT", "Italiano"),
 	("SK", "Slovenský"),
+	("EL", "Ελληνικά"),
 	("CN", "中國人")
 	])
 
@@ -60,6 +61,8 @@ elif config.plugins.RaedQuickSignal.lang.value == "IT":
 	from Plugins.Extensions.RaedQuickSignal.language.it import *
 elif config.plugins.RaedQuickSignal.lang.value == "SK":
 	from Plugins.Extensions.RaedQuickSignal.language.sk import *
+elif config.plugins.RaedQuickSignal.lang.value == "EL":
+	from Plugins.Extensions.RaedQuickSignal.language.el import *
 elif config.plugins.RaedQuickSignal.lang.value == "CN":
 	from Plugins.Extensions.RaedQuickSignal.language.ch import *
 else:
@@ -155,3 +158,4 @@ config.plugins.RaedQuickSignal.degreetype = ConfigSelection(default="C", choices
 	("F", _("%s") % title13)
 	])
 config.plugins.RaedQuickSignal.weather_location = ConfigText(default="bh-BH", visible_width = 250, fixed_size = False)     
+
