@@ -160,8 +160,8 @@ def VTI():
 
 def VUDevice():
     if exists(BRANDVU) and not VTI():
-    	if not exists(BRANDOPENPYO) or not exists(BRANDOPENPY) or not exists(BRANDOPENPYC):
-        	return VUDevice
+        if not exists(BRANDOPENPYO) or not exists(BRANDOPENPY) or not exists(BRANDOPENPYC):
+                return VUDevice
 
 def getDesktopSize():
     s = getDesktop(0).size()
@@ -767,30 +767,46 @@ class RaedQuickSignalScreen(Screen):
                        trace_error()
 
         def errBack(self,error=None):
-               logdata("errBack-error",error)
+                logdata("errBack-error",error)
+
+        def errBack(self,error=None):
+                logdata("errBack-error",error)
 
         def parseData(self, data):
-               if PY3:
-                   data = data.decode("utf-8")
-               else:
-                   data = data.encode("utf-8")
-               if data:
-                   lines = data.split("\n")
-                   for line in lines:
-                       if line.startswith("version"):
-                          self.new_version = line.split("=")[1]
-                          #break #if enabled the for loop will exit before reading description line
-                       if line.startswith("description"):
-                          self.new_description = line.split("=")[1]
-                          break
-               logdata("Current VER",VER)
-               logdata('New VER',self.new_version)
-               if float(VER) == float(self.new_version) or float(VER)>float(self.new_version):
-                   logdata("Updates","No new version available")
-               else :
-                   new_version = self.new_version
-                   new_description = self.new_description
-                   self.session.openWithCallback(self.install, MessageBox, _('%s %s %s.\n\n%s.\n\n%s.' % (title27, new_version, title28, new_description, title29)), MessageBox.TYPE_YESNO)
+                if PY3:
+                       data = data.decode("utf-8")
+                else:
+                       data = data.encode("utf-8")
+
+                if data:
+                       lines = data.split("\n")
+                       desc_started = False
+                       desc_lines = []
+                       for line in lines:
+                                line = line.strip()
+                                if line.startswith("version"):
+                                        self.new_version = line.split("=")[1].strip('"')
+                                elif line.startswith("description="):
+                                        desc_started = True
+                                        first_part = line.split("=", 1)[1].lstrip('"')
+                                        if first_part.endswith('"'):
+                                                # description is in one line only
+                                                self.new_description = first_part.rstrip('"')
+                                                desc_started = False
+                                        else:
+                                                desc_lines.append(first_part)
+                                elif desc_started:
+                                        if line.endswith('"'):
+                                                desc_lines.append(line.rstrip('"'))
+                                                desc_started = False
+                                                self.new_description = "\n".join(desc_lines)
+                                        else:
+                                                desc_lines.append(line)
+                if float(VER) >= float(self.new_version):
+                                logdata("Updates", "No new version available")
+                else:
+                                new_description = self.new_description
+                                self.session.openWithCallback(self.install, MessageBox, _('%s %s %s.\n\n%s.\n\n%s.' % (title27, new_version, title28, new_description, title29)), MessageBox.TYPE_YESNO)
 
         def install(self,answer=False):
                 try:
@@ -1093,109 +1109,109 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
 
 class SelectionScreen(Screen, ConfigListScreen):
 
-	def __init__(self, session):
-		Screen.__init__(self, session)
-		self.skin = SKIN_SelectionScreen
-		ConfigListScreen.__init__(self, [], session=session)
-		self.session = session
-		self.setup_title = _("Select your choose")
-		self.setTitle(self.setup_title)
+        def __init__(self, session):
+                Screen.__init__(self, session)
+                self.skin = SKIN_SelectionScreen
+                ConfigListScreen.__init__(self, [], session=session)
+                self.session = session
+                self.setup_title = _("Select your choose")
+                self.setTitle(self.setup_title)
 
-		# Load pixmaps for checkboxes
-		sz_w = getDesktop(0).size().width()
-		if sz_w == 1280 :
-			self.empty_box = LoadPixmap(resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/checkbox_empty.png'))
-			self.checked_box = LoadPixmap(resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/checkbox_checked.png'))
-		else:
-			self.empty_box = LoadPixmap(resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/checkbox_empty2.png'))
-			self.checked_box = LoadPixmap(resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/checkbox_checked2.png'))
+                # Load pixmaps for checkboxes
+                sz_w = getDesktop(0).size().width()
+                if sz_w == 1280 :
+                        self.empty_box = LoadPixmap(resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/checkbox_empty.png'))
+                        self.checked_box = LoadPixmap(resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/checkbox_checked.png'))
+                else:
+                        self.empty_box = LoadPixmap(resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/checkbox_empty2.png'))
+                        self.checked_box = LoadPixmap(resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/checkbox_checked2.png'))
 
-		# Initialize selection states
-		self.selection_states = {
-			"Menu": False,
-			"Channellist": False,
-			"Extensions": False
-		}
+                # Initialize selection states
+                self.selection_states = {
+                        "Menu": False,
+                        "Channellist": False,
+                        "Extensions": False
+                }
 
-		# Get current config value and update selection states
-		self.current_value = config.plugins.RaedQuickSignal.showplugin.value
-		if self.current_value:
-			selected_items = self.current_value.split(',')
-			for item in selected_items:
-				if item in self.selection_states:
-					self.selection_states[item] = True
+                # Get current config value and update selection states
+                self.current_value = config.plugins.RaedQuickSignal.showplugin.value
+                if self.current_value:
+                        selected_items = self.current_value.split(',')
+                        for item in selected_items:
+                                if item in self.selection_states:
+                                        self.selection_states[item] = True
 
-		# Create list of options with their checkbox states
-		self.list = []
+                # Create list of options with their checkbox states
+                self.list = []
 
-		# Set up the list component
-		self["list"] = List(self.list)
+                # Set up the list component
+                self["list"] = List(self.list)
 
-		# Now update the list
-		self.updateList()
+                # Now update the list
+                self.updateList()
 
-		# Set up labels
-		self["key_green"] = Label(_("Save"))
-		self["key_red"] = Label(_("Cancel"))
+                # Set up labels
+                self["key_green"] = Label(_("Save"))
+                self["key_red"] = Label(_("Cancel"))
 
-		# Set up actions
-		self["actions"] = ActionMap(["WizardActions", "ColorActions", "MenuActions"], {
-			"ok": self.select_option,
-			"cancel": self.close,
-			"back": self.close,
-			"green": self.save
-		}, -2)  # Higher priority to ensure OK is captured (DreamOS images need it)
+                # Set up actions
+                self["actions"] = ActionMap(["WizardActions", "ColorActions", "MenuActions"], {
+                        "ok": self.select_option,
+                        "cancel": self.close,
+                        "back": self.close,
+                        "green": self.save
+                }, -2)  # Higher priority to ensure OK is captured (DreamOS images need it)
 
-		self.onLayoutFinish.append(self.layoutFinished)
+                self.onLayoutFinish.append(self.layoutFinished)
 
-	def layoutFinished(self):
-		self.setTitle(self.setup_title)
+        def layoutFinished(self):
+                self.setTitle(self.setup_title)
 
-	def updateList(self):
-		# Store the current index before updating the list
-		current_index = self["list"].getIndex() or 0
-		self.list = []
-		choices = [
-			("Menu", _("Menu")),
-			("Channellist", _("Channellist")),
-			("Extensions", _("Extensions"))
-		]
+        def updateList(self):
+                # Store the current index before updating the list
+                current_index = self["list"].getIndex() or 0
+                self.list = []
+                choices = [
+                        ("Menu", _("Menu")),
+                        ("Channellist", _("Channellist")),
+                        ("Extensions", _("Extensions"))
+                ]
 
-		for key, text in choices:
-			pixmap = self.checked_box if self.selection_states[key] else self.empty_box
-			self.list.append((text, pixmap, key))
+                for key, text in choices:
+                        pixmap = self.checked_box if self.selection_states[key] else self.empty_box
+                        self.list.append((text, pixmap, key))
 
-		self["list"].setList(self.list)
-		# Restore the previous index, ensuring it's within bounds
-		if current_index < len(self.list):
-			self["list"].setIndex(current_index)
-		else:
-			self["list"].setIndex(0)  # Fallback to first item if index is out of range
+                self["list"].setList(self.list)
+                # Restore the previous index, ensuring it's within bounds
+                if current_index < len(self.list):
+                        self["list"].setIndex(current_index)
+                else:
+                        self["list"].setIndex(0)  # Fallback to first item if index is out of range
 
-	def select_option(self):
-		current = self["list"].getCurrent()
-		if current:
-			key = current[2]
-			self.selection_states[key] = not self.selection_states[key]
-			self.updateList()
+        def select_option(self):
+                current = self["list"].getCurrent()
+                if current:
+                        key = current[2]
+                        self.selection_states[key] = not self.selection_states[key]
+                        self.updateList()
 
-	def save(self):
-		# Save all selected options as comma-separated string
-		selected_options = [key for key, state in self.selection_states.items() if state]
-		new_value = ','.join(selected_options)
-		config.plugins.RaedQuickSignal.showplugin.value = new_value
-		config.plugins.RaedQuickSignal.showplugin.save()
+        def save(self):
+                # Save all selected options as comma-separated string
+                selected_options = [key for key, state in self.selection_states.items() if state]
+                new_value = ','.join(selected_options)
+                config.plugins.RaedQuickSignal.showplugin.value = new_value
+                config.plugins.RaedQuickSignal.showplugin.save()
 
-		if self.current_value != new_value:
-			self.session.openWithCallback(self.restart, MessageBox, _("You need to restart GUI\nDo you want to do it now ?!"))
-		else:
-			self.close(True)
+                if self.current_value != new_value:
+                        self.session.openWithCallback(self.restart, MessageBox, _("You need to restart GUI\nDo you want to do it now ?!"))
+                else:
+                        self.close(True)
 
-	def restart(self,answer=None):
-		if answer:
-			self.session.open(TryQuitMainloop, 3)
-		else:
-			self.close(True)
+        def restart(self,answer=None):
+                if answer:
+                        self.session.open(TryQuitMainloop, 3)
+                else:
+                        self.close(True)
 
 
 class PiconsScreen(Screen):
@@ -1348,12 +1364,12 @@ def sessionstart(reason, session=None, **kwargs):
 
 def main_menu(menuid, **kwargs):
         if menuid == "mainmenu" and config.plugins.RaedQuickSignal.showplugin.value:
-        	return [(_("RaedQuickSignal"), main, "RaedQuickSignal", 45)]
+                return [(_("RaedQuickSignal"), main, "RaedQuickSignal", 45)]
         else:
-        	return []
+                return []
 
 def run(session, *args, **kwargs):
-	session.open(RaedQuickSignalScreen)
+        session.open(RaedQuickSignalScreen)
 
 def main(session, *args, **kwargs):
         session.open(RaedQuickSignal_setup)
@@ -1362,7 +1378,7 @@ def main(session, *args, **kwargs):
 description = _("RaedQuickSignal")
 
 def Plugins(**kwargs):
-	result = [
+        result = [
                 PluginDescriptor(
                         where = [PluginDescriptor.WHERE_SESSIONSTART],
                         fnc = sessionstart
@@ -1374,45 +1390,45 @@ def Plugins(**kwargs):
                         icon = 'images/RaedQuickSignal.png',
                         fnc = main
                 ),
-	]
+        ]
 
-	show = config.plugins.RaedQuickSignal.showplugin.value
-	selected_options = show.split(",") if show else []
+        show = config.plugins.RaedQuickSignal.showplugin.value
+        selected_options = show.split(",") if show else []
 
-	menulist = PluginDescriptor(
-		name=_("RaedQuickSignal"),
-		description=description,
-		where=PluginDescriptor.WHERE_MENU,
-		fnc=main_menu
-	)
+        menulist = PluginDescriptor(
+                name=_("RaedQuickSignal"),
+                description=description,
+                where=PluginDescriptor.WHERE_MENU,
+                fnc=main_menu
+        )
 
-	extDescriptor = PluginDescriptor(
-		name=_("RAED's RaedQuickSignal [RaedQuickSignal]"),
-		description=description,
-		where=PluginDescriptor.WHERE_EXTENSIONSMENU,
-		fnc=run
-	)
+        extDescriptor = PluginDescriptor(
+                name=_("RAED's RaedQuickSignal [RaedQuickSignal]"),
+                description=description,
+                where=PluginDescriptor.WHERE_EXTENSIONSMENU,
+                fnc=run
+        )
 
-	contextlist = PluginDescriptor(
-		name=_("RAED's RaedQuickSignal [RaedQuickSignal]"),
-		description=description,
-		where=PluginDescriptor.WHERE_CHANNEL_CONTEXT_MENU,
-		fnc=run
-	)
+        contextlist = PluginDescriptor(
+                name=_("RAED's RaedQuickSignal [RaedQuickSignal]"),
+                description=description,
+                where=PluginDescriptor.WHERE_CHANNEL_CONTEXT_MENU,
+                fnc=run
+        )
 
-	if "Menu" in selected_options:
-		result.append(menulist)
-	if "Extensions" in selected_options:
-		result.append(extDescriptor)
-	if "Channellist" in selected_options:
-		result.append(contextlist)
-		if DreamOS():
-			result.append(
-				PluginDescriptor(
-					name=_("RAED's RaedQuickSignal [RaedQuickSignal]"),
-					description=description,
-					where=PluginDescriptor.WHERE_CHANNEL_SELECTION_RED,
-					fnc=run
-				)
-			)
-	return result
+        if "Menu" in selected_options:
+                result.append(menulist)
+        if "Extensions" in selected_options:
+                result.append(extDescriptor)
+        if "Channellist" in selected_options:
+                result.append(contextlist)
+                if DreamOS():
+                        result.append(
+                                PluginDescriptor(
+                                        name=_("RAED's RaedQuickSignal [RaedQuickSignal]"),
+                                        description=description,
+                                        where=PluginDescriptor.WHERE_CHANNEL_SELECTION_RED,
+                                        fnc=run
+                                )
+                        )
+        return result

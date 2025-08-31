@@ -2,8 +2,14 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
-version=18.0
-description="What is NEW:\n- Remove (valueFont) from skin some images does not use it\n\n*************************\nما هو الجديد:\n- من السكين بعض الصور لا تستخدمه valueFont حذف"
+version="18.1"
+description="
+What is NEW:
+- Add Greek translation
+
+ما هو الجديد:
+- إضافة اللغة اليونانية
+"
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
