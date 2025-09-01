@@ -2,6 +2,7 @@
 ##setup command=wget -q "--no-check-certificate" https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh
 
 ######### Only These two lines to edit with new version ######
+# next veriosn do not missing to add "" to version number
 version=18.1
 description="
 What is NEW:
