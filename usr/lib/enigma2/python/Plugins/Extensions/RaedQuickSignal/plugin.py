@@ -785,10 +785,10 @@ class RaedQuickSignalScreen(Screen):
                        for line in lines:
                                 line = line.strip()
                                 if line.startswith("version"):
-                                        self.new_version = line.split("=")[1].strip('"')
+                                        self.new_version = line.split("=")[1].strip('"').strip().strip('"').strip("'")
                                 elif line.startswith("description="):
                                         desc_started = True
-                                        first_part = line.split("=", 1)[1].lstrip('"')
+                                        first_part = line.split("=", 1)[1].lstrip('"').strip().strip('"').strip("'")
                                         if first_part.endswith('"'):
                                                 # description is in one line only
                                                 self.new_description = first_part.rstrip('"')
@@ -806,7 +806,7 @@ class RaedQuickSignalScreen(Screen):
                                 logdata("Updates", "No new version available")
                 else:
                                 new_description = self.new_description
-                                self.session.openWithCallback(self.install, MessageBox, _('%s %s %s.\n\n%s.\n\n%s.' % (title27, new_version, title28, new_description, title29)), MessageBox.TYPE_YESNO)
+                                self.session.openWithCallback(self.install, MessageBox, _('%s %s %s.\n\n%s.\n\n%s.' % (title27, self.new_version, title28, new_description, title29)), MessageBox.TYPE_YESNO)
 
         def install(self,answer=False):
                 try:
