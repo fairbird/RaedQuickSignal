@@ -45,7 +45,6 @@ config.plugins.RaedQuickSignal.lang = ConfigSelection(default="EN", choices = [
 	("RU", "Русский"),
 	("IT", "Italiano"),
 	("SK", "Slovenský"),
-	("EL", "Ελληνικά"),
 	("CN", "中國人")
 	])
 
@@ -61,8 +60,6 @@ elif config.plugins.RaedQuickSignal.lang.value == "IT":
 	from Plugins.Extensions.RaedQuickSignal.language.it import *
 elif config.plugins.RaedQuickSignal.lang.value == "SK":
 	from Plugins.Extensions.RaedQuickSignal.language.sk import *
-elif config.plugins.RaedQuickSignal.lang.value == "EL":
-	from Plugins.Extensions.RaedQuickSignal.language.el import *
 elif config.plugins.RaedQuickSignal.lang.value == "CN":
 	from Plugins.Extensions.RaedQuickSignal.language.ch import *
 else:
@@ -106,9 +103,14 @@ config.plugins.RaedQuickSignal.keyname = ConfigSelection(default = "KEY_TEXT", c
 
 ############# style of skin
 config.plugins.RaedQuickSignal.style = ConfigSelection(default = "AGC1", choices = [
-	("AGC1", _("AGC Progress + Picon")),
-	("AGC2", _("AGC Progress + Event Description")),
-	("AGC3", _("AGC Progress + Weather")),
+	("AGC1", _("skin 1 QuickSignal By BO-HLALA")),
+	("AGC2", _("skin 2 QuickSignal By BO-HLALA")),
+	("AGC3", _("skin 3 QuickSignal By BO-HLALA")),
+	("AGC4", _("skin 4 QuickSignal By BO-HLALA")),
+  ("AGC5", _("skin 5 QuickSignal By BO-HLALA")),
+	("AGC6", _("AGC Progress + Picon")),
+	("AGC7", _("AGC Progress + Event Description")),
+	("AGC8", _("AGC Progress + Weather")),            
 	("Event1", _("Event Progress + Picon")),
 	("Event2", _("Event Progress + Event Description")),
 	("Event3", _("Event Progress + Weather")),
@@ -158,4 +160,3 @@ config.plugins.RaedQuickSignal.degreetype = ConfigSelection(default="C", choices
 	("F", _("%s") % title13)
 	])
 config.plugins.RaedQuickSignal.weather_location = ConfigText(default="bh-BH", visible_width = 250, fixed_size = False)     
-
