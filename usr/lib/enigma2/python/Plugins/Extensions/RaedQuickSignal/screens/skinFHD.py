@@ -52,11 +52,11 @@ if DreamOS():
 <screen name="RaedQuickSignal_setup" position="0,0" size="1920,1080" title="RAED's RaedQuickSignal setup" flags="wfNoBorder" backgroundColor="#16000000">
   <widget source="Title" position="269,35" size="1210,65" render="Label" font="{0};50" foregroundColor="#ffa500" backgroundColor="#16000000" transparent="1" halign="center" />
   <widget source="session.VideoPicture" render="Pig" position="1037,158" size="827,437" backgroundColor="transparent" zPosition="1" />
-  <eLabel text="Background of VideoPicture" foregroundColor="white" backgroundColor="white" size="842,452" position="1030,150" zPosition="-10" />
-  <widget source="global.CurrentTime" font="{0};55" foregroundColor="white" backgroundColor="#16000000" halign="center" position="1565,3" render="Label" size="353,84" transparent="1" valign="center" zPosition="5">
+  <eLabel text="Background of VideoPicture" foregroundColor="#ffffff" backgroundColor="#ffffff" size="842,452" position="1030,150" zPosition="-10" />
+  <widget source="global.CurrentTime" font="{0};55" foregroundColor="#ffffff" backgroundColor="#16000000" halign="center" position="1565,3" render="Label" size="353,84" transparent="1" valign="center" zPosition="5">
     <convert type="ClockToText">Default</convert>
   </widget>
-  <widget source="global.CurrentTime" render="Label" position="1565,78" size="353,65" font="{0};50" halign="center" foregroundColor="white" backgroundColor="#16000000" transparent="1" zPosition="6">
+  <widget source="global.CurrentTime" render="Label" position="1565,78" size="353,65" font="{0};50" halign="center" foregroundColor="#ffffff" backgroundColor="#16000000" transparent="1" zPosition="6">
     <convert type="ClockToText">Format:%d.%m.%Y</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="1030,601" zPosition="1" size="842,68" font="{0};34" halign="center" foregroundColor="#ff2525" backgroundColor="#16000000" transparent="1" valign="center">
@@ -65,7 +65,7 @@ if DreamOS():
   <widget source="session.Event_Now" render="Label" position="1030,661" zPosition="2" size="842,68" font="{0};32" halign="center" foregroundColor="yellow" backgroundColor="#16000000" transparent="1" valign="center">
     <convert type="EventName">Name</convert>
   </widget>
-  <widget name="config" position="25,130" size="981,690" foregroundColor="white" backgroundColor="#16000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#0e6382" scrollbarMode="showOnDemand" transparent="1" zPosition="1" /><widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1312,933" size="300,80" alphatest="on" scale="1" zPosition="4" />
+  <widget name="config" position="25,130" size="981,690" foregroundColor="#ffffff" backgroundColor="#16000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#0e6382" scrollbarMode="showOnDemand" transparent="1" zPosition="1" /><widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1312,933" size="300,80" alphatest="on" scale="1" zPosition="4" />
   <widget source="key_red" render="Label" position="1,1030" zPosition="2" size="381,34" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="transponderinfo" transparent="1" />
   <widget source="key_green" render="Label" position="544,1030" zPosition="2" size="381,34" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="transponderinfo" transparent="1" />
   <widget source="key_yellow" render="Label" position="1074,1030" zPosition="2" size="381,34" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="transponderinfo" transparent="1" />
@@ -86,11 +86,11 @@ else:
 <screen name="RaedQuickSignal_setup" position="0,0" size="1920,1080" title="RAED's RaedQuickSignal setup" flags="wfNoBorder" backgroundColor="#16000000">
   <widget source="Title" position="269,35" size="1210,65" render="Label" font="{0};50" foregroundColor="#ffa500" backgroundColor="#16000000" transparent="1" halign="center" />
   <widget source="session.VideoPicture" render="Pig" position="1037,158" size="827,437" backgroundColor="transparent" zPosition="1" />
-  <eLabel text="Background of VideoPicture" foregroundColor="white" backgroundColor="white" size="842,452" position="1030,150" zPosition="-10" />
-  <widget source="global.CurrentTime" font="{0};55" foregroundColor="white" backgroundColor="#16000000" halign="center" position="1565,3" render="Label" size="353,84" transparent="1" valign="center" zPosition="5">
+  <eLabel text="Background of VideoPicture" foregroundColor="#ffffff" backgroundColor="#ffffff" size="842,452" position="1030,150" zPosition="-10" />
+  <widget source="global.CurrentTime" font="{0};55" foregroundColor="#ffffff" backgroundColor="#16000000" halign="center" position="1565,3" render="Label" size="353,84" transparent="1" valign="center" zPosition="5">
     <convert type="ClockToText">Default</convert>
   </widget>
-  <widget source="global.CurrentTime" render="Label" position="1565,78" size="353,65" font="{0};50" halign="center" foregroundColor="white" backgroundColor="#16000000" transparent="1" zPosition="6">
+  <widget source="global.CurrentTime" render="Label" position="1565,78" size="353,65" font="{0};50" halign="center" foregroundColor="#ffffff" backgroundColor="#16000000" transparent="1" zPosition="6">
     <convert type="ClockToText">Format:%d.%m.%Y</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="1030,601" zPosition="1" size="842,68" font="{0};34" halign="center" foregroundColor="#ff2525" backgroundColor="#16000000" transparent="1" valign="center">
@@ -99,7 +99,7 @@ else:
   <widget source="session.Event_Now" render="Label" position="1030,661" zPosition="2" size="842,68" font="{0};32" halign="center" foregroundColor="yellow" backgroundColor="#16000000" transparent="1" valign="center">
     <convert type="EventName">Name</convert>
   </widget>
-  <widget name="config" position="25,130" size="981,690" foregroundColor="white" backgroundColor="#16000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#0e6382" scrollbarMode="showOnDemand" transparent="1" zPosition="2" font="{0};30" itemHeight="40" /> <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1312,933" size="300,80" alphatest="on" scale="1" zPosition="4" />
+  <widget name="config" position="25,130" size="981,690" foregroundColor="#ffffff" backgroundColor="#16000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#0e6382" scrollbarMode="showOnDemand" transparent="1" zPosition="2" font="{0};30" itemHeight="40" /> <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1312,933" size="300,80" alphatest="on" scale="1" zPosition="4" />
   <widget source="key_red" render="Label" position="6,1030" zPosition="2" size="381,34" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="transponderinfo" transparent="1" />
   <widget source="key_green" render="Label" position="544,1030" zPosition="2" size="381,34" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="transponderinfo" transparent="1" />
   <widget source="key_yellow" render="Label" position="1074,1030" zPosition="2" size="381,34" font="{0};30" halign="center" valign="center" backgroundColor="#54111112" foregroundColor="transponderinfo" transparent="1" />
@@ -185,7 +185,7 @@ SKIN_SelectionScreen = """
 if DreamOS():
       SKIN_Picons = """
 <screen name="PiconsScreen" backgroundColor="#30000000" position="center,center" size="1120,469" title="RAED's RaedQuickSignal Picons setup" flags="wfNoBorder">
-  <eLabel position="0,63" size="1120,1" zPosition="10" backgroundColor="white" />
+  <eLabel position="0,63" size="1120,1" zPosition="10" backgroundColor="#ffffff" />
   <widget source="Title" render="Label" font="{0};35" foregroundColor="yellow" position="90,12" size="1028,45" transparent="1" />
   <widget name="menu" position="15,70" size="662,285" foregroundColor="#00ffffff" backgroundColor="#16000000" foregroundColorSelected="#00000000" backgroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" zPosition="1" itemCornerRadius="13" />
   <eLabel text="{1}" position="29,370" size="1072,38" font="{0};32" foregroundColor="#ff2525" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5" />
@@ -199,9 +199,9 @@ else:
 
       SKIN_Picons = """
 <screen name="PiconsScreen" backgroundColor="#30000000" position="center,center" size="1120,469" title="RAED's RaedQuickSignal Picons setup" flags="wfNoBorder" zPosition="100">
-  <eLabel position="0,63" size="1120,1" zPosition="10" backgroundColor="white" />
+  <eLabel position="0,63" size="1120,1" zPosition="10" backgroundColor="#ffffff" />
   <widget source="Title" render="Label" font="{0};35" foregroundColor="yellow" position="90,12" size="1028,45" transparent="1" />
-  <widget name="menu" position="25,70" size="662,285" font="{0};35" itemHeight="45" foregroundColor="white" backgroundColor="#16000000" foregroundColorSelected="#00000000" backgroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" zPosition="1" itemCornerRadius="13" />
+  <widget name="menu" position="25,70" size="662,285" font="{0};35" itemHeight="45" foregroundColor="#ffffff" backgroundColor="#16000000" foregroundColorSelected="#00000000" backgroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" zPosition="1" itemCornerRadius="13" />
   <eLabel text="{1}" position="31,370" size="1072,38" font="{0};32" foregroundColor="#ff2525" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5" />
   <eLabel text="{2}" position="31,415" size="1072,38" font="{0};32" foregroundColor="yellow" backgroundColor="#16000000" valign="center" halign="center" transparent="1" zPosition="5" />
   <ePixmap position="12,2" zPosition="30" size="70,70" pixmap="{1}/images/fairbirdfhd.png" scale="1" alphatest="blend" />
@@ -478,19 +478,19 @@ SKIN_AGC_Picon_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
     <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -719,19 +719,19 @@ SKIN_AGC_Picon_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
     <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -953,19 +953,19 @@ SKIN_AGC_Event_Des_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,612" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,612" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -1183,19 +1183,19 @@ SKIN_AGC_Event_Des_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -1406,7 +1406,7 @@ SKIN_AGC_Weather_SNRdB = """
   <ePixmap position="1433,508" size="48,48" zPosition="4" alphatest="blend" pixmap="{1}/images/blue48x48.png" scale="1" />
   <!-- Weather -->
   <!-- Today -->
-  <widget source="session.CurrentService" render="Label" position="431,659" size="241,32" font="{0}; 27" zPosition="3" halign="center" valign="center" foregroundColor="white" backgroundColor="#54111112" transparent="1">
+  <widget source="session.CurrentService" render="Label" position="431,659" size="241,32" font="{0}; 27" zPosition="3" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#54111112" transparent="1">
     <convert type="RaedQuickWeather">Day</convert>
   </widget>
   <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="326,635" size="100,100" zPosition="3" transparent="1" alphatest="blend">
@@ -1442,19 +1442,19 @@ SKIN_AGC_Weather_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" font="Bold;35" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" font="Bold;35" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -1662,7 +1662,7 @@ SKIN_AGC_Weather_NOSNRdB = """
   <ePixmap position="1433,508" size="48,48" zPosition="4" alphatest="blend" pixmap="{1}/images/blue48x48.png" scale="1" />
   <!-- Weather -->
   <!-- Today -->
-  <widget source="session.CurrentService" render="Label" position="431,659" size="241,32" font="{0}; 27" zPosition="3" halign="center" valign="center" foregroundColor="white" backgroundColor="#54111112" transparent="1">
+  <widget source="session.CurrentService" render="Label" position="431,659" size="241,32" font="{0}; 27" zPosition="3" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#54111112" transparent="1">
     <convert type="RaedQuickWeather">Day</convert>
   </widget>
   <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="326,635" size="100,100" zPosition="3" transparent="1" alphatest="blend">
@@ -1698,19 +1698,19 @@ SKIN_AGC_Weather_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" font="Bold;35" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" font="Bold;35" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,616" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -1942,19 +1942,19 @@ SKIN_Event_Progress_Picon_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -2181,19 +2181,19 @@ SKIN_Event_Progress_Picon_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -2413,19 +2413,19 @@ SKIN_Event_Progress_Event_Des_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -2641,19 +2641,19 @@ SKIN_Event_Progress_Event_Des_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -2863,7 +2863,7 @@ SKIN_Event_Progress_Weather_SNRdB = """
   <ePixmap position="1433,508" size="48,48" zPosition="4" alphatest="blend" pixmap="{1}/images/blue48x48.png" scale="1" />
   <!-- Weather -->
   <!-- Today -->
-  <widget source="session.CurrentService" render="Label" position="434,663" size="241,32" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="white" backgroundColor="#54111112" transparent="1">
+  <widget source="session.CurrentService" render="Label" position="434,663" size="241,32" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#54111112" transparent="1">
     <convert type="RaedQuickWeather">Day</convert>
   </widget>
   <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="326,645" size="100,100" zPosition="3" transparent="1" alphatest="blend">
@@ -2899,19 +2899,19 @@ SKIN_Event_Progress_Weather_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
  <!-- Icons VideoWidth  -->
-   <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+   <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget> 
@@ -3119,7 +3119,7 @@ SKIN_Event_Progress_Weather_NOSNRdB = """
   <ePixmap position="1433,508" size="48,48" zPosition="4" alphatest="blend" pixmap="{1}/images/blue48x48.png" scale="1" />
 
   <!-- Today -->
-  <widget source="session.CurrentService" render="Label" position="434,663" size="241,32" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="white" backgroundColor="#54111112" transparent="1">
+  <widget source="session.CurrentService" render="Label" position="434,663" size="241,32" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#54111112" transparent="1">
     <convert type="RaedQuickWeather">Day</convert>
   </widget>
   <widget source="session.CurrentService" render="RaedQuickSignalPiconUni" path="RaedQuickSignal/PICONS/weather" position="326,645" size="100,100" zPosition="3" transparent="1" alphatest="blend">
@@ -3155,19 +3155,19 @@ SKIN_Event_Progress_Weather_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,618" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -3399,19 +3399,19 @@ SKIN_AGC_Picon_media_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -3640,19 +3640,19 @@ SKIN_AGC_Picon_media_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,611" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -3883,19 +3883,19 @@ SKIN_Event_Progress_Picon_media_SNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -4124,19 +4124,19 @@ SKIN_Event_Progress_Picon_media_NOSNRdB = """
     <convert type="RaedQuickServName2">Provider</convert>
   </widget>
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="7,613" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -4184,14 +4184,14 @@ SKIN_Full_Screen1 = """
 <widget source="session.FrontendStatus" render="Progress" pixmap="{1}/images/icons_quick/icon_snr-scan3.png" position="30,165" size="1860,75" borderWidth="1" foregroundGradient="red,yellow,green,horizontal" foregroundColor="#1d8503" borderColor="#656565" transparent="1">
     <convert type="FrontendInfo">SNR</convert>
   </widget>
-  <eLabel text="SNR:" position="37,165" size="150,75" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" font="{0};52" />
+  <eLabel text="SNR:" position="37,165" size="150,75" valign="center" foregroundColor="#ffffff" backgroundColor="#00000000" transparent="1" font="{0};52" />
   <widget source="session.FrontendStatus" render="Label" position="1552,165" size="330,75" halign="right" valign="center" transparent="1" font="{0};52" zPosition="9">
     <convert type="FrontendInfo">SNR</convert>
   </widget>
   <widget source="session.FrontendStatus" render="Progress" pixmap="{1}/images/icons_quick/icon_snr-scan3.png" position="30,255" size="1860,75" borderWidth="1" foregroundGradient="red,yellow,green,horizontal" foregroundColor="#30394" borderColor="#656565" transparent="1">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
-  <eLabel text="AGC:" position="37,255" size="150,75" valign="center" foregroundColor="white" backgroundColor="black" transparent="1" font="{0};52" zPosition="9" />
+  <eLabel text="AGC:" position="37,255" size="150,75" valign="center" foregroundColor="#ffffff" backgroundColor="#00000000" transparent="1" font="{0};52" zPosition="9" />
   <widget source="session.FrontendStatus" render="Label" position="1552,255" size="330,75" halign="right" valign="center" transparent="1" font="{0};52" zPosition="9">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
@@ -4220,27 +4220,27 @@ SKIN_Full_Screen1 = """
   <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="850,76" size="300,80" alphatest="on" scale="1" zPosition="99" />
 <widget source="session.CurrentService" render="ChannelNumber" position="929,482" size="158,50" font="{0};40" foregroundColor="#fec000" backgroundColor="transpBlack" valign="center" halign="Left" transparent="1" zPosition="9" />
 <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="1095,482" size="95,50" font="Bold;45" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="1095,482" size="95,50" font="Bold;45" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="1095,482" size="95,50" shadowOffset="4,3" font="Bold;45" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="1095,482" size="95,50" shadowOffset="4,3" font="Bold;45" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="1095,482" size="95,50" font="Bold;45" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="1095,482" size="95,50" font="Bold;45" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="1095,482" size="95,50" font="Bold;45" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="1095,482" size="95,50" font="Bold;45" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="1197,482" size="95,50" font="Bold;45" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="1197,482" size="95,50" font="Bold;45" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="1197,482" size="95,50" font="Bold;45" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="1197,482" size="95,50" font="Bold;45" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">Invert</convert>
   </widget>
@@ -4275,14 +4275,14 @@ SKIN_Full_Screen2_SNRdB = """
   <widget source="session.FrontendStatus" render="Progress" pixmap="{1}/images/icons_quick/icon_snr-scan3.png" position="30,915" size="1860,75" borderWidth="1" borderColor="#808888" transparent="0">
     <convert type="FrontendInfo">SNR</convert>
   </widget>
-  <eLabel text="SNR:" position="37,915" size="150,75" valign="center" foregroundColor="white" backgroundColor="black1" transparent="1" font="{0};50" zPosition="11" borderWidth="1" borderColor="black1" />
+  <eLabel text="SNR:" position="37,915" size="150,75" valign="center" foregroundColor="#ffffff" backgroundColor="black1" transparent="1" font="{0};50" zPosition="11" borderWidth="1" borderColor="black1" />
   <widget source="session.FrontendStatus" render="Label" position="1552,915" size="330,75" halign="right" valign="center" transparent="1" font="{0};52" zPosition="11" borderWidth="2" borderColor="#101010">
     <convert type="FrontendInfo">SNR</convert>
   </widget>
   <widget source="session.FrontendStatus" render="Progress" pixmap="{1}/images/icons_quick/icon_snr-scan3.png" position="30,1000" size="1860,75" borderWidth="1" foregroundGradient="red,yellow,green,horizontal" foregroundColor="#30394" borderColor="#656565" transparent="0">
 		<convert type="FrontendInfo">AGC</convert>
 	</widget>
-  <eLabel text="AGC:" position="37,1000" size="150,75" valign="center" foregroundColor="white" backgroundColor="black1" transparent="1" font="{0};50" zPosition="11" borderWidth="1" borderColor="black1" />
+  <eLabel text="AGC:" position="37,1000" size="150,75" valign="center" foregroundColor="#ffffff" backgroundColor="black1" transparent="1" font="{0};50" zPosition="11" borderWidth="1" borderColor="black1" />
   <widget source="session.FrontendStatus" render="Label" position="1552,1000" size="330,75" halign="right" valign="center" transparent="1" font="{0};52" zPosition="11" borderWidth="2" borderColor="#101010">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
@@ -4314,14 +4314,14 @@ SKIN_Full_Screen2_NOSNRdB = """
   <widget source="session.FrontendStatus" render="Progress" pixmap="{1}/images/icons_quick/icon_snr-scan3.png" position="30,915" size="1860,75" borderWidth="1" borderColor="#808888">
     <convert type="FrontendInfo">SNR</convert>
   </widget>
-  <eLabel text="SNR:" position="37,915" size="150,75" valign="center" foregroundColor="white" backgroundColor="black1" transparent="1" font="{0};52" zPosition="11" borderWidth="1" borderColor="black1" />
+  <eLabel text="SNR:" position="37,915" size="150,75" valign="center" foregroundColor="#ffffff" backgroundColor="black1" transparent="1" font="{0};52" zPosition="11" borderWidth="1" borderColor="black1" />
   <widget source="session.FrontendStatus" render="Label" position="1552,915" size="330,75" halign="right" valign="center" transparent="1" font="{0};52" zPosition="11" borderWidth="2" borderColor="#101010">
     <convert type="FrontendInfo">SNR</convert>
   </widget>
   <widget source="session.FrontendStatus" render="Progress" pixmap="{1}/images/icons_quick/icon_snr-scan3.png" position="30,1000" size="1860,75" borderWidth="1" foregroundGradient="red,yellow,green,horizontal" foregroundColor="#30394" borderColor="#656565" transparent="0">
 		<convert type="FrontendInfo">AGC</convert>
 	</widget>
-  <eLabel text="AGC:" position="37,1000" size="150,75" valign="center" foregroundColor="white" backgroundColor="black1" transparent="1" font="{0};52" zPosition="11" borderWidth="1" borderColor="black1" />
+  <eLabel text="AGC:" position="37,1000" size="150,75" valign="center" foregroundColor="#ffffff" backgroundColor="black1" transparent="1" font="{0};52" zPosition="11" borderWidth="1" borderColor="black1" />
   <widget source="session.FrontendStatus" render="Label" position="1552,1000" size="330,75" halign="right" valign="center" transparent="1" font="{0};52" zPosition="11" borderWidth="2" borderColor="#101010">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
@@ -4415,19 +4415,19 @@ SKIN_Full_Screen_Picon_Vertical = """
   <ePixmap position="928,1013" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
   <ePixmap position="936,959" size="48,48" zPosition="49" alphatest="blend" pixmap="{1}/images/blue48x48.png" scale="1" />
  <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" font="Bold;45" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" font="Bold;45" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" shadowOffset="4,3" font="Bold;45" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" shadowOffset="4,3" font="Bold;45" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" font="Bold;45" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" font="Bold;45" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" font="Bold;45" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" font="Bold;45" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -4527,19 +4527,19 @@ SKIN_Full_Screen_Picon_media_Vertical = """
   <ePixmap position="928,1013" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
   <ePixmap position="936,959" size="48,48" zPosition="49" alphatest="blend" pixmap="{1}/images/blue48x48.png" scale="1" />
  <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" font="Bold;45" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" font="Bold;45" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" shadowOffset="4,3" font="Bold;45" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" shadowOffset="4,3" font="Bold;45" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" font="Bold;45" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" font="Bold;45" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" font="Bold;45" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="614,353" size="120,47" font="Bold;45" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="right" transparent="1" zPosition="300" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -4670,19 +4670,19 @@ SKIN_Full_Screen_Picon_Ecm1_Vertical = """
   <widget name="Positioner" position="60,16" size="575,72" zPosition="10" font="{0};35" halign="left" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="center" />
   <widget name="Satfinder" position="1283,16" size="575,72" zPosition="10" font="{0};35" backgroundColor="#54111112" foregroundColor="#deff" transparent="1" valign="center" halign="right" />
    <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#9fcff" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#9fcff" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" shadowOffset="4,3" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" shadowOffset="4,3" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="white" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#ffffff" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -4817,19 +4817,19 @@ SKIN_Full_Screen_Picon_media_Ecm1_Vertical = """
   <widget name="Positioner" position="60,16" size="575,72" zPosition="10" font="{0};35" halign="left" backgroundColor="#54111112" foregroundColor="#41ff9900" transparent="1" valign="center" />
   <widget name="Satfinder" position="1283,16" size="575,72" zPosition="10" font="{0};35" backgroundColor="#54111112" foregroundColor="#deff" transparent="1" valign="center" halign="right" />
    <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#9fcff" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#9fcff" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" shadowOffset="4,3" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" shadowOffset="4,3" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="white" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#ffffff" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -4967,19 +4967,19 @@ SKIN_Full_Screen_Picon_Ecm2_Vertical = """
     <widget name="Positioner" position="60,16" size="575,72" zPosition="10" font="{0};30" halign="left" backgroundColor="#00ffffff" foregroundColor="#41ff9900" transparent="1" valign="center" />
     <widget name="Satfinder" position="1283,16" size="575,72" zPosition="10" font="{0};30" backgroundColor="#00ffffff" foregroundColor="#0000deff" transparent="1" valign="center" halign="right" />
  <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#9fcff" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#9fcff" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" shadowOffset="4,3" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" shadowOffset="4,3" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="white" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#ffffff" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -5116,19 +5116,19 @@ SKIN_Full_Screen_Picon_media_Ecm2_Vertical = """
     <widget name="Positioner" position="60,16" size="575,72" zPosition="10" font="{0};30" halign="left" backgroundColor="#00ffffff" foregroundColor="#41ff9900" transparent="1" valign="center" />
     <widget name="Satfinder" position="1283,16" size="575,72" zPosition="10" font="{0};30" backgroundColor="#00ffffff" foregroundColor="#0000deff" transparent="1" valign="center" halign="right" />
  <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#9fcff" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#9fcff" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" shadowOffset="4,3" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" shadowOffset="4,3" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#e5e5e5" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="white" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="1485,831" size="120,40" font="Bold;42" foregroundColor="#ffffff" backgroundColor="#00000000" valign="center" halign="left" transparent="1" zPosition="30" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -5332,27 +5332,27 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
 	<ePixmap position="788,992" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/menu.png" alphatest="blend" />
 	<ePixmap position="1002,992" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/exit.png" alphatest="blend" /> 
  <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="275,855" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="275,855" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="275,855" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="275,855" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">Invert</convert>
   </widget>
@@ -5557,27 +5557,27 @@ SKIN_Full_Screen_Picon_media_Ecm3_Vertical = """
 	<ePixmap position="788,992" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/menu.png" alphatest="blend" />
 	<ePixmap position="1002,992" size="100,40" pixmap="{1}/images/CobaltFHD/FHD/exit.png" alphatest="blend" /> 
  <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="173,855" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="275,855" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="275,855" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="275,855" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="275,855" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">Invert</convert>
   </widget>
@@ -5729,15 +5729,15 @@ SKIN_Full_Screen_Picon_Ecm3_SNR_ANALOG = """
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="1540,881" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="1540,881" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="1637,881" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="1637,881" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="1637,881" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="1637,881" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">Invert</convert>
   </widget>
@@ -5889,15 +5889,15 @@ SKIN_Full_Screen_Picon_media_Ecm3_SNR_ANALOG = """
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="1540,881" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="1540,881" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="1637,881" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="1637,881" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="1637,881" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="1637,881" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">Invert</convert>
   </widget>
@@ -5923,13 +5923,13 @@ SKIN_AGC_Event_Des_SNRdB5 = """
 <screen name="AGC_Event_Des" position="0,0" size="1920,1080" title="RAED's Quick Signal Info" zPosition="1" flags="wfNoBorder" backgroundColor="#90000000">
   <!-- 5 -->
   <widget source="Title" render="Label" font="{0};35" foregroundColor="#bbbbbb" position="50,1110" size="400,40" transparent="1" halign="left" />
-  <widget source="global.CurrentTime" render="Label" position="407,695" size="239,40" font="{0};32" valign="top" halign="left" foregroundColor="white" transparent="1" backgroundColor="#80ff" zPosition="-3" borderWidth="2" borderColor="#101010">
+  <widget source="global.CurrentTime" render="Label" position="407,695" size="239,40" font="{0};32" valign="top" halign="left" foregroundColor="#ffffff" transparent="1" backgroundColor="#80ff" zPosition="-3" borderWidth="2" borderColor="#101010">
     <convert type="ClockToText">Format: %d-%m-%Y  </convert>
   </widget>
-  <widget source="global.CurrentTime" render="Label" position="1281,695" size="235,40" font="{0};32" valign="top" halign="right" foregroundColor="white" transparent="1" backgroundColor="#80ff" zPosition="-3" borderWidth="2" borderColor="#101010" cornerRadius="9">
+  <widget source="global.CurrentTime" render="Label" position="1281,695" size="235,40" font="{0};32" valign="top" halign="right" foregroundColor="#ffffff" transparent="1" backgroundColor="#80ff" zPosition="-3" borderWidth="2" borderColor="#101010" cornerRadius="9">
     <convert type="ClockToText">Format:%H:%M %A </convert>
   </widget>
-  <widget source="session.FrontendStatus" render="Label" position="754,955" zPosition="2" size="270,55" font="{0}; 45" foregroundColor="#f23d21" halign="center" valign="center" transparent="1" backgroundColor="black">
+  <widget source="session.FrontendStatus" render="Label" position="754,955" zPosition="2" size="270,55" font="{0}; 45" foregroundColor="#f23d21" halign="center" valign="center" transparent="1" backgroundColor="#00000000">
     <convert type="RaedQuickFrontendInfo2">SNRdB</convert>
   </widget>
   <!-- SNR -->
@@ -5945,7 +5945,7 @@ SKIN_AGC_Event_Des_SNRdB5 = """
   <widget source="session.CurrentService" render="Label" position="399,426" size="1125,314" font="{0}; 28" zPosition="-2" backgroundColor="#31000000" foregroundColor="#c400" valign="center" halign="center" transparent="1" borderWidth="2" borderColor="#101010">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="273,767" size="1375,70" font="{0}; 32" zPosition="-2" backgroundColor="black" foregroundColor="#bbbbbb" transparent="1" valign="center" halign="center" cornerRadius="37">
+  <widget source="session.CurrentService" render="Label" position="273,767" size="1375,70" font="{0}; 32" zPosition="-2" backgroundColor="#00000000" foregroundColor="#bbbbbb" transparent="1" valign="center" halign="center" cornerRadius="37">
     <convert type="RaedQuickEcmInfo">caids</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="1443,781" size="200,45" font="{0}; 32" zPosition="3" backgroundColor="#54111112" foregroundColor="#fec000" transparent="1" valign="top" halign="center" cornerRadius="37">
@@ -5954,7 +5954,7 @@ SKIN_AGC_Event_Des_SNRdB5 = """
   <widget source="session.CurrentService" render="Label" position="175,855" size="1570,50" font="{0}; 32" zPosition="2" backgroundColor="#7f000000" foregroundColor="#41ff9900" transparent="1" valign="center" halign="center" cornerRadius="37">
     <convert type="RaedQuickEcmInfo">pids</convert>
   </widget>
-  <widget render="VideoSize" source="session.CurrentService" position="7,1024" size="179,40" backgroundColor="black" font="{0}; 32" foregroundColor="#bbbbbb" halign="center" valign="center" transparent="1" zPosition="5" />
+  <widget render="VideoSize" source="session.CurrentService" position="7,1024" size="179,40" backgroundColor="#00000000" font="{0}; 32" foregroundColor="#bbbbbb" halign="center" valign="center" transparent="1" zPosition="5" />
   <!--widget source="session.CurrentService" render="Label" position="40,563" size="1400,45" font="{0}; 32" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="center" halign="center">
     <convert type="RaedQuickEcmInfo">bitrate</convert>
   </widget-->
@@ -6141,32 +6141,32 @@ SKIN_AGC_Event_Des_SNRdB5 = """
   </widget>
   <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" scale="1" position="1224,953" size="170,102" alphatest="blend" zPosition="3" cornerRadius="20" />
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="189,1025" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="189,1025" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="189,1025" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="189,1025" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="189,1025" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="189,1025" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="189,1025" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="189,1025" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="277,1025" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="277,1025" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="277,1025" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="277,1025" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">Invert</convert>
   </widget>
   <!-- IsFta  -->
-  <widget source="session.CurrentService" render="FixedLabel" text="{4}" position="733,1020" size="300,38" zPosition="4" font="{0};30" halign="center" valign="center" foregroundColor="white" backgroundColor="#16000000" transparent="1">
+  <widget source="session.CurrentService" render="FixedLabel" text="{4}" position="733,1020" size="300,38" zPosition="4" font="{0};30" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#16000000" transparent="1">
     <convert type="RaedQuickSignalCaidInfo2">IsFta</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -6183,14 +6183,14 @@ SKIN_AGC_Event_Des_SNRdB5 = """
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Tuner Info  -->
-  <widget source="session.CurrentService" render="Label" position="1406,928" size="500,66" font="{0}; 25" halign="center" backgroundColor="black" foregroundColor="#fec000" shadowOffset="3,2" transparent="1" cornerRadius="37" valign="bottom" borderWidth="2" borderColor="black">
+  <widget source="session.CurrentService" render="Label" position="1406,928" size="500,66" font="{0}; 25" halign="center" backgroundColor="#00000000" foregroundColor="#fec000" shadowOffset="3,2" transparent="1" cornerRadius="37" valign="bottom" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickServName2">%F %p %Y %f %M %s</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="1407,1006" size="499,60" font="{0}; 25" halign="center" backgroundColor="#54111112" foregroundColor="#bbbbbb" transparent="1" cornerRadius="37" valign="bottom">
     <convert type="RaedQuickServName2">%c %l %h %m %g %b %e %S</convert>
   </widget>
   <widget name="Satfinder" position="1505,786" size="395,50" zPosition="1" font="{0};24" halign="right" backgroundColor="#2444444" foregroundColor="#41ff9900" transparent="1" cornerRadius="37" valign="center" />
-  <widget name="Positioner" position="18,778" size="390,50" zPosition="1" font="{0};22" halign="left" backgroundColor="black" foregroundColor="#41ff9900" transparent="1" cornerRadius="37" valign="center" />
+  <widget name="Positioner" position="18,778" size="390,50" zPosition="1" font="{0};22" halign="left" backgroundColor="#00000000" foregroundColor="#41ff9900" transparent="1" cornerRadius="37" valign="center" />
   {2}
 </screen>
 """.format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"), title41, title42, title80, title81, title82, title83, title84, title85, title86, title87)
@@ -6225,7 +6225,7 @@ SKIN_AGC_Event_Des_SNRdB1 = """
   <widget source="session.FrontendStatus" render="Label" position="1561,143" size="135,50" font="{0}; 37" foregroundColor="#bbbbbb" transparent="1">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="130,203" size="1400,300" font="{0}; 28" zPosition="2" backgroundColor="black" foregroundColor="#41ff9900" transparent="1" valign="center" halign="center">
+  <widget source="session.CurrentService" render="Label" position="130,203" size="1400,300" font="{0}; 28" zPosition="2" backgroundColor="#00000000" foregroundColor="#41ff9900" transparent="1" valign="center" halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="35,562" size="1633,68" font="{0}; 32" zPosition="-2" backgroundColor="#31000000" foregroundColor="#bbbbbb" transparent="0" valign="center" halign="center" cornerRadius="38">
@@ -6237,7 +6237,7 @@ SKIN_AGC_Event_Des_SNRdB1 = """
   <widget source="session.CurrentService" render="Label" position="35,649" size="1633,50" font="{0}; 32" zPosition="2" backgroundColor="#101010" foregroundColor="#41ff9900" transparent="0" valign="center" halign="center" cornerRadius="36">
     <convert type="RaedQuickEcmInfo">pids</convert>
   </widget>
-  <widget render="VideoSize" source="session.CurrentService" position="7,811" size="179,40" backgroundColor="black" font="{0}; 32" foregroundColor="#bbbbbb" halign="center" valign="center" transparent="1" zPosition="5" />
+  <widget render="VideoSize" source="session.CurrentService" position="7,811" size="179,40" backgroundColor="#00000000" font="{0}; 32" foregroundColor="#bbbbbb" halign="center" valign="center" transparent="1" zPosition="5" />
   <!--widget source="session.CurrentService" render="Label" position="40,563" size="1400,45" font="{0}; 32" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="center" halign="center">
     <convert type="RaedQuickEcmInfo">bitrate</convert>
   </widget-->
@@ -6429,20 +6429,20 @@ SKIN_AGC_Event_Des_SNRdB1 = """
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="189,811" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="189,811" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="277,811" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="277,811" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="277,811" size="90,35" font="Bold;40" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="277,811" size="90,35" font="Bold;40" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">Invert</convert>
   </widget>
   <!-- IsFta  -->
-  <widget source="session.CurrentService" render="FixedLabel" text="{4}" position="693,472" size="300,38" zPosition="4" font="{0};30" halign="center" valign="center" foregroundColor="white" backgroundColor="#16000000" transparent="1">
+  <widget source="session.CurrentService" render="FixedLabel" text="{4}" position="693,472" size="300,38" zPosition="4" font="{0};30" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#16000000" transparent="1">
     <convert type="RaedQuickSignalCaidInfo2">IsFta</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -6498,7 +6498,7 @@ SKIN_AGC_Event_Des_SNRdB2 = """
   <widget source="session.FrontendStatus" render="Label" position="1561,143" size="135,50" font="{0}; 37" foregroundColor="#bbbbbb" transparent="1">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="130,203" size="1400,300" font="{0}; 28" zPosition="2" backgroundColor="black" foregroundColor="#41ff9900" transparent="1" valign="center" halign="center">
+  <widget source="session.CurrentService" render="Label" position="130,203" size="1400,300" font="{0}; 28" zPosition="2" backgroundColor="#00000000" foregroundColor="#41ff9900" transparent="1" valign="center" halign="center">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="145,562" size="1400,70" font="{0}; 32" zPosition="-2" backgroundColor="#2444444" foregroundColor="#bbbbbb" transparent="0" valign="center" halign="center" cornerRadius="37" borderWidth="1" borderColor="#101010">
@@ -6510,7 +6510,7 @@ SKIN_AGC_Event_Des_SNRdB2 = """
   <widget source="session.CurrentService" render="Label" position="60,644" size="1570,50" font="{0}; 32" zPosition="2" backgroundColor="#656565" foregroundColor="#41ff9900" transparent="0" valign="center" halign="center" cornerRadius="37" borderWidth="2" borderColor="#101010">
     <convert type="RaedQuickEcmInfo">pids</convert>
   </widget>
-  <widget render="VideoSize" source="session.CurrentService" position="7,796" size="179,40" backgroundColor="black" font="{0}; 32" foregroundColor="#bbbbbb" halign="center" valign="center" transparent="1" zPosition="5" />
+  <widget render="VideoSize" source="session.CurrentService" position="7,796" size="179,40" backgroundColor="#00000000" font="{0}; 32" foregroundColor="#bbbbbb" halign="center" valign="center" transparent="1" zPosition="5" />
   <!--widget source="session.CurrentService" render="Label" position="40,563" size="1400,45" font="{0}; 32" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="center" halign="center">
     <convert type="RaedQuickEcmInfo">bitrate</convert>
   </widget-->
@@ -6697,15 +6697,15 @@ SKIN_AGC_Event_Des_SNRdB2 = """
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="189,796" size="90,40" font="Bold;40" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="189,796" size="90,40" font="Bold;40" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="277,796" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="277,796" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="277,796" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="277,796" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">Invert</convert>
   </widget>
@@ -6719,11 +6719,11 @@ SKIN_AGC_Event_Des_SNRdB2 = """
   <widget source="session.CurrentService" render="Label" position="36,947" size="300,31" font="{0}; 25" zPosition="3" halign="left" valign="center" foregroundColor="#f37104" backgroundColor="#54111112" transparent="1">
     <convert type="RaedQuickWeather">Location</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="102,897" size="201,32" font="{0}; 27" zPosition="3" halign="left" valign="center" foregroundColor="white" backgroundColor="#54111112" transparent="1">
+  <widget source="session.CurrentService" render="Label" position="102,897" size="201,32" font="{0}; 27" zPosition="3" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#54111112" transparent="1">
     <convert type="RaedQuickWeather">Day</convert>
   </widget>
   <!-- IsFta  -->
-  <widget source="session.CurrentService" render="FixedLabel" text="{4}" position="693,472" size="300,38" zPosition="4" font="{0};30" halign="center" valign="center" foregroundColor="white" backgroundColor="#16000000" transparent="1">
+  <widget source="session.CurrentService" render="FixedLabel" text="{4}" position="693,472" size="300,38" zPosition="4" font="{0};30" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#16000000" transparent="1">
     <convert type="RaedQuickSignalCaidInfo2">IsFta</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -6755,11 +6755,11 @@ SKIN_AGC_Event_Des_SNRdB2 = """
 SKIN_AGC_Event_Des_SNRdB3 = """ 
 <screen backgroundColor="transparent" name="AGC_Event_Des" position="0,0" size="1920,1080" title="RAED's Quick Signal Info" zPosition="1" flags="wfNoBorder">
   <!-- 3 -->
-  <widget source="session.FrontendStatus" render="Label" position="774,941" zPosition="2" size="235,55" font="{0}; 45" foregroundColor="#ff0000" halign="center" valign="center" transparent="1" backgroundColor="black">
+  <widget source="session.FrontendStatus" render="Label" position="774,941" zPosition="2" size="235,55" font="{0}; 45" foregroundColor="#ff0000" halign="center" valign="center" transparent="1" backgroundColor="#00000000">
     <convert type="RaedQuickFrontendInfo2">SNRdB</convert>
   </widget>
   <!-- SNR -->
-  <eLabel name="snr" text="SNR:" position="68,815" size="191,50" font="{0}; 37" halign="left" foregroundColor="#c5c6c7" transparent="1" zPosition="4" backgroundColor="black" />
+  <eLabel name="snr" text="SNR:" position="68,815" size="191,50" font="{0}; 37" halign="left" foregroundColor="#c5c6c7" transparent="1" zPosition="4" backgroundColor="#00000000" />
   <widget source="session.FrontendStatus" render="Progress" pixmap="{1}/images/icons_quick/icon_snr-scan3.png" scale="1" position="58,815" size="1760,50" foregroundGradient="red,yellow,#00008000,horizontal" foregroundColor="#1d8503" zPosition="2" borderWidth="4" borderColor="#656565">
     <convert type="FrontendInfo">SNR</convert>
   </widget>
@@ -6767,7 +6767,7 @@ SKIN_AGC_Event_Des_SNRdB3 = """
     <convert type="FrontendInfo">SNR</convert>
   </widget>
   <!-- AGC -->
-  <eLabel name="agc" text="AGC:" position="68,873" size="191,50" font="{0}; 37" halign="left" foregroundColor="#c5c6c7" transparent="1" zPosition="4" backgroundColor="black" />
+  <eLabel name="agc" text="AGC:" position="68,873" size="191,50" font="{0}; 37" halign="left" foregroundColor="#c5c6c7" transparent="1" zPosition="4" backgroundColor="#00000000" />
   <widget source="session.FrontendStatus" render="Progress" pixmap="{1}/images/icons_quick/icon_snr-scan3.png" scale="1" position="59,873" size="1760,50" foregroundGradient="red,yellow,green,horizontal" foregroundColor="#030394" zPosition="2" borderWidth="4" borderColor="#656565">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
@@ -6786,11 +6786,11 @@ SKIN_AGC_Event_Des_SNRdB3 = """
   <widget source="session.CurrentService" render="Label" position="175,754" size="1570,50" font="{0}; 32" zPosition="2" backgroundColor="#656565" foregroundColor="#41ff9900" transparent="1" valign="center" halign="center" cornerRadius="37">
     <convert type="RaedQuickEcmInfo">pids</convert>
   </widget>
-  <widget render="VideoSize" source="session.CurrentService" position="7,1028" size="179,40" backgroundColor="black" font="{0}; 32" foregroundColor="#bbbbbb" halign="center" valign="center" transparent="1" zPosition="5" />
+  <widget render="VideoSize" source="session.CurrentService" position="7,1028" size="179,40" backgroundColor="#00000000" font="{0}; 32" foregroundColor="#bbbbbb" halign="center" valign="center" transparent="1" zPosition="5" />
   <!--widget source="session.CurrentService" render="Label" position="40,563" size="1400,45" font="{0}; 32" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="center" halign="center">
     <convert type="RaedQuickEcmInfo">bitrate</convert>
   </widget-->
-  <widget source="global.CurrentTime" render="Label" position="768,1005" size="248,60" font="Regular; 28" valign="bottom" halign="center" foregroundColor="#bbbbbb" transparent="1" backgroundColor="black">
+  <widget source="global.CurrentTime" render="Label" position="768,1005" size="248,60" font="Regular; 28" valign="bottom" halign="center" foregroundColor="#bbbbbb" transparent="1" backgroundColor="#00000000">
     <convert type="ClockToText">Format:%H:%M:%S %A  %d-%m-%Y</convert>
   </widget>
   <widget source="session.CurrentService" render="ChannelNumber" position="8,933" size="158,40" font="{0};35" foregroundColor="#fec000" backgroundColor="transpBlack" valign="center" halign="left" transparent="1" zPosition="9" cornerRadius="30" />
@@ -6986,20 +6986,20 @@ SKIN_AGC_Event_Des_SNRdB3 = """
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="189,1028" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="189,1028" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="277,1028" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="277,1028" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="277,1028" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="277,1028" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">Invert</convert>
   </widget>
   <!-- IsFta  -->
-  <widget source="session.CurrentService" render="FixedLabel" text="{4}" position="834,623" size="250,38" zPosition="4" font="{0};30" halign="center" valign="center" foregroundColor="white" backgroundColor="#7f000000" cornerRadius="35" transparent="0">
+  <widget source="session.CurrentService" render="FixedLabel" text="{4}" position="834,623" size="250,38" zPosition="4" font="{0};30" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#7f000000" cornerRadius="35" transparent="0">
     <convert type="RaedQuickSignalCaidInfo2">IsFta</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -7038,7 +7038,7 @@ SKIN_AGC_Event_Des_SNRdB4 = """
   <widget source="global.CurrentTime" render="Label" position="1658,541" size="235,40" font="{0};32" valign="top" halign="right" foregroundColor="#bbbbbb" transparent="1" backgroundColor="#80ff" zPosition="-70" borderWidth="2" borderColor="#101010" cornerRadius="9">
     <convert type="ClockToText">Format:%H:%M %A </convert>
   </widget>
-  <widget source="session.FrontendStatus" render="Label" position="754,885" zPosition="2" size="270,55" font="{0}; 45" foregroundColor="#f23d21" halign="center" valign="center" transparent="1" backgroundColor="black">
+  <widget source="session.FrontendStatus" render="Label" position="754,885" zPosition="2" size="270,55" font="{0}; 45" foregroundColor="#f23d21" halign="center" valign="center" transparent="1" backgroundColor="#00000000">
     <convert type="RaedQuickFrontendInfo2">SNRdB</convert>
   </widget>
   <!-- SNR -->
@@ -7060,7 +7060,7 @@ SKIN_AGC_Event_Des_SNRdB4 = """
   <widget source="session.CurrentService" render="Label" position="274,331" size="1371,314" font="{0}; 28" zPosition="-2" backgroundColor="#31000000" foregroundColor="#41ff9900" valign="center" halign="center" transparent="1" borderWidth="2" borderColor="#101010">
     <convert type="RaedQuickEcmInfo">ecmfile</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" position="257,662" size="1400,70" font="{0}; 32" zPosition="-2" backgroundColor="black" foregroundColor="#bbbbbb" transparent="1" valign="center" halign="center" cornerRadius="37">
+  <widget source="session.CurrentService" render="Label" position="257,662" size="1400,70" font="{0}; 32" zPosition="-2" backgroundColor="#00000000" foregroundColor="#bbbbbb" transparent="1" valign="center" halign="center" cornerRadius="37">
     <convert type="RaedQuickEcmInfo">caids</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="1453,676" size="200,45" font="{0}; 32" zPosition="3" backgroundColor="#54111112" foregroundColor="#fec000" transparent="1" valign="top" halign="center" cornerRadius="37">
@@ -7069,7 +7069,7 @@ SKIN_AGC_Event_Des_SNRdB4 = """
   <widget source="session.CurrentService" render="Label" position="175,750" size="1570,50" font="{0}; 32" zPosition="2" backgroundColor="#7f000000" foregroundColor="#41ff9900" transparent="0" valign="center" halign="center" cornerRadius="37">
     <convert type="RaedQuickEcmInfo">pids</convert>
   </widget>
-  <widget render="VideoSize" source="session.CurrentService" position="7,900" size="179,40" backgroundColor="black" font="{0}; 32" foregroundColor="#bbbbbb" halign="center" valign="center" transparent="1" zPosition="5" />
+  <widget render="VideoSize" source="session.CurrentService" position="7,900" size="179,40" backgroundColor="#00000000" font="{0}; 32" foregroundColor="#bbbbbb" halign="center" valign="center" transparent="1" zPosition="5" />
   <!--widget source="session.CurrentService" render="Label" position="40,563" size="1400,45" font="{0}; 32" zPosition="2" backgroundColor="#54111112" foregroundColor="#00bbbbbb" transparent="1" valign="center" halign="center">
     <convert type="RaedQuickEcmInfo">bitrate</convert>
   </widget-->
@@ -7255,32 +7255,32 @@ SKIN_AGC_Event_Des_SNRdB4 = """
   </widget>
   <widget source="session.CurrentService" render="RaedQuickSignalPicEmuF" path="RaedQuickSignal/PICONS/emu" scale="1" position="1224,832" size="170,102" alphatest="blend" zPosition="3" cornerRadius="20" />
   <!-- Icons VideoWidth  -->
-  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="189,900" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="UHD" render="FixedLabel" source="session.CurrentService" position="189,900" size="90,40" font="Bold;40" foregroundColor="#deff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsUHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="189,900" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="FHD" render="FixedLabel" source="session.CurrentService" position="189,900" size="90,40" shadowOffset="4,3" font="Bold;35" foregroundColor="#fec000" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsFHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="189,900" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="HD" render="FixedLabel" source="session.CurrentService" position="189,900" size="90,40" font="Bold;35" foregroundColor="green" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsHD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="189,900" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="black">
+  <widget text="SD" render="FixedLabel" source="session.CurrentService" position="189,900" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickSignalServiceInfo">IsSD</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="277,900" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="16:9" render="FixedLabel" source="session.CurrentService" position="277,900" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="277,900" size="90,40" font="Bold;35" foregroundColor="white" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
+  <widget text="4:3" render="FixedLabel" source="session.CurrentService" position="277,900" size="90,40" font="Bold;35" foregroundColor="#ffffff" backgroundColor="#40000000" valign="center" halign="center" transparent="1" zPosition="3">
     <convert type="RaedQuickSignalServiceInfo">IsWidescreen</convert>
     <convert type="ConditionalShowHide">Invert</convert>
   </widget>
   <!-- IsFta  -->
-  <widget source="session.CurrentService" render="FixedLabel" text="{4}" position="733,837" size="300,38" zPosition="4" font="{0};30" halign="center" valign="center" foregroundColor="white" backgroundColor="#16000000" transparent="1">
+  <widget source="session.CurrentService" render="FixedLabel" text="{4}" position="733,837" size="300,38" zPosition="4" font="{0};30" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#16000000" transparent="1">
     <convert type="RaedQuickSignalCaidInfo2">IsFta</convert>
     <convert type="ConditionalShowHide" />
   </widget>
@@ -7297,14 +7297,14 @@ SKIN_AGC_Event_Des_SNRdB4 = """
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Tuner Info  -->
-  <widget source="session.CurrentService" render="Label" position="1406,813" size="500,66" font="{0}; 25" halign="center" backgroundColor="black" foregroundColor="#fec000" shadowOffset="3,2" transparent="1" cornerRadius="37" valign="bottom" borderWidth="2" borderColor="black">
+  <widget source="session.CurrentService" render="Label" position="1406,813" size="500,66" font="{0}; 25" halign="center" backgroundColor="#00000000" foregroundColor="#fec000" shadowOffset="3,2" transparent="1" cornerRadius="37" valign="bottom" borderWidth="2" borderColor="#00000000">
     <convert type="RaedQuickServName2">%F %p %Y %f %M %s</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="1407,886" size="499,60" font="{0}; 25" halign="center" backgroundColor="#54111112" foregroundColor="#bbbbbb" transparent="1" cornerRadius="37" valign="bottom">
     <convert type="RaedQuickServName2">%c %l %h %m %g %b %e %S</convert>
   </widget>
   <widget name="Satfinder" position="1505,596" size="395,50" zPosition="1" font="{0};24" halign="right" backgroundColor="#2444444" foregroundColor="#41ff9900" transparent="1" cornerRadius="37" valign="center" />
-  <widget name="Positioner" position="18,596" size="390,50" zPosition="1" font="{0};22" halign="left" backgroundColor="black" foregroundColor="#41ff9900" transparent="1" cornerRadius="37" valign="center" />
+  <widget name="Positioner" position="18,596" size="390,50" zPosition="1" font="{0};22" halign="left" backgroundColor="#00000000" foregroundColor="#41ff9900" transparent="1" cornerRadius="37" valign="center" />
   {2}
 </screen>
 """.format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"), title41, title42, title80, title81, title82, title83, title84, title85, title86, title87)
