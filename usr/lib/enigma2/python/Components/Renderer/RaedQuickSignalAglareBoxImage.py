@@ -30,7 +30,7 @@ class RaedQuickSignalAglareBoxImage(Renderer):
                 hostname = "default"
                 
             # Construct image path
-            self.image_path = f"/usr/share/enigma2/{hostname}.png"
+            self.image_path = "/usr/share/enigma2/%s.png" % hostname
             
             # Fallback to default.png if the specific image doesn't exist
             if not os.path.exists(self.image_path):
