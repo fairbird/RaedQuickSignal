@@ -290,6 +290,8 @@ SKIN_AGC_Picon_SNRdB = """
   <widget source="session.FrontendStatus" render="Label" position="1348,112" size="150,40" font="{0}; 35" foregroundColor="#00bbbbbb" transparent="1">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
+  <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1206,390" size="270,70" alphatest="on" scale="1" zPosition="99" />
+  <ePixmap position="22,333" size="120,130" zPosition="4" alphatest="blend" pixmap="{1}/images/service_info_sat.png" scale="1" />
   <eLabel position="148,512" size="1200,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="145,560" size="1200,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="145,609" size="1200,2" backgroundColor="#00bbbbbb" zPosition="4" />
@@ -527,6 +529,8 @@ SKIN_AGC_Picon_NOSNRdB = """
   <widget source="session.FrontendStatus" render="Label" position="1348,112" size="150,40" font="{0}; 35" foregroundColor="#00bbbbbb" transparent="1">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
+    <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1206,390" size="270,70" alphatest="on" scale="1" zPosition="99" />
+    <ePixmap position="22,333" size="120,130" zPosition="4" alphatest="blend" pixmap="{1}/images/service_info_sat.png" scale="1" />
   <eLabel position="148,512" size="1200,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="145,560" size="1200,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="145,609" size="1200,2" backgroundColor="#00bbbbbb" zPosition="4" />
@@ -776,6 +780,8 @@ SKIN_AGC_Event_Des_SNRdB = """
   <widget source="session.FrontendStatus" render="Label" position="1348,112" size="150,40" font="{0}; 35" foregroundColor="#00bbbbbb" transparent="1">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
+    <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1206,390" size="270,70" alphatest="on" scale="1" zPosition="99" />
+    <ePixmap position="22,333" size="120,130" zPosition="4" alphatest="blend" pixmap="{1}/images/service_info_sat.png" scale="1" />
   <eLabel position="148,512" size="1200,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="145,560" size="1200,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="145,609" size="1200,2" backgroundColor="#00bbbbbb" zPosition="4" />
@@ -1006,6 +1012,8 @@ SKIN_AGC_Event_Des_NOSNRdB = """
   <widget source="session.FrontendStatus" render="Label" position="1348,112" size="150,40" font="{0}; 35" foregroundColor="#00bbbbbb" transparent="1">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
+    <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1206,390" size="270,70" alphatest="on" scale="1" zPosition="99" />
+    <ePixmap position="22,333" size="120,130" zPosition="4" alphatest="blend" pixmap="{1}/images/service_info_sat.png" scale="1" />
   <eLabel position="148,512" size="1200,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="145,560" size="1200,2" backgroundColor="#00bbbbbb" zPosition="4" />
   <eLabel position="145,609" size="1200,2" backgroundColor="#00bbbbbb" zPosition="4" />
@@ -1239,6 +1247,8 @@ SKIN_AGC_Weather_SNRdB = """
   <widget source="session.FrontendStatus" render="Label" position="1348,112" size="150,40" font="{0}; 35" foregroundColor="#bbbbbb" transparent="1">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
+    <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1206,390" size="270,70" alphatest="on" scale="1" zPosition="99" />
+    <ePixmap position="22,333" size="120,130" zPosition="4" alphatest="blend" pixmap="{1}/images/service_info_sat.png" scale="1" />
   <eLabel position="148,512" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,560" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,609" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
@@ -1495,6 +1505,8 @@ SKIN_AGC_Weather_NOSNRdB = """
   <widget source="session.FrontendStatus" render="Label" position="1348,112" size="150,40" font="{0}; 35" foregroundColor="#bbbbbb" transparent="1">
     <convert type="FrontendInfo">AGC</convert>
   </widget>
+    <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1206,390" size="270,70" alphatest="on" scale="1" zPosition="99" />
+    <ePixmap position="22,333" size="120,130" zPosition="4" alphatest="blend" pixmap="{1}/images/service_info_sat.png" scale="1" />
   <eLabel position="148,512" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,560" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,609" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
@@ -1727,7 +1739,7 @@ SKIN_AGC_Weather_NOSNRdB = """
 </screen>
 """.format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"), NUMBERS)
 
-### SKIN_Event_Progress_Picon  ### SKIN_Picons#---4---------------------------------------------------skin author:By BO-HLALA.FHD--.. ^_^ ------15--------------------------------------------------------
+### SKIN_Event_Progress_Picon  ### SKIN_Picons#---4-----------------------------------ksa----------------skin author:By BO-HLALA.FHD--.. ^_^ ------15--------------------------------------------------------
 
 
 SKIN_Event_Progress_Picon_SNRdB = """
@@ -1754,6 +1766,8 @@ SKIN_Event_Progress_Picon_SNRdB = """
   <widget source="session.Event_Now" render="Label" position="160,112" size="1180,50" font="{0};35" valign="center" backgroundColor="black1" transparent="1" zPosition="3">
     <convert type="EventName">Name</convert>
   </widget>
+    <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1206,390" size="270,70" alphatest="on" scale="1" zPosition="99" />
+   <ePixmap position="22,333" size="120,130" zPosition="4" alphatest="blend" pixmap="{1}/images/service_info_sat.png" scale="1" />
   <eLabel position="148,512" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,560" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,609" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
@@ -1993,6 +2007,8 @@ SKIN_Event_Progress_Picon_NOSNRdB = """
   <widget source="session.Event_Now" render="Label" position="160,112" size="1180,50" font="{0};35" valign="center" backgroundColor="black1" transparent="1" zPosition="3">
     <convert type="EventName">Name</convert>
   </widget>
+  <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1206,390" size="270,70" alphatest="on" scale="1" zPosition="99" />
+  <ePixmap position="22,333" size="120,130" zPosition="4" alphatest="blend" pixmap="{1}/images/service_info_sat.png" scale="1" />
   <eLabel position="148,512" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,560" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,609" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
@@ -2236,6 +2252,8 @@ SKIN_Event_Progress_Event_Des_SNRdB = """
   <widget source="session.Event_Now" render="Label" position="160,112" size="1180,50" font="{0};35" valign="center" backgroundColor="black1" transparent="1" zPosition="3">
     <convert type="EventName">Name</convert>
   </widget>
+    <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1206,390" size="270,70" alphatest="on" scale="1" zPosition="99" />
+    <ePixmap position="22,333" size="120,130" zPosition="4" alphatest="blend" pixmap="{1}/images/service_info_sat.png" scale="1" />
   <eLabel position="148,512" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,560" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,609" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
@@ -2464,6 +2482,8 @@ SKIN_Event_Progress_Event_Des_NOSNRdB = """
   <widget source="session.Event_Now" render="Label" position="160,112" size="1180,50" font="{0};35" valign="center" backgroundColor="black1" transparent="1" zPosition="3">
     <convert type="EventName">Name</convert>
   </widget>
+    <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1206,390" size="270,70" alphatest="on" scale="1" zPosition="99" />
+    <ePixmap position="22,333" size="120,130" zPosition="4" alphatest="blend" pixmap="{1}/images/service_info_sat.png" scale="1" />
   <eLabel position="148,512" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,560" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,609" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
@@ -2696,6 +2716,8 @@ SKIN_Event_Progress_Weather_SNRdB = """
   <widget source="session.Event_Now" render="Label" position="160,112" size="1180,50" font="{0};35" valign="center" backgroundColor="black1" transparent="1" zPosition="3">
     <convert type="EventName">Name</convert>
   </widget>
+    <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1206,390" size="270,70" alphatest="on" scale="1" zPosition="99" />
+    <ePixmap position="22,333" size="120,130" zPosition="4" alphatest="blend" pixmap="{1}/images/service_info_sat.png" scale="1" />
   <eLabel position="148,512" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,560" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,609" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
@@ -2951,6 +2973,8 @@ SKIN_Event_Progress_Weather_NOSNRdB = """
   <widget source="session.Event_Now" render="Label" position="160,112" size="1180,50" font="{0};35" valign="center" backgroundColor="black1" transparent="1" zPosition="3">
     <convert type="EventName">Name</convert>
   </widget>
+    <widget source="session.CurrentService" render="RaedQuickSignalAglareBoxImage" position="1206,390" size="270,70" alphatest="on" scale="1" zPosition="99" />
+    <ePixmap position="22,333" size="120,130" zPosition="4" alphatest="blend" pixmap="{1}/images/service_info_sat.png" scale="1" />
   <eLabel position="148,512" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,560" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
   <eLabel position="145,609" size="1200,2" backgroundColor="#bbbbbb" zPosition="4" />
@@ -3117,7 +3141,6 @@ SKIN_Event_Progress_Weather_NOSNRdB = """
    <!-- Weather -->
   <ePixmap position="1425,565" size="65,50" zPosition="4" alphatest="blend" pixmap="{1}/images/menu2.png" />
   <ePixmap position="1433,508" size="48,48" zPosition="4" alphatest="blend" pixmap="{1}/images/blue48x48.png" scale="1" />
-
   <!-- Today -->
   <widget source="session.CurrentService" render="Label" position="434,663" size="241,32" font="{0}; 30" zPosition="3" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#54111112" transparent="1">
     <convert type="RaedQuickWeather">Day</convert>
@@ -3919,8 +3942,7 @@ SKIN_Event_Progress_Picon_media_NOSNRdB = """
    <widget source="Title" render="Label" font="{0};30" foregroundColor="#bbbbbb" position="15,5" size="500,40" transparent="1" />
   <widget source="global.CurrentTime" render="Label" position="1145,5" size="338,40" font="{0};32" valign="top" halign="left" foregroundColor="#bbbbbb" transparent="1">
     <convert type="ClockToText">Format:%d-%m-%Y    %H:%M:%S</convert>
-  </widget>
-  
+  </widget>  
   <!-- SNR -->
   <eLabel name="snr" text="SNR:" position="0,59" size="150,40" font="{0}; 35" halign="right" foregroundColor="#bbbbbb" transparent="1" />
   <widget source="session.FrontendStatus" render="Progress" position="160,54" size="1180,50" pixmap="{1}/images/icons_quick/icon_snr-scan2.png" zPosition="2" borderWidth="4" foregroundGradient="red,yellow,green,horizontal" foregroundColor="#1d8503" borderColor="#656565" transparent="1">
@@ -7309,4 +7331,3 @@ SKIN_AGC_Event_Des_SNRdB4 = """
 </screen>
 """.format(FontName, resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal"), title41, title42, title80, title81, title82, title83, title84, title85, title86, title87)
 ### SKIN_Picons#------------------------------------------------------skin author:By BO-HLALA.FHD--.. ^_^ ------38--------------------------------------------------------
-
