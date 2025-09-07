@@ -1284,7 +1284,7 @@ class PiconsScreen(Screen):
                                         cmd='wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/installerTransparentPicons2.sh -O - | /bin/sh'
                                         cmdlist.append(cmd)
                                 elif index == "BO-HLALA-Style":
-                                        cmd='wget -O - https://github.com/fairbird/RaedQuickSignal/raw/refs/heads/main/Style/BO-HLALA-Style.tar.gz | tar -xz -C /tmp'
+                                        cmd='wget -O - https://github.com/fairbird/RaedQuickSignal/raw/refs/heads/main/Style/BO-HLALA-Style.tar.gz | tar -xz -C /'
                                         cmdlist.append(cmd)
                                 self.session.open(Console, title='%s' % title73, cmdlist=cmdlist, finishedCallback=self.Finished, closeOnSuccess=True)
                         else:
