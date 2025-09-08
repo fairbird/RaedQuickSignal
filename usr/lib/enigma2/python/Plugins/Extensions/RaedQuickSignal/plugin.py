@@ -1231,12 +1231,13 @@ class PiconsScreen(Screen):
                 self["Picture"] = Pixmap()
 
                 list = []
+                list.append(getConfigListEntry("%s" % title98))
                 list.append((_("%s") % title69, "Black"))
                 list.append((_("%s") % title70, "White"))
                 list.append((_("%s") % title71, "Transparent"))
                 list.append((_("%s") % title94, "Transparent2"))
-                list.append(getConfigListEntry("********************************************************"))
                 if not (BHVU() or VTI() or DreamOS()):
+                	list.append(getConfigListEntry("%s" % title99))
                 	list.append((_("%s") % title97, "BO-HLALA-Style"))
                 self["menu"] = MenuList(list)
                 self["menu"].onSelectionChanged.append(self.Picture)
