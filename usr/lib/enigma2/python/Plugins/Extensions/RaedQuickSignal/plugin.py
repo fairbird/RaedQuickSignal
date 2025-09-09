@@ -1231,10 +1231,14 @@ class PiconsScreen(Screen):
                 self["Picture"] = Pixmap()
 
                 list = []
+                list.append(getConfigListEntry("%s" % title98))
                 list.append((_("%s") % title69, "Black"))
                 list.append((_("%s") % title70, "White"))
                 list.append((_("%s") % title71, "Transparent"))
                 list.append((_("%s") % title94, "Transparent2"))
+                if not (BHVU() or VTI() or DreamOS()):
+                	list.append(getConfigListEntry("%s" % title99))
+                	list.append((_("%s") % title97, "BO-HLALA-Style"))
                 self["menu"] = MenuList(list)
                 self["menu"].onSelectionChanged.append(self.Picture)
                 self.onShow.append(self.Picture)
@@ -1254,6 +1258,8 @@ class PiconsScreen(Screen):
                                 pic = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/preview/TransparentPicon.png')
                         elif index == "Transparent2":
                                 pic = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/preview/TransparentPicon2.png')
+                        elif index == "BO-HLALA-Style":
+                                pic = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/preview/BO-HLALA-Style.png')
                         self['Picture'].instance.setPixmapFromFile(pic)
                 except Exception as error:
                         logdata("Picture preview:", error)
@@ -1277,6 +1283,9 @@ class PiconsScreen(Screen):
                                         cmdlist.append(cmd)
                                 elif index == "Transparent2":
                                         cmd='wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/installerTransparentPicons2.sh -O - | /bin/sh'
+                                        cmdlist.append(cmd)
+                                elif index == "BO-HLALA-Style":
+                                        cmd='wget -O - https://github.com/fairbird/RaedQuickSignal/raw/refs/heads/main/Style/BO-HLALA-Style.tar.gz | tar -xz -C /'
                                         cmdlist.append(cmd)
                                 self.session.open(Console, title='%s' % title73, cmdlist=cmdlist, finishedCallback=self.Finished, closeOnSuccess=True)
                         else:

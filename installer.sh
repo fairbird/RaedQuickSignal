@@ -3,13 +3,13 @@
 
 ######### Only These two lines to edit with new version ######
 # next veriosn do not missing to add "" to version number
-version=18.1
+version=18.2
 description="
 What is NEW:
-- Add Greek translation
+- Add BO-HLALA Style
 
 ما هو الجديد:
-- إضافة اللغة اليونانية
+- BO-HLALA إضافة تصاميم
 "
 ##############################################################
 
