@@ -3,13 +3,13 @@
 
 ######### Only These two lines to edit with new version ######
 # next veriosn do not missing to add "" to version number
-version=18.2
+version=18.3
 description="
 What is NEW:
-- Add BO-HLALA Style
+- Fix crash in VTI and BH Vu imges
 
 ما هو الجديد:
-- BO-HLALA إضافة تصاميم
+- BH VU و VTI إصلاح مشكلة الكراش على صورة
 "
 ##############################################################
 
