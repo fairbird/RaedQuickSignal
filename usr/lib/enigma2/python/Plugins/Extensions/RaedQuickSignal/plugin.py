@@ -1237,8 +1237,8 @@ class PiconsScreen(Screen):
                 list.append((_("%s") % title71, "Transparent"))
                 list.append((_("%s") % title94, "Transparent2"))
                 if not (BHVU() or VTI() or DreamOS()):
-                	list.append(getConfigListEntry("%s" % title99))
-                	list.append((_("%s") % title97, "BO-HLALA-Style"))
+                        list.append(getConfigListEntry("%s" % title99))
+                        list.append((_("%s") % title97, "BO-HLALA-Style"))
                 self["menu"] = MenuList(list)
                 self["menu"].onSelectionChanged.append(self.Picture)
                 self.onShow.append(self.Picture)
@@ -1419,12 +1419,12 @@ def Plugins(**kwargs):
         )
 
         if hasattr(PluginDescriptor, "WHERE_CHANNEL_CONTEXT_MENU"):
-		contextlist = PluginDescriptor(
-			name=_("RAED's RaedQuickSignal [RaedQuickSignal]"),
-			description=description,
-			where=PluginDescriptor.WHERE_CHANNEL_CONTEXT_MENU,
-			fnc=run
-		)
+                contextlist = PluginDescriptor(
+                        name=_("RAED's RaedQuickSignal [RaedQuickSignal]"),
+                        description=description,
+                        where=PluginDescriptor.WHERE_CHANNEL_CONTEXT_MENU,
+                        fnc=run
+                )
 
         if "Menu" in selected_options:
                 result.append(menulist)
