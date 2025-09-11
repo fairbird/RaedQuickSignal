@@ -1418,12 +1418,13 @@ def Plugins(**kwargs):
                 fnc=run
         )
 
-        contextlist = PluginDescriptor(
-                name=_("RAED's RaedQuickSignal [RaedQuickSignal]"),
-                description=description,
-                where=PluginDescriptor.WHERE_CHANNEL_CONTEXT_MENU,
-                fnc=run
-        )
+        if hasattr(PluginDescriptor, "WHERE_CHANNEL_CONTEXT_MENU"):
+		contextlist = PluginDescriptor(
+			name=_("RAED's RaedQuickSignal [RaedQuickSignal]"),
+			description=description,
+			where=PluginDescriptor.WHERE_CHANNEL_CONTEXT_MENU,
+			fnc=run
+		)
 
         if "Menu" in selected_options:
                 result.append(menulist)
