@@ -1094,11 +1094,10 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                 else:
                         self.close(False)
 
-        def cancel(self):
-                for i in self["config"].list:
-                        if len(i)>1:
-                                i[1].cancel()
-                self.close(False)
+	def cancel(self):
+		for x in self["config"].list:
+			x[1].cancel()
+		self.close()
 
         def restart(self,answer=None):
                 if answer:
@@ -1296,9 +1295,10 @@ class PiconsScreen(Screen):
         def Finished(self):
                 self.session.open(MessageBox, _('%s') % title74, MessageBox.TYPE_INFO,timeout=4)
 
-        def cancel(self):
-                self.close()
-
+	def cancel(self):
+		for x in self["config"].list:
+			x[1].cancel()
+		self.close()
 
 class SearchLocationMSN(Screen):
         def __init__(self, session, name):
