@@ -3,13 +3,13 @@
 
 ######### Only These two lines to edit with new version ######
 # next veriosn do not missing to add "" to version number
-version=18.3
+version=18.4
 description="
 What is NEW:
-- Fix crash in VTI and BH Vu imges
+- Small fix for DreamOS
 
 ما هو الجديد:
-- BH VU و VTI إصلاح مشكلة الكراش على صورة
+- DreamOS إصلاح صغير لصورة
 "
 ##############################################################
 
