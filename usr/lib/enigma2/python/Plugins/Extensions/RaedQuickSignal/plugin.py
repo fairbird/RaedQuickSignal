@@ -1096,7 +1096,8 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
 
         def cancel(self):
                 for x in self["config"].list:
-                	x[1].cancel()
+                	if len(x) > 1:
+                		x[1].cancel()
                 self.close()
 
         def restart(self,answer=None):
