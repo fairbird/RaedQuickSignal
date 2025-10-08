@@ -1297,8 +1297,6 @@ class PiconsScreen(Screen):
                 self.session.open(MessageBox, _('%s') % title74, MessageBox.TYPE_INFO,timeout=4)
 
         def cancel(self):
-                for x in self["config"].list:
-                	x[1].cancel()
                 self.close()
 
 class SearchLocationMSN(Screen):
