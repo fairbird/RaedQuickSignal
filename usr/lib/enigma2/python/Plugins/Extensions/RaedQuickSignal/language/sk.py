@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# RAEDQuickSignal (c) RAED 20-06-2025
+# RAEDQuickSignal (c) RAED 08-10-2025
 # Slovak translation by (enosat&yahoo.com) Thank you
 
 title1="Povoliť zobrazovanie v dB"
@@ -98,6 +98,6 @@ title93="Posunutím < alebo > vyberte metódu, ktorú chcete použiť na vyhľad
 title94="Priehľadné piktogramy od (azl + Albahraniy)"
 title95="Zobrazenie doplnku #stlačte OK pre zmenu"
 title96="Táto možnosť zobrazuje doplnok vo vybraných položkách"
-title97="BO-HLALA Style"
-title98=" ___________________ 礑 Picons 礑 ___________________"
-title99=" ___________________ 礑  Style 礑 ____________________"
+title97="BO-HLALA Štýly"
+title98=" __________________ 礑 Piktogramy 礑 _________________"
+title99=" ___________________ 礑  Štýly 礑 ____________________"
