@@ -3,13 +3,13 @@
 
 ######### Only These two lines to edit with new version ######
 # next veriosn do not missing to add "" to version number
-version=18.4
+version=18.5
 description="
 What is NEW:
-- Small fix for DreamOS
+- Small fix
 
 ما هو الجديد:
-- DreamOS إصلاح صغير لصورة
+-  إصلاح صغير
 "
 ##############################################################
 
