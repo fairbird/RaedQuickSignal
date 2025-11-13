@@ -54,9 +54,11 @@ class RaedQuickFrontendInfo2(Converter, object):
 			percent = self.source.snr
 		elif self.type == self.SNRdB:
 			if self.source.snr_db is not None:
-				return "%3.01f dB" % (self.source.snr_db / 100.0)
+				# --- CHANGE IS HERE (from %3.01f to %3.02f) ---
+				return "%3.02f dB" % (self.source.snr_db / 100.0)
 			elif self.source.snr is not None: #fallback to normal SNR
-				return "%3.01f dB" % (0.32 *((self.source.snr * 100) /65536.0) / 2)
+				# --- AND HERE (from %3.01f to %3.02f) ---
+				return "%3.02f dB" % (0.32 *((self.source.snr * 100) /65536.0) / 2)
 		elif self.type == self.TUNER_TYPE:
 			return self.source.frontend_type and self.frontend_type or "Unknown"
 		if percent is None:

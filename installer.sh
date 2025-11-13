@@ -3,13 +3,13 @@
 
 ######### Only These two lines to edit with new version ######
 # next veriosn do not missing to add "" to version number
-version=18.5
+version=18.6
 description="
 What is NEW:
-- Small fix
+- Small fix snr_db
 
 ما هو الجديد:
--  إصلاح صغير
+-  snr_db إصلاح صغير
 "
 ##############################################################
 
