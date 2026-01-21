@@ -5086,7 +5086,7 @@ SKIN_Full_Screen_Picon_Ecm3_Vertical = """
     <convert type="RaedQuickEcmInfo">pids</convert>
  </widget>
     <eLabel backgroundColor="#00000000" font="{0};32" foregroundColor="#004f6ef2" halign="left" position="487,728" size="120,38" text="{2}" transparent="1" />
-    <widget backgroundColor="#00000000" font="{0};32" halign="left" position="602,728" render="Label" size="200,38" source="session.CurrentService"  transparent="1">
+    <widget backgroundColor="#00000000" font="{0};32" halign="left" position="602,728" render="Label" size="250,38" source="session.CurrentService"  transparent="1">
     <convert type="RaedQuickEcmInfo">bitrate</convert>
  </widget>
  <eLabel backgroundColor="#00000000" font="{0};32" halign="left" position="905,728" size="80,38" text="fps" transparent="1" />
