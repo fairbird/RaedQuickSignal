@@ -39,6 +39,10 @@ from Components.Converter.Poll import Poll
 ## Add By RAED
 from sys import version_info
 PY3 = version_info[0] == 3
+try:
+	from urllib import quote as _url_quote
+except ImportError:
+	from urllib.parse import quote as _url_quote
 if PY3:
 	import six
 	TMP176 = six.ensure_str(six.unichr(176))
@@ -415,7 +419,8 @@ class RaedQuickWeather(Poll, Converter, object):
 		noneweather.close()
 
 	def get_xmlfile(self):
-		self.iConsole.ePopen("wget -P /tmp -T2 'http://weather.service.msn.com/data.aspx?weadegreetype=%s&culture=%s&weasearchstr=%s&src=outlook' -O /tmp/RaedQSweathermsn.xml" % (degreetype, language, weather_city), self.control_xml)
+		safe_city = _url_quote(str(weather_city), safe='')
+		self.iConsole.ePopen("wget -P /tmp -T2 'http://weather.service.msn.com/data.aspx?weadegreetype=%s&culture=%s&weasearchstr=%s&src=outlook' -O /tmp/RaedQSweathermsn.xml" % (degreetype, language, safe_city), self.control_xml)
 
 	@cached
 	def getText(self):

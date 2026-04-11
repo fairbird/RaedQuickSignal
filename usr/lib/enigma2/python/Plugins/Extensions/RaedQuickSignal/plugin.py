@@ -257,7 +257,7 @@ def getcities(weather_location):
                 url_2 = url.replace("startRow=","startRow="+str(page))
                 request = requests.get(url_2)
                 if request.status_code == 200:
-                        data = S.get(url_2, verify=False).content.decode('ascii', 'ignore')
+                        data = S.get(url_2).content.decode('ascii', 'ignore')
                         blocks = str(data).split('alt="P">')
                         blocks.pop(0)
                         for block in blocks:

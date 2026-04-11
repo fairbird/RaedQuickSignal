@@ -4,6 +4,7 @@
 
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS
 import os
+import shutil
 
 SHAREPATH='/usr/share/enigma2/'
 DEFAULTFont = '/usr/share/fonts/Default.ttf'
@@ -16,10 +17,13 @@ PICONPROVPATH = resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICON
 PICONCRYPTPATH = resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/PICONS/piconCrypt")
 
 if os.path.exists("/tmp/RaedQSweathermsn.xml"):
-	os.system("rm -f /tmp/RaedQSweathermsn.xml")
+	os.remove("/tmp/RaedQSweathermsn.xml")
 
 if not os.path.exists(DEFAULTFont):
-	os.system('cp -f %s %s' % (FONTPLUGIN, DEFAULTFont))
+	try:
+		shutil.copy2(FONTPLUGIN, DEFAULTFont)
+	except (IOError, OSError):
+		pass
 
 keymapfile='KEY_TEXT'
 try:

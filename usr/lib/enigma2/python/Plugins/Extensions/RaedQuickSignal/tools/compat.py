@@ -4,11 +4,6 @@ from threading import Thread
 
 PY3 = version_info[0] == 3
 
-# Disable certificate verification on python 2.7.9
-if version_info >= (2, 7, 9):
-	import ssl
-	ssl._create_default_https_context = ssl._create_unverified_context
-
 
 if version_info[0] == 2:
 	# Python 2
