@@ -90,7 +90,7 @@ except ImportError:
 def removeunicode(data):
         try:
             try:
-                data = data.encode('utf', 'ignore')
+                data = data.encode('utf-8', 'ignore')
             except:
                 pass
             data = data.decode('unicode_escape').encode('ascii', 'replace').replace('?', '').strip()
@@ -211,24 +211,24 @@ def cprint(text):
 
 def downloadFile(url, filePath):
     try:
-        # Download the file from `url` and save it locally under `file_name`:
         compat_urlretrieve(url, filePath)
         return True
-        req = compat_Request(url, headers={'User-Agent': 'Mozilla/5.0'}) # add [headers={'User-Agent': 'Mozilla/5.0'}] to fix HTTP Error 403: Forbidden
-        response = compat_urlopen(req,timeout=5)
-        cprint("response.read: %s" % response.read())
-        output = open(filePath, 'wb')
-        output.write(response.read())
-        output.close()
+    except Exception:
+        pass
+    try:
+        req = compat_Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        response = compat_urlopen(req, timeout=5)
+        data = response.read()
         response.close()
+        with open(filePath, 'wb') as output:
+            output.write(data)
         return True
     except compat_URLError as e:
         trace_error()
         if hasattr(e, 'code'):
             cprint('We failed with error code - %s.' % e.code)
         elif hasattr(e, 'reason'):
-            cprint('We failed to reach a server.')
-            cprint('Reason: %s' % e.reason)
+            cprint('We failed to reach a server. Reason: %s' % e.reason)
     return False
 
 def readurl(url):

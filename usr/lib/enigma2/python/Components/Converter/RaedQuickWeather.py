@@ -64,11 +64,9 @@ time_update_ms = 3000
 def connected_to_internet():
     import requests
     try:
-        _ = requests.get("http://www.google.com", timeout=3)
-        print("internet connection available.")
+        requests.get("http://www.google.com", timeout=3)
         return True
-    except:
-        print("internet connection available.")
+    except Exception:
         return False
 
 class RaedQuickWeather(Poll, Converter, object):

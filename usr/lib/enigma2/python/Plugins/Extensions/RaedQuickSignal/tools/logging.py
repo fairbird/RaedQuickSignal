@@ -23,13 +23,13 @@ def logdata(label_name = '', data = None,mode='a'):
 
 def dellog():
     try:
-        if os_path.exists(logFile):
-                os_remove(logFile)
+        if os.path.exists(logFile):
+            os.remove(logFile)
     except:
         pass
 
 def DreamOS():
-    if os_path.exists('/var/lib/dpkg/status'):
+    if os.path.exists('/var/lib/dpkg/status'):
         return True
     else:
         return False
