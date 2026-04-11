@@ -27,10 +27,10 @@ if not os.path.exists(DEFAULTFont):
 
 keymapfile='KEY_TEXT'
 try:
-	fp = open("/etc/enigma2/settings", "r").readlines()
-	for line in fp:
-		if "config.plugins.RaedQuickSignal.keyname" in line:
-			keymapfile = line.split('=')[1].strip()
+	with open("/etc/enigma2/settings", "r") as fp:
+		for line in fp.readlines():
+			if "config.plugins.RaedQuickSignal.keyname" in line:
+				keymapfile = line.split('=')[1].strip()
 except:
 	pass
 
@@ -49,8 +49,8 @@ except:
 	pass
 
 if os.path.exists('/usr/lib64/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml'):
-	keyfile = open("/usr/lib64/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml", "w")
+	keymap_path = "/usr/lib64/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml"
 else:
-	keyfile = open("/usr/lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml", "w")
-keyfile.write('<keymap>\n\t<map context="GlobalActions">\n\t\t<key id="%s" mapto="showRaedQuickSignal" flags="m" />\n\t</map>\n</keymap>' % keymapfile)
-keyfile.close()
+	keymap_path = "/usr/lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml"
+with open(keymap_path, "w") as keyfile:
+	keyfile.write('<keymap>\n\t<map context="GlobalActions">\n\t\t<key id="%s" mapto="showRaedQuickSignal" flags="m" />\n\t</map>\n</keymap>' % keymapfile)

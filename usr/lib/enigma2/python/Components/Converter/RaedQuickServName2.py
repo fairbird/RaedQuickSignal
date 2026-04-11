@@ -552,12 +552,13 @@ class RaedQuickServName2(Converter, object):
                                         if os_path.isfile('%s%s' % (searchpath[i], refname)):
                                                 refpath = '%s%s' % (searchpath[i], refname)
                                 if not '' is refpath:
-                                        for line in open(refpath):
-                                                if tmpref in line or tmpref.strip()[:-15] in line:
-                                                        tmpprov = line.split(':')[-1].strip('\r').strip('\n').strip()
-                                                #elif line.split()[0][i + 1:] in line:
-                                                        #tmpprov = line.split(':')[-1].strip('\r').strip('\n').strip()
-                
+                                        with open(refpath) as _rf:
+                                                for line in _rf:
+                                                        if tmpref in line or tmpref.strip()[:-15] in line:
+                                                                tmpprov = line.split(':')[-1].strip('\r').strip('\n').strip()
+                                                        #elif line.split()[0][i + 1:] in line:
+                                                                #tmpprov = line.split(':')[-1].strip('\r').strip('\n').strip()
+
                                 return tmpprov
                         return tmpprov
                 elif self.type == self.REFERENCE:
@@ -655,10 +656,11 @@ class RaedQuickServName2(Converter, object):
                                                         if os_path.isfile('%s%s' % (searchpath[i], refname)):
                                                                 refpath = '%s%s' % (searchpath[i], refname)
                                                         if not '' is refpath:
-                                                                for line in open(refpath):
-                                                                        i = len(line.split(':')[0])
-                                                                        if tmpref in line or tmpref.strip()[:-15] in line:
-                                                                                tmpprov = line.split(':')[-1].strip('\r').strip('\n').strip()
+                                                                with open(refpath) as _rf2:
+                                                                        for line in _rf2:
+                                                                                i = len(line.split(':')[0])
+                                                                                if tmpref in line or tmpref.strip()[:-15] in line:
+                                                                                        tmpprov = line.split(':')[-1].strip('\r').strip('\n').strip()
                                         ret += tmpprov  
                                 elif f == 'R':  # %R - Reference
                                         if self.refstr:

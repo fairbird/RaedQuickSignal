@@ -145,13 +145,14 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                 if self.getServiceInfoString(info, iServiceInformation.sCAIDs):
                         if os.path.exists("/tmp/ecm.info"):
                                 try:
-                                        for line in open("/tmp/ecm.info"):
-                                                if line.find("caid:") > -1:
-                                                        caidvalue = line.strip("\n").split()[-1][2:]
-                                                        if len(caidvalue) < 4:
-                                                                caidvalue = value[len(caidvalue):] + caidvalue
-                                                elif line.find("CaID") > -1 or line.find("CAID") > -1:
-                                                        caidvalue = line.split(",")[0].split()[-1][2:]
+                                        with open("/tmp/ecm.info") as _ecmf:
+                                                for line in _ecmf:
+                                                        if line.find("caid:") > -1:
+                                                                caidvalue = line.strip("\n").split()[-1][2:]
+                                                                if len(caidvalue) < 4:
+                                                                        caidvalue = value[len(caidvalue):] + caidvalue
+                                                        elif line.find("CaID") > -1 or line.find("CAID") > -1:
+                                                                caidvalue = line.split(",")[0].split()[-1][2:]
                                 except:
                                         pass
                 return caidvalue
@@ -199,25 +200,24 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                 elif self.type == self.ecmfile:
                         if self.getServiceInfoString(info, iServiceInformation.sCAIDs):
                                 try:
-                                        ecmfiles = open("/tmp/ecm.info", "r")
-                                        for line in ecmfiles:
-                                                if line.find("caid:") > -1 or line.find("provider:") > -1 or line.find("provid:") > -1 or line.find("pid:") > -1 or line.find("hops:") > -1  or line.find("system:") > -1 or line.find("address:") > -1 or line.find("using:") > -1 or line.find("ecm time:") > -1:
-                                                        line = line.replace(' ',"").replace(":",": ")
-                                                if line.find("caid:") > -1 or line.find("pid:") > -1 or line.find("reader:") > -1 or line.find("from:") > -1 or line.find("hops:") > -1  or line.find("system:") > -1 or line.find("Service:") > -1 or line.find("CAID:") > -1 or line.find("Provider:") > -1:
-                                                        line = line.strip('\n') + "  "
-                                                if line.find("Signature") > -1:
-                                                        line = ""
-                                                if line.find("=") > -1:
-                                                        line = line.lstrip('=').replace('======', "").replace('\n', "").rstrip() + ', '
-                                                if line.find("ecmtime:") > -1:
-                                                        line = line.replace("ecmtime:", "ecm time:")
-                                                if line.find("response time:") > -1:
-                                                        line = line.replace("response time:", "ecm time:").replace("decoded by", "by")
-                                                if not line.startswith('\n'):
-                                                        if line.find('pkey:') > -1:
-                                                                line = '\n' + line + '\n'
-                                                        ecminfo += line
-                                        ecmfiles.close()
+                                        with open("/tmp/ecm.info", "r") as ecmfiles:
+                                                for line in ecmfiles:
+                                                        if line.find("caid:") > -1 or line.find("provider:") > -1 or line.find("provid:") > -1 or line.find("pid:") > -1 or line.find("hops:") > -1  or line.find("system:") > -1 or line.find("address:") > -1 or line.find("using:") > -1 or line.find("ecm time:") > -1:
+                                                                line = line.replace(' ',"").replace(":",": ")
+                                                        if line.find("caid:") > -1 or line.find("pid:") > -1 or line.find("reader:") > -1 or line.find("from:") > -1 or line.find("hops:") > -1  or line.find("system:") > -1 or line.find("Service:") > -1 or line.find("CAID:") > -1 or line.find("Provider:") > -1:
+                                                                line = line.strip('\n') + "  "
+                                                        if line.find("Signature") > -1:
+                                                                line = ""
+                                                        if line.find("=") > -1:
+                                                                line = line.lstrip('=').replace('======', "").replace('\n', "").rstrip() + ', '
+                                                        if line.find("ecmtime:") > -1:
+                                                                line = line.replace("ecmtime:", "ecm time:")
+                                                        if line.find("response time:") > -1:
+                                                                line = line.replace("response time:", "ecm time:").replace("decoded by", "by")
+                                                        if not line.startswith('\n'):
+                                                                if line.find('pkey:') > -1:
+                                                                        line = '\n' + line + '\n'
+                                                                ecminfo += line
                                         #if os.path.exists("/tmp/pid.info"):
                                                 #for line in open("/tmp/pid.info"):
                                                         #ecminfo += line
@@ -267,9 +267,10 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                         # VIX
                         elif os.path.exists(resolveFilename(SCOPE_PLUGINS, "SystemPlugins/ViX/SoftcamManager.pyo")) or os.path.exists(resolveFilename(SCOPE_PLUGINS, "SystemPlugins/ViX/SoftcamManager.pyc")):
                                 if os.path.exists('/tmp/cam.check.log'):
-                                        for line in open("/tmp/cam.check.log"):
-                                                if ": Starting" in line:
-                                                        return line.split(" ")[-1].lstrip()
+                                        with open("/tmp/cam.check.log") as _clf:
+                                                for line in _clf:
+                                                        if ": Starting" in line:
+                                                                return line.split(" ")[-1].lstrip()
                         # egami
                         elif os.path.exists("/etc/egami/emuname"):
                                 try:
@@ -279,9 +280,10 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                         # TS-Panel
                         elif os.path.exists("/etc/startcam.sh"):
                                 try:
-                                        for line in open("/etc/startcam.sh"):
-                                                if line.find("script") > -1:
-                                                        return "%s" % line.split("/")[-1].split()[0][:-3]
+                                        with open("/etc/startcam.sh") as _scf:
+                                                for line in _scf:
+                                                        if line.find("script") > -1:
+                                                                return "%s" % line.split("/")[-1].split()[0][:-3]
                                 except:
                                         camdlist = None
                         # domica 8120
@@ -295,8 +297,9 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                         #HDMU
                         elif os.path.exists("/etc/.emustart") and os.path.exists("/etc/image-version"):
                                 try:
-                                        for line in open("/etc/.emustart"):
-                                                return line.split()[0].split('/')[-1]
+                                        with open("/etc/.emustart") as _ef:
+                                                for line in _ef:
+                                                        return line.split()[0].split('/')[-1]
                                 except:
                                         camdlist = None
                         # SPA
@@ -400,24 +403,27 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                         #elif os.path.exists("/etc/init.d/softcam") and not os.path.exists(BRANDPLI):
                         elif os.path.exists("/etc/init.d/softcam") or os.path.exists("/etc/init.d/cardserver"):
                                 try:
-                                        for line in open("/etc/init.d/softcam"):
-                                                if "# Short-Description:" in line:
-                                                        return line.split(':')[-1].lstrip().strip('\n')
+                                        with open("/etc/init.d/softcam") as _sf:
+                                                for line in _sf:
+                                                        if "# Short-Description:" in line:
+                                                                return line.split(':')[-1].lstrip().strip('\n')
                                 except:
                                         pass
                         # Pli/OV
                         #elif os.path.exists(BRANDPLI) and os.path.exists("/etc/init.d/softcam") or os.path.exists("/etc/init.d/cardserver"):
                                 try:
-                                        for line in open("/etc/init.d/softcam"):
-                                                if "echo" in line:
-                                                        nameemu.append(line)
+                                        with open("/etc/init.d/softcam") as _sf2:
+                                                for line in _sf2:
+                                                        if "echo" in line:
+                                                                nameemu.append(line)
                                         camdlist = "%s" % nameemu[1].split('"')[1]
                                 except:
                                         pass
                                 try:
-                                        for line in open("/etc/init.d/cardserver"):
-                                                if "echo" in line:
-                                                        nameser.append(line)
+                                        with open("/etc/init.d/cardserver") as _cs:
+                                                for line in _cs:
+                                                        if "echo" in line:
+                                                                nameser.append(line)
                                         serlist = "%s" % nameser[1].split('"')[1]
                                 except:
                                         pass
@@ -432,18 +438,20 @@ class RaedQuickEcmInfo(Poll, Converter, object):
                         elif os.path.exists("/etc/image-version") and not os.path.exists("/etc/.emustart"):
                                 emu = ""
                                 server = ""
-                                for line in open("/etc/image-version"):
-                                        if "=AAF" in line or "=openATV" in line or "=opendroid" in line or "=openESI" in line or "=OpenPlus" in line:
-                                                if config.softcam.actCam.value: 
-                                                        emu = config.softcam.actCam.value
-                                                if config.softcam.actCam2.value: 
-                                                        server = config.softcam.actCam2.value
-                                                        if config.softcam.actCam2.value == "no CAM 2 active":
-                                                                server = ""
-                                        elif "=vuplus" in line:
-                                                if os.path.exists("/tmp/.emu.info"):
-                                                        for line in open("/tmp/.emu.info"):
-                                                                emu = line.strip('\n')
+                                with open("/etc/image-version") as _iv:
+                                        for line in _iv:
+                                                if "=AAF" in line or "=openATV" in line or "=opendroid" in line or "=openESI" in line or "=OpenPlus" in line:
+                                                        if config.softcam.actCam.value:
+                                                                emu = config.softcam.actCam.value
+                                                        if config.softcam.actCam2.value:
+                                                                server = config.softcam.actCam2.value
+                                                                if config.softcam.actCam2.value == "no CAM 2 active":
+                                                                        server = ""
+                                                elif "=vuplus" in line:
+                                                        if os.path.exists("/tmp/.emu.info"):
+                                                                with open("/tmp/.emu.info") as _ei:
+                                                                        for line in _ei:
+                                                                                emu = line.strip('\n')
                                 return "%s %s" % (emu, server)
                         # Unknown emu
                         else:

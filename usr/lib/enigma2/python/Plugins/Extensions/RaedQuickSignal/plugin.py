@@ -103,8 +103,9 @@ def getversioninfo():
     version_file=resolveFilename(SCOPE_PLUGINS, "Extensions/RaedQuickSignal/tools/version")
     if exists(version_file):
         try:
-            fp=open(version_file, 'r').readlines()
-            for line in fp:
+            with open(version_file, 'r') as fp:
+                lines = fp.readlines()
+            for line in lines:
                 if 'version' in line:
                     currversion=line.split('=')[1].strip()
         except:
@@ -116,19 +117,18 @@ VER = getversioninfo()
 def trace_error():
     try:
         traceback.print_exc(file=sys.stdout)
-        traceback.print_exc(file=open('/tmp/RaedQuickSignal.log', 'a'))
+        with open('/tmp/RaedQuickSignal.log', 'a') as _logf:
+            traceback.print_exc(file=_logf)
     except:
         pass
 
 def logdata(label_name = '', data = None):
     try:
         data=str(data)
-        fp = open('/tmp/RaedQuickSignal.log', 'a')
-        fp.write( str(label_name) + ' : ' + data+"\n")
-        fp.close()
+        with open('/tmp/RaedQuickSignal.log', 'a') as fp:
+            fp.write(str(label_name) + ' : ' + data + "\n")
     except:
-        trace_error()    
-        pass
+        trace_error()
 
 def dellog(label_name = '', data = None):
     try:
@@ -140,10 +140,11 @@ def dellog(label_name = '', data = None):
 def getSatfinderinfo():
     infofile=resolveFilename(SCOPE_PLUGINS, "SystemPlugins/Satfinder/LICENSE")
     if exists(infofile):
-        fp=open(infofile, 'r').readlines()
-        for line in fp:
-                if 'RAED' in line:
-                        return getSatfinderinfo
+        with open(infofile, 'r') as fp:
+            lines = fp.readlines()
+        for line in lines:
+            if 'RAED' in line:
+                return getSatfinderinfo
 
 def DreamOS():
     if exists('/var/lib/dpkg/status'):

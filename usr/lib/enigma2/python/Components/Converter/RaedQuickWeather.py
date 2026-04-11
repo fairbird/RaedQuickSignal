@@ -416,7 +416,6 @@ class RaedQuickWeather(Poll, Converter, object):
 	def write_none(self):
 		with open("/tmp/RaedQSweathermsn.xml", "w") as noneweather:
 			noneweather.write("None")
-		noneweather.close()
 
 	def get_xmlfile(self):
 		safe_city = _url_quote(str(weather_city), safe='')
@@ -547,9 +546,11 @@ class RaedQuickWeather(Poll, Converter, object):
 		if not fileExists("/tmp/RaedQSweathermsn.xml"):
 			self.write_none()
 			return info
-		if fileExists("/tmp/RaedQSweathermsn.xml") and open("/tmp/RaedQSweathermsn.xml").read() == 'None':
+		with open("/tmp/RaedQSweathermsn.xml", "r") as _wf:
+			_weather_content = _wf.read()
+		if _weather_content == 'None':
 			return info
-		for line in open("/tmp/RaedQSweathermsn.xml"):
+		for line in _weather_content.splitlines():
 			try:
 				if "<weather" in line:
 					msnweather['Location'] = line.split('weatherlocationname')[1].split('"')[1].split(',')[0]

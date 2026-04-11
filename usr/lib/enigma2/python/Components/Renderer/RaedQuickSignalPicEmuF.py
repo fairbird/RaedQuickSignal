@@ -118,9 +118,10 @@ class RaedQuickSignalPicEmuF(Renderer, Poll):
                                         return softcamcheck
                         except:
                                 return None
-                #  GlassSysUtil 
+                #  GlassSysUtil
                 elif os.path.exists("/tmp/ucm_cam.info"):
-                        return open("/tmp/ucm_cam.info").read()
+                        with open("/tmp/ucm_cam.info") as _ucm:
+                                return _ucm.read()
                 # egami
                 elif os.path.exists("/etc/egami/emuname"):
                         try:
@@ -130,9 +131,10 @@ class RaedQuickSignalPicEmuF(Renderer, Poll):
                 # TS-Panel & Ts images
                 elif os.path.exists("/etc/startcam.sh"):
                         try:
-                                for line in open("/etc/startcam.sh"):
-                                        if "script" in line:
-                                                return "%s" % line.split("/")[-1].split()[0][:-3]
+                                with open("/etc/startcam.sh") as _scf:
+                                        for line in _scf:
+                                                if "script" in line:
+                                                        return "%s" % line.split("/")[-1].split()[0][:-3]
                         except:
                                 camdlist = None
                 # domica 8
@@ -146,8 +148,9 @@ class RaedQuickSignalPicEmuF(Renderer, Poll):
                 #HDMU
                 elif os.path.exists("/etc/.emustart") and os.path.exists("/etc/image-version"):
                         try:
-                                for line in open("/etc/.emustart"):
-                                        return line.split()[0].split('/')[-1]
+                                with open("/etc/.emustart") as _ef:
+                                        for line in _ef:
+                                                return line.split()[0].split('/')[-1]
                         except:
                                 return None
                 # Domica        
@@ -239,24 +242,27 @@ class RaedQuickSignalPicEmuF(Renderer, Poll):
                 #elif os.path.exists("/etc/init.d/softcam") and not os.path.exists(BRANDPLI):
                 elif os.path.exists("/etc/init.d/softcam") or os.path.exists("/etc/init.d/cardserver"):
                         try:
-                                for line in open("/etc/init.d/softcam"):
-                                        if "# Short-Description:" in line:
-                                                return line.split(':')[-1].lstrip().strip('\n')
+                                with open("/etc/init.d/softcam") as _sf:
+                                        for line in _sf:
+                                                if "# Short-Description:" in line:
+                                                        return line.split(':')[-1].lstrip().strip('\n')
                         except:
                                 pass
                 # Pli/OV
                 #elif os.path.exists(BRANDPLI) and os.path.exists("/etc/init.d/softcam") or os.path.exists("/etc/init.d/cardserver"):
                         try:
-                                for line in open("/etc/init.d/softcam"):
-                                        if "echo" in line:
-                                                nameemu.append(line)
+                                with open("/etc/init.d/softcam") as _sf2:
+                                        for line in _sf2:
+                                                if "echo" in line:
+                                                        nameemu.append(line)
                                 camdlist = "%s" % nameemu[1].split('"')[1]
                         except:
                                 pass
                         try:
-                                for line in open("/etc/init.d/cardserver"):
-                                        if "echo" in line:
-                                                nameser.append(line)
+                                with open("/etc/init.d/cardserver") as _cs:
+                                        for line in _cs:
+                                                if "echo" in line:
+                                                        nameser.append(line)
                                 serlist = "%s" % nameser[1].split('"')[1]
                         except:
                                 pass
@@ -271,21 +277,24 @@ class RaedQuickSignalPicEmuF(Renderer, Poll):
                 elif os.path.exists("/etc/image-version") and not os.path.exists("/etc/.emustart"):
                         emu = ""
                         server = ""
-                        for line in open("/etc/image-version"):
-                                if "=AAF" in line or "=openATV" in line or "=opendroid" in line or "=openESI" in line or "=OpenPlus" in line:
-                                        if config.softcam.actCam.value: 
-                                                emu = config.softcam.actCam.value
-                                        if config.softcam.actCam2.value: 
-                                                server = config.softcam.actCam2.value
-                                                if config.softcam.actCam2.value == "no CAM 2 active":
-                                                        server = ""
-                                elif "=vuplus" in line:
-                                        if os.path.exists("/tmp/.emu.info"):
-                                                for line in open("/tmp/.emu.info"):
-                                                        emu = line.strip('\n')
-                                # BlackHole     
-                                elif "version=" in line and os.path.exists("/etc/CurrentBhCamName"):
-                                        emu = open("/etc/CurrentBhCamName").read()
+                        with open("/etc/image-version") as _iv:
+                                for line in _iv:
+                                        if "=AAF" in line or "=openATV" in line or "=opendroid" in line or "=openESI" in line or "=OpenPlus" in line:
+                                                if config.softcam.actCam.value:
+                                                        emu = config.softcam.actCam.value
+                                                if config.softcam.actCam2.value:
+                                                        server = config.softcam.actCam2.value
+                                                        if config.softcam.actCam2.value == "no CAM 2 active":
+                                                                server = ""
+                                        elif "=vuplus" in line:
+                                                if os.path.exists("/tmp/.emu.info"):
+                                                        with open("/tmp/.emu.info") as _ei:
+                                                                for line in _ei:
+                                                                        emu = line.strip('\n')
+                                        # BlackHole
+                                        elif "version=" in line and os.path.exists("/etc/CurrentBhCamName"):
+                                                with open("/etc/CurrentBhCamName") as _bh:
+                                                        emu = _bh.read()
                         return "%s %s" % (emu, server)
                 else:
                         return None
@@ -352,9 +361,8 @@ class RaedQuickSignalPicEmuF(Renderer, Poll):
                                                                 sname = "camd3"
                                                         elif os.path.exists("/tmp/ecm.info"):
                                                              try:
-                                                                f = open("/tmp/ecm.info", "r")
-                                                                content = f.read()
-                                                                f.close()
+                                                                with open("/tmp/ecm.info", "r") as f:
+                                                                    content = f.read()
                                                              except:
                                                                 content = ""
                                                              contentInfo = content.split("\n")

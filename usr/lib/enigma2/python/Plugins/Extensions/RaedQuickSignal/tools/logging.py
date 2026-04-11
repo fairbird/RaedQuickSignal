@@ -4,22 +4,18 @@ logFile='/tmp/RaedQuickSignal.log'
 def trace_error():
     try:
         traceback.print_exc(file=sys.stdout)
-        traceback.print_exc(file=open(logFile, 'a'))
+        with open(logFile, 'a') as _lf:
+            traceback.print_exc(file=_lf)
     except:
         pass
 
-def logdata(label_name = '', data = None,mode='a'):
+def logdata(label_name = '', data = None, mode='a'):
     try:
-        data=str(data)
-        if mode=='w':
-           fp = open(logFile, 'w')
-        else:   
-           fp = open(logFile, 'a')
-        fp.write( str(label_name) + ': ' + data+"\n")
-        fp.close()
+        data = str(data)
+        with open(logFile, mode) as fp:
+            fp.write(str(label_name) + ': ' + data + "\n")
     except:
-        trace_error()    
-        pass
+        trace_error()
 
 def dellog():
     try:
