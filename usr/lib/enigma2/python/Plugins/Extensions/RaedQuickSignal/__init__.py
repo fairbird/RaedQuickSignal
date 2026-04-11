@@ -31,7 +31,7 @@ try:
 		for line in fp.readlines():
 			if "config.plugins.RaedQuickSignal.keyname" in line:
 				keymapfile = line.split('=')[1].strip()
-except:
+except (IOError, OSError):
 	pass
 
 try:
@@ -45,7 +45,7 @@ try:
 		os.symlink(PICONPROVPATH, SHAREPATH + 'piconProv')
 	if not os.path.exists(SHAREPATH + 'piconCrypt'):
 		os.symlink(PICONCRYPTPATH, SHAREPATH + 'piconCrypt')
-except:
+except (IOError, OSError):
 	pass
 
 if os.path.exists('/usr/lib64/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml'):

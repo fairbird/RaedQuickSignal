@@ -6,7 +6,7 @@ def trace_error():
         traceback.print_exc(file=sys.stdout)
         with open(logFile, 'a') as _lf:
             traceback.print_exc(file=_lf)
-    except:
+    except Exception:
         pass
 
 def logdata(label_name = '', data = None, mode='a'):
@@ -14,14 +14,14 @@ def logdata(label_name = '', data = None, mode='a'):
         data = str(data)
         with open(logFile, mode) as fp:
             fp.write(str(label_name) + ': ' + data + "\n")
-    except:
+    except Exception:
         trace_error()
 
 def dellog():
     try:
         if os.path.exists(logFile):
             os.remove(logFile)
-    except:
+    except Exception:
         pass
 
 def DreamOS():

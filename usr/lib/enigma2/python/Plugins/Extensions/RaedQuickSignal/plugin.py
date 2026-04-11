@@ -31,10 +31,13 @@ from Tools.LoadPixmap import LoadPixmap
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 try:
         from keymapparser import readKeymap
-except:
+except ImportError:
         from Components.ActionMap import loadKeymap as readKeymap
 from twisted.web.client import downloadPage, getPage, error
-from xml.etree.cElementTree import fromstring as cet_fromstring
+try:
+    from xml.etree.cElementTree import fromstring as cet_fromstring
+except ImportError:
+    from xml.etree.ElementTree import fromstring as cet_fromstring
 # import as python3 from plugin
 from .tools.configs import *
 from .tools.compat import compat_urlopen, compat_Request, compat_URLError, compat_quote, compat_urlretrieve, PY3

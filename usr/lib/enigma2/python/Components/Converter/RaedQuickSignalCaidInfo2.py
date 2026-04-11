@@ -12,9 +12,6 @@ from Components.Element import cached
 from Components.Converter.Poll import Poll
 import os
 
-info = {}
-old_ecm_mtime = None
-
 class RaedQuickSignalCaidInfo2(Poll, Converter, object):
 	CAID = 0
 	PID = 1
@@ -60,6 +57,8 @@ class RaedQuickSignalCaidInfo2(Poll, Converter, object):
 	def __init__(self, type):
 		Poll.__init__(self)
 		Converter.__init__(self, type)
+		self._ecm_info = {}
+		self._old_ecm_mtime = None
 		if type == "CAID":
 			self.type = self.CAID
 		elif type == "PID":
@@ -499,32 +498,29 @@ class RaedQuickSignalCaidInfo2(Poll, Converter, object):
 	text = property(getText)
 
 	def ecmfile(self):
-		global info
-		global old_ecm_mtime
 		ecm = None
 		service = self.source.service
 		if service:
 			try:
 				ecm_mtime = os.stat("/tmp/ecm.info").st_mtime
 				if not os.stat("/tmp/ecm.info").st_size > 0:
-					info = {}
-				if ecm_mtime == old_ecm_mtime:
-					return info
-				old_ecm_mtime = ecm_mtime
-				#ecmf = open("/tmp/ecm.info", "rb")
-				ecmf = open("/tmp/ecm.info", "r") # Fix Python3 (TypeError: a bytes-like object is required, not 'str' )
-				ecm = ecmf.readlines()
+					self._ecm_info = {}
+				if ecm_mtime == self._old_ecm_mtime:
+					return self._ecm_info
+				self._old_ecm_mtime = ecm_mtime
+				with open("/tmp/ecm.info", "r") as ecmf:  # Fix Python3 (TypeError: a bytes-like object is required, not 'str' )
+					ecm = ecmf.readlines()
 			except:
-				old_ecm_mtime = None
-				info = {}
-				return info
+				self._old_ecm_mtime = None
+				self._ecm_info = {}
+				return self._ecm_info
 
 			if ecm:
 				for line in ecm:
 					x = line.lower().find("msec")
 					#ecm time for mgcamd and oscam
 					if x != -1:
-						info["ecm time"] = line[0:x+4]
+						self._ecm_info["ecm time"] = line[0:x+4]
 					else:
 						item = line.split(":", 1)
 						if len(item) > 1:
@@ -535,19 +531,19 @@ class RaedQuickSignalCaidInfo2(Poll, Converter, object):
 							elif item[0] == "ECM PID":
 								item[0] = "pid"
 							elif item[0] == "response time":
-								info["source"] = "net"
+								self._ecm_info["source"] = "net"
 								it_tmp = item[1].strip().split(" ")
-								info["ecm time"] = "%s msec" % it_tmp[0]
+								self._ecm_info["ecm time"] = "%s msec" % it_tmp[0]
 								y = it_tmp[-1].find('[')
 								if y !=-1:
-									info["server"] = it_tmp[-1][:y]
-									info["protocol"] = it_tmp[-1][y+1:-1]
+									self._ecm_info["server"] = it_tmp[-1][:y]
+									self._ecm_info["protocol"] = it_tmp[-1][y+1:-1]
 								#item[0]="port"
 								#item[1] = ""
 								y = it_tmp[-1].find('(')
 								if y !=-1:
-									info["server"] = it_tmp[-1].split("(")[-1].split(":")[0]
-									info["port"] = it_tmp[-1].split("(")[-1].split(":")[-1].rstrip(")")
+									self._ecm_info["server"] = it_tmp[-1].split("(")[-1].split(":")[0]
+									self._ecm_info["port"] = it_tmp[-1].split("(")[-1].split(":")[-1].rstrip(")")
 								elif y == -1:
 									item[0] = "source"
 									item[1] = "sci"
@@ -561,15 +557,15 @@ class RaedQuickSignalCaidInfo2(Poll, Converter, object):
 								item[1] = item[1].strip("\n")
 							elif item[0] == "provider":
 								item[1] = item[1].strip("\n")
-							elif item[0][:2] == 'cw'or item[0] =='ChID' or item[0] == "Service": 
+							elif item[0][:2] == 'cw'or item[0] =='ChID' or item[0] == "Service":
 								pass
 							#mgcamd new_oscam block
 							elif item[0] == "source":
 								if item[1].strip()[:3] == "net":
 									it_tmp = item[1].strip().split(" ")
-									info["protocol"] = it_tmp[1][1:]
-									info["server"] = it_tmp[-1].split(":",1)[0]
-									info["port"] = it_tmp[-1].split(':',1)[1][:-1]
+									self._ecm_info["protocol"] = it_tmp[1][1:]
+									self._ecm_info["server"] = it_tmp[-1].split(":",1)[0]
+									self._ecm_info["port"] = it_tmp[-1].split(':',1)[1][:-1]
 									item[1] = "net"
 							elif item[0] == "prov":
 								y = item[1].find(",")
@@ -584,7 +580,7 @@ class RaedQuickSignalCaidInfo2(Poll, Converter, object):
 									item[1] = "sci"
 									item[0] = "source"
 								else:
-									info["source"] = "net"
+									self._ecm_info["source"] = "net"
 									item[0] = "server"
 							#cccam block
 							elif item[0] == "provid":
@@ -593,33 +589,32 @@ class RaedQuickSignalCaidInfo2(Poll, Converter, object):
 								if item[1].strip() == "emu" or item[1].strip() == "sci":
 									item[0] = "source"
 								else:
-									info["source"] = "net"
+									self._ecm_info["source"] = "net"
 									item[0] = "protocol"
 							elif item[0] == "address":
 								tt = item[1].find(":")
 								if tt != -1:
-									info["server"] = item[1][:tt].strip()
+									self._ecm_info["server"] = item[1][:tt].strip()
 									item[0] = "port"
 									item[1] = item[1][tt+1:]
-							info[item[0].strip().lower()] = item[1].strip()
+							self._ecm_info[item[0].strip().lower()] = item[1].strip()
 						else:
-							if not 'caid' in info or not 'CaID' in info:
+							if not 'caid' in self._ecm_info or not 'CaID' in self._ecm_info:
 								x = line.lower().find("caid")
 								if x != -1:
 									y = line.find(",")
 									if y != -1:
-										info["caid"] = line[x+5:y]
-							if not 'pid' in info:
+										self._ecm_info["caid"] = line[x+5:y]
+							if not 'pid' in self._ecm_info:
 								x = line.lower().find("pid")
 								if x != -1:
 									y = line.find(" =")
 									z = line.find(" *")
 									if y != -1:
-										info["pid"] = line[x+4:y]
+										self._ecm_info["pid"] = line[x+4:y]
 									elif z != -1:
-										info["pid"] = line[x+4:z]
-				ecmf.close()
-		return info
+										self._ecm_info["pid"] = line[x+4:z]
+		return self._ecm_info
 
 	def changed(self, what):
 		Converter.changed(self, (self.CHANGED_POLL,))
