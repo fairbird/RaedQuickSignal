@@ -818,7 +818,7 @@ class RaedQuickSignalScreen(Screen):
                 except:
                            trace_error()
         
-        def myCallback(self,result):
+        def myCallback(self, result = None):
                 return
 
 class RaedQuickSignal():
@@ -1021,7 +1021,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                 except:
                            trace_error()
 
-        def myCallback(self,result):
+        def myCallback(self, result = None):
                 return
 
         def ShowsearchBarracuda(self, name):
