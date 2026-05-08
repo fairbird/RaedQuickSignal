@@ -3,13 +3,13 @@
 
 ######### Only These two lines to edit with new version ######
 # next veriosn do not missing to add "" to version number
-version=18.6
+version=18.7
 description="
 What is NEW:
-- Small fix snr_db
+- Change the way the quick button is selected
 
 ما هو الجديد:
--  snr_db إصلاح صغير
+-  تغيير طريقة اختيار الزر السريع
 "
 ##############################################################
 
