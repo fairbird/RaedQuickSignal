@@ -83,26 +83,7 @@ config.plugins.RaedQuickSignal.fontsSize = ConfigSelection(default = "Default", 
 	])
 
 ############# keymap
-config.plugins.RaedQuickSignal.keyname = ConfigSelection(default = "KEY_TEXT", choices = [
-	("KEY_TEXT", _("TEXT")),
-	("KEY_TV", _("TV")),
-	("KEY_RADIO", _("RADIO")),
-	("KEY_OK", _("OK")),
-	("KEY_HELP", _("HELP")),
-	("KEY_INFO", _("INFO")),
-	("KEY_RED", _("RED")),
-	("KEY_GREEN", _("GREEN")),
-	("KEY_BLUE", _("BLUE")),
-	("KEY_VIDEO", _("PVR")),
-	("KEY_HOMEPAGE", _("HOMEPAGE")),
-	("KEY_0", _("0")),
-	("KEY_1", _("1")),
-	("KEY_2", _("2")),
-	("KEY_3", _("3")),
-	("KEY_F1", _("f1")),
-	("KEY_F2", _("f2")),
-	("KEY_F3", _("f3"))
-	])
+config.plugins.RaedQuickSignal.keyname = ConfigText(default="KEY_TEXT")
 
 ############# style of skin
 config.plugins.RaedQuickSignal.style = ConfigSelection(default = "AGC1", choices = [
