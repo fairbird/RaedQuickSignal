@@ -10,7 +10,7 @@ from Components.config import config, getConfigListEntry, ConfigText, ConfigSele
 from Components.ConfigList import ConfigListScreen
 from Components.ActionMap import ActionMap
 from GlobalActions import globalActionMap
-from enigma import eTimer, getDesktop, gFont, addFont
+from enigma import eTimer, getDesktop, gFont, addFont, eActionMap, eRCInput
 from Plugins.Plugin import PluginDescriptor
 from Screens.Screen import Screen
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS, SCOPE_LANGUAGE
@@ -863,7 +863,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                 {
                         "red": self.cancel,
                         "cancel": self.cancel,
-                        "green": self.save,
+                        "green": self.keySave,
                         "yellow": self.keyYellow,
                         "blue": self.keyBlue,
                         "ok": self.keyOk
@@ -1029,8 +1029,17 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                         self.session.open(SearchLocationMSN, name)
                 return
 
+        def keyCaptured(self, keyname=None):
+                if keyname:
+                        config.plugins.RaedQuickSignal.keyname.value = keyname
+                        config.plugins.RaedQuickSignal.keyname.save()
+                        self.keySave()
+                        self.createConfigList()
+
         def keyOk(self):
                 cur = self["config"].getCurrent()
+                if cur == self.set_keyname:
+                	self.session.openWithCallback(self.keyCaptured, KeyCaptureScreen)
                 if cur == self.set_city:
                         config.plugins.RaedQuickSignal.Searchmethod.save()
                         self.session.openWithCallback(self.ShowsearchBarracuda, VirtualKeyBoard, title=_('%s') % title16)
@@ -1067,7 +1076,7 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                   config.plugins.RaedQuickSignal.city.setValue(weather_city)
                   self.createConfigList()
 
-        def save(self):
+        def keySave(self):
                 #if self["config"].isChanged():
                 system("rm -f /tmp/RaedQSweathermsn.xml")
                 if self.configChanged:
@@ -1075,13 +1084,17 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                                 if len(x)>1:
                                         x[1].save()
                         configfile.save()
-                        # we can not use resolveFilename(SCOPE_PLUGINS) here the keymap.xml will be not writable 
-                        if exists('/usr/lib64/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml'):
-                            keyfile = open("/usr/lib64/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml", "w")
-                        else:
-                            keyfile = open("/usr/lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml", "w")
-                        keyfile.write('<keymap>\n\t<map context="GlobalActions">\n\t\t<key id="%s" mapto="showRaedQuickSignal" flags="m" />\n\t</map>\n</keymap>' % config.plugins.RaedQuickSignal.keyname.value)
-                        keyfile.close()
+                        try:
+                                # we can not use resolveFilename(SCOPE_PLUGINS) here the keymap.xml will be not writable 
+                                if exists("/usr/lib64/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml"):
+                                        keymap_path = "/usr/lib64/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml"
+                                else:
+                                        keymap_path = "/usr/lib/enigma2/python/Plugins/Extensions/RaedQuickSignal/tools/keymap.xml"
+                                keyfile = open(keymap_path, "w")
+                                keyfile.write('<keymap>\n\t<map context="GlobalActions">\n\t\t<key id="%s" mapto="showRaedQuickSignal" flags="m" />\n\t</map>\n</keymap>' % config.plugins.RaedQuickSignal.keyname.value)
+                                keyfile.close()
+                        except Exception as error:
+                                logdata("keySave keymap error:", error)
                         if not self.currkeyname_value == config.plugins.RaedQuickSignal.keyname.value \
                         or not self.fontsStyle_value == config.plugins.RaedQuickSignal.fontsStyle.value \
                         or not self.fontssize_value == config.plugins.RaedQuickSignal.fontsSize.value \
@@ -1105,6 +1118,73 @@ class RaedQuickSignal_setup(ConfigListScreen, Screen):
                    self.session.open(TryQuitMainloop, 3)
                    return
                 self.close(True)
+
+
+class KeyCaptureScreen(Screen):
+	skin = """<screen position="center,center" size="500,100" title="" flags="wfNoBorder">
+	<widget name="label" position="10,10" size="480,80" font="Regular;35" halign="center" valign="center"/>
+	</screen>"""
+	def __init__(self, session):
+		Screen.__init__(self, session)
+		self["label"] = Label(title100)
+		self.key_caught = False
+		self["actions"] = ActionMap(["SetupActions", "WizardActions", "MenuActions"], 
+			{
+				"cancel": self.close,
+				"ok": self.dummy,
+				"up": self.dummy,
+				"down": self.dummy,
+				"left": self.dummy,
+				"right": self.dummy
+			}, -100)
+		self.onFirstExecBegin.append(self.startHook)
+		self.onClose.append(self.stopHook)
+
+	def dummy(self):
+		return 1
+
+	def startHook(self):
+		try:
+			self.hook_slot = eActionMap.getInstance().bindAction('', -2147483648, self.keyPressed)
+		except:
+			pass
+
+	def stopHook(self):
+		try:
+			if hasattr(self, 'hook_slot'):
+				self.hook_slot = None
+				eActionMap.getInstance().unbindAction('', self.keyPressed)
+		except:
+			pass
+
+	def keyPressed(self, key, flag):
+		if flag == 1:
+			keyname = self.resolveKeyName(key)
+			if keyname:
+				if keyname in ("KEY_EXIT", "KEY_ESC"):
+					self.close(None)
+					return 1
+				if not self.key_caught:
+					self.key_caught = True
+					self.close(keyname)
+					return 1
+		return 1
+
+	def resolveKeyName(self, key):
+		try:
+			from keyids import KEYIDS
+			for name, k_id in KEYIDS.items():
+				if k_id == key:
+					return name
+		except:
+			pass
+		try:
+			rc = eRCInput.getInstance()
+			if hasattr(rc, 'getLabel'): return rc.getLabel(key)
+			if hasattr(rc, 'getKeyName'): return rc.getKeyName(key)
+		except:
+			pass
+		return None
 
 
 class SelectionScreen(Screen, ConfigListScreen):
@@ -1159,7 +1239,7 @@ class SelectionScreen(Screen, ConfigListScreen):
                         "ok": self.select_option,
                         "cancel": self.close,
                         "back": self.close,
-                        "green": self.save
+                        "green": self.keySave
                 }, -2)  # Higher priority to ensure OK is captured (DreamOS images need it)
 
                 self.onLayoutFinish.append(self.layoutFinished)
@@ -1195,7 +1275,7 @@ class SelectionScreen(Screen, ConfigListScreen):
                         self.selection_states[key] = not self.selection_states[key]
                         self.updateList()
 
-        def save(self):
+        def keySave(self):
                 # Save all selected options as comma-separated string
                 selected_options = [key for key, state in self.selection_states.items() if state]
                 new_value = ','.join(selected_options)
