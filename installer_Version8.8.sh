@@ -38,11 +38,11 @@ else
 	echo "Need to install $Package"
 	echo ""
 	if [ $OSTYPE = "DreamOs" ]; then
-		apt-get update && apt-get install python-six -y
+		apt-get update > /dev/null 2>&1 && apt-get install python-six -y > /dev/null 2>&1
 	elif [ $PYTHON = "PY3" ]; then
-		opkg update && opkg install python3-six
+		opkg update > /dev/null 2>&1 && opkg install python3-six > /dev/null 2>&1
 	elif [ $PYTHON = "PY2" ]; then
-		opkg update && opkg install python-six
+		opkg update > /dev/null 2>&1 && opkg install python-six > /dev/null 2>&1
 	fi
 fi
 echo ""

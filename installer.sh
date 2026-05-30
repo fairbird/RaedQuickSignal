@@ -46,7 +46,7 @@ if [ $PYTHON = "PY3" ]; then
 	if grep -qs "Package: $Packagesix" cat $STATUS ; then
 		echo ""
 	else
-		opkg update && opkg install python3-six
+		opkg update > /dev/null 2>&1 && opkg install python3-six > /dev/null 2>&1
 	fi
 fi
 echo ""
@@ -56,11 +56,11 @@ else
 	echo "Need to install $Packagerequests"
 	echo ""
 	if [ $OSTYPE = "DreamOs" ]; then
-		apt-get update && apt-get install python-requests -y
+		apt-get update > /dev/null 2>&1 && apt-get install python-requests -y > /dev/null 2>&1
 	elif [ $PYTHON = "PY3" ]; then
-		opkg update && opkg install python3-requests
+		opkg update > /dev/null 2>&1 && opkg install python3-requests > /dev/null 2>&1
 	elif [ $PYTHON = "PY2" ]; then
-		opkg update && opkg install python-requests
+		opkg update > /dev/null 2>&1 && opkg install python-requests > /dev/null 2>&1
 	fi
 fi
 echo ""
