@@ -65,6 +65,7 @@ echo ""
 [ -d $PLUGINPICONTMPPATH ] && rm -rf $PLUGINPICONTMPPATH > /dev/null 2>&1
 [ -r /tmp/RaedQuickSignal-"$version".tar.gz ] && rm -f /tmp/RaedQuickSignal-"$version".tar.gz > /dev/null 2>&1
 [ -r /tmp/RaedQuickServName2-dreamos.tar.gz ] && rm -f /tmp/RaedQuickServName2-dreamos.tar.gz > /dev/null 2>&1
+[ -r /tmp/FrontendInfo-dreamos.tar.gz ] && rm -f /tmp/FrontendInfo-dreamos.tar.gz > /dev/null 2>&1
 ### backup Current files/Folders and save it beffore delete old version of plugin
 mkdir -p $BACKUPPATH
 [ -r $PLUGINPATH/tools/keymap.xml ] && cp -f $PLUGINPATH/tools/keymap.xml $BACKUPPATH/keymap.xml > /dev/null 2>&1
@@ -82,32 +83,37 @@ cd /tmp
 set -e
 rm -rf *RaedQuickSignal* > /dev/null 2>&1
 if [ -f /var/lib/dpkg/status ]; then
-   echo "# Your image is OE2.5/2.6 #"
-   echo ""
-   echo ""
-   #cd /tmp
-   #wget https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
-   #tar -xzf main.tar.gz
-   #cp -r 'RaedQuickSignal-main/usr' '/'
-   #cp -r 'RaedQuickSignal-main/tmp/RaedQuickSignal' '/tmp'
-   #wget https://github.com/fairbird/RaedQuickSignal/raw/main/RaedQuickServName2-dreamos.tar.gz
-   #if [ -f '/tmp/RaedQuickServName2-dreamos.tar.gz' ]; then
-   #	rm -f /usr/lib/enigma2/python/Components/Converter/RaedQuickServName2.py > /dev/null 2>&1
-   #fi
-   #tar -xzf RaedQuickServName2-dreamos.tar.gz -C /
+	echo "# Your image is OE2.5/2.6 #"
+	echo ""
+	echo ""
+	#cd /tmp
+	#wget https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
+	#tar -xzf main.tar.gz
+	#cp -r 'RaedQuickSignal-main/usr' '/'
+	#cp -r 'RaedQuickSignal-main/tmp/RaedQuickSignal' '/tmp'
+	#wget https://github.com/fairbird/RaedQuickSignal/raw/main/RaedQuickServName2-dreamos.tar.gz
+	#if [ -f '/tmp/RaedQuickServName2-dreamos.tar.gz' ]; then
+	#	rm -f /usr/lib/enigma2/python/Components/Converter/RaedQuickServName2.py > /dev/null 2>&1
+	#fi
+	#tar -xzf RaedQuickServName2-dreamos.tar.gz -C /
 else
-   echo "# Your image is OE2.0 #"
-   echo ""
-   echo ""
-   #wget https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
-   #tar -xzf main.tar.gz
-   #cp -r 'RaedQuickSignal-main/usr' '/'
-   #cp -r 'RaedQuickSignal-main/tmp/RaedQuickSignal' '/tmp'
+	echo "# Your image is OE2.0 #"
+	echo ""
+	echo ""
+	#wget https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
+	#tar -xzf main.tar.gz
+	#cp -r 'RaedQuickSignal-main/usr' '/'
+	#cp -r 'RaedQuickSignal-main/tmp/RaedQuickSignal' '/tmp'
 fi
 wget https://github.com/fairbird/RaedQuickSignal/archive/refs/heads/main.tar.gz
 tar -xzf main.tar.gz
 cp -r 'RaedQuickSignal-main/usr' '/'
 cp -r 'RaedQuickSignal-main/tmp/RaedQuickSignal' '/tmp'
+if [ -f /var/lib/dpkg/status ]; then
+	cd /tmp
+	wget https://github.com/fairbird/RaedQuickSignal/raw/refs/heads/dreamos/FrontendInfo-dreamos.tar.gz
+	tar -xzf FrontendInfo-dreamos.tar.gz -C /
+fi
 set +e
 cd ..
 sleep 2
@@ -163,6 +169,7 @@ rm -rf $PLUGINPICONTMPPATH > /dev/null 2>&1
 rm -rf $BACKUPPATH > /dev/null 2>&1
 rm -f /tmp/RaedQuickSignal-"$version".tar.gz > /dev/null 2>&1
 rm -f /tmp/RaedQuickServName2-dreamos.tar.gz > /dev/null 2>&1
+rm -f /tmp/FrontendInfo-dreamos.tar.gz > /dev/null 2>&1
 sync
 echo ""
 echo ""
