@@ -3,14 +3,10 @@
 
 ######### Only These two lines to edit with new version ######
 # next veriosn do not missing to add "" to version number
-version=18.7
+version=18.8
 description="
 What is NEW:
-- Change the way the quick button is selected
-
-ما هو الجديد:
--  تغيير طريقة اختيار الزر السريع
-"
+- [FrontendInfo] Add AGC fallback for unsupported frontends"
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
