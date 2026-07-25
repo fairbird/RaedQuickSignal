@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # by 2boom 2011-14
-# last update 18.01.2014
+# last update 25.07.2026 by RAED
 
 from Components.Converter.Converter import Converter
 from Components.Element import cached
@@ -50,14 +50,14 @@ class RaedQuickFrontendInfo2(Converter, object):
 		snr = self.source.snr
 		if not snr:
 			return agc
-		snr_percent = snr * 100.0 / 65535.0
+		snr_percent = float(snr) * 100.0 / 65535.0
 		if snr_percent < 35:
 			agc_percent = snr_percent * 1.8
 		elif snr_percent < 70:
 			agc_percent = 63 + ((snr_percent - 35) * 0.8)
 		else:
 			agc_percent = 91 + ((snr_percent - 70) * 0.3)
-		return round(min(100, agc_percent) * self.range / 100.0)
+		return int(round(min(100, agc_percent) * float(self.range) / 100.0))
 
 	@cached
 	def getText(self):
