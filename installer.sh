@@ -111,7 +111,7 @@ cp -r 'RaedQuickSignal-main/usr' '/'
 cp -r 'RaedQuickSignal-main/tmp/RaedQuickSignal' '/tmp'
 if [ -f /var/lib/dpkg/status ]; then
 	cd /tmp
-	wget https://github.com/fairbird/RaedQuickSignal/raw/refs/heads/dreamos/FrontendInfo-dreamos.tar.gz
+	wget https://github.com/fairbird/RaedQuickSignal/raw/refs/heads/main/FrontendInfo-dreamos.tar.gz
 	tar -xzf FrontendInfo-dreamos.tar.gz -C /
 fi
 set +e
