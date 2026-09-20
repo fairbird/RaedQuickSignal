@@ -3,10 +3,10 @@
 
 ######### Only These two lines to edit with new version ######
 # next veriosn do not missing to add "" to version number
-version=18.8
+version=18.9
 description="
 What is NEW:
-- [FrontendInfo] Add AGC fallback for unsupported frontends"
+- Support WQHD (UHD) Skin"
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
