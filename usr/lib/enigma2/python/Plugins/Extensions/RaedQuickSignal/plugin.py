@@ -164,15 +164,21 @@ def VUDevice():
                 return VUDevice
 
 def getDesktopSize():
-    s = getDesktop(0).size()
-    return (s.width(), s.height())
+	s = getDesktop(0).size()
+	return (s.width(), s.height())
 
 def isHD():
-    desktopSize = getDesktopSize()
-    return desktopSize[0] == 1280
+	desktopSize = getDesktopSize()
+	return desktopSize[0] == 1280
+
+def isUHD():
+	desktopSize = getDesktopSize()
+	return desktopSize[0] == 2560 or desktopSize[0] == 3840
 
 if isHD():
         from .screens.skinHD import *
+elif isUHD():
+        from .screens.skinUHD import *
 else:
         from .screens.skinFHD import *
 
