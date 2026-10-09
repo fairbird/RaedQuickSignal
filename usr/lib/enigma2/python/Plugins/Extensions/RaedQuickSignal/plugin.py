@@ -164,21 +164,15 @@ def VUDevice():
                 return VUDevice
 
 def getDesktopSize():
-	s = getDesktop(0).size()
-	return (s.width(), s.height())
+    s = getDesktop(0).size()
+    return (s.width(), s.height())
 
 def isHD():
-	desktopSize = getDesktopSize()
-	return desktopSize[0] == 1280
-
-def isUHD():
-	desktopSize = getDesktopSize()
-	return desktopSize[0] == 2560 or desktopSize[0] == 3840
+    desktopSize = getDesktopSize()
+    return desktopSize[0] == 1280
 
 if isHD():
         from .screens.skinHD import *
-elif isUHD():
-        from .screens.skinUHD import *
 else:
         from .screens.skinFHD import *
 
@@ -1322,6 +1316,7 @@ class PiconsScreen(Screen):
                 list.append((_("%s") % title70, "White"))
                 list.append((_("%s") % title71, "Transparent"))
                 list.append((_("%s") % title94, "Transparent2"))
+                list.append((_("%s") % title101, "Transparent3"))
                 if not (BHVU() or VTI() or DreamOS()):
                         list.append(getConfigListEntry("%s" % title99))
                         list.append((_("%s") % title97, "BO-HLALA-Style"))
@@ -1344,6 +1339,8 @@ class PiconsScreen(Screen):
                                 pic = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/preview/TransparentPicon.png')
                         elif index == "Transparent2":
                                 pic = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/preview/TransparentPicon2.png')
+                        elif index == "Transparent3":
+                                pic = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/preview/TransparentPicon3.png')
                         elif index == "BO-HLALA-Style":
                                 pic = resolveFilename(SCOPE_PLUGINS, 'Extensions/RaedQuickSignal/images/preview/BO-HLALA-Style.png')
                         self['Picture'].instance.setPixmapFromFile(pic)
@@ -1369,6 +1366,9 @@ class PiconsScreen(Screen):
                                         cmdlist.append(cmd)
                                 elif index == "Transparent2":
                                         cmd='wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/installerTransparentPicons2.sh -O - | /bin/sh'
+                                        cmdlist.append(cmd)
+                                elif index == "Transparent3":
+                                        cmd='wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/picons/installerTransparentPicons3.sh -O - | /bin/sh'
                                         cmdlist.append(cmd)
                                 elif index == "BO-HLALA-Style":
                                         cmd='wget -O - https://github.com/fairbird/RaedQuickSignal/raw/refs/heads/main/Style/BO-HLALA-Style.tar.gz | tar -xz -C /'
