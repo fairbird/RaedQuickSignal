@@ -3,10 +3,10 @@
 
 ######### Only These two lines to edit with new version ######
 # next veriosn do not missing to add "" to version number
-version=18.9
+version=19.0
 description="
 What is NEW:
-- Support WQHD (UHD) Skin"
+- Add Transparent Picons BY (chocholousek)"
 ##############################################################
 
 BACKUPPATH=/tmp/Backup
